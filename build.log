@@ -1,0 +1,2412 @@
+Build settings from command line:
+    SYMROOT = /tmp
+java_sql/Sources/Connection.swift:1152:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Connection.swift:1164:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Connection.swift:1172:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/Connection.swift:1183:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ResultSet.swift:4216:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSet.swift:4228:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSet.swift:4236:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ResultSet.swift:4247:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ResultSet.swift:4216:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSet.swift:4228:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSet.swift:4236:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ResultSet.swift:4247:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/Statement.swift:977:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Statement.swift:989:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Statement.swift:997:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/Statement.swift:1008:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:2558:15: error: overriding declaration requires an 'override' keyword
+    open func setBoolean( arg0: Int, arg1: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:288:15: note: overridden declaration is here
+    open func setBoolean( arg0: Int, arg1: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2569:15: error: overriding declaration requires an 'override' keyword
+    open func setBoolean( _ _arg0: Int, _ _arg1: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:299:15: note: overridden declaration is here
+    open func setBoolean( _ _arg0: Int, _ _arg1: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2577:15: error: overriding declaration requires an 'override' keyword
+    open func setByte( arg0: Int, arg1: Int8 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:307:15: note: overridden declaration is here
+    open func setByte( arg0: Int, arg1: Int8 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2588:15: error: overriding declaration requires an 'override' keyword
+    open func setByte( _ _arg0: Int, _ _arg1: Int8 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:318:15: note: overridden declaration is here
+    open func setByte( _ _arg0: Int, _ _arg1: Int8 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2596:15: error: overriding declaration requires an 'override' keyword
+    open func setShort( arg0: Int, arg1: Int16 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:326:15: note: overridden declaration is here
+    open func setShort( arg0: Int, arg1: Int16 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2607:15: error: overriding declaration requires an 'override' keyword
+    open func setShort( _ _arg0: Int, _ _arg1: Int16 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:337:15: note: overridden declaration is here
+    open func setShort( _ _arg0: Int, _ _arg1: Int16 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2615:15: error: overriding declaration requires an 'override' keyword
+    open func setInt( arg0: Int, arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:345:15: note: overridden declaration is here
+    open func setInt( arg0: Int, arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2626:15: error: overriding declaration requires an 'override' keyword
+    open func setInt( _ _arg0: Int, _ _arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:356:15: note: overridden declaration is here
+    open func setInt( _ _arg0: Int, _ _arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2634:15: error: overriding declaration requires an 'override' keyword
+    open func setLong( arg0: Int, arg1: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:364:15: note: overridden declaration is here
+    open func setLong( arg0: Int, arg1: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2645:15: error: overriding declaration requires an 'override' keyword
+    open func setLong( _ _arg0: Int, _ _arg1: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:375:15: note: overridden declaration is here
+    open func setLong( _ _arg0: Int, _ _arg1: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2653:15: error: overriding declaration requires an 'override' keyword
+    open func setFloat( arg0: Int, arg1: Float ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:383:15: note: overridden declaration is here
+    open func setFloat( arg0: Int, arg1: Float ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2664:15: error: overriding declaration requires an 'override' keyword
+    open func setFloat( _ _arg0: Int, _ _arg1: Float ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:394:15: note: overridden declaration is here
+    open func setFloat( _ _arg0: Int, _ _arg1: Float ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2672:15: error: overriding declaration requires an 'override' keyword
+    open func setDouble( arg0: Int, arg1: Double ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:402:15: note: overridden declaration is here
+    open func setDouble( arg0: Int, arg1: Double ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2683:15: error: overriding declaration requires an 'override' keyword
+    open func setDouble( _ _arg0: Int, _ _arg1: Double ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:413:15: note: overridden declaration is here
+    open func setDouble( _ _arg0: Int, _ _arg1: Double ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2691:15: error: overriding declaration requires an 'override' keyword
+    open func setTimestamp( arg0: Int, arg1: Timestamp? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:421:15: note: overridden declaration is here
+    open func setTimestamp( arg0: Int, arg1: Timestamp? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2702:15: error: overriding declaration requires an 'override' keyword
+    open func setTimestamp( _ _arg0: Int, _ _arg1: Timestamp? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:432:15: note: overridden declaration is here
+    open func setTimestamp( _ _arg0: Int, _ _arg1: Timestamp? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2710:15: error: overriding declaration requires an 'override' keyword
+    open func setTimestamp( arg0: Int, arg1: Timestamp?, arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:440:15: note: overridden declaration is here
+    open func setTimestamp( arg0: Int, arg1: Timestamp?, arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2722:15: error: overriding declaration requires an 'override' keyword
+    open func setTimestamp( _ _arg0: Int, _ _arg1: Timestamp?, _ _arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:452:15: note: overridden declaration is here
+    open func setTimestamp( _ _arg0: Int, _ _arg1: Timestamp?, _ _arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2730:15: error: overriding declaration requires an 'override' keyword
+    open func setURL( arg0: Int, arg1: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:460:15: note: overridden declaration is here
+    open func setURL( arg0: Int, arg1: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2741:15: error: overriding declaration requires an 'override' keyword
+    open func setURL( _ _arg0: Int, _ _arg1: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:471:15: note: overridden declaration is here
+    open func setURL( _ _arg0: Int, _ _arg1: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2749:15: error: overriding declaration requires an 'override' keyword
+    open func setTime( arg0: Int, arg1: Time?, arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:479:15: note: overridden declaration is here
+    open func setTime( arg0: Int, arg1: Time?, arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2761:15: error: overriding declaration requires an 'override' keyword
+    open func setTime( _ _arg0: Int, _ _arg1: Time?, _ _arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:491:15: note: overridden declaration is here
+    open func setTime( _ _arg0: Int, _ _arg1: Time?, _ _arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2769:15: error: overriding declaration requires an 'override' keyword
+    open func setTime( arg0: Int, arg1: Time? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:499:15: note: overridden declaration is here
+    open func setTime( arg0: Int, arg1: Time? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2780:15: error: overriding declaration requires an 'override' keyword
+    open func setTime( _ _arg0: Int, _ _arg1: Time? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:510:15: note: overridden declaration is here
+    open func setTime( _ _arg0: Int, _ _arg1: Time? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2788:15: error: overriding declaration requires an 'override' keyword
+    open func setDate( arg0: Int, arg1: Date? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:518:15: note: overridden declaration is here
+    open func setDate( arg0: Int, arg1: Date? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2799:15: error: overriding declaration requires an 'override' keyword
+    open func setDate( _ _arg0: Int, _ _arg1: Date? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:529:15: note: overridden declaration is here
+    open func setDate( _ _arg0: Int, _ _arg1: Date? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2807:15: error: overriding declaration requires an 'override' keyword
+    open func setDate( arg0: Int, arg1: Date?, arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:537:15: note: overridden declaration is here
+    open func setDate( arg0: Int, arg1: Date?, arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2819:15: error: overriding declaration requires an 'override' keyword
+    open func setDate( _ _arg0: Int, _ _arg1: Date?, _ _arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:549:15: note: overridden declaration is here
+    open func setDate( _ _arg0: Int, _ _arg1: Date?, _ _arg2: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2858:15: error: overriding declaration requires an 'override' keyword
+    open func setBytes( arg0: Int, arg1: [Int8]? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:588:15: note: overridden declaration is here
+    open func setBytes( arg0: Int, arg1: [Int8]? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2869:15: error: overriding declaration requires an 'override' keyword
+    open func setBytes( _ _arg0: Int, _ _arg1: [Int8]? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:599:15: note: overridden declaration is here
+    open func setBytes( _ _arg0: Int, _ _arg1: [Int8]? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2877:15: error: overriding declaration requires an 'override' keyword
+    open func setBinaryStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:607:15: note: overridden declaration is here
+    open func setBinaryStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2888:15: error: overriding declaration requires an 'override' keyword
+    open func setBinaryStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:618:15: note: overridden declaration is here
+    open func setBinaryStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2896:15: error: overriding declaration requires an 'override' keyword
+    open func setBinaryStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:626:15: note: overridden declaration is here
+    open func setBinaryStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2908:15: error: overriding declaration requires an 'override' keyword
+    open func setBinaryStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:638:15: note: overridden declaration is here
+    open func setBinaryStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2916:15: error: overriding declaration requires an 'override' keyword
+    open func setBinaryStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:646:15: note: overridden declaration is here
+    open func setBinaryStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2928:15: error: overriding declaration requires an 'override' keyword
+    open func setBinaryStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:658:15: note: overridden declaration is here
+    open func setBinaryStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2936:15: error: overriding declaration requires an 'override' keyword
+    open func setNull( arg0: Int, arg1: Int, arg2: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:666:15: note: overridden declaration is here
+    open func setNull( arg0: Int, arg1: Int, arg2: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2948:15: error: overriding declaration requires an 'override' keyword
+    open func setNull( _ _arg0: Int, _ _arg1: Int, _ _arg2: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:678:15: note: overridden declaration is here
+    open func setNull( _ _arg0: Int, _ _arg1: Int, _ _arg2: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2956:15: error: overriding declaration requires an 'override' keyword
+    open func setNull( arg0: Int, arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:686:15: note: overridden declaration is here
+    open func setNull( arg0: Int, arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2967:15: error: overriding declaration requires an 'override' keyword
+    open func setNull( _ _arg0: Int, _ _arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:697:15: note: overridden declaration is here
+    open func setNull( _ _arg0: Int, _ _arg1: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2975:15: error: overriding declaration requires an 'override' keyword
+    open func setBigDecimal( arg0: Int, arg1: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:705:15: note: overridden declaration is here
+    open func setBigDecimal( arg0: Int, arg1: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2986:15: error: overriding declaration requires an 'override' keyword
+    open func setBigDecimal( _ _arg0: Int, _ _arg1: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:716:15: note: overridden declaration is here
+    open func setBigDecimal( _ _arg0: Int, _ _arg1: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:2994:15: error: overriding declaration requires an 'override' keyword
+    open func setString( arg0: Int, arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:724:15: note: overridden declaration is here
+    open func setString( arg0: Int, arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3005:15: error: overriding declaration requires an 'override' keyword
+    open func setString( _ _arg0: Int, _ _arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:735:15: note: overridden declaration is here
+    open func setString( _ _arg0: Int, _ _arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3013:15: error: overriding declaration requires an 'override' keyword
+    open func setAsciiStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:743:15: note: overridden declaration is here
+    open func setAsciiStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3025:15: error: overriding declaration requires an 'override' keyword
+    open func setAsciiStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:755:15: note: overridden declaration is here
+    open func setAsciiStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3033:15: error: overriding declaration requires an 'override' keyword
+    open func setAsciiStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:763:15: note: overridden declaration is here
+    open func setAsciiStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3045:15: error: overriding declaration requires an 'override' keyword
+    open func setAsciiStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:775:15: note: overridden declaration is here
+    open func setAsciiStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3053:15: error: overriding declaration requires an 'override' keyword
+    open func setAsciiStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:783:15: note: overridden declaration is here
+    open func setAsciiStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3064:15: error: overriding declaration requires an 'override' keyword
+    open func setAsciiStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:794:15: note: overridden declaration is here
+    open func setAsciiStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3072:15: error: overriding declaration requires an 'override' keyword
+    open func setObject( arg0: Int, arg1: java_lang.JavaObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:802:15: note: overridden declaration is here
+    open func setObject( arg0: Int, arg1: java_lang.JavaObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3083:15: error: overriding declaration requires an 'override' keyword
+    open func setObject( _ _arg0: Int, _ _arg1: java_lang.JavaObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:813:15: note: overridden declaration is here
+    open func setObject( _ _arg0: Int, _ _arg1: java_lang.JavaObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3091:15: error: overriding declaration requires an 'override' keyword
+    open func setObject( arg0: Int, arg1: java_lang.JavaObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:821:15: note: overridden declaration is here
+    open func setObject( arg0: Int, arg1: java_lang.JavaObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3103:15: error: overriding declaration requires an 'override' keyword
+    open func setObject( _ _arg0: Int, _ _arg1: java_lang.JavaObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:833:15: note: overridden declaration is here
+    open func setObject( _ _arg0: Int, _ _arg1: java_lang.JavaObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3111:15: error: overriding declaration requires an 'override' keyword
+    open func setObject( arg0: Int, arg1: java_lang.JavaObject?, arg2: Int, arg3: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:841:15: note: overridden declaration is here
+    open func setObject( arg0: Int, arg1: java_lang.JavaObject?, arg2: Int, arg3: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3124:15: error: overriding declaration requires an 'override' keyword
+    open func setObject( _ _arg0: Int, _ _arg1: java_lang.JavaObject?, _ _arg2: Int, _ _arg3: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:854:15: note: overridden declaration is here
+    open func setObject( _ _arg0: Int, _ _arg1: java_lang.JavaObject?, _ _arg2: Int, _ _arg3: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3132:15: error: overriding declaration requires an 'override' keyword
+    open func setCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:862:15: note: overridden declaration is here
+    open func setCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3144:15: error: overriding declaration requires an 'override' keyword
+    open func setCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:874:15: note: overridden declaration is here
+    open func setCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3152:15: error: overriding declaration requires an 'override' keyword
+    open func setCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:882:15: note: overridden declaration is here
+    open func setCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3164:15: error: overriding declaration requires an 'override' keyword
+    open func setCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:894:15: note: overridden declaration is here
+    open func setCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3172:15: error: overriding declaration requires an 'override' keyword
+    open func setCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:902:15: note: overridden declaration is here
+    open func setCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3183:15: error: overriding declaration requires an 'override' keyword
+    open func setCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:913:15: note: overridden declaration is here
+    open func setCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3191:15: error: overriding declaration requires an 'override' keyword
+    open func setRowId( arg0: Int, arg1: RowId? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:921:15: note: overridden declaration is here
+    open func setRowId( arg0: Int, arg1: RowId? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3202:15: error: overriding declaration requires an 'override' keyword
+    open func setRowId( _ _arg0: Int, _ _arg1: RowId? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:932:15: note: overridden declaration is here
+    open func setRowId( _ _arg0: Int, _ _arg1: RowId? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3210:15: error: overriding declaration requires an 'override' keyword
+    open func setNString( arg0: Int, arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:940:15: note: overridden declaration is here
+    open func setNString( arg0: Int, arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3221:15: error: overriding declaration requires an 'override' keyword
+    open func setNString( _ _arg0: Int, _ _arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:951:15: note: overridden declaration is here
+    open func setNString( _ _arg0: Int, _ _arg1: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3229:15: error: overriding declaration requires an 'override' keyword
+    open func setNCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:959:15: note: overridden declaration is here
+    open func setNCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3241:15: error: overriding declaration requires an 'override' keyword
+    open func setNCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:971:15: note: overridden declaration is here
+    open func setNCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3249:15: error: overriding declaration requires an 'override' keyword
+    open func setNCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:979:15: note: overridden declaration is here
+    open func setNCharacterStream( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3260:15: error: overriding declaration requires an 'override' keyword
+    open func setNCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:990:15: note: overridden declaration is here
+    open func setNCharacterStream( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3268:15: error: overriding declaration requires an 'override' keyword
+    open func setNClob( arg0: Int, arg1: NClob? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:998:15: note: overridden declaration is here
+    open func setNClob( arg0: Int, arg1: NClob? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3279:15: error: overriding declaration requires an 'override' keyword
+    open func setNClob( _ _arg0: Int, _ _arg1: NClob? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1009:15: note: overridden declaration is here
+    open func setNClob( _ _arg0: Int, _ _arg1: NClob? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3287:15: error: overriding declaration requires an 'override' keyword
+    open func setNClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1017:15: note: overridden declaration is here
+    open func setNClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3299:15: error: overriding declaration requires an 'override' keyword
+    open func setNClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1029:15: note: overridden declaration is here
+    open func setNClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3307:15: error: overriding declaration requires an 'override' keyword
+    open func setNClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1037:15: note: overridden declaration is here
+    open func setNClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3318:15: error: overriding declaration requires an 'override' keyword
+    open func setNClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1048:15: note: overridden declaration is here
+    open func setNClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3326:15: error: overriding declaration requires an 'override' keyword
+    open func setClob( arg0: Int, arg1: Clob? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1056:15: note: overridden declaration is here
+    open func setClob( arg0: Int, arg1: Clob? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3337:15: error: overriding declaration requires an 'override' keyword
+    open func setClob( _ _arg0: Int, _ _arg1: Clob? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1067:15: note: overridden declaration is here
+    open func setClob( _ _arg0: Int, _ _arg1: Clob? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3345:15: error: overriding declaration requires an 'override' keyword
+    open func setClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1075:15: note: overridden declaration is here
+    open func setClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3357:15: error: overriding declaration requires an 'override' keyword
+    open func setClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1087:15: note: overridden declaration is here
+    open func setClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3365:15: error: overriding declaration requires an 'override' keyword
+    open func setClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1095:15: note: overridden declaration is here
+    open func setClob( arg0: Int, arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3376:15: error: overriding declaration requires an 'override' keyword
+    open func setClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1106:15: note: overridden declaration is here
+    open func setClob( _ _arg0: Int, _ _arg1: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3384:15: error: overriding declaration requires an 'override' keyword
+    open func setBlob( arg0: Int, arg1: Blob? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1114:15: note: overridden declaration is here
+    open func setBlob( arg0: Int, arg1: Blob? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3395:15: error: overriding declaration requires an 'override' keyword
+    open func setBlob( _ _arg0: Int, _ _arg1: Blob? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1125:15: note: overridden declaration is here
+    open func setBlob( _ _arg0: Int, _ _arg1: Blob? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3403:15: error: overriding declaration requires an 'override' keyword
+    open func setBlob( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1133:15: note: overridden declaration is here
+    open func setBlob( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3415:15: error: overriding declaration requires an 'override' keyword
+    open func setBlob( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1145:15: note: overridden declaration is here
+    open func setBlob( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int64 ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3423:15: error: overriding declaration requires an 'override' keyword
+    open func setBlob( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1153:15: note: overridden declaration is here
+    open func setBlob( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3434:15: error: overriding declaration requires an 'override' keyword
+    open func setBlob( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1164:15: note: overridden declaration is here
+    open func setBlob( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3442:15: error: overriding declaration requires an 'override' keyword
+    open func setSQLXML( arg0: Int, arg1: SQLXML? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1172:15: note: overridden declaration is here
+    open func setSQLXML( arg0: Int, arg1: SQLXML? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3453:15: error: overriding declaration requires an 'override' keyword
+    open func setSQLXML( _ _arg0: Int, _ _arg1: SQLXML? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1183:15: note: overridden declaration is here
+    open func setSQLXML( _ _arg0: Int, _ _arg1: SQLXML? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1353:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:332:15: note: overridden declaration is here
+    open func execute( arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1364:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:343:15: note: overridden declaration is here
+    open func execute( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1372:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:351:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1384:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:363:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1392:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:371:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1404:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:383:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1412:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:391:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1424:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:403:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:2827:15: error: overriding declaration requires an 'override' keyword
+    open func execute() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:557:15: note: overridden declaration is here
+    open func execute() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3623:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1353:15: note: overridden declaration is here
+    open func execute( arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3634:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1364:15: note: overridden declaration is here
+    open func execute( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3642:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1372:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3654:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1384:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3662:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1392:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3674:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1404:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3682:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1412:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3694:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1424:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:2842:15: error: overriding declaration requires an 'override' keyword
+    open func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:572:15: note: overridden declaration is here
+    open func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1544:15: error: overriding declaration requires an 'override' keyword
+    open func executeQuery( arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:523:15: note: overridden declaration is here
+    open func executeQuery( arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1556:15: error: overriding declaration requires an 'override' keyword
+    open func executeQuery( _ _arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:535:15: note: overridden declaration is here
+    open func executeQuery( _ _arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/CallableStatement.swift:3461:15: error: overriding declaration requires an 'override' keyword
+    open func executeQuery() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1191:15: note: overridden declaration is here
+    open func executeQuery() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/CallableStatement.swift:3814:15: error: overriding declaration requires an 'override' keyword
+    open func executeQuery( arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1544:15: note: overridden declaration is here
+    open func executeQuery( arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/CallableStatement.swift:3826:15: error: overriding declaration requires an 'override' keyword
+    open func executeQuery( _ _arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1556:15: note: overridden declaration is here
+    open func executeQuery( _ _arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1564:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:543:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1576:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:555:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1584:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:563:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1596:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:575:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1604:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:583:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1616:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:595:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1624:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:603:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1635:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:614:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3477:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1207:15: note: overridden declaration is here
+    open func executeUpdate() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3834:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1564:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3846:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1576:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3854:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1584:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3866:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1596:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3874:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1604:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3886:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1616:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3894:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1624:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3905:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1635:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3492:15: error: overriding declaration requires an 'override' keyword
+    open func setUnicodeStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1222:15: note: overridden declaration is here
+    open func setUnicodeStream( arg0: Int, arg1: /* java.io.InputStream */ UnclassedObject?, arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3504:15: error: overriding declaration requires an 'override' keyword
+    open func setUnicodeStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1234:15: note: overridden declaration is here
+    open func setUnicodeStream( _ _arg0: Int, _ _arg1: /* java.io.InputStream */ UnclassedObject?, _ _arg2: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3512:15: error: overriding declaration requires an 'override' keyword
+    open func clearParameters() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1242:15: note: overridden declaration is here
+    open func clearParameters() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1643:15: error: overriding declaration requires an 'override' keyword
+    open func addBatch( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:622:15: note: overridden declaration is here
+    open func addBatch( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1653:15: error: overriding declaration requires an 'override' keyword
+    open func addBatch( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:632:15: note: overridden declaration is here
+    open func addBatch( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3526:15: error: overriding declaration requires an 'override' keyword
+    open func addBatch() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1256:15: note: overridden declaration is here
+    open func addBatch() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3913:15: error: overriding declaration requires an 'override' keyword
+    open func addBatch( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1643:15: note: overridden declaration is here
+    open func addBatch( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3923:15: error: overriding declaration requires an 'override' keyword
+    open func addBatch( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1653:15: note: overridden declaration is here
+    open func addBatch( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3540:15: error: overriding declaration requires an 'override' keyword
+    open func setRef( arg0: Int, arg1: Ref? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1270:15: note: overridden declaration is here
+    open func setRef( arg0: Int, arg1: Ref? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3551:15: error: overriding declaration requires an 'override' keyword
+    open func setRef( _ _arg0: Int, _ _arg1: Ref? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1281:15: note: overridden declaration is here
+    open func setRef( _ _arg0: Int, _ _arg1: Ref? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3559:15: error: overriding declaration requires an 'override' keyword
+    open func setArray( arg0: Int, arg1: Array? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1289:15: note: overridden declaration is here
+    open func setArray( arg0: Int, arg1: Array? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3570:15: error: overriding declaration requires an 'override' keyword
+    open func setArray( _ _arg0: Int, _ _arg1: Array? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1300:15: note: overridden declaration is here
+    open func setArray( _ _arg0: Int, _ _arg1: Array? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3578:15: error: overriding declaration requires an 'override' keyword
+    open func getParameterMetaData() throws /* java.sql.SQLException */ -> ParameterMetaData! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1308:15: note: overridden declaration is here
+    open func getParameterMetaData() throws /* java.sql.SQLException */ -> ParameterMetaData! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1324:15: error: overriding declaration requires an 'override' keyword
+    open func close() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:303:15: note: overridden declaration is here
+    open func close() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3594:15: error: overriding declaration requires an 'override' keyword
+    open func close() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1324:15: note: overridden declaration is here
+    open func close() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1338:15: error: overriding declaration requires an 'override' keyword
+    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:317:15: note: overridden declaration is here
+    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:3608:15: error: overriding declaration requires an 'override' keyword
+    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1338:15: note: overridden declaration is here
+    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1432:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:411:15: note: overridden declaration is here
+    open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/CallableStatement.swift:3702:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1432:15: note: overridden declaration is here
+    open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1448:15: error: overriding declaration requires an 'override' keyword
+    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:427:15: note: overridden declaration is here
+    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
+              ^
+java_sql/Sources/CallableStatement.swift:3718:15: error: overriding declaration requires an 'override' keyword
+    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1448:15: note: overridden declaration is here
+    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1464:15: error: overriding declaration requires an 'override' keyword
+    open func clearWarnings() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:443:15: note: overridden declaration is here
+    open func clearWarnings() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3734:15: error: overriding declaration requires an 'override' keyword
+    open func clearWarnings() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1464:15: note: overridden declaration is here
+    open func clearWarnings() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1478:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchDirection( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:457:15: note: overridden declaration is here
+    open func setFetchDirection( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1488:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchDirection( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:467:15: note: overridden declaration is here
+    open func setFetchDirection( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3748:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchDirection( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1478:15: note: overridden declaration is here
+    open func setFetchDirection( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3758:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchDirection( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1488:15: note: overridden declaration is here
+    open func setFetchDirection( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1496:15: error: overriding declaration requires an 'override' keyword
+    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:475:15: note: overridden declaration is here
+    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3766:15: error: overriding declaration requires an 'override' keyword
+    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1496:15: note: overridden declaration is here
+    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1511:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:490:15: note: overridden declaration is here
+    open func setFetchSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1521:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:500:15: note: overridden declaration is here
+    open func setFetchSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3781:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1511:15: note: overridden declaration is here
+    open func setFetchSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3791:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1521:15: note: overridden declaration is here
+    open func setFetchSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1529:15: error: overriding declaration requires an 'override' keyword
+    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:508:15: note: overridden declaration is here
+    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3799:15: error: overriding declaration requires an 'override' keyword
+    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1529:15: note: overridden declaration is here
+    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1661:15: error: overriding declaration requires an 'override' keyword
+    open func getMaxFieldSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:640:15: note: overridden declaration is here
+    open func getMaxFieldSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3931:15: error: overriding declaration requires an 'override' keyword
+    open func getMaxFieldSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1661:15: note: overridden declaration is here
+    open func getMaxFieldSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1676:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxFieldSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:655:15: note: overridden declaration is here
+    open func setMaxFieldSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1686:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxFieldSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:665:15: note: overridden declaration is here
+    open func setMaxFieldSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3946:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxFieldSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1676:15: note: overridden declaration is here
+    open func setMaxFieldSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3956:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxFieldSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1686:15: note: overridden declaration is here
+    open func setMaxFieldSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1694:15: error: overriding declaration requires an 'override' keyword
+    open func getMaxRows() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:673:15: note: overridden declaration is here
+    open func getMaxRows() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:3964:15: error: overriding declaration requires an 'override' keyword
+    open func getMaxRows() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1694:15: note: overridden declaration is here
+    open func getMaxRows() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1709:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxRows( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:688:15: note: overridden declaration is here
+    open func setMaxRows( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1719:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxRows( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:698:15: note: overridden declaration is here
+    open func setMaxRows( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3979:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxRows( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1709:15: note: overridden declaration is here
+    open func setMaxRows( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3989:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxRows( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1719:15: note: overridden declaration is here
+    open func setMaxRows( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1727:15: error: overriding declaration requires an 'override' keyword
+    open func setEscapeProcessing( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:706:15: note: overridden declaration is here
+    open func setEscapeProcessing( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1737:15: error: overriding declaration requires an 'override' keyword
+    open func setEscapeProcessing( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:716:15: note: overridden declaration is here
+    open func setEscapeProcessing( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:3997:15: error: overriding declaration requires an 'override' keyword
+    open func setEscapeProcessing( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1727:15: note: overridden declaration is here
+    open func setEscapeProcessing( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4007:15: error: overriding declaration requires an 'override' keyword
+    open func setEscapeProcessing( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1737:15: note: overridden declaration is here
+    open func setEscapeProcessing( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1745:15: error: overriding declaration requires an 'override' keyword
+    open func getQueryTimeout() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:724:15: note: overridden declaration is here
+    open func getQueryTimeout() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:4015:15: error: overriding declaration requires an 'override' keyword
+    open func getQueryTimeout() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1745:15: note: overridden declaration is here
+    open func getQueryTimeout() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1760:15: error: overriding declaration requires an 'override' keyword
+    open func setQueryTimeout( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:739:15: note: overridden declaration is here
+    open func setQueryTimeout( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1770:15: error: overriding declaration requires an 'override' keyword
+    open func setQueryTimeout( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:749:15: note: overridden declaration is here
+    open func setQueryTimeout( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4030:15: error: overriding declaration requires an 'override' keyword
+    open func setQueryTimeout( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1760:15: note: overridden declaration is here
+    open func setQueryTimeout( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4040:15: error: overriding declaration requires an 'override' keyword
+    open func setQueryTimeout( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1770:15: note: overridden declaration is here
+    open func setQueryTimeout( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1778:15: error: overriding declaration requires an 'override' keyword
+    open func cancel() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:757:15: note: overridden declaration is here
+    open func cancel() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4048:15: error: overriding declaration requires an 'override' keyword
+    open func cancel() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1778:15: note: overridden declaration is here
+    open func cancel() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1792:15: error: overriding declaration requires an 'override' keyword
+    open func setCursorName( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:771:15: note: overridden declaration is here
+    open func setCursorName( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1802:15: error: overriding declaration requires an 'override' keyword
+    open func setCursorName( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:781:15: note: overridden declaration is here
+    open func setCursorName( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4062:15: error: overriding declaration requires an 'override' keyword
+    open func setCursorName( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1792:15: note: overridden declaration is here
+    open func setCursorName( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4072:15: error: overriding declaration requires an 'override' keyword
+    open func setCursorName( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1802:15: note: overridden declaration is here
+    open func setCursorName( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1810:15: error: overriding declaration requires an 'override' keyword
+    open func getUpdateCount() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:789:15: note: overridden declaration is here
+    open func getUpdateCount() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:4080:15: error: overriding declaration requires an 'override' keyword
+    open func getUpdateCount() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1810:15: note: overridden declaration is here
+    open func getUpdateCount() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1825:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults( arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:804:15: note: overridden declaration is here
+    open func getMoreResults( arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1836:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults( _ _arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:815:15: note: overridden declaration is here
+    open func getMoreResults( _ _arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1844:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:823:15: note: overridden declaration is here
+    open func getMoreResults() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:4095:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults( arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1825:15: note: overridden declaration is here
+    open func getMoreResults( arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:4106:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults( _ _arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1836:15: note: overridden declaration is here
+    open func getMoreResults( _ _arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:4114:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1844:15: note: overridden declaration is here
+    open func getMoreResults() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1859:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetConcurrency() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:838:15: note: overridden declaration is here
+    open func getResultSetConcurrency() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:4129:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetConcurrency() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1859:15: note: overridden declaration is here
+    open func getResultSetConcurrency() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1874:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetType() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:853:15: note: overridden declaration is here
+    open func getResultSetType() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:4144:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetType() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1874:15: note: overridden declaration is here
+    open func getResultSetType() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1889:15: error: overriding declaration requires an 'override' keyword
+    open func clearBatch() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:868:15: note: overridden declaration is here
+    open func clearBatch() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4159:15: error: overriding declaration requires an 'override' keyword
+    open func clearBatch() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1889:15: note: overridden declaration is here
+    open func clearBatch() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1903:15: error: overriding declaration requires an 'override' keyword
+    open func executeBatch() throws /* java.sql.SQLException */ -> [Int32]! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:882:15: note: overridden declaration is here
+    open func executeBatch() throws /* java.sql.SQLException */ -> [Int32]! {
+              ^
+java_sql/Sources/CallableStatement.swift:4173:15: error: overriding declaration requires an 'override' keyword
+    open func executeBatch() throws /* java.sql.SQLException */ -> [Int32]! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1903:15: note: overridden declaration is here
+    open func executeBatch() throws /* java.sql.SQLException */ -> [Int32]! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1918:15: error: overriding declaration requires an 'override' keyword
+    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:897:15: note: overridden declaration is here
+    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
+              ^
+java_sql/Sources/CallableStatement.swift:4188:15: error: overriding declaration requires an 'override' keyword
+    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1918:15: note: overridden declaration is here
+    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1934:15: error: overriding declaration requires an 'override' keyword
+    open func getGeneratedKeys() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:913:15: note: overridden declaration is here
+    open func getGeneratedKeys() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/CallableStatement.swift:4204:15: error: overriding declaration requires an 'override' keyword
+    open func getGeneratedKeys() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1934:15: note: overridden declaration is here
+    open func getGeneratedKeys() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1950:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:929:15: note: overridden declaration is here
+    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/CallableStatement.swift:4220:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1950:15: note: overridden declaration is here
+    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1965:15: error: overriding declaration requires an 'override' keyword
+    open func setPoolable( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:944:15: note: overridden declaration is here
+    open func setPoolable( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1975:15: error: overriding declaration requires an 'override' keyword
+    open func setPoolable( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:954:15: note: overridden declaration is here
+    open func setPoolable( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4235:15: error: overriding declaration requires an 'override' keyword
+    open func setPoolable( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1965:15: note: overridden declaration is here
+    open func setPoolable( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/CallableStatement.swift:4245:15: error: overriding declaration requires an 'override' keyword
+    open func setPoolable( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1975:15: note: overridden declaration is here
+    open func setPoolable( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1983:15: error: overriding declaration requires an 'override' keyword
+    open func isPoolable() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:962:15: note: overridden declaration is here
+    open func isPoolable() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:4253:15: error: overriding declaration requires an 'override' keyword
+    open func isPoolable() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1983:15: note: overridden declaration is here
+    open func isPoolable() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/Statement.swift:977:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Statement.swift:989:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1998:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:977:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/PreparedStatement.swift:2010:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:989:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/CallableStatement.swift:4268:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:1998:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/CallableStatement.swift:4280:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:2010:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Statement.swift:997:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/Statement.swift:1008:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:2018:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:997:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:2029:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:1008:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:4288:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:2018:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/CallableStatement.swift:4299:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/PreparedStatement.swift:2029:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1353:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:332:15: note: overridden declaration is here
+    open func execute( arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1364:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:343:15: note: overridden declaration is here
+    open func execute( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1372:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:351:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1384:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:363:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1392:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:371:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1404:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:383:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1412:15: error: overriding declaration requires an 'override' keyword
+    open func execute( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:391:15: note: overridden declaration is here
+    open func execute( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1424:15: error: overriding declaration requires an 'override' keyword
+    open func execute( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:403:15: note: overridden declaration is here
+    open func execute( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1544:15: error: overriding declaration requires an 'override' keyword
+    open func executeQuery( arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:523:15: note: overridden declaration is here
+    open func executeQuery( arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1556:15: error: overriding declaration requires an 'override' keyword
+    open func executeQuery( _ _arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:535:15: note: overridden declaration is here
+    open func executeQuery( _ _arg0: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1564:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:543:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1576:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:555:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [String]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1584:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:563:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1596:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:575:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: [Int32]? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1604:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:583:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String?, arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1616:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:595:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String?, _ _arg1: Int ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1624:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:603:15: note: overridden declaration is here
+    open func executeUpdate( arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1635:15: error: overriding declaration requires an 'override' keyword
+    open func executeUpdate( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:614:15: note: overridden declaration is here
+    open func executeUpdate( _ _arg0: String? ) throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1643:15: error: overriding declaration requires an 'override' keyword
+    open func addBatch( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:622:15: note: overridden declaration is here
+    open func addBatch( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1653:15: error: overriding declaration requires an 'override' keyword
+    open func addBatch( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:632:15: note: overridden declaration is here
+    open func addBatch( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1324:15: error: overriding declaration requires an 'override' keyword
+    open func close() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:303:15: note: overridden declaration is here
+    open func close() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1338:15: error: overriding declaration requires an 'override' keyword
+    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:317:15: note: overridden declaration is here
+    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1432:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:411:15: note: overridden declaration is here
+    open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1448:15: error: overriding declaration requires an 'override' keyword
+    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:427:15: note: overridden declaration is here
+    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1464:15: error: overriding declaration requires an 'override' keyword
+    open func clearWarnings() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:443:15: note: overridden declaration is here
+    open func clearWarnings() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1478:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchDirection( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:457:15: note: overridden declaration is here
+    open func setFetchDirection( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1488:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchDirection( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:467:15: note: overridden declaration is here
+    open func setFetchDirection( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1496:15: error: overriding declaration requires an 'override' keyword
+    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:475:15: note: overridden declaration is here
+    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1511:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:490:15: note: overridden declaration is here
+    open func setFetchSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1521:15: error: overriding declaration requires an 'override' keyword
+    open func setFetchSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:500:15: note: overridden declaration is here
+    open func setFetchSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1529:15: error: overriding declaration requires an 'override' keyword
+    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:508:15: note: overridden declaration is here
+    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1661:15: error: overriding declaration requires an 'override' keyword
+    open func getMaxFieldSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:640:15: note: overridden declaration is here
+    open func getMaxFieldSize() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1676:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxFieldSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:655:15: note: overridden declaration is here
+    open func setMaxFieldSize( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1686:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxFieldSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:665:15: note: overridden declaration is here
+    open func setMaxFieldSize( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1694:15: error: overriding declaration requires an 'override' keyword
+    open func getMaxRows() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:673:15: note: overridden declaration is here
+    open func getMaxRows() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1709:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxRows( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:688:15: note: overridden declaration is here
+    open func setMaxRows( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1719:15: error: overriding declaration requires an 'override' keyword
+    open func setMaxRows( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:698:15: note: overridden declaration is here
+    open func setMaxRows( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1727:15: error: overriding declaration requires an 'override' keyword
+    open func setEscapeProcessing( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:706:15: note: overridden declaration is here
+    open func setEscapeProcessing( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1737:15: error: overriding declaration requires an 'override' keyword
+    open func setEscapeProcessing( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:716:15: note: overridden declaration is here
+    open func setEscapeProcessing( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1745:15: error: overriding declaration requires an 'override' keyword
+    open func getQueryTimeout() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:724:15: note: overridden declaration is here
+    open func getQueryTimeout() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1760:15: error: overriding declaration requires an 'override' keyword
+    open func setQueryTimeout( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:739:15: note: overridden declaration is here
+    open func setQueryTimeout( arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1770:15: error: overriding declaration requires an 'override' keyword
+    open func setQueryTimeout( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:749:15: note: overridden declaration is here
+    open func setQueryTimeout( _ _arg0: Int ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1778:15: error: overriding declaration requires an 'override' keyword
+    open func cancel() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:757:15: note: overridden declaration is here
+    open func cancel() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1792:15: error: overriding declaration requires an 'override' keyword
+    open func setCursorName( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:771:15: note: overridden declaration is here
+    open func setCursorName( arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1802:15: error: overriding declaration requires an 'override' keyword
+    open func setCursorName( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:781:15: note: overridden declaration is here
+    open func setCursorName( _ _arg0: String? ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1810:15: error: overriding declaration requires an 'override' keyword
+    open func getUpdateCount() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:789:15: note: overridden declaration is here
+    open func getUpdateCount() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1825:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults( arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:804:15: note: overridden declaration is here
+    open func getMoreResults( arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1836:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults( _ _arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:815:15: note: overridden declaration is here
+    open func getMoreResults( _ _arg0: Int ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1844:15: error: overriding declaration requires an 'override' keyword
+    open func getMoreResults() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:823:15: note: overridden declaration is here
+    open func getMoreResults() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:1859:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetConcurrency() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:838:15: note: overridden declaration is here
+    open func getResultSetConcurrency() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1874:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetType() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:853:15: note: overridden declaration is here
+    open func getResultSetType() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1889:15: error: overriding declaration requires an 'override' keyword
+    open func clearBatch() throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:868:15: note: overridden declaration is here
+    open func clearBatch() throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1903:15: error: overriding declaration requires an 'override' keyword
+    open func executeBatch() throws /* java.sql.SQLException */ -> [Int32]! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:882:15: note: overridden declaration is here
+    open func executeBatch() throws /* java.sql.SQLException */ -> [Int32]! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1918:15: error: overriding declaration requires an 'override' keyword
+    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:897:15: note: overridden declaration is here
+    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1934:15: error: overriding declaration requires an 'override' keyword
+    open func getGeneratedKeys() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:913:15: note: overridden declaration is here
+    open func getGeneratedKeys() throws /* java.sql.SQLException */ -> ResultSet! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1950:15: error: overriding declaration requires an 'override' keyword
+    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
+              ^
+         override 
+java_sql/Sources/Statement.swift:929:15: note: overridden declaration is here
+    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
+              ^
+java_sql/Sources/PreparedStatement.swift:1965:15: error: overriding declaration requires an 'override' keyword
+    open func setPoolable( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:944:15: note: overridden declaration is here
+    open func setPoolable( arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1975:15: error: overriding declaration requires an 'override' keyword
+    open func setPoolable( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+         override 
+java_sql/Sources/Statement.swift:954:15: note: overridden declaration is here
+    open func setPoolable( _ _arg0: Bool ) throws /* java.sql.SQLException */ {
+              ^
+java_sql/Sources/PreparedStatement.swift:1983:15: error: overriding declaration requires an 'override' keyword
+    open func isPoolable() throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:962:15: note: overridden declaration is here
+    open func isPoolable() throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/Statement.swift:977:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Statement.swift:989:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/PreparedStatement.swift:1998:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:977:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/PreparedStatement.swift:2010:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Statement.swift:989:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/Statement.swift:997:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/Statement.swift:1008:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:2018:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:997:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/PreparedStatement.swift:2029:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Statement.swift:1008:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+Build settings from command line:
+    SYMROOT = /tmp
+java_sql/Sources/ResultSetMetaData.swift:563:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSetMetaData.swift:575:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSetMetaData.swift:583:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ResultSetMetaData.swift:594:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ParameterMetaData.swift:335:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ParameterMetaData.swift:347:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ParameterMetaData.swift:355:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ParameterMetaData.swift:366:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ParameterMetaData.swift:335:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ParameterMetaData.swift:347:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ParameterMetaData.swift:355:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ParameterMetaData.swift:366:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4448:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4460:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4468:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4479:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ParameterMetaData.swift:335:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ParameterMetaData.swift:347:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ParameterMetaData.swift:355:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ParameterMetaData.swift:366:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4448:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4460:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4468:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/DatabaseMetaData.swift:4479:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ResultSetMetaData.swift:563:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:29:15: note: overridden declaration is here
+    open func unwrap( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSetMetaData.swift:575:15: error: overriding declaration requires an 'override' keyword
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:41:15: note: overridden declaration is here
+    open func unwrap( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> java_lang.JavaObject! {
+              ^
+java_sql/Sources/ResultSetMetaData.swift:583:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:49:15: note: overridden declaration is here
+    open func isWrapperFor( arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+java_sql/Sources/ResultSetMetaData.swift:594:15: error: overriding declaration requires an 'override' keyword
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
+         override 
+java_sql/Sources/Wrapper.swift:60:15: note: overridden declaration is here
+    open func isWrapperFor( _ _arg0: java_lang.Class? ) throws /* java.sql.SQLException */ -> Bool {
+              ^
