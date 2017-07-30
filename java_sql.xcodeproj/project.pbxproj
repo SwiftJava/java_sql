@@ -258,7 +258,7 @@
 					BBBF2E5C1D49A058004142AE = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeamName = "John Holdsworth";
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
 				};
