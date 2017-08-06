@@ -57,6 +57,10 @@
 		BB3409671E08B08100DA5E5E /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3409371E08B08100DA5E5E /* Wrapper.swift */; };
 		BBBF2E951D49A0DA004142AE /* java_sql.h in Headers */ = {isa = PBXBuildFile; fileRef = BBBF2E911D49A0DA004142AE /* java_sql.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBBF2F021D49A12A004142AE /* java_util.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBF2F011D49A12A004142AE /* java_util.framework */; };
+		CEC963F91F2EBB2200F11259 /* SQLType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC963F51F2EBB2200F11259 /* SQLType.swift */; };
+		CEC963FA1F2EBB2200F11259 /* DriverAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC963F61F2EBB2200F11259 /* DriverAction.swift */; };
+		CEC963FB1F2EBB2200F11259 /* PseudoColumnUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC963F71F2EBB2200F11259 /* PseudoColumnUsage.swift */; };
+		CEC963FC1F2EBB2200F11259 /* JDBCType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC963F81F2EBB2200F11259 /* JDBCType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +119,10 @@
 		BBBF2E911D49A0DA004142AE /* java_sql.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = java_sql.h; sourceTree = "<group>"; };
 		BBBF2E921D49A0DA004142AE /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BBBF2F011D49A12A004142AE /* java_util.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = java_util.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftJava-bhwyspxgviouaubrunixdmmpgggl/Build/Products/Debug/java_util.framework"; sourceTree = "<group>"; };
+		CEC963F51F2EBB2200F11259 /* SQLType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLType.swift; path = Sources/SQLType.swift; sourceTree = "<group>"; };
+		CEC963F61F2EBB2200F11259 /* DriverAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverAction.swift; path = Sources/DriverAction.swift; sourceTree = "<group>"; };
+		CEC963F71F2EBB2200F11259 /* PseudoColumnUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PseudoColumnUsage.swift; path = Sources/PseudoColumnUsage.swift; sourceTree = "<group>"; };
+		CEC963F81F2EBB2200F11259 /* JDBCType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDBCType.swift; path = Sources/JDBCType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,10 @@
 		BBBF2E971D49A0F5004142AE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CEC963F61F2EBB2200F11259 /* DriverAction.swift */,
+				CEC963F81F2EBB2200F11259 /* JDBCType.swift */,
+				CEC963F71F2EBB2200F11259 /* PseudoColumnUsage.swift */,
+				CEC963F51F2EBB2200F11259 /* SQLType.swift */,
 				BB3409081E08B08100DA5E5E /* Array.swift */,
 				BB3409091E08B08100DA5E5E /* BatchUpdateException.swift */,
 				BB34090A1E08B08100DA5E5E /* Blob.swift */,
@@ -252,7 +264,7 @@
 		BBBF2E541D49A058004142AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "John Holdsworth";
 				TargetAttributes = {
 					BBBF2E5C1D49A058004142AE = {
@@ -296,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB3409501E08B08100DA5E5E /* SQLDataException.swift in Sources */,
+				CEC963F91F2EBB2200F11259 /* SQLType.swift in Sources */,
 				BB3409421E08B08100DA5E5E /* Driver.swift in Sources */,
 				BB34093A1E08B08100DA5E5E /* Blob.swift in Sources */,
 				BB34094E1E08B08100DA5E5E /* SQLClientInfoException.swift in Sources */,
@@ -312,13 +325,16 @@
 				BB3409651E08B08100DA5E5E /* Timestamp.swift in Sources */,
 				BB34094C1E08B08100DA5E5E /* RowIdLifetime.swift in Sources */,
 				BB34094B1E08B08100DA5E5E /* RowId.swift in Sources */,
+				CEC963FC1F2EBB2200F11259 /* JDBCType.swift in Sources */,
 				BB3409611E08B08100DA5E5E /* SQLXML.swift in Sources */,
+				CEC963FA1F2EBB2200F11259 /* DriverAction.swift in Sources */,
 				BB3409661E08B08100DA5E5E /* Types.swift in Sources */,
 				BB34094F1E08B08100DA5E5E /* SQLData.swift in Sources */,
 				BB34095D1E08B08100DA5E5E /* SQLTransactionRollbackException.swift in Sources */,
 				BB3409621E08B08100DA5E5E /* Statement.swift in Sources */,
 				BB3409391E08B08100DA5E5E /* BatchUpdateException.swift in Sources */,
 				BB3409481E08B08100DA5E5E /* Ref.swift in Sources */,
+				CEC963FB1F2EBB2200F11259 /* PseudoColumnUsage.swift in Sources */,
 				BB34093C1E08B08100DA5E5E /* ClientInfoStatus.swift in Sources */,
 				BB3409531E08B08100DA5E5E /* SQLInput.swift in Sources */,
 				BB3409451E08B08100DA5E5E /* NClob.swift in Sources */,
@@ -358,7 +374,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -366,7 +384,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -410,7 +432,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -418,7 +442,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
