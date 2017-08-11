@@ -224,21 +224,21 @@ public protocol PreparedStatement: Statement {
 
     func executeLargeUpdate() throws /* java.sql.SQLException */ -> Int64
 
-    /// public abstract java.sql.ResultSetMetaData java.sql.PreparedStatement.getMetaData() throws java.sql.SQLException
+    /// public abstract void java.sql.PreparedStatement.setTime(int,java.sql.Time,java.util.Calendar) throws java.sql.SQLException
 
-    func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData!
-
-    /// public abstract void java.sql.PreparedStatement.setURL(int,java.net.URL) throws java.sql.SQLException
-
-    func setURL( parameterIndex: Int, x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */
+    func setTime( parameterIndex: Int, x: Time?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.PreparedStatement.setTime(int,java.sql.Time) throws java.sql.SQLException
 
     func setTime( parameterIndex: Int, x: Time? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.PreparedStatement.setTime(int,java.sql.Time,java.util.Calendar) throws java.sql.SQLException
+    /// public abstract void java.sql.PreparedStatement.setURL(int,java.net.URL) throws java.sql.SQLException
 
-    func setTime( parameterIndex: Int, x: Time?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */
+    func setURL( parameterIndex: Int, x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */
+
+    /// public abstract java.sql.ResultSetMetaData java.sql.PreparedStatement.getMetaData() throws java.sql.SQLException
+
+    func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData!
 
 }
 
@@ -403,8 +403,8 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: cal, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTimestamp", methodSig: "(ILjava/sql/Timestamp;Ljava/util/Calendar;)V", methodCache: &PreparedStatementForward.setTimestamp_MethodID_67, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -423,7 +423,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTimestamp", methodSig: "(ILjava/sql/Timestamp;)V", methodCache: &PreparedStatementForward.setTimestamp_MethodID_68, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -442,7 +442,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setObject", methodSig: "(ILjava/lang/Object;I)V", methodCache: &PreparedStatementForward.setObject_MethodID_69, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -462,7 +462,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setObject", methodSig: "(ILjava/lang/Object;Ljava/sql/SQLType;)V", methodCache: &PreparedStatementForward.setObject_MethodID_70, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -482,7 +482,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
         __args[3] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setObject", methodSig: "(ILjava/lang/Object;Ljava/sql/SQLType;I)V", methodCache: &PreparedStatementForward.setObject_MethodID_71, args: &__args, locals: &__locals )
@@ -503,7 +503,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
         __args[3] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setObject", methodSig: "(ILjava/lang/Object;II)V", methodCache: &PreparedStatementForward.setObject_MethodID_72, args: &__args, locals: &__locals )
@@ -524,7 +524,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setObject", methodSig: "(ILjava/lang/Object;)V", methodCache: &PreparedStatementForward.setObject_MethodID_73, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -562,7 +562,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setBinaryStream", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &PreparedStatementForward.setBinaryStream_MethodID_75, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -582,7 +582,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setBinaryStream", methodSig: "(ILjava/io/InputStream;)V", methodCache: &PreparedStatementForward.setBinaryStream_MethodID_76, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -601,7 +601,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setBinaryStream", methodSig: "(ILjava/io/InputStream;I)V", methodCache: &PreparedStatementForward.setBinaryStream_MethodID_77, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -660,7 +660,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setBigDecimal", methodSig: "(ILjava/math/BigDecimal;)V", methodCache: &PreparedStatementForward.setBigDecimal_MethodID_80, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -698,8 +698,8 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: cal, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setDate", methodSig: "(ILjava/sql/Date;Ljava/util/Calendar;)V", methodCache: &PreparedStatementForward.setDate_MethodID_82, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -718,7 +718,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setDate", methodSig: "(ILjava/sql/Date;)V", methodCache: &PreparedStatementForward.setDate_MethodID_83, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -737,7 +737,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setAsciiStream", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &PreparedStatementForward.setAsciiStream_MethodID_84, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -757,7 +757,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setAsciiStream", methodSig: "(ILjava/io/InputStream;I)V", methodCache: &PreparedStatementForward.setAsciiStream_MethodID_85, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -777,7 +777,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setAsciiStream", methodSig: "(ILjava/io/InputStream;)V", methodCache: &PreparedStatementForward.setAsciiStream_MethodID_86, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -796,7 +796,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setCharacterStream", methodSig: "(ILjava/io/Reader;)V", methodCache: &PreparedStatementForward.setCharacterStream_MethodID_87, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -815,7 +815,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setCharacterStream", methodSig: "(ILjava/io/Reader;J)V", methodCache: &PreparedStatementForward.setCharacterStream_MethodID_88, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -835,7 +835,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setCharacterStream", methodSig: "(ILjava/io/Reader;I)V", methodCache: &PreparedStatementForward.setCharacterStream_MethodID_89, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -893,7 +893,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: value != nil ? value! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: value, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNCharacterStream", methodSig: "(ILjava/io/Reader;J)V", methodCache: &PreparedStatementForward.setNCharacterStream_MethodID_92, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -913,7 +913,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: value != nil ? value! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: value, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNCharacterStream", methodSig: "(ILjava/io/Reader;)V", methodCache: &PreparedStatementForward.setNCharacterStream_MethodID_93, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -951,7 +951,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNClob", methodSig: "(ILjava/io/Reader;J)V", methodCache: &PreparedStatementForward.setNClob_MethodID_95, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -971,7 +971,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNClob", methodSig: "(ILjava/io/Reader;)V", methodCache: &PreparedStatementForward.setNClob_MethodID_96, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -990,7 +990,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setClob", methodSig: "(ILjava/io/Reader;J)V", methodCache: &PreparedStatementForward.setClob_MethodID_97, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -1029,7 +1029,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setClob", methodSig: "(ILjava/io/Reader;)V", methodCache: &PreparedStatementForward.setClob_MethodID_99, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -1048,7 +1048,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: inputStream != nil ? inputStream! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: inputStream, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setBlob", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &PreparedStatementForward.setBlob_MethodID_100, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -1068,7 +1068,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: inputStream != nil ? inputStream! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: inputStream, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setBlob", methodSig: "(ILjava/io/InputStream;)V", methodCache: &PreparedStatementForward.setBlob_MethodID_101, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -1156,7 +1156,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
         __args[2] = JNIType.toJava( value: length, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setUnicodeStream", methodSig: "(ILjava/io/InputStream;I)V", methodCache: &PreparedStatementForward.setUnicodeStream_MethodID_106, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -1265,51 +1265,36 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
     }
 
 
-    /// public abstract java.sql.ResultSetMetaData java.sql.PreparedStatement.getMetaData() throws java.sql.SQLException
+    /// public abstract void java.sql.PreparedStatement.setTime(int,java.sql.Time,java.util.Calendar) throws java.sql.SQLException
 
-    private static var getMetaData_MethodID_113: jmethodID?
+    private static var setTime_MethodID_113: jmethodID?
 
-    open func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMetaData", methodSig: "()Ljava/sql/ResultSetMetaData;", methodCache: &PreparedStatementForward.getMetaData_MethodID_113, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetMetaDataForward( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract void java.sql.PreparedStatement.setURL(int,java.net.URL) throws java.sql.SQLException
-
-    private static var setURL_MethodID_114: jmethodID?
-
-    open func setURL( parameterIndex: Int, x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+    open func setTime( parameterIndex: Int, x: Time?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setURL", methodSig: "(ILjava/net/URL;)V", methodCache: &PreparedStatementForward.setURL_MethodID_114, args: &__args, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: cal, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTime", methodSig: "(ILjava/sql/Time;Ljava/util/Calendar;)V", methodCache: &PreparedStatementForward.setTime_MethodID_113, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
     }
 
-    open func setURL( _ _parameterIndex: Int, _ _x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try setURL( parameterIndex: _parameterIndex, x: _x )
+    open func setTime( _ _parameterIndex: Int, _ _x: Time?, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ {
+        try setTime( parameterIndex: _parameterIndex, x: _x, cal: _cal )
     }
 
     /// public abstract void java.sql.PreparedStatement.setTime(int,java.sql.Time) throws java.sql.SQLException
 
-    private static var setTime_MethodID_115: jmethodID?
+    private static var setTime_MethodID_114: jmethodID?
 
     open func setTime( parameterIndex: Int, x: Time? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTime", methodSig: "(ILjava/sql/Time;)V", methodCache: &PreparedStatementForward.setTime_MethodID_115, args: &__args, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTime", methodSig: "(ILjava/sql/Time;)V", methodCache: &PreparedStatementForward.setTime_MethodID_114, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -1319,25 +1304,40 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
         try setTime( parameterIndex: _parameterIndex, x: _x )
     }
 
-    /// public abstract void java.sql.PreparedStatement.setTime(int,java.sql.Time,java.util.Calendar) throws java.sql.SQLException
+    /// public abstract void java.sql.PreparedStatement.setURL(int,java.net.URL) throws java.sql.SQLException
 
-    private static var setTime_MethodID_116: jmethodID?
+    private static var setURL_MethodID_115: jmethodID?
 
-    open func setTime( parameterIndex: Int, x: Time?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+    open func setURL( parameterIndex: Int, x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: parameterIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTime", methodSig: "(ILjava/sql/Time;Ljava/util/Calendar;)V", methodCache: &PreparedStatementForward.setTime_MethodID_116, args: &__args, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setURL", methodSig: "(ILjava/net/URL;)V", methodCache: &PreparedStatementForward.setURL_MethodID_115, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
     }
 
-    open func setTime( _ _parameterIndex: Int, _ _x: Time?, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ {
-        try setTime( parameterIndex: _parameterIndex, x: _x, cal: _cal )
+    open func setURL( _ _parameterIndex: Int, _ _x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try setURL( parameterIndex: _parameterIndex, x: _x )
     }
+
+    /// public abstract java.sql.ResultSetMetaData java.sql.PreparedStatement.getMetaData() throws java.sql.SQLException
+
+    private static var getMetaData_MethodID_116: jmethodID?
+
+    open func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMetaData", methodSig: "()Ljava/sql/ResultSetMetaData;", methodCache: &PreparedStatementForward.getMetaData_MethodID_116, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetMetaDataForward( javaObject: __return ) : nil
+    }
+
 
     /// public abstract boolean java.sql.Statement.execute(java.lang.String,int) throws java.sql.SQLException
 
@@ -2057,14 +2057,30 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
     }
 
 
+    /// public abstract java.sql.ResultSet java.sql.Statement.getResultSet() throws java.sql.SQLException
+
+    private static var getResultSet_MethodID_159: jmethodID?
+
+    override open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getResultSet", methodSig: "()Ljava/sql/ResultSet;", methodCache: &PreparedStatementForward.getResultSet_MethodID_159, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+
     /// public abstract java.sql.SQLWarning java.sql.Statement.getWarnings() throws java.sql.SQLException
 
-    private static var getWarnings_MethodID_159: jmethodID?
+    private static var getWarnings_MethodID_160: jmethodID?
 
     override open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getWarnings", methodSig: "()Ljava/sql/SQLWarning;", methodCache: &PreparedStatementForward.getWarnings_MethodID_159, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getWarnings", methodSig: "()Ljava/sql/SQLWarning;", methodCache: &PreparedStatementForward.getWarnings_MethodID_160, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -2075,12 +2091,12 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
 
     /// public abstract void java.sql.Statement.clearWarnings() throws java.sql.SQLException
 
-    private static var clearWarnings_MethodID_160: jmethodID?
+    private static var clearWarnings_MethodID_161: jmethodID?
 
     override open func clearWarnings() throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "clearWarnings", methodSig: "()V", methodCache: &PreparedStatementForward.clearWarnings_MethodID_160, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "clearWarnings", methodSig: "()V", methodCache: &PreparedStatementForward.clearWarnings_MethodID_161, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -2089,13 +2105,13 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
 
     /// public abstract void java.sql.Statement.setFetchDirection(int) throws java.sql.SQLException
 
-    private static var setFetchDirection_MethodID_161: jmethodID?
+    private static var setFetchDirection_MethodID_162: jmethodID?
 
     override open func setFetchDirection( direction: Int ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: direction, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchDirection", methodSig: "(I)V", methodCache: &PreparedStatementForward.setFetchDirection_MethodID_161, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchDirection", methodSig: "(I)V", methodCache: &PreparedStatementForward.setFetchDirection_MethodID_162, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -2107,12 +2123,12 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
 
     /// public abstract int java.sql.Statement.getFetchDirection() throws java.sql.SQLException
 
-    private static var getFetchDirection_MethodID_162: jmethodID?
+    private static var getFetchDirection_MethodID_163: jmethodID?
 
     override open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchDirection", methodSig: "()I", methodCache: &PreparedStatementForward.getFetchDirection_MethodID_162, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchDirection", methodSig: "()I", methodCache: &PreparedStatementForward.getFetchDirection_MethodID_163, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -2122,13 +2138,13 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
 
     /// public abstract void java.sql.Statement.setFetchSize(int) throws java.sql.SQLException
 
-    private static var setFetchSize_MethodID_163: jmethodID?
+    private static var setFetchSize_MethodID_164: jmethodID?
 
     override open func setFetchSize( rows: Int ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: rows, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchSize", methodSig: "(I)V", methodCache: &PreparedStatementForward.setFetchSize_MethodID_163, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchSize", methodSig: "(I)V", methodCache: &PreparedStatementForward.setFetchSize_MethodID_164, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -2140,12 +2156,12 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
 
     /// public abstract int java.sql.Statement.getFetchSize() throws java.sql.SQLException
 
-    private static var getFetchSize_MethodID_164: jmethodID?
+    private static var getFetchSize_MethodID_165: jmethodID?
 
     override open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchSize", methodSig: "()I", methodCache: &PreparedStatementForward.getFetchSize_MethodID_164, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchSize", methodSig: "()I", methodCache: &PreparedStatementForward.getFetchSize_MethodID_165, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -2155,32 +2171,16 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
 
     /// public abstract boolean java.sql.Statement.isClosed() throws java.sql.SQLException
 
-    private static var isClosed_MethodID_165: jmethodID?
+    private static var isClosed_MethodID_166: jmethodID?
 
     override open func isClosed() throws /* java.sql.SQLException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isClosed", methodSig: "()Z", methodCache: &PreparedStatementForward.isClosed_MethodID_165, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isClosed", methodSig: "()Z", methodCache: &PreparedStatementForward.isClosed_MethodID_166, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
         return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.sql.ResultSet java.sql.Statement.getResultSet() throws java.sql.SQLException
-
-    private static var getResultSet_MethodID_166: jmethodID?
-
-    override open func getResultSet() throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getResultSet", methodSig: "()Ljava/sql/ResultSet;", methodCache: &PreparedStatementForward.getResultSet_MethodID_166, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
     }
 
 
@@ -2191,7 +2191,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
     override open func unwrap( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unwrap", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &PreparedStatementForward.unwrap_MethodID_167, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -2211,7 +2211,7 @@ open class PreparedStatementForward: StatementForward, PreparedStatement {
     override open func isWrapperFor( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isWrapperFor", methodSig: "(Ljava/lang/Class;)Z", methodCache: &PreparedStatementForward.isWrapperFor_MethodID_168, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )

@@ -63,7 +63,7 @@ open class SQLWarning: SQLException {
     public convenience init( cause: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -81,7 +81,7 @@ open class SQLWarning: SQLException {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -100,7 +100,7 @@ open class SQLWarning: SQLException {
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_3, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -120,7 +120,7 @@ open class SQLWarning: SQLException {
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
         __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
-        __args[3] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_4, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -216,7 +216,7 @@ open class SQLWarning: SQLException {
     open func setNextWarning( w: SQLWarning? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: w != nil ? w! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: w, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNextWarning", methodSig: "(Ljava/sql/SQLWarning;)V", methodCache: &SQLWarning.setNextWarning_MethodID_10, args: &__args, locals: &__locals )
     }
 

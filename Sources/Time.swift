@@ -97,7 +97,7 @@ open class Time: java_util.Date {
     open class func valueOf( time: /* java.time.LocalTime */ UnclassedObject? ) -> Time! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: time != nil ? time! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: time, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Time", classCache: &TimeJNIClass, methodName: "valueOf", methodSig: "(Ljava/time/LocalTime;)Ljava/sql/Time;", methodCache: &valueOf_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Time( javaObject: __return ) : nil
@@ -160,6 +160,10 @@ open class Time: java_util.Date {
 
     /// public int java.sql.Time.getDay()
 
+    /// public void java.sql.Time.setTime(long)
+
+    /// public int java.sql.Time.getDate()
+
     /// public java.time.LocalTime java.sql.Time.toLocalTime()
 
     private static var toLocalTime_MethodID_8: jmethodID?
@@ -172,10 +176,6 @@ open class Time: java_util.Date {
         return __return != nil ? /* java.time.LocalTime */ UnclassedObject( javaObject: __return ) : nil
     }
 
-
-    /// public void java.sql.Time.setTime(long)
-
-    /// public int java.sql.Time.getDate()
 
 }
 

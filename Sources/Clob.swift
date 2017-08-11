@@ -35,6 +35,10 @@ public protocol Clob: JavaProtocol {
 
     /// public abstract java.io.Writer java.sql.Clob.setCharacterStream(long) throws java.sql.SQLException
 
+    /// public abstract void java.sql.Clob.free() throws java.sql.SQLException
+
+    func free() throws /* java.sql.SQLException */
+
     /// public abstract java.lang.String java.sql.Clob.getSubString(long,int) throws java.sql.SQLException
 
     func getSubString( pos: Int64, length: Int ) throws /* java.sql.SQLException */ -> String!
@@ -44,10 +48,6 @@ public protocol Clob: JavaProtocol {
     /// public abstract java.io.Reader java.sql.Clob.getCharacterStream() throws java.sql.SQLException
 
     /// public abstract java.io.Reader java.sql.Clob.getCharacterStream(long,long) throws java.sql.SQLException
-
-    /// public abstract void java.sql.Clob.free() throws java.sql.SQLException
-
-    func free() throws /* java.sql.SQLException */
 
 }
 
@@ -175,16 +175,30 @@ open class ClobForward: JNIObjectForward, Clob {
 
     /// public abstract java.io.Writer java.sql.Clob.setCharacterStream(long) throws java.sql.SQLException
 
+    /// public abstract void java.sql.Clob.free() throws java.sql.SQLException
+
+    private static var free_MethodID_15: jmethodID?
+
+    open func free() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "free", methodSig: "()V", methodCache: &ClobForward.free_MethodID_15, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
     /// public abstract java.lang.String java.sql.Clob.getSubString(long,int) throws java.sql.SQLException
 
-    private static var getSubString_MethodID_15: jmethodID?
+    private static var getSubString_MethodID_16: jmethodID?
 
     open func getSubString( pos: Int64, length: Int ) throws /* java.sql.SQLException */ -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: pos, locals: &__locals )
         __args[1] = JNIType.toJava( value: length, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSubString", methodSig: "(JI)Ljava/lang/String;", methodCache: &ClobForward.getSubString_MethodID_15, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSubString", methodSig: "(JI)Ljava/lang/String;", methodCache: &ClobForward.getSubString_MethodID_16, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -200,20 +214,6 @@ open class ClobForward: JNIObjectForward, Clob {
     /// public abstract java.io.Reader java.sql.Clob.getCharacterStream() throws java.sql.SQLException
 
     /// public abstract java.io.Reader java.sql.Clob.getCharacterStream(long,long) throws java.sql.SQLException
-
-    /// public abstract void java.sql.Clob.free() throws java.sql.SQLException
-
-    private static var free_MethodID_16: jmethodID?
-
-    open func free() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "free", methodSig: "()V", methodCache: &ClobForward.free_MethodID_16, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
 
 }
 

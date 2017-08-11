@@ -101,7 +101,7 @@ open class DataTruncation: SQLWarning {
         __args[2] = JNIType.toJava( value: read, locals: &__locals )
         __args[3] = JNIType.toJava( value: dataSize, locals: &__locals )
         __args[4] = JNIType.toJava( value: transferSize, locals: &__locals )
-        __args[5] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[5] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/DataTruncation", classCache: &DataTruncation.DataTruncationJNIClass, methodSig: "(IZZIILjava/lang/Throwable;)V", methodCache: &DataTruncation.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )

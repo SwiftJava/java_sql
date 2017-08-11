@@ -23,6 +23,38 @@ public protocol SQLOutput: JavaProtocol {
 
     func writeBytes( x: [Int8]? ) throws /* java.sql.SQLException */
 
+    /// public abstract void java.sql.SQLOutput.writeBoolean(boolean) throws java.sql.SQLException
+
+    func writeBoolean( x: Bool ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.SQLOutput.writeByte(byte) throws java.sql.SQLException
+
+    func writeByte( x: Int8 ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.SQLOutput.writeShort(short) throws java.sql.SQLException
+
+    func writeShort( x: Int16 ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.SQLOutput.writeLong(long) throws java.sql.SQLException
+
+    func writeLong( x: Int64 ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.SQLOutput.writeDouble(double) throws java.sql.SQLException
+
+    func writeDouble( x: Double ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.SQLOutput.writeString(java.lang.String) throws java.sql.SQLException
+
+    func writeString( x: String? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.SQLOutput.writeArray(java.sql.Array) throws java.sql.SQLException
+
+    func writeArray( x: Array? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.SQLOutput.writeFloat(float) throws java.sql.SQLException
+
+    func writeFloat( x: Float ) throws /* java.sql.SQLException */
+
     /// public abstract void java.sql.SQLOutput.writeBigDecimal(java.math.BigDecimal) throws java.sql.SQLException
 
     func writeBigDecimal( x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */
@@ -87,38 +119,6 @@ public protocol SQLOutput: JavaProtocol {
 
     func writeSQLXML( x: SQLXML? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.SQLOutput.writeBoolean(boolean) throws java.sql.SQLException
-
-    func writeBoolean( x: Bool ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.SQLOutput.writeByte(byte) throws java.sql.SQLException
-
-    func writeByte( x: Int8 ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.SQLOutput.writeShort(short) throws java.sql.SQLException
-
-    func writeShort( x: Int16 ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.SQLOutput.writeLong(long) throws java.sql.SQLException
-
-    func writeLong( x: Int64 ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.SQLOutput.writeDouble(double) throws java.sql.SQLException
-
-    func writeDouble( x: Double ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.SQLOutput.writeString(java.lang.String) throws java.sql.SQLException
-
-    func writeString( x: String? ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.SQLOutput.writeArray(java.sql.Array) throws java.sql.SQLException
-
-    func writeArray( x: Array? ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.SQLOutput.writeFloat(float) throws java.sql.SQLException
-
-    func writeFloat( x: Float ) throws /* java.sql.SQLException */
-
 }
 
 
@@ -133,7 +133,7 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
     open func writeObject( x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
         __args[1] = JNIType.toJava( value: targetSqlType, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeObject", methodSig: "(Ljava/lang/Object;Ljava/sql/SQLType;)V", methodCache: &SQLOutputForward.writeObject_MethodID_29, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
@@ -199,303 +199,15 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
         try writeBytes( x: _x )
     }
 
-    /// public abstract void java.sql.SQLOutput.writeBigDecimal(java.math.BigDecimal) throws java.sql.SQLException
-
-    private static var writeBigDecimal_MethodID_33: jmethodID?
-
-    open func writeBigDecimal( x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBigDecimal", methodSig: "(Ljava/math/BigDecimal;)V", methodCache: &SQLOutputForward.writeBigDecimal_MethodID_33, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeBigDecimal( _ _x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try writeBigDecimal( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeDate(java.sql.Date) throws java.sql.SQLException
-
-    private static var writeDate_MethodID_34: jmethodID?
-
-    open func writeDate( x: Date? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeDate", methodSig: "(Ljava/sql/Date;)V", methodCache: &SQLOutputForward.writeDate_MethodID_34, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeDate( _ _x: Date? ) throws /* java.sql.SQLException */ {
-        try writeDate( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeTime(java.sql.Time) throws java.sql.SQLException
-
-    private static var writeTime_MethodID_35: jmethodID?
-
-    open func writeTime( x: Time? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeTime", methodSig: "(Ljava/sql/Time;)V", methodCache: &SQLOutputForward.writeTime_MethodID_35, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeTime( _ _x: Time? ) throws /* java.sql.SQLException */ {
-        try writeTime( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeTimestamp(java.sql.Timestamp) throws java.sql.SQLException
-
-    private static var writeTimestamp_MethodID_36: jmethodID?
-
-    open func writeTimestamp( x: Timestamp? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeTimestamp", methodSig: "(Ljava/sql/Timestamp;)V", methodCache: &SQLOutputForward.writeTimestamp_MethodID_36, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeTimestamp( _ _x: Timestamp? ) throws /* java.sql.SQLException */ {
-        try writeTimestamp( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeCharacterStream(java.io.Reader) throws java.sql.SQLException
-
-    private static var writeCharacterStream_MethodID_37: jmethodID?
-
-    open func writeCharacterStream( x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeCharacterStream", methodSig: "(Ljava/io/Reader;)V", methodCache: &SQLOutputForward.writeCharacterStream_MethodID_37, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeCharacterStream( _ _x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try writeCharacterStream( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeAsciiStream(java.io.InputStream) throws java.sql.SQLException
-
-    private static var writeAsciiStream_MethodID_38: jmethodID?
-
-    open func writeAsciiStream( x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeAsciiStream", methodSig: "(Ljava/io/InputStream;)V", methodCache: &SQLOutputForward.writeAsciiStream_MethodID_38, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeAsciiStream( _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try writeAsciiStream( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeBinaryStream(java.io.InputStream) throws java.sql.SQLException
-
-    private static var writeBinaryStream_MethodID_39: jmethodID?
-
-    open func writeBinaryStream( x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBinaryStream", methodSig: "(Ljava/io/InputStream;)V", methodCache: &SQLOutputForward.writeBinaryStream_MethodID_39, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeBinaryStream( _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try writeBinaryStream( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeRef(java.sql.Ref) throws java.sql.SQLException
-
-    private static var writeRef_MethodID_40: jmethodID?
-
-    open func writeRef( x: Ref? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeRef", methodSig: "(Ljava/sql/Ref;)V", methodCache: &SQLOutputForward.writeRef_MethodID_40, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeRef( _ _x: Ref? ) throws /* java.sql.SQLException */ {
-        try writeRef( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeBlob(java.sql.Blob) throws java.sql.SQLException
-
-    private static var writeBlob_MethodID_41: jmethodID?
-
-    open func writeBlob( x: Blob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBlob", methodSig: "(Ljava/sql/Blob;)V", methodCache: &SQLOutputForward.writeBlob_MethodID_41, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeBlob( _ _x: Blob? ) throws /* java.sql.SQLException */ {
-        try writeBlob( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeClob(java.sql.Clob) throws java.sql.SQLException
-
-    private static var writeClob_MethodID_42: jmethodID?
-
-    open func writeClob( x: Clob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeClob", methodSig: "(Ljava/sql/Clob;)V", methodCache: &SQLOutputForward.writeClob_MethodID_42, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeClob( _ _x: Clob? ) throws /* java.sql.SQLException */ {
-        try writeClob( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeStruct(java.sql.Struct) throws java.sql.SQLException
-
-    private static var writeStruct_MethodID_43: jmethodID?
-
-    open func writeStruct( x: Struct? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeStruct", methodSig: "(Ljava/sql/Struct;)V", methodCache: &SQLOutputForward.writeStruct_MethodID_43, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeStruct( _ _x: Struct? ) throws /* java.sql.SQLException */ {
-        try writeStruct( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeURL(java.net.URL) throws java.sql.SQLException
-
-    private static var writeURL_MethodID_44: jmethodID?
-
-    open func writeURL( x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeURL", methodSig: "(Ljava/net/URL;)V", methodCache: &SQLOutputForward.writeURL_MethodID_44, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeURL( _ _x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try writeURL( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeNString(java.lang.String) throws java.sql.SQLException
-
-    private static var writeNString_MethodID_45: jmethodID?
-
-    open func writeNString( x: String? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeNString", methodSig: "(Ljava/lang/String;)V", methodCache: &SQLOutputForward.writeNString_MethodID_45, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeNString( _ _x: String? ) throws /* java.sql.SQLException */ {
-        try writeNString( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeNClob(java.sql.NClob) throws java.sql.SQLException
-
-    private static var writeNClob_MethodID_46: jmethodID?
-
-    open func writeNClob( x: NClob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeNClob", methodSig: "(Ljava/sql/NClob;)V", methodCache: &SQLOutputForward.writeNClob_MethodID_46, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeNClob( _ _x: NClob? ) throws /* java.sql.SQLException */ {
-        try writeNClob( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeRowId(java.sql.RowId) throws java.sql.SQLException
-
-    private static var writeRowId_MethodID_47: jmethodID?
-
-    open func writeRowId( x: RowId? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeRowId", methodSig: "(Ljava/sql/RowId;)V", methodCache: &SQLOutputForward.writeRowId_MethodID_47, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeRowId( _ _x: RowId? ) throws /* java.sql.SQLException */ {
-        try writeRowId( x: _x )
-    }
-
-    /// public abstract void java.sql.SQLOutput.writeSQLXML(java.sql.SQLXML) throws java.sql.SQLException
-
-    private static var writeSQLXML_MethodID_48: jmethodID?
-
-    open func writeSQLXML( x: SQLXML? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeSQLXML", methodSig: "(Ljava/sql/SQLXML;)V", methodCache: &SQLOutputForward.writeSQLXML_MethodID_48, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func writeSQLXML( _ _x: SQLXML? ) throws /* java.sql.SQLException */ {
-        try writeSQLXML( x: _x )
-    }
-
     /// public abstract void java.sql.SQLOutput.writeBoolean(boolean) throws java.sql.SQLException
 
-    private static var writeBoolean_MethodID_49: jmethodID?
+    private static var writeBoolean_MethodID_33: jmethodID?
 
     open func writeBoolean( x: Bool ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBoolean", methodSig: "(Z)V", methodCache: &SQLOutputForward.writeBoolean_MethodID_49, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBoolean", methodSig: "(Z)V", methodCache: &SQLOutputForward.writeBoolean_MethodID_33, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -507,13 +219,13 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     /// public abstract void java.sql.SQLOutput.writeByte(byte) throws java.sql.SQLException
 
-    private static var writeByte_MethodID_50: jmethodID?
+    private static var writeByte_MethodID_34: jmethodID?
 
     open func writeByte( x: Int8 ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeByte", methodSig: "(B)V", methodCache: &SQLOutputForward.writeByte_MethodID_50, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeByte", methodSig: "(B)V", methodCache: &SQLOutputForward.writeByte_MethodID_34, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -525,13 +237,13 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     /// public abstract void java.sql.SQLOutput.writeShort(short) throws java.sql.SQLException
 
-    private static var writeShort_MethodID_51: jmethodID?
+    private static var writeShort_MethodID_35: jmethodID?
 
     open func writeShort( x: Int16 ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeShort", methodSig: "(S)V", methodCache: &SQLOutputForward.writeShort_MethodID_51, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeShort", methodSig: "(S)V", methodCache: &SQLOutputForward.writeShort_MethodID_35, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -543,13 +255,13 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     /// public abstract void java.sql.SQLOutput.writeLong(long) throws java.sql.SQLException
 
-    private static var writeLong_MethodID_52: jmethodID?
+    private static var writeLong_MethodID_36: jmethodID?
 
     open func writeLong( x: Int64 ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeLong", methodSig: "(J)V", methodCache: &SQLOutputForward.writeLong_MethodID_52, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeLong", methodSig: "(J)V", methodCache: &SQLOutputForward.writeLong_MethodID_36, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -561,13 +273,13 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     /// public abstract void java.sql.SQLOutput.writeDouble(double) throws java.sql.SQLException
 
-    private static var writeDouble_MethodID_53: jmethodID?
+    private static var writeDouble_MethodID_37: jmethodID?
 
     open func writeDouble( x: Double ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeDouble", methodSig: "(D)V", methodCache: &SQLOutputForward.writeDouble_MethodID_53, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeDouble", methodSig: "(D)V", methodCache: &SQLOutputForward.writeDouble_MethodID_37, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -579,13 +291,13 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     /// public abstract void java.sql.SQLOutput.writeString(java.lang.String) throws java.sql.SQLException
 
-    private static var writeString_MethodID_54: jmethodID?
+    private static var writeString_MethodID_38: jmethodID?
 
     open func writeString( x: String? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeString", methodSig: "(Ljava/lang/String;)V", methodCache: &SQLOutputForward.writeString_MethodID_54, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeString", methodSig: "(Ljava/lang/String;)V", methodCache: &SQLOutputForward.writeString_MethodID_38, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -597,13 +309,13 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     /// public abstract void java.sql.SQLOutput.writeArray(java.sql.Array) throws java.sql.SQLException
 
-    private static var writeArray_MethodID_55: jmethodID?
+    private static var writeArray_MethodID_39: jmethodID?
 
     open func writeArray( x: Array? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeArray", methodSig: "(Ljava/sql/Array;)V", methodCache: &SQLOutputForward.writeArray_MethodID_55, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeArray", methodSig: "(Ljava/sql/Array;)V", methodCache: &SQLOutputForward.writeArray_MethodID_39, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -615,13 +327,13 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     /// public abstract void java.sql.SQLOutput.writeFloat(float) throws java.sql.SQLException
 
-    private static var writeFloat_MethodID_56: jmethodID?
+    private static var writeFloat_MethodID_40: jmethodID?
 
     open func writeFloat( x: Float ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeFloat", methodSig: "(F)V", methodCache: &SQLOutputForward.writeFloat_MethodID_56, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeFloat", methodSig: "(F)V", methodCache: &SQLOutputForward.writeFloat_MethodID_40, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -629,6 +341,294 @@ open class SQLOutputForward: JNIObjectForward, SQLOutput {
 
     open func writeFloat( _ _x: Float ) throws /* java.sql.SQLException */ {
         try writeFloat( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeBigDecimal(java.math.BigDecimal) throws java.sql.SQLException
+
+    private static var writeBigDecimal_MethodID_41: jmethodID?
+
+    open func writeBigDecimal( x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBigDecimal", methodSig: "(Ljava/math/BigDecimal;)V", methodCache: &SQLOutputForward.writeBigDecimal_MethodID_41, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeBigDecimal( _ _x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try writeBigDecimal( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeDate(java.sql.Date) throws java.sql.SQLException
+
+    private static var writeDate_MethodID_42: jmethodID?
+
+    open func writeDate( x: Date? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeDate", methodSig: "(Ljava/sql/Date;)V", methodCache: &SQLOutputForward.writeDate_MethodID_42, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeDate( _ _x: Date? ) throws /* java.sql.SQLException */ {
+        try writeDate( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeTime(java.sql.Time) throws java.sql.SQLException
+
+    private static var writeTime_MethodID_43: jmethodID?
+
+    open func writeTime( x: Time? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeTime", methodSig: "(Ljava/sql/Time;)V", methodCache: &SQLOutputForward.writeTime_MethodID_43, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeTime( _ _x: Time? ) throws /* java.sql.SQLException */ {
+        try writeTime( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeTimestamp(java.sql.Timestamp) throws java.sql.SQLException
+
+    private static var writeTimestamp_MethodID_44: jmethodID?
+
+    open func writeTimestamp( x: Timestamp? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeTimestamp", methodSig: "(Ljava/sql/Timestamp;)V", methodCache: &SQLOutputForward.writeTimestamp_MethodID_44, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeTimestamp( _ _x: Timestamp? ) throws /* java.sql.SQLException */ {
+        try writeTimestamp( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeCharacterStream(java.io.Reader) throws java.sql.SQLException
+
+    private static var writeCharacterStream_MethodID_45: jmethodID?
+
+    open func writeCharacterStream( x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeCharacterStream", methodSig: "(Ljava/io/Reader;)V", methodCache: &SQLOutputForward.writeCharacterStream_MethodID_45, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeCharacterStream( _ _x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try writeCharacterStream( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeAsciiStream(java.io.InputStream) throws java.sql.SQLException
+
+    private static var writeAsciiStream_MethodID_46: jmethodID?
+
+    open func writeAsciiStream( x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeAsciiStream", methodSig: "(Ljava/io/InputStream;)V", methodCache: &SQLOutputForward.writeAsciiStream_MethodID_46, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeAsciiStream( _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try writeAsciiStream( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeBinaryStream(java.io.InputStream) throws java.sql.SQLException
+
+    private static var writeBinaryStream_MethodID_47: jmethodID?
+
+    open func writeBinaryStream( x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBinaryStream", methodSig: "(Ljava/io/InputStream;)V", methodCache: &SQLOutputForward.writeBinaryStream_MethodID_47, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeBinaryStream( _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try writeBinaryStream( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeRef(java.sql.Ref) throws java.sql.SQLException
+
+    private static var writeRef_MethodID_48: jmethodID?
+
+    open func writeRef( x: Ref? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeRef", methodSig: "(Ljava/sql/Ref;)V", methodCache: &SQLOutputForward.writeRef_MethodID_48, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeRef( _ _x: Ref? ) throws /* java.sql.SQLException */ {
+        try writeRef( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeBlob(java.sql.Blob) throws java.sql.SQLException
+
+    private static var writeBlob_MethodID_49: jmethodID?
+
+    open func writeBlob( x: Blob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeBlob", methodSig: "(Ljava/sql/Blob;)V", methodCache: &SQLOutputForward.writeBlob_MethodID_49, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeBlob( _ _x: Blob? ) throws /* java.sql.SQLException */ {
+        try writeBlob( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeClob(java.sql.Clob) throws java.sql.SQLException
+
+    private static var writeClob_MethodID_50: jmethodID?
+
+    open func writeClob( x: Clob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeClob", methodSig: "(Ljava/sql/Clob;)V", methodCache: &SQLOutputForward.writeClob_MethodID_50, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeClob( _ _x: Clob? ) throws /* java.sql.SQLException */ {
+        try writeClob( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeStruct(java.sql.Struct) throws java.sql.SQLException
+
+    private static var writeStruct_MethodID_51: jmethodID?
+
+    open func writeStruct( x: Struct? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeStruct", methodSig: "(Ljava/sql/Struct;)V", methodCache: &SQLOutputForward.writeStruct_MethodID_51, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeStruct( _ _x: Struct? ) throws /* java.sql.SQLException */ {
+        try writeStruct( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeURL(java.net.URL) throws java.sql.SQLException
+
+    private static var writeURL_MethodID_52: jmethodID?
+
+    open func writeURL( x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeURL", methodSig: "(Ljava/net/URL;)V", methodCache: &SQLOutputForward.writeURL_MethodID_52, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeURL( _ _x: /* java.net.URL */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try writeURL( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeNString(java.lang.String) throws java.sql.SQLException
+
+    private static var writeNString_MethodID_53: jmethodID?
+
+    open func writeNString( x: String? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeNString", methodSig: "(Ljava/lang/String;)V", methodCache: &SQLOutputForward.writeNString_MethodID_53, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeNString( _ _x: String? ) throws /* java.sql.SQLException */ {
+        try writeNString( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeNClob(java.sql.NClob) throws java.sql.SQLException
+
+    private static var writeNClob_MethodID_54: jmethodID?
+
+    open func writeNClob( x: NClob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeNClob", methodSig: "(Ljava/sql/NClob;)V", methodCache: &SQLOutputForward.writeNClob_MethodID_54, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeNClob( _ _x: NClob? ) throws /* java.sql.SQLException */ {
+        try writeNClob( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeRowId(java.sql.RowId) throws java.sql.SQLException
+
+    private static var writeRowId_MethodID_55: jmethodID?
+
+    open func writeRowId( x: RowId? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeRowId", methodSig: "(Ljava/sql/RowId;)V", methodCache: &SQLOutputForward.writeRowId_MethodID_55, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeRowId( _ _x: RowId? ) throws /* java.sql.SQLException */ {
+        try writeRowId( x: _x )
+    }
+
+    /// public abstract void java.sql.SQLOutput.writeSQLXML(java.sql.SQLXML) throws java.sql.SQLException
+
+    private static var writeSQLXML_MethodID_56: jmethodID?
+
+    open func writeSQLXML( x: SQLXML? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeSQLXML", methodSig: "(Ljava/sql/SQLXML;)V", methodCache: &SQLOutputForward.writeSQLXML_MethodID_56, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func writeSQLXML( _ _x: SQLXML? ) throws /* java.sql.SQLException */ {
+        try writeSQLXML( x: _x )
     }
 
 }

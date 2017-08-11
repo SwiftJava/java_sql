@@ -7,7 +7,7 @@ import java_util
 
 /// class java.sql.SQLException ///
 
-open class SQLException: java_lang.Exception, java_lang.Iterable {
+open class SQLException: java_swift.Exception, java_lang.Iterable {
 
     public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
         self.init( javaObject: nil )
@@ -66,7 +66,7 @@ open class SQLException: java_lang.Exception, java_lang.Iterable {
     public convenience init( cause: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLException", classCache: &SQLException.SQLExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &SQLException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -84,7 +84,7 @@ open class SQLException: java_lang.Exception, java_lang.Iterable {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLException", classCache: &SQLException.SQLExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -103,7 +103,7 @@ open class SQLException: java_lang.Exception, java_lang.Iterable {
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: sqlState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLException", classCache: &SQLException.SQLExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLException.new_MethodID_3, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -123,7 +123,7 @@ open class SQLException: java_lang.Exception, java_lang.Iterable {
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: sqlState, locals: &__locals )
         __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
-        __args[3] = JNIType.toJava( value: cause != nil ? cause! as JNIObject : nil, locals: &__locals )
+        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/SQLException", classCache: &SQLException.SQLExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V", methodCache: &SQLException.new_MethodID_4, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -212,57 +212,57 @@ open class SQLException: java_lang.Exception, java_lang.Iterable {
     }
 
 
-    /// public void java.sql.SQLException.setNextException(java.sql.SQLException)
-
-    private static var setNextException_MethodID_10: jmethodID?
-
-    open func setNextException( ex: SQLException? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: ex != nil ? ex! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNextException", methodSig: "(Ljava/sql/SQLException;)V", methodCache: &SQLException.setNextException_MethodID_10, args: &__args, locals: &__locals )
-    }
-
-    open func setNextException( _ _ex: SQLException? ) {
-        setNextException( ex: _ex )
-    }
-
     /// public java.lang.String java.sql.SQLException.getSQLState()
 
-    private static var getSQLState_MethodID_11: jmethodID?
+    private static var getSQLState_MethodID_10: jmethodID?
 
     open func getSQLState() -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLState", methodSig: "()Ljava/lang/String;", methodCache: &SQLException.getSQLState_MethodID_11, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLState", methodSig: "()Ljava/lang/String;", methodCache: &SQLException.getSQLState_MethodID_10, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: String(), from: __return )
     }
 
 
     /// public int java.sql.SQLException.getErrorCode()
 
-    private static var getErrorCode_MethodID_12: jmethodID?
+    private static var getErrorCode_MethodID_11: jmethodID?
 
     open func getErrorCode() -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getErrorCode", methodSig: "()I", methodCache: &SQLException.getErrorCode_MethodID_12, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getErrorCode", methodSig: "()I", methodCache: &SQLException.getErrorCode_MethodID_11, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
 
 
     /// public java.sql.SQLException java.sql.SQLException.getNextException()
 
-    private static var getNextException_MethodID_13: jmethodID?
+    private static var getNextException_MethodID_12: jmethodID?
 
     open func getNextException() -> SQLException! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNextException", methodSig: "()Ljava/sql/SQLException;", methodCache: &SQLException.getNextException_MethodID_13, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNextException", methodSig: "()Ljava/sql/SQLException;", methodCache: &SQLException.getNextException_MethodID_12, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? SQLException( javaObject: __return ) : nil
     }
 
+
+    /// public void java.sql.SQLException.setNextException(java.sql.SQLException)
+
+    private static var setNextException_MethodID_13: jmethodID?
+
+    open func setNextException( ex: SQLException? ) {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: ex, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNextException", methodSig: "(Ljava/sql/SQLException;)V", methodCache: &SQLException.setNextException_MethodID_13, args: &__args, locals: &__locals )
+    }
+
+    open func setNextException( _ _ex: SQLException? ) {
+        setNextException( ex: _ex )
+    }
 
     /// In declared protocol but not defined.. ///
 

@@ -48,95 +48,17 @@ open class DriverManager: java_swift.JavaObject {
         println( message: _message )
     }
 
-    /// private static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String,java.util.Properties,java.lang.Class) throws java.sql.SQLException
-
-    /// public static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String) throws java.sql.SQLException
-
-    private static var getConnection_MethodID_2: jmethodID?
-
-    open class func getConnection( url: String? ) throws /* java.sql.SQLException */ -> Connection! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: url, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getConnection", methodSig: "(Ljava/lang/String;)Ljava/sql/Connection;", methodCache: &getConnection_MethodID_2, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ConnectionForward( javaObject: __return ) : nil
-    }
-
-    open class func getConnection( _ _url: String? ) throws /* java.sql.SQLException */ -> Connection! {
-        return try getConnection( url: _url )
-    }
-
-    /// public static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String,java.util.Properties) throws java.sql.SQLException
-
-    private static var getConnection_MethodID_3: jmethodID?
-
-    open class func getConnection( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> Connection! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: url, locals: &__locals )
-        __args[1] = JNIType.toJava( value: info, mapClass: "java/util/Properties", locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getConnection", methodSig: "(Ljava/lang/String;Ljava/util/Properties;)Ljava/sql/Connection;", methodCache: &getConnection_MethodID_3, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ConnectionForward( javaObject: __return ) : nil
-    }
-
-    open class func getConnection( _ _url: String?, _ _info: java_util.Properties? ) throws /* java.sql.SQLException */ -> Connection! {
-        return try getConnection( url: _url, info: _info )
-    }
-
-    /// public static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getConnection_MethodID_4: jmethodID?
-
-    open class func getConnection( url: String?, user: String?, password: String? ) throws /* java.sql.SQLException */ -> Connection! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: url, locals: &__locals )
-        __args[1] = JNIType.toJava( value: user, locals: &__locals )
-        __args[2] = JNIType.toJava( value: password, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getConnection", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/Connection;", methodCache: &getConnection_MethodID_4, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ConnectionForward( javaObject: __return ) : nil
-    }
-
-    open class func getConnection( _ _url: String?, _ _user: String?, _ _password: String? ) throws /* java.sql.SQLException */ -> Connection! {
-        return try getConnection( url: _url, user: _user, password: _password )
-    }
-
-    /// public static java.io.PrintWriter java.sql.DriverManager.getLogWriter()
-
-    private static var getLogWriter_MethodID_5: jmethodID?
-
-    open class func getLogWriter() -> /* java.io.PrintWriter */ UnclassedObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getLogWriter", methodSig: "()Ljava/io/PrintWriter;", methodCache: &getLogWriter_MethodID_5, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* java.io.PrintWriter */ UnclassedObject( javaObject: __return ) : nil
-    }
-
-
     /// private static void java.sql.DriverManager.loadInitialDrivers()
 
     /// public static void java.sql.DriverManager.setLogWriter(java.io.PrintWriter)
 
-    private static var setLogWriter_MethodID_6: jmethodID?
+    private static var setLogWriter_MethodID_2: jmethodID?
 
     open class func setLogWriter( out: /* java.io.PrintWriter */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: out != nil ? out! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "setLogWriter", methodSig: "(Ljava/io/PrintWriter;)V", methodCache: &setLogWriter_MethodID_6, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: out, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "setLogWriter", methodSig: "(Ljava/io/PrintWriter;)V", methodCache: &setLogWriter_MethodID_2, args: &__args, locals: &__locals )
     }
 
     open class func setLogWriter( _ _out: /* java.io.PrintWriter */ UnclassedObject? ) {
@@ -145,13 +67,13 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static java.sql.Driver java.sql.DriverManager.getDriver(java.lang.String) throws java.sql.SQLException
 
-    private static var getDriver_MethodID_7: jmethodID?
+    private static var getDriver_MethodID_3: jmethodID?
 
     open class func getDriver( url: String? ) throws /* java.sql.SQLException */ -> Driver! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: url, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getDriver", methodSig: "(Ljava/lang/String;)Ljava/sql/Driver;", methodCache: &getDriver_MethodID_7, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getDriver", methodSig: "(Ljava/lang/String;)Ljava/sql/Driver;", methodCache: &getDriver_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -165,14 +87,14 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static synchronized void java.sql.DriverManager.registerDriver(java.sql.Driver,java.sql.DriverAction) throws java.sql.SQLException
 
-    private static var registerDriver_MethodID_8: jmethodID?
+    private static var registerDriver_MethodID_4: jmethodID?
 
     open class func registerDriver( driver: Driver?, da: DriverAction? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: driver, locals: &__locals )
         __args[1] = JNIType.toJava( value: da, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "registerDriver", methodSig: "(Ljava/sql/Driver;Ljava/sql/DriverAction;)V", methodCache: &registerDriver_MethodID_8, args: &__args, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "registerDriver", methodSig: "(Ljava/sql/Driver;Ljava/sql/DriverAction;)V", methodCache: &registerDriver_MethodID_4, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -184,13 +106,13 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static synchronized void java.sql.DriverManager.registerDriver(java.sql.Driver) throws java.sql.SQLException
 
-    private static var registerDriver_MethodID_9: jmethodID?
+    private static var registerDriver_MethodID_5: jmethodID?
 
     open class func registerDriver( driver: Driver? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: driver, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "registerDriver", methodSig: "(Ljava/sql/Driver;)V", methodCache: &registerDriver_MethodID_9, args: &__args, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "registerDriver", methodSig: "(Ljava/sql/Driver;)V", methodCache: &registerDriver_MethodID_5, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -202,13 +124,13 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static synchronized void java.sql.DriverManager.deregisterDriver(java.sql.Driver) throws java.sql.SQLException
 
-    private static var deregisterDriver_MethodID_10: jmethodID?
+    private static var deregisterDriver_MethodID_6: jmethodID?
 
     open class func deregisterDriver( driver: Driver? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: driver, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "deregisterDriver", methodSig: "(Ljava/sql/Driver;)V", methodCache: &deregisterDriver_MethodID_10, args: &__args, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "deregisterDriver", methodSig: "(Ljava/sql/Driver;)V", methodCache: &deregisterDriver_MethodID_6, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -220,12 +142,12 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static java.util.Enumeration java.sql.DriverManager.getDrivers()
 
-    private static var getDrivers_MethodID_11: jmethodID?
+    private static var getDrivers_MethodID_7: jmethodID?
 
     open class func getDrivers() -> java_util.Enumeration! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getDrivers", methodSig: "()Ljava/util/Enumeration;", methodCache: &getDrivers_MethodID_11, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getDrivers", methodSig: "()Ljava/util/Enumeration;", methodCache: &getDrivers_MethodID_7, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_util.EnumerationForward( javaObject: __return ) : nil
     }
@@ -233,13 +155,13 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static void java.sql.DriverManager.setLoginTimeout(int)
 
-    private static var setLoginTimeout_MethodID_12: jmethodID?
+    private static var setLoginTimeout_MethodID_8: jmethodID?
 
     open class func setLoginTimeout( seconds: Int ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: seconds, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "setLoginTimeout", methodSig: "(I)V", methodCache: &setLoginTimeout_MethodID_12, args: &__args, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "setLoginTimeout", methodSig: "(I)V", methodCache: &setLoginTimeout_MethodID_8, args: &__args, locals: &__locals )
     }
 
     open class func setLoginTimeout( _ _seconds: Int ) {
@@ -248,25 +170,25 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static int java.sql.DriverManager.getLoginTimeout()
 
-    private static var getLoginTimeout_MethodID_13: jmethodID?
+    private static var getLoginTimeout_MethodID_9: jmethodID?
 
     open class func getLoginTimeout() -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticIntMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getLoginTimeout", methodSig: "()I", methodCache: &getLoginTimeout_MethodID_13, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticIntMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getLoginTimeout", methodSig: "()I", methodCache: &getLoginTimeout_MethodID_9, args: &__args, locals: &__locals )
         return JNIType.toSwift( type: Int(), from: __return )
     }
 
 
     /// public static void java.sql.DriverManager.setLogStream(java.io.PrintStream)
 
-    private static var setLogStream_MethodID_14: jmethodID?
+    private static var setLogStream_MethodID_10: jmethodID?
 
     open class func setLogStream( out: /* java.io.PrintStream */ UnclassedObject? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: out != nil ? out! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "setLogStream", methodSig: "(Ljava/io/PrintStream;)V", methodCache: &setLogStream_MethodID_14, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: out, locals: &__locals )
+        JNIMethod.CallStaticVoidMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "setLogStream", methodSig: "(Ljava/io/PrintStream;)V", methodCache: &setLogStream_MethodID_10, args: &__args, locals: &__locals )
     }
 
     open class func setLogStream( _ _out: /* java.io.PrintStream */ UnclassedObject? ) {
@@ -275,20 +197,98 @@ open class DriverManager: java_swift.JavaObject {
 
     /// public static java.io.PrintStream java.sql.DriverManager.getLogStream()
 
-    private static var getLogStream_MethodID_15: jmethodID?
+    private static var getLogStream_MethodID_11: jmethodID?
 
     open class func getLogStream() -> /* java.io.PrintStream */ UnclassedObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getLogStream", methodSig: "()Ljava/io/PrintStream;", methodCache: &getLogStream_MethodID_15, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getLogStream", methodSig: "()Ljava/io/PrintStream;", methodCache: &getLogStream_MethodID_11, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? /* java.io.PrintStream */ UnclassedObject( javaObject: __return ) : nil
     }
 
 
+    /// private static boolean java.sql.DriverManager.isDriverAllowed(java.sql.Driver,java.lang.ClassLoader)
+
     /// private static boolean java.sql.DriverManager.isDriverAllowed(java.sql.Driver,java.lang.Class)
 
-    /// private static boolean java.sql.DriverManager.isDriverAllowed(java.sql.Driver,java.lang.ClassLoader)
+    /// public static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String,java.util.Properties) throws java.sql.SQLException
+
+    private static var getConnection_MethodID_12: jmethodID?
+
+    open class func getConnection( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> Connection! {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: url, locals: &__locals )
+        __args[1] = JNIType.toJava( value: info, mapClass: "java/util/Properties", locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getConnection", methodSig: "(Ljava/lang/String;Ljava/util/Properties;)Ljava/sql/Connection;", methodCache: &getConnection_MethodID_12, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ConnectionForward( javaObject: __return ) : nil
+    }
+
+    open class func getConnection( _ _url: String?, _ _info: java_util.Properties? ) throws /* java.sql.SQLException */ -> Connection! {
+        return try getConnection( url: _url, info: _info )
+    }
+
+    /// private static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String,java.util.Properties,java.lang.Class) throws java.sql.SQLException
+
+    /// public static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getConnection_MethodID_13: jmethodID?
+
+    open class func getConnection( url: String?, user: String?, password: String? ) throws /* java.sql.SQLException */ -> Connection! {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: url, locals: &__locals )
+        __args[1] = JNIType.toJava( value: user, locals: &__locals )
+        __args[2] = JNIType.toJava( value: password, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getConnection", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/Connection;", methodCache: &getConnection_MethodID_13, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ConnectionForward( javaObject: __return ) : nil
+    }
+
+    open class func getConnection( _ _url: String?, _ _user: String?, _ _password: String? ) throws /* java.sql.SQLException */ -> Connection! {
+        return try getConnection( url: _url, user: _user, password: _password )
+    }
+
+    /// public static java.sql.Connection java.sql.DriverManager.getConnection(java.lang.String) throws java.sql.SQLException
+
+    private static var getConnection_MethodID_14: jmethodID?
+
+    open class func getConnection( url: String? ) throws /* java.sql.SQLException */ -> Connection! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: url, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getConnection", methodSig: "(Ljava/lang/String;)Ljava/sql/Connection;", methodCache: &getConnection_MethodID_14, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ConnectionForward( javaObject: __return ) : nil
+    }
+
+    open class func getConnection( _ _url: String? ) throws /* java.sql.SQLException */ -> Connection! {
+        return try getConnection( url: _url )
+    }
+
+    /// public static java.io.PrintWriter java.sql.DriverManager.getLogWriter()
+
+    private static var getLogWriter_MethodID_15: jmethodID?
+
+    open class func getLogWriter() -> /* java.io.PrintWriter */ UnclassedObject! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/DriverManager", classCache: &DriverManagerJNIClass, methodName: "getLogWriter", methodSig: "()Ljava/io/PrintWriter;", methodCache: &getLogWriter_MethodID_15, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? /* java.io.PrintWriter */ UnclassedObject( javaObject: __return ) : nil
+    }
+
 
 }
 

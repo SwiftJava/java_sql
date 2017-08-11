@@ -97,7 +97,7 @@ open class Date: java_util.Date {
     open class func valueOf( date: /* java.time.LocalDate */ UnclassedObject? ) -> Date! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: date != nil ? date! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: date, locals: &__locals )
         let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Date", classCache: &DateJNIClass, methodName: "valueOf", methodSig: "(Ljava/time/LocalDate;)Ljava/sql/Date;", methodCache: &valueOf_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Date( javaObject: __return ) : nil
@@ -160,33 +160,33 @@ open class Date: java_util.Date {
         setSeconds( i: _i )
     }
 
-    /// public java.time.LocalDate java.sql.Date.toLocalDate()
-
-    private static var toLocalDate_MethodID_8: jmethodID?
-
-    open func toLocalDate() -> /* java.time.LocalDate */ UnclassedObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toLocalDate", methodSig: "()Ljava/time/LocalDate;", methodCache: &Date.toLocalDate_MethodID_8, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* java.time.LocalDate */ UnclassedObject( javaObject: __return ) : nil
-    }
-
-
     /// public void java.sql.Date.setTime(long)
 
-    private static var setTime_MethodID_9: jmethodID?
+    private static var setTime_MethodID_8: jmethodID?
 
     open func setTime( date: Int64 ) {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: date, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTime", methodSig: "(J)V", methodCache: &Date.setTime_MethodID_9, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setTime", methodSig: "(J)V", methodCache: &Date.setTime_MethodID_8, args: &__args, locals: &__locals )
     }
 
     override open func setTime( _ _date: Int64 ) {
         setTime( date: _date )
     }
+
+    /// public java.time.LocalDate java.sql.Date.toLocalDate()
+
+    private static var toLocalDate_MethodID_9: jmethodID?
+
+    open func toLocalDate() -> /* java.time.LocalDate */ UnclassedObject! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toLocalDate", methodSig: "()Ljava/time/LocalDate;", methodCache: &Date.toLocalDate_MethodID_9, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? /* java.time.LocalDate */ UnclassedObject( javaObject: __return ) : nil
+    }
+
 
 }
 

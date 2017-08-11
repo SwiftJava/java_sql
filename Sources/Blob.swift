@@ -37,13 +37,13 @@ public protocol Blob: JavaProtocol {
 
     /// public abstract java.io.OutputStream java.sql.Blob.setBinaryStream(long) throws java.sql.SQLException
 
-    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream(long,long) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream() throws java.sql.SQLException
-
     /// public abstract void java.sql.Blob.free() throws java.sql.SQLException
 
     func free() throws /* java.sql.SQLException */
+
+    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream(long,long) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream() throws java.sql.SQLException
 
 }
 
@@ -189,10 +189,6 @@ open class BlobForward: JNIObjectForward, Blob {
 
     /// public abstract java.io.OutputStream java.sql.Blob.setBinaryStream(long) throws java.sql.SQLException
 
-    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream(long,long) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream() throws java.sql.SQLException
-
     /// public abstract void java.sql.Blob.free() throws java.sql.SQLException
 
     private static var free_MethodID_16: jmethodID?
@@ -206,6 +202,10 @@ open class BlobForward: JNIObjectForward, Blob {
         }
     }
 
+
+    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream(long,long) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream() throws java.sql.SQLException
 
 }
 

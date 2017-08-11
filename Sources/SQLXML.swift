@@ -15,21 +15,21 @@ public protocol SQLXML: JavaProtocol {
 
     /// public abstract java.io.Writer java.sql.SQLXML.setCharacterStream() throws java.sql.SQLException
 
+    /// public abstract void java.sql.SQLXML.free() throws java.sql.SQLException
+
+    func free() throws /* java.sql.SQLException */
+
     /// public abstract javax.xml.transform.Source java.sql.SQLXML.getSource(java.lang.Class) throws java.sql.SQLException
 
     /// public abstract javax.xml.transform.Result java.sql.SQLXML.setResult(java.lang.Class) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.SQLXML.getBinaryStream() throws java.sql.SQLException
-
-    /// public abstract java.io.Reader java.sql.SQLXML.getCharacterStream() throws java.sql.SQLException
 
     /// public abstract java.lang.String java.sql.SQLXML.getString() throws java.sql.SQLException
 
     func getString() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract void java.sql.SQLXML.free() throws java.sql.SQLException
+    /// public abstract java.io.InputStream java.sql.SQLXML.getBinaryStream() throws java.sql.SQLException
 
-    func free() throws /* java.sql.SQLException */
+    /// public abstract java.io.Reader java.sql.SQLXML.getCharacterStream() throws java.sql.SQLException
 
 }
 
@@ -60,22 +60,32 @@ open class SQLXMLForward: JNIObjectForward, SQLXML {
 
     /// public abstract java.io.Writer java.sql.SQLXML.setCharacterStream() throws java.sql.SQLException
 
+    /// public abstract void java.sql.SQLXML.free() throws java.sql.SQLException
+
+    private static var free_MethodID_5: jmethodID?
+
+    open func free() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "free", methodSig: "()V", methodCache: &SQLXMLForward.free_MethodID_5, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
     /// public abstract javax.xml.transform.Source java.sql.SQLXML.getSource(java.lang.Class) throws java.sql.SQLException
 
     /// public abstract javax.xml.transform.Result java.sql.SQLXML.setResult(java.lang.Class) throws java.sql.SQLException
 
-    /// public abstract java.io.InputStream java.sql.SQLXML.getBinaryStream() throws java.sql.SQLException
-
-    /// public abstract java.io.Reader java.sql.SQLXML.getCharacterStream() throws java.sql.SQLException
-
     /// public abstract java.lang.String java.sql.SQLXML.getString() throws java.sql.SQLException
 
-    private static var getString_MethodID_5: jmethodID?
+    private static var getString_MethodID_6: jmethodID?
 
     open func getString() throws /* java.sql.SQLException */ -> String! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getString", methodSig: "()Ljava/lang/String;", methodCache: &SQLXMLForward.getString_MethodID_5, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getString", methodSig: "()Ljava/lang/String;", methodCache: &SQLXMLForward.getString_MethodID_6, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -83,19 +93,9 @@ open class SQLXMLForward: JNIObjectForward, SQLXML {
     }
 
 
-    /// public abstract void java.sql.SQLXML.free() throws java.sql.SQLException
+    /// public abstract java.io.InputStream java.sql.SQLXML.getBinaryStream() throws java.sql.SQLException
 
-    private static var free_MethodID_6: jmethodID?
-
-    open func free() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "free", methodSig: "()V", methodCache: &SQLXMLForward.free_MethodID_6, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
+    /// public abstract java.io.Reader java.sql.SQLXML.getCharacterStream() throws java.sql.SQLException
 
 }
 

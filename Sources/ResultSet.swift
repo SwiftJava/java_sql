@@ -189,37 +189,77 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func previous() throws /* java.sql.SQLException */ -> Bool
 
+    /// public abstract java.sql.Time java.sql.ResultSet.getTime(java.lang.String,java.util.Calendar) throws java.sql.SQLException
+
+    func getTime( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time!
+
+    /// public abstract java.sql.Time java.sql.ResultSet.getTime(int,java.util.Calendar) throws java.sql.SQLException
+
+    func getTime( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time!
+
+    /// public abstract java.sql.Time java.sql.ResultSet.getTime(int) throws java.sql.SQLException
+
+    func getTime( columnIndex: Int ) throws /* java.sql.SQLException */ -> Time!
+
+    /// public abstract java.sql.Time java.sql.ResultSet.getTime(java.lang.String) throws java.sql.SQLException
+
+    func getTime( columnLabel: String? ) throws /* java.sql.SQLException */ -> Time!
+
+    /// public abstract java.sql.Date java.sql.ResultSet.getDate(java.lang.String) throws java.sql.SQLException
+
+    func getDate( columnLabel: String? ) throws /* java.sql.SQLException */ -> Date!
+
+    /// public abstract java.sql.Date java.sql.ResultSet.getDate(int,java.util.Calendar) throws java.sql.SQLException
+
+    func getDate( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Date!
+
+    /// public abstract java.sql.Date java.sql.ResultSet.getDate(int) throws java.sql.SQLException
+
+    func getDate( columnIndex: Int ) throws /* java.sql.SQLException */ -> Date!
+
+    /// public abstract java.sql.Date java.sql.ResultSet.getDate(java.lang.String,java.util.Calendar) throws java.sql.SQLException
+
+    func getDate( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Date!
+
+    /// public abstract java.lang.String java.sql.ResultSet.getString(java.lang.String) throws java.sql.SQLException
+
+    func getString( columnLabel: String? ) throws /* java.sql.SQLException */ -> String!
+
+    /// public abstract java.lang.String java.sql.ResultSet.getString(int) throws java.sql.SQLException
+
+    func getString( columnIndex: Int ) throws /* java.sql.SQLException */ -> String!
+
     /// public abstract boolean java.sql.ResultSet.wasNull() throws java.sql.SQLException
 
     func wasNull() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(java.lang.String) throws java.sql.SQLException
-
-    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(int) throws java.sql.SQLException
-
     /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(int,int) throws java.sql.SQLException
+
+    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(java.lang.String) throws java.sql.SQLException
 
     /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(java.lang.String,int) throws java.sql.SQLException
 
-    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int,java.util.Calendar) throws java.sql.SQLException
-
-    func getTimestamp( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp!
-
-    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int) throws java.sql.SQLException
-
-    func getTimestamp( columnIndex: Int ) throws /* java.sql.SQLException */ -> Timestamp!
-
-    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(java.lang.String) throws java.sql.SQLException
-
-    func getTimestamp( columnLabel: String? ) throws /* java.sql.SQLException */ -> Timestamp!
+    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(int) throws java.sql.SQLException
 
     /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(java.lang.String,java.util.Calendar) throws java.sql.SQLException
 
     func getTimestamp( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp!
 
-    /// public abstract java.io.InputStream java.sql.ResultSet.getAsciiStream(java.lang.String) throws java.sql.SQLException
+    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int,java.util.Calendar) throws java.sql.SQLException
+
+    func getTimestamp( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp!
+
+    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(java.lang.String) throws java.sql.SQLException
+
+    func getTimestamp( columnLabel: String? ) throws /* java.sql.SQLException */ -> Timestamp!
+
+    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int) throws java.sql.SQLException
+
+    func getTimestamp( columnIndex: Int ) throws /* java.sql.SQLException */ -> Timestamp!
 
     /// public abstract java.io.InputStream java.sql.ResultSet.getAsciiStream(int) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.ResultSet.getAsciiStream(java.lang.String) throws java.sql.SQLException
 
     /// public abstract java.io.InputStream java.sql.ResultSet.getUnicodeStream(int) throws java.sql.SQLException
 
@@ -249,9 +289,9 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func findColumn( columnLabel: String? ) throws /* java.sql.SQLException */ -> Int
 
-    /// public abstract java.io.Reader java.sql.ResultSet.getCharacterStream(java.lang.String) throws java.sql.SQLException
-
     /// public abstract java.io.Reader java.sql.ResultSet.getCharacterStream(int) throws java.sql.SQLException
+
+    /// public abstract java.io.Reader java.sql.ResultSet.getCharacterStream(java.lang.String) throws java.sql.SQLException
 
     /// public abstract boolean java.sql.ResultSet.isBeforeFirst() throws java.sql.SQLException
 
@@ -321,21 +361,21 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func rowDeleted() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract void java.sql.ResultSet.updateNull(java.lang.String) throws java.sql.SQLException
-
-    func updateNull( columnLabel: String? ) throws /* java.sql.SQLException */
-
     /// public abstract void java.sql.ResultSet.updateNull(int) throws java.sql.SQLException
 
     func updateNull( columnIndex: Int ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateBoolean(int,boolean) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateNull(java.lang.String) throws java.sql.SQLException
 
-    func updateBoolean( columnIndex: Int, x: Bool ) throws /* java.sql.SQLException */
+    func updateNull( columnLabel: String? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateBoolean(java.lang.String,boolean) throws java.sql.SQLException
 
     func updateBoolean( columnLabel: String?, x: Bool ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateBoolean(int,boolean) throws java.sql.SQLException
+
+    func updateBoolean( columnIndex: Int, x: Bool ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateByte(java.lang.String,byte) throws java.sql.SQLException
 
@@ -361,21 +401,21 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func updateInt( columnIndex: Int, x: Int ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateLong(java.lang.String,long) throws java.sql.SQLException
-
-    func updateLong( columnLabel: String?, x: Int64 ) throws /* java.sql.SQLException */
-
     /// public abstract void java.sql.ResultSet.updateLong(int,long) throws java.sql.SQLException
 
     func updateLong( columnIndex: Int, x: Int64 ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateFloat(int,float) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateLong(java.lang.String,long) throws java.sql.SQLException
 
-    func updateFloat( columnIndex: Int, x: Float ) throws /* java.sql.SQLException */
+    func updateLong( columnLabel: String?, x: Int64 ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateFloat(java.lang.String,float) throws java.sql.SQLException
 
     func updateFloat( columnLabel: String?, x: Float ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateFloat(int,float) throws java.sql.SQLException
+
+    func updateFloat( columnIndex: Int, x: Float ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateDouble(java.lang.String,double) throws java.sql.SQLException
 
@@ -393,89 +433,101 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func updateBigDecimal( columnLabel: String?, x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateString(java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    func updateString( columnLabel: String?, x: String? ) throws /* java.sql.SQLException */
-
     /// public abstract void java.sql.ResultSet.updateString(int,java.lang.String) throws java.sql.SQLException
 
     func updateString( columnIndex: Int, x: String? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateDate(java.lang.String,java.sql.Date) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateString(java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func updateDate( columnLabel: String?, x: Date? ) throws /* java.sql.SQLException */
+    func updateString( columnLabel: String?, x: String? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateDate(int,java.sql.Date) throws java.sql.SQLException
 
     func updateDate( columnIndex: Int, x: Date? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateTime(int,java.sql.Time) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateDate(java.lang.String,java.sql.Date) throws java.sql.SQLException
 
-    func updateTime( columnIndex: Int, x: Time? ) throws /* java.sql.SQLException */
+    func updateDate( columnLabel: String?, x: Date? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateTime(java.lang.String,java.sql.Time) throws java.sql.SQLException
 
     func updateTime( columnLabel: String?, x: Time? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateTimestamp(int,java.sql.Timestamp) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateTime(int,java.sql.Time) throws java.sql.SQLException
 
-    func updateTimestamp( columnIndex: Int, x: Timestamp? ) throws /* java.sql.SQLException */
+    func updateTime( columnIndex: Int, x: Time? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateTimestamp(java.lang.String,java.sql.Timestamp) throws java.sql.SQLException
 
     func updateTimestamp( columnLabel: String?, x: Timestamp? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,int) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateTimestamp(int,java.sql.Timestamp) throws java.sql.SQLException
 
-    func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,long) throws java.sql.SQLException
-
-    func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
+    func updateTimestamp( columnIndex: Int, x: Timestamp? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
 
     func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,long) throws java.sql.SQLException
 
-    func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
+    func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,int) throws java.sql.SQLException
+
+    func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream) throws java.sql.SQLException
 
     func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
 
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
+
+    func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
+
     /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream,int) throws java.sql.SQLException
 
     func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
-
-    func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream) throws java.sql.SQLException
-
-    func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
-
-    func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,int) throws java.sql.SQLException
-
-    func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream,int) throws java.sql.SQLException
-
-    func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream,long) throws java.sql.SQLException
 
     func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
+
+    func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream,int) throws java.sql.SQLException
+
+    func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,int) throws java.sql.SQLException
+
+    func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
+
+    func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream) throws java.sql.SQLException
+
+    func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
+
     /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader,int) throws java.sql.SQLException
 
     func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader) throws java.sql.SQLException
+
+    func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader) throws java.sql.SQLException
+
+    func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader,long) throws java.sql.SQLException
+
+    func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader,int) throws java.sql.SQLException
 
@@ -485,17 +537,13 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader) throws java.sql.SQLException
+    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType,int) throws java.sql.SQLException
 
-    func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
+    func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType?, scaleOrLength: Int ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader,long) throws java.sql.SQLException
+    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType) throws java.sql.SQLException
 
-    func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader) throws java.sql.SQLException
-
-    func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
+    func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */
 
     /// public default void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,java.sql.SQLType,int) throws java.sql.SQLException
 
@@ -505,29 +553,21 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func updateObject( columnLabel: String?, x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */
 
-    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType,int) throws java.sql.SQLException
-
-    func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType?, scaleOrLength: Int ) throws /* java.sql.SQLException */
-
-    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType) throws java.sql.SQLException
-
-    func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */
-
     /// public abstract void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,int) throws java.sql.SQLException
 
     func updateObject( columnLabel: String?, x: java_swift.JavaObject?, scaleOrLength: Int ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateObject(int,java.lang.Object) throws java.sql.SQLException
 
-    func updateObject( columnLabel: String?, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */
+    func updateObject( columnIndex: Int, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateObject(int,java.lang.Object,int) throws java.sql.SQLException
 
     func updateObject( columnIndex: Int, x: java_swift.JavaObject?, scaleOrLength: Int ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateObject(int,java.lang.Object) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object) throws java.sql.SQLException
 
-    func updateObject( columnIndex: Int, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */
+    func updateObject( columnLabel: String?, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.insertRow() throws java.sql.SQLException
 
@@ -561,21 +601,21 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func getStatement() throws /* java.sql.SQLException */ -> Statement!
 
-    /// public abstract java.sql.Blob java.sql.ResultSet.getBlob(int) throws java.sql.SQLException
-
-    func getBlob( columnIndex: Int ) throws /* java.sql.SQLException */ -> Blob!
-
     /// public abstract java.sql.Blob java.sql.ResultSet.getBlob(java.lang.String) throws java.sql.SQLException
 
     func getBlob( columnLabel: String? ) throws /* java.sql.SQLException */ -> Blob!
 
-    /// public abstract java.sql.Clob java.sql.ResultSet.getClob(java.lang.String) throws java.sql.SQLException
+    /// public abstract java.sql.Blob java.sql.ResultSet.getBlob(int) throws java.sql.SQLException
 
-    func getClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> Clob!
+    func getBlob( columnIndex: Int ) throws /* java.sql.SQLException */ -> Blob!
 
     /// public abstract java.sql.Clob java.sql.ResultSet.getClob(int) throws java.sql.SQLException
 
     func getClob( columnIndex: Int ) throws /* java.sql.SQLException */ -> Clob!
+
+    /// public abstract java.sql.Clob java.sql.ResultSet.getClob(java.lang.String) throws java.sql.SQLException
+
+    func getClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> Clob!
 
     /// public abstract void java.sql.ResultSet.updateRef(int,java.sql.Ref) throws java.sql.SQLException
 
@@ -585,21 +625,21 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func updateRef( columnLabel: String?, x: Ref? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateBlob(int,java.io.InputStream) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
 
-    func updateBlob( columnIndex: Int, inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
+    func updateBlob( columnLabel: String?, inputStream: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.io.InputStream) throws java.sql.SQLException
 
     func updateBlob( columnLabel: String?, inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
 
+    /// public abstract void java.sql.ResultSet.updateBlob(int,java.io.InputStream) throws java.sql.SQLException
+
+    func updateBlob( columnIndex: Int, inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */
+
     /// public abstract void java.sql.ResultSet.updateBlob(int,java.io.InputStream,long) throws java.sql.SQLException
 
     func updateBlob( columnIndex: Int, inputStream: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
-
-    func updateBlob( columnLabel: String?, inputStream: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.sql.Blob) throws java.sql.SQLException
 
@@ -609,29 +649,29 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func updateBlob( columnIndex: Int, x: Blob? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.sql.Clob) throws java.sql.SQLException
 
-    func updateClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
+    func updateClob( columnLabel: String?, x: Clob? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateClob(int,java.io.Reader) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateClob(int,java.sql.Clob) throws java.sql.SQLException
 
-    func updateClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
+    func updateClob( columnIndex: Int, x: Clob? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateClob(int,java.io.Reader,long) throws java.sql.SQLException
 
     func updateClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.sql.Clob) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateClob(int,java.io.Reader) throws java.sql.SQLException
 
-    func updateClob( columnLabel: String?, x: Clob? ) throws /* java.sql.SQLException */
+    func updateClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.io.Reader) throws java.sql.SQLException
 
     func updateClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateClob(int,java.sql.Clob) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
 
-    func updateClob( columnIndex: Int, x: Clob? ) throws /* java.sql.SQLException */
+    func updateClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateArray(int,java.sql.Array) throws java.sql.SQLException
 
@@ -649,13 +689,13 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func getRowId( columnIndex: Int ) throws /* java.sql.SQLException */ -> RowId!
 
-    /// public abstract void java.sql.ResultSet.updateRowId(java.lang.String,java.sql.RowId) throws java.sql.SQLException
-
-    func updateRowId( columnLabel: String?, x: RowId? ) throws /* java.sql.SQLException */
-
     /// public abstract void java.sql.ResultSet.updateRowId(int,java.sql.RowId) throws java.sql.SQLException
 
     func updateRowId( columnIndex: Int, x: RowId? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateRowId(java.lang.String,java.sql.RowId) throws java.sql.SQLException
+
+    func updateRowId( columnLabel: String?, x: RowId? ) throws /* java.sql.SQLException */
 
     /// public abstract int java.sql.ResultSet.getHoldability() throws java.sql.SQLException
 
@@ -665,17 +705,25 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func isClosed() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract void java.sql.ResultSet.updateNString(int,java.lang.String) throws java.sql.SQLException
-
-    func updateNString( columnIndex: Int, nString: String? ) throws /* java.sql.SQLException */
-
     /// public abstract void java.sql.ResultSet.updateNString(java.lang.String,java.lang.String) throws java.sql.SQLException
 
     func updateNString( columnLabel: String?, nString: String? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader,long) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateNString(int,java.lang.String) throws java.sql.SQLException
 
-    func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
+    func updateNString( columnIndex: Int, nString: String? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.io.Reader) throws java.sql.SQLException
+
+    func updateNClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader) throws java.sql.SQLException
+
+    func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
+
+    /// public abstract void java.sql.ResultSet.updateNClob(int,java.sql.NClob) throws java.sql.SQLException
+
+    func updateNClob( columnIndex: Int, nClob: NClob? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
 
@@ -685,33 +733,25 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func updateNClob( columnLabel: String?, nClob: NClob? ) throws /* java.sql.SQLException */
 
-    /// public abstract void java.sql.ResultSet.updateNClob(int,java.sql.NClob) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader,long) throws java.sql.SQLException
 
-    func updateNClob( columnIndex: Int, nClob: NClob? ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader) throws java.sql.SQLException
-
-    func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.io.Reader) throws java.sql.SQLException
-
-    func updateNClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
-
-    /// public abstract java.sql.NClob java.sql.ResultSet.getNClob(java.lang.String) throws java.sql.SQLException
-
-    func getNClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> NClob!
+    func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
 
     /// public abstract java.sql.NClob java.sql.ResultSet.getNClob(int) throws java.sql.SQLException
 
     func getNClob( columnIndex: Int ) throws /* java.sql.SQLException */ -> NClob!
 
-    /// public abstract java.sql.SQLXML java.sql.ResultSet.getSQLXML(int) throws java.sql.SQLException
+    /// public abstract java.sql.NClob java.sql.ResultSet.getNClob(java.lang.String) throws java.sql.SQLException
 
-    func getSQLXML( columnIndex: Int ) throws /* java.sql.SQLException */ -> SQLXML!
+    func getNClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> NClob!
 
     /// public abstract java.sql.SQLXML java.sql.ResultSet.getSQLXML(java.lang.String) throws java.sql.SQLException
 
     func getSQLXML( columnLabel: String? ) throws /* java.sql.SQLException */ -> SQLXML!
+
+    /// public abstract java.sql.SQLXML java.sql.ResultSet.getSQLXML(int) throws java.sql.SQLException
+
+    func getSQLXML( columnIndex: Int ) throws /* java.sql.SQLException */ -> SQLXML!
 
     /// public abstract void java.sql.ResultSet.updateSQLXML(java.lang.String,java.sql.SQLXML) throws java.sql.SQLException
 
@@ -729,9 +769,13 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
 
     func getNString( columnIndex: Int ) throws /* java.sql.SQLException */ -> String!
 
+    /// public abstract java.io.Reader java.sql.ResultSet.getNCharacterStream(int) throws java.sql.SQLException
+
     /// public abstract java.io.Reader java.sql.ResultSet.getNCharacterStream(java.lang.String) throws java.sql.SQLException
 
-    /// public abstract java.io.Reader java.sql.ResultSet.getNCharacterStream(int) throws java.sql.SQLException
+    /// public abstract void java.sql.ResultSet.updateNCharacterStream(int,java.io.Reader) throws java.sql.SQLException
+
+    func updateNCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
 
     /// public abstract void java.sql.ResultSet.updateNCharacterStream(java.lang.String,java.io.Reader) throws java.sql.SQLException
 
@@ -744,50 +788,6 @@ public protocol ResultSet: Wrapper, java_lang.AutoCloseable {
     /// public abstract void java.sql.ResultSet.updateNCharacterStream(int,java.io.Reader,long) throws java.sql.SQLException
 
     func updateNCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */
-
-    /// public abstract void java.sql.ResultSet.updateNCharacterStream(int,java.io.Reader) throws java.sql.SQLException
-
-    func updateNCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */
-
-    /// public abstract java.lang.String java.sql.ResultSet.getString(int) throws java.sql.SQLException
-
-    func getString( columnIndex: Int ) throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.ResultSet.getString(java.lang.String) throws java.sql.SQLException
-
-    func getString( columnLabel: String? ) throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.sql.Time java.sql.ResultSet.getTime(int,java.util.Calendar) throws java.sql.SQLException
-
-    func getTime( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time!
-
-    /// public abstract java.sql.Time java.sql.ResultSet.getTime(int) throws java.sql.SQLException
-
-    func getTime( columnIndex: Int ) throws /* java.sql.SQLException */ -> Time!
-
-    /// public abstract java.sql.Time java.sql.ResultSet.getTime(java.lang.String) throws java.sql.SQLException
-
-    func getTime( columnLabel: String? ) throws /* java.sql.SQLException */ -> Time!
-
-    /// public abstract java.sql.Time java.sql.ResultSet.getTime(java.lang.String,java.util.Calendar) throws java.sql.SQLException
-
-    func getTime( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time!
-
-    /// public abstract java.sql.Date java.sql.ResultSet.getDate(int) throws java.sql.SQLException
-
-    func getDate( columnIndex: Int ) throws /* java.sql.SQLException */ -> Date!
-
-    /// public abstract java.sql.Date java.sql.ResultSet.getDate(java.lang.String) throws java.sql.SQLException
-
-    func getDate( columnLabel: String? ) throws /* java.sql.SQLException */ -> Date!
-
-    /// public abstract java.sql.Date java.sql.ResultSet.getDate(int,java.util.Calendar) throws java.sql.SQLException
-
-    func getDate( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Date!
-
-    /// public abstract java.sql.Date java.sql.ResultSet.getDate(java.lang.String,java.util.Calendar) throws java.sql.SQLException
-
-    func getDate( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Date!
 
 }
 
@@ -1013,7 +1013,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: type, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getObject", methodSig: "(ILjava/lang/Class;)Ljava/lang/Object;", methodCache: &ResultSetForward.getObject_MethodID_183, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -1034,7 +1034,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[1] = JNIType.toJava( value: type, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getObject", methodSig: "(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &ResultSetForward.getObject_MethodID_184, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -1545,2530 +1545,37 @@ open class ResultSetForward: WrapperForward, ResultSet {
     }
 
 
-    /// public abstract boolean java.sql.ResultSet.wasNull() throws java.sql.SQLException
+    /// public abstract java.sql.Time java.sql.ResultSet.getTime(java.lang.String,java.util.Calendar) throws java.sql.SQLException
 
-    private static var wasNull_MethodID_212: jmethodID?
+    private static var getTime_MethodID_212: jmethodID?
 
-    open func wasNull() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "wasNull", methodSig: "()Z", methodCache: &ResultSetForward.wasNull_MethodID_212, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(java.lang.String) throws java.sql.SQLException
-
-    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(int) throws java.sql.SQLException
-
-    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(int,int) throws java.sql.SQLException
-
-    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(java.lang.String,int) throws java.sql.SQLException
-
-    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int,java.util.Calendar) throws java.sql.SQLException
-
-    private static var getTimestamp_MethodID_213: jmethodID?
-
-    open func getTimestamp( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
+    open func getTime( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(ILjava/util/Calendar;)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_213, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cal, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(Ljava/lang/String;Ljava/util/Calendar;)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_212, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
-        return __return != nil ? Timestamp( javaObject: __return ) : nil
+        return __return != nil ? Time( javaObject: __return ) : nil
     }
 
-    open func getTimestamp( _ _columnIndex: Int, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
-        return try getTimestamp( columnIndex: _columnIndex, cal: _cal )
-    }
-
-    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int) throws java.sql.SQLException
-
-    private static var getTimestamp_MethodID_214: jmethodID?
-
-    open func getTimestamp( columnIndex: Int ) throws /* java.sql.SQLException */ -> Timestamp! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(I)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_214, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? Timestamp( javaObject: __return ) : nil
-    }
-
-    open func getTimestamp( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Timestamp! {
-        return try getTimestamp( columnIndex: _columnIndex )
-    }
-
-    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(java.lang.String) throws java.sql.SQLException
-
-    private static var getTimestamp_MethodID_215: jmethodID?
-
-    open func getTimestamp( columnLabel: String? ) throws /* java.sql.SQLException */ -> Timestamp! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(Ljava/lang/String;)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_215, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? Timestamp( javaObject: __return ) : nil
-    }
-
-    open func getTimestamp( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Timestamp! {
-        return try getTimestamp( columnLabel: _columnLabel )
-    }
-
-    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(java.lang.String,java.util.Calendar) throws java.sql.SQLException
-
-    private static var getTimestamp_MethodID_216: jmethodID?
-
-    open func getTimestamp( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(Ljava/lang/String;Ljava/util/Calendar;)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_216, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? Timestamp( javaObject: __return ) : nil
-    }
-
-    open func getTimestamp( _ _columnLabel: String?, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
-        return try getTimestamp( columnLabel: _columnLabel, cal: _cal )
-    }
-
-    /// public abstract java.io.InputStream java.sql.ResultSet.getAsciiStream(java.lang.String) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.ResultSet.getAsciiStream(int) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.ResultSet.getUnicodeStream(int) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.ResultSet.getUnicodeStream(java.lang.String) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.ResultSet.getBinaryStream(int) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.ResultSet.getBinaryStream(java.lang.String) throws java.sql.SQLException
-
-    /// public abstract java.sql.SQLWarning java.sql.ResultSet.getWarnings() throws java.sql.SQLException
-
-    private static var getWarnings_MethodID_217: jmethodID?
-
-    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getWarnings", methodSig: "()Ljava/sql/SQLWarning;", methodCache: &ResultSetForward.getWarnings_MethodID_217, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? SQLWarning( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract void java.sql.ResultSet.clearWarnings() throws java.sql.SQLException
-
-    private static var clearWarnings_MethodID_218: jmethodID?
-
-    open func clearWarnings() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "clearWarnings", methodSig: "()V", methodCache: &ResultSetForward.clearWarnings_MethodID_218, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract java.lang.String java.sql.ResultSet.getCursorName() throws java.sql.SQLException
-
-    private static var getCursorName_MethodID_219: jmethodID?
-
-    open func getCursorName() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCursorName", methodSig: "()Ljava/lang/String;", methodCache: &ResultSetForward.getCursorName_MethodID_219, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.sql.ResultSetMetaData java.sql.ResultSet.getMetaData() throws java.sql.SQLException
-
-    private static var getMetaData_MethodID_220: jmethodID?
-
-    open func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMetaData", methodSig: "()Ljava/sql/ResultSetMetaData;", methodCache: &ResultSetForward.getMetaData_MethodID_220, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetMetaDataForward( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract int java.sql.ResultSet.findColumn(java.lang.String) throws java.sql.SQLException
-
-    private static var findColumn_MethodID_221: jmethodID?
-
-    open func findColumn( columnLabel: String? ) throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "findColumn", methodSig: "(Ljava/lang/String;)I", methodCache: &ResultSetForward.findColumn_MethodID_221, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open func findColumn( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Int {
-        return try findColumn( columnLabel: _columnLabel )
-    }
-
-    /// public abstract java.io.Reader java.sql.ResultSet.getCharacterStream(java.lang.String) throws java.sql.SQLException
-
-    /// public abstract java.io.Reader java.sql.ResultSet.getCharacterStream(int) throws java.sql.SQLException
-
-    /// public abstract boolean java.sql.ResultSet.isBeforeFirst() throws java.sql.SQLException
-
-    private static var isBeforeFirst_MethodID_222: jmethodID?
-
-    open func isBeforeFirst() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isBeforeFirst", methodSig: "()Z", methodCache: &ResultSetForward.isBeforeFirst_MethodID_222, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.isAfterLast() throws java.sql.SQLException
-
-    private static var isAfterLast_MethodID_223: jmethodID?
-
-    open func isAfterLast() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isAfterLast", methodSig: "()Z", methodCache: &ResultSetForward.isAfterLast_MethodID_223, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.isFirst() throws java.sql.SQLException
-
-    private static var isFirst_MethodID_224: jmethodID?
-
-    open func isFirst() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isFirst", methodSig: "()Z", methodCache: &ResultSetForward.isFirst_MethodID_224, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.isLast() throws java.sql.SQLException
-
-    private static var isLast_MethodID_225: jmethodID?
-
-    open func isLast() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isLast", methodSig: "()Z", methodCache: &ResultSetForward.isLast_MethodID_225, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract void java.sql.ResultSet.beforeFirst() throws java.sql.SQLException
-
-    private static var beforeFirst_MethodID_226: jmethodID?
-
-    open func beforeFirst() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "beforeFirst", methodSig: "()V", methodCache: &ResultSetForward.beforeFirst_MethodID_226, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract void java.sql.ResultSet.afterLast() throws java.sql.SQLException
-
-    private static var afterLast_MethodID_227: jmethodID?
-
-    open func afterLast() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "afterLast", methodSig: "()V", methodCache: &ResultSetForward.afterLast_MethodID_227, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract int java.sql.ResultSet.getRow() throws java.sql.SQLException
-
-    private static var getRow_MethodID_228: jmethodID?
-
-    open func getRow() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getRow", methodSig: "()I", methodCache: &ResultSetForward.getRow_MethodID_228, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.absolute(int) throws java.sql.SQLException
-
-    private static var absolute_MethodID_229: jmethodID?
-
-    open func absolute( row: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: row, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "absolute", methodSig: "(I)Z", methodCache: &ResultSetForward.absolute_MethodID_229, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func absolute( _ _row: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try absolute( row: _row )
-    }
-
-    /// public abstract boolean java.sql.ResultSet.relative(int) throws java.sql.SQLException
-
-    private static var relative_MethodID_230: jmethodID?
-
-    open func relative( rows: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: rows, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "relative", methodSig: "(I)Z", methodCache: &ResultSetForward.relative_MethodID_230, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func relative( _ _rows: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try relative( rows: _rows )
-    }
-
-    /// public abstract void java.sql.ResultSet.setFetchDirection(int) throws java.sql.SQLException
-
-    private static var setFetchDirection_MethodID_231: jmethodID?
-
-    open func setFetchDirection( direction: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: direction, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchDirection", methodSig: "(I)V", methodCache: &ResultSetForward.setFetchDirection_MethodID_231, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func setFetchDirection( _ _direction: Int ) throws /* java.sql.SQLException */ {
-        try setFetchDirection( direction: _direction )
-    }
-
-    /// public abstract int java.sql.ResultSet.getFetchDirection() throws java.sql.SQLException
-
-    private static var getFetchDirection_MethodID_232: jmethodID?
-
-    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchDirection", methodSig: "()I", methodCache: &ResultSetForward.getFetchDirection_MethodID_232, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract void java.sql.ResultSet.setFetchSize(int) throws java.sql.SQLException
-
-    private static var setFetchSize_MethodID_233: jmethodID?
-
-    open func setFetchSize( rows: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: rows, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchSize", methodSig: "(I)V", methodCache: &ResultSetForward.setFetchSize_MethodID_233, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func setFetchSize( _ _rows: Int ) throws /* java.sql.SQLException */ {
-        try setFetchSize( rows: _rows )
-    }
-
-    /// public abstract int java.sql.ResultSet.getFetchSize() throws java.sql.SQLException
-
-    private static var getFetchSize_MethodID_234: jmethodID?
-
-    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchSize", methodSig: "()I", methodCache: &ResultSetForward.getFetchSize_MethodID_234, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.ResultSet.getConcurrency() throws java.sql.SQLException
-
-    private static var getConcurrency_MethodID_235: jmethodID?
-
-    open func getConcurrency() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getConcurrency", methodSig: "()I", methodCache: &ResultSetForward.getConcurrency_MethodID_235, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.rowUpdated() throws java.sql.SQLException
-
-    private static var rowUpdated_MethodID_236: jmethodID?
-
-    open func rowUpdated() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "rowUpdated", methodSig: "()Z", methodCache: &ResultSetForward.rowUpdated_MethodID_236, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.rowInserted() throws java.sql.SQLException
-
-    private static var rowInserted_MethodID_237: jmethodID?
-
-    open func rowInserted() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "rowInserted", methodSig: "()Z", methodCache: &ResultSetForward.rowInserted_MethodID_237, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.rowDeleted() throws java.sql.SQLException
-
-    private static var rowDeleted_MethodID_238: jmethodID?
-
-    open func rowDeleted() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "rowDeleted", methodSig: "()Z", methodCache: &ResultSetForward.rowDeleted_MethodID_238, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract void java.sql.ResultSet.updateNull(java.lang.String) throws java.sql.SQLException
-
-    private static var updateNull_MethodID_239: jmethodID?
-
-    open func updateNull( columnLabel: String? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNull", methodSig: "(Ljava/lang/String;)V", methodCache: &ResultSetForward.updateNull_MethodID_239, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNull( _ _columnLabel: String? ) throws /* java.sql.SQLException */ {
-        try updateNull( columnLabel: _columnLabel )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNull(int) throws java.sql.SQLException
-
-    private static var updateNull_MethodID_240: jmethodID?
-
-    open func updateNull( columnIndex: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNull", methodSig: "(I)V", methodCache: &ResultSetForward.updateNull_MethodID_240, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNull( _ _columnIndex: Int ) throws /* java.sql.SQLException */ {
-        try updateNull( columnIndex: _columnIndex )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBoolean(int,boolean) throws java.sql.SQLException
-
-    private static var updateBoolean_MethodID_241: jmethodID?
-
-    open func updateBoolean( columnIndex: Int, x: Bool ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBoolean", methodSig: "(IZ)V", methodCache: &ResultSetForward.updateBoolean_MethodID_241, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBoolean( _ _columnIndex: Int, _ _x: Bool ) throws /* java.sql.SQLException */ {
-        try updateBoolean( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBoolean(java.lang.String,boolean) throws java.sql.SQLException
-
-    private static var updateBoolean_MethodID_242: jmethodID?
-
-    open func updateBoolean( columnLabel: String?, x: Bool ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBoolean", methodSig: "(Ljava/lang/String;Z)V", methodCache: &ResultSetForward.updateBoolean_MethodID_242, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBoolean( _ _columnLabel: String?, _ _x: Bool ) throws /* java.sql.SQLException */ {
-        try updateBoolean( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateByte(java.lang.String,byte) throws java.sql.SQLException
-
-    private static var updateByte_MethodID_243: jmethodID?
-
-    open func updateByte( columnLabel: String?, x: Int8 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateByte", methodSig: "(Ljava/lang/String;B)V", methodCache: &ResultSetForward.updateByte_MethodID_243, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateByte( _ _columnLabel: String?, _ _x: Int8 ) throws /* java.sql.SQLException */ {
-        try updateByte( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateByte(int,byte) throws java.sql.SQLException
-
-    private static var updateByte_MethodID_244: jmethodID?
-
-    open func updateByte( columnIndex: Int, x: Int8 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateByte", methodSig: "(IB)V", methodCache: &ResultSetForward.updateByte_MethodID_244, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateByte( _ _columnIndex: Int, _ _x: Int8 ) throws /* java.sql.SQLException */ {
-        try updateByte( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateShort(java.lang.String,short) throws java.sql.SQLException
-
-    private static var updateShort_MethodID_245: jmethodID?
-
-    open func updateShort( columnLabel: String?, x: Int16 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateShort", methodSig: "(Ljava/lang/String;S)V", methodCache: &ResultSetForward.updateShort_MethodID_245, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateShort( _ _columnLabel: String?, _ _x: Int16 ) throws /* java.sql.SQLException */ {
-        try updateShort( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateShort(int,short) throws java.sql.SQLException
-
-    private static var updateShort_MethodID_246: jmethodID?
-
-    open func updateShort( columnIndex: Int, x: Int16 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateShort", methodSig: "(IS)V", methodCache: &ResultSetForward.updateShort_MethodID_246, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateShort( _ _columnIndex: Int, _ _x: Int16 ) throws /* java.sql.SQLException */ {
-        try updateShort( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateInt(java.lang.String,int) throws java.sql.SQLException
-
-    private static var updateInt_MethodID_247: jmethodID?
-
-    open func updateInt( columnLabel: String?, x: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateInt", methodSig: "(Ljava/lang/String;I)V", methodCache: &ResultSetForward.updateInt_MethodID_247, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateInt( _ _columnLabel: String?, _ _x: Int ) throws /* java.sql.SQLException */ {
-        try updateInt( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateInt(int,int) throws java.sql.SQLException
-
-    private static var updateInt_MethodID_248: jmethodID?
-
-    open func updateInt( columnIndex: Int, x: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateInt", methodSig: "(II)V", methodCache: &ResultSetForward.updateInt_MethodID_248, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateInt( _ _columnIndex: Int, _ _x: Int ) throws /* java.sql.SQLException */ {
-        try updateInt( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateLong(java.lang.String,long) throws java.sql.SQLException
-
-    private static var updateLong_MethodID_249: jmethodID?
-
-    open func updateLong( columnLabel: String?, x: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateLong", methodSig: "(Ljava/lang/String;J)V", methodCache: &ResultSetForward.updateLong_MethodID_249, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateLong( _ _columnLabel: String?, _ _x: Int64 ) throws /* java.sql.SQLException */ {
-        try updateLong( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateLong(int,long) throws java.sql.SQLException
-
-    private static var updateLong_MethodID_250: jmethodID?
-
-    open func updateLong( columnIndex: Int, x: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateLong", methodSig: "(IJ)V", methodCache: &ResultSetForward.updateLong_MethodID_250, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateLong( _ _columnIndex: Int, _ _x: Int64 ) throws /* java.sql.SQLException */ {
-        try updateLong( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateFloat(int,float) throws java.sql.SQLException
-
-    private static var updateFloat_MethodID_251: jmethodID?
-
-    open func updateFloat( columnIndex: Int, x: Float ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateFloat", methodSig: "(IF)V", methodCache: &ResultSetForward.updateFloat_MethodID_251, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateFloat( _ _columnIndex: Int, _ _x: Float ) throws /* java.sql.SQLException */ {
-        try updateFloat( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateFloat(java.lang.String,float) throws java.sql.SQLException
-
-    private static var updateFloat_MethodID_252: jmethodID?
-
-    open func updateFloat( columnLabel: String?, x: Float ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateFloat", methodSig: "(Ljava/lang/String;F)V", methodCache: &ResultSetForward.updateFloat_MethodID_252, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateFloat( _ _columnLabel: String?, _ _x: Float ) throws /* java.sql.SQLException */ {
-        try updateFloat( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateDouble(java.lang.String,double) throws java.sql.SQLException
-
-    private static var updateDouble_MethodID_253: jmethodID?
-
-    open func updateDouble( columnLabel: String?, x: Double ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDouble", methodSig: "(Ljava/lang/String;D)V", methodCache: &ResultSetForward.updateDouble_MethodID_253, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateDouble( _ _columnLabel: String?, _ _x: Double ) throws /* java.sql.SQLException */ {
-        try updateDouble( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateDouble(int,double) throws java.sql.SQLException
-
-    private static var updateDouble_MethodID_254: jmethodID?
-
-    open func updateDouble( columnIndex: Int, x: Double ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDouble", methodSig: "(ID)V", methodCache: &ResultSetForward.updateDouble_MethodID_254, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateDouble( _ _columnIndex: Int, _ _x: Double ) throws /* java.sql.SQLException */ {
-        try updateDouble( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBigDecimal(int,java.math.BigDecimal) throws java.sql.SQLException
-
-    private static var updateBigDecimal_MethodID_255: jmethodID?
-
-    open func updateBigDecimal( columnIndex: Int, x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBigDecimal", methodSig: "(ILjava/math/BigDecimal;)V", methodCache: &ResultSetForward.updateBigDecimal_MethodID_255, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBigDecimal( _ _columnIndex: Int, _ _x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateBigDecimal( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBigDecimal(java.lang.String,java.math.BigDecimal) throws java.sql.SQLException
-
-    private static var updateBigDecimal_MethodID_256: jmethodID?
-
-    open func updateBigDecimal( columnLabel: String?, x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBigDecimal", methodSig: "(Ljava/lang/String;Ljava/math/BigDecimal;)V", methodCache: &ResultSetForward.updateBigDecimal_MethodID_256, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBigDecimal( _ _columnLabel: String?, _ _x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateBigDecimal( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateString(java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var updateString_MethodID_257: jmethodID?
-
-    open func updateString( columnLabel: String?, x: String? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateString", methodSig: "(Ljava/lang/String;Ljava/lang/String;)V", methodCache: &ResultSetForward.updateString_MethodID_257, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateString( _ _columnLabel: String?, _ _x: String? ) throws /* java.sql.SQLException */ {
-        try updateString( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateString(int,java.lang.String) throws java.sql.SQLException
-
-    private static var updateString_MethodID_258: jmethodID?
-
-    open func updateString( columnIndex: Int, x: String? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateString", methodSig: "(ILjava/lang/String;)V", methodCache: &ResultSetForward.updateString_MethodID_258, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateString( _ _columnIndex: Int, _ _x: String? ) throws /* java.sql.SQLException */ {
-        try updateString( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateDate(java.lang.String,java.sql.Date) throws java.sql.SQLException
-
-    private static var updateDate_MethodID_259: jmethodID?
-
-    open func updateDate( columnLabel: String?, x: Date? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDate", methodSig: "(Ljava/lang/String;Ljava/sql/Date;)V", methodCache: &ResultSetForward.updateDate_MethodID_259, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateDate( _ _columnLabel: String?, _ _x: Date? ) throws /* java.sql.SQLException */ {
-        try updateDate( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateDate(int,java.sql.Date) throws java.sql.SQLException
-
-    private static var updateDate_MethodID_260: jmethodID?
-
-    open func updateDate( columnIndex: Int, x: Date? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDate", methodSig: "(ILjava/sql/Date;)V", methodCache: &ResultSetForward.updateDate_MethodID_260, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateDate( _ _columnIndex: Int, _ _x: Date? ) throws /* java.sql.SQLException */ {
-        try updateDate( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateTime(int,java.sql.Time) throws java.sql.SQLException
-
-    private static var updateTime_MethodID_261: jmethodID?
-
-    open func updateTime( columnIndex: Int, x: Time? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTime", methodSig: "(ILjava/sql/Time;)V", methodCache: &ResultSetForward.updateTime_MethodID_261, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateTime( _ _columnIndex: Int, _ _x: Time? ) throws /* java.sql.SQLException */ {
-        try updateTime( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateTime(java.lang.String,java.sql.Time) throws java.sql.SQLException
-
-    private static var updateTime_MethodID_262: jmethodID?
-
-    open func updateTime( columnLabel: String?, x: Time? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTime", methodSig: "(Ljava/lang/String;Ljava/sql/Time;)V", methodCache: &ResultSetForward.updateTime_MethodID_262, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateTime( _ _columnLabel: String?, _ _x: Time? ) throws /* java.sql.SQLException */ {
-        try updateTime( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateTimestamp(int,java.sql.Timestamp) throws java.sql.SQLException
-
-    private static var updateTimestamp_MethodID_263: jmethodID?
-
-    open func updateTimestamp( columnIndex: Int, x: Timestamp? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTimestamp", methodSig: "(ILjava/sql/Timestamp;)V", methodCache: &ResultSetForward.updateTimestamp_MethodID_263, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateTimestamp( _ _columnIndex: Int, _ _x: Timestamp? ) throws /* java.sql.SQLException */ {
-        try updateTimestamp( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateTimestamp(java.lang.String,java.sql.Timestamp) throws java.sql.SQLException
-
-    private static var updateTimestamp_MethodID_264: jmethodID?
-
-    open func updateTimestamp( columnLabel: String?, x: Timestamp? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTimestamp", methodSig: "(Ljava/lang/String;Ljava/sql/Timestamp;)V", methodCache: &ResultSetForward.updateTimestamp_MethodID_264, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateTimestamp( _ _columnLabel: String?, _ _x: Timestamp? ) throws /* java.sql.SQLException */ {
-        try updateTimestamp( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,int) throws java.sql.SQLException
-
-    private static var updateAsciiStream_MethodID_265: jmethodID?
-
-    open func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(ILjava/io/InputStream;I)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_265, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateAsciiStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
-        try updateAsciiStream( columnIndex: _columnIndex, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,long) throws java.sql.SQLException
-
-    private static var updateAsciiStream_MethodID_266: jmethodID?
-
-    open func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_266, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateAsciiStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateAsciiStream( columnIndex: _columnIndex, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
-
-    private static var updateAsciiStream_MethodID_267: jmethodID?
-
-    open func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;J)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_267, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateAsciiStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateAsciiStream( columnLabel: _columnLabel, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
-
-    private static var updateAsciiStream_MethodID_268: jmethodID?
-
-    open func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_268, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateAsciiStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateAsciiStream( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream) throws java.sql.SQLException
-
-    private static var updateAsciiStream_MethodID_269: jmethodID?
-
-    open func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(ILjava/io/InputStream;)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_269, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateAsciiStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateAsciiStream( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream,int) throws java.sql.SQLException
-
-    private static var updateAsciiStream_MethodID_270: jmethodID?
-
-    open func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;I)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_270, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateAsciiStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
-        try updateAsciiStream( columnLabel: _columnLabel, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
-
-    private static var updateBinaryStream_MethodID_271: jmethodID?
-
-    open func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_271, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBinaryStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateBinaryStream( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream) throws java.sql.SQLException
-
-    private static var updateBinaryStream_MethodID_272: jmethodID?
-
-    open func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(ILjava/io/InputStream;)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_272, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBinaryStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateBinaryStream( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
-
-    private static var updateBinaryStream_MethodID_273: jmethodID?
-
-    open func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_273, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBinaryStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateBinaryStream( columnLabel: _columnLabel, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,int) throws java.sql.SQLException
-
-    private static var updateBinaryStream_MethodID_274: jmethodID?
-
-    open func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;I)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_274, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBinaryStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
-        try updateBinaryStream( columnLabel: _columnLabel, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream,int) throws java.sql.SQLException
-
-    private static var updateBinaryStream_MethodID_275: jmethodID?
-
-    open func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(ILjava/io/InputStream;I)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_275, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBinaryStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
-        try updateBinaryStream( columnIndex: _columnIndex, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream,long) throws java.sql.SQLException
-
-    private static var updateBinaryStream_MethodID_276: jmethodID?
-
-    open func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_276, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBinaryStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateBinaryStream( columnIndex: _columnIndex, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader,int) throws java.sql.SQLException
-
-    private static var updateCharacterStream_MethodID_277: jmethodID?
-
-    open func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(ILjava/io/Reader;I)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_277, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
-        try updateCharacterStream( columnIndex: _columnIndex, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader,int) throws java.sql.SQLException
-
-    private static var updateCharacterStream_MethodID_278: jmethodID?
-
-    open func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;I)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_278, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
-        try updateCharacterStream( columnLabel: _columnLabel, reader: _reader, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateCharacterStream_MethodID_279: jmethodID?
-
-    open func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_279, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateCharacterStream( columnLabel: _columnLabel, reader: _reader, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateCharacterStream_MethodID_280: jmethodID?
-
-    open func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_280, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateCharacterStream( columnLabel: _columnLabel, reader: _reader )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateCharacterStream_MethodID_281: jmethodID?
-
-    open func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_281, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateCharacterStream( columnIndex: _columnIndex, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateCharacterStream_MethodID_282: jmethodID?
-
-    open func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_282, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateCharacterStream( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public default void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,java.sql.SQLType,int) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_283: jmethodID?
-
-    open func updateObject( columnLabel: String?, x: java_swift.JavaObject?, targetSqlType: SQLType?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
-        __args[3] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;I)V", methodCache: &ResultSetForward.updateObject_MethodID_283, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        try updateObject( columnLabel: _columnLabel, x: _x, targetSqlType: _targetSqlType, scaleOrLength: _scaleOrLength )
-    }
-
-    /// public default void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,java.sql.SQLType) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_284: jmethodID?
-
-    open func updateObject( columnLabel: String?, x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;)V", methodCache: &ResultSetForward.updateObject_MethodID_284, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
-        try updateObject( columnLabel: _columnLabel, x: _x, targetSqlType: _targetSqlType )
-    }
-
-    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType,int) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_285: jmethodID?
-
-    open func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
-        __args[3] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;Ljava/sql/SQLType;I)V", methodCache: &ResultSetForward.updateObject_MethodID_285, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        try updateObject( columnIndex: _columnIndex, x: _x, targetSqlType: _targetSqlType, scaleOrLength: _scaleOrLength )
-    }
-
-    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_286: jmethodID?
-
-    open func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;Ljava/sql/SQLType;)V", methodCache: &ResultSetForward.updateObject_MethodID_286, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
-        try updateObject( columnIndex: _columnIndex, x: _x, targetSqlType: _targetSqlType )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,int) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_287: jmethodID?
-
-    open func updateObject( columnLabel: String?, x: java_swift.JavaObject?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;I)V", methodCache: &ResultSetForward.updateObject_MethodID_287, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        try updateObject( columnLabel: _columnLabel, x: _x, scaleOrLength: _scaleOrLength )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_288: jmethodID?
-
-    open func updateObject( columnLabel: String?, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;)V", methodCache: &ResultSetForward.updateObject_MethodID_288, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
-        try updateObject( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateObject(int,java.lang.Object,int) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_289: jmethodID?
-
-    open func updateObject( columnIndex: Int, x: java_swift.JavaObject?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;I)V", methodCache: &ResultSetForward.updateObject_MethodID_289, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
-        try updateObject( columnIndex: _columnIndex, x: _x, scaleOrLength: _scaleOrLength )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateObject(int,java.lang.Object) throws java.sql.SQLException
-
-    private static var updateObject_MethodID_290: jmethodID?
-
-    open func updateObject( columnIndex: Int, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;)V", methodCache: &ResultSetForward.updateObject_MethodID_290, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
-        try updateObject( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.insertRow() throws java.sql.SQLException
-
-    private static var insertRow_MethodID_291: jmethodID?
-
-    open func insertRow() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "insertRow", methodSig: "()V", methodCache: &ResultSetForward.insertRow_MethodID_291, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract void java.sql.ResultSet.updateRow() throws java.sql.SQLException
-
-    private static var updateRow_MethodID_292: jmethodID?
-
-    open func updateRow() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRow", methodSig: "()V", methodCache: &ResultSetForward.updateRow_MethodID_292, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract void java.sql.ResultSet.deleteRow() throws java.sql.SQLException
-
-    private static var deleteRow_MethodID_293: jmethodID?
-
-    open func deleteRow() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "deleteRow", methodSig: "()V", methodCache: &ResultSetForward.deleteRow_MethodID_293, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract void java.sql.ResultSet.refreshRow() throws java.sql.SQLException
-
-    private static var refreshRow_MethodID_294: jmethodID?
-
-    open func refreshRow() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "refreshRow", methodSig: "()V", methodCache: &ResultSetForward.refreshRow_MethodID_294, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract void java.sql.ResultSet.cancelRowUpdates() throws java.sql.SQLException
-
-    private static var cancelRowUpdates_MethodID_295: jmethodID?
-
-    open func cancelRowUpdates() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "cancelRowUpdates", methodSig: "()V", methodCache: &ResultSetForward.cancelRowUpdates_MethodID_295, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract void java.sql.ResultSet.moveToInsertRow() throws java.sql.SQLException
-
-    private static var moveToInsertRow_MethodID_296: jmethodID?
-
-    open func moveToInsertRow() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "moveToInsertRow", methodSig: "()V", methodCache: &ResultSetForward.moveToInsertRow_MethodID_296, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract void java.sql.ResultSet.moveToCurrentRow() throws java.sql.SQLException
-
-    private static var moveToCurrentRow_MethodID_297: jmethodID?
-
-    open func moveToCurrentRow() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "moveToCurrentRow", methodSig: "()V", methodCache: &ResultSetForward.moveToCurrentRow_MethodID_297, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract java.sql.Statement java.sql.ResultSet.getStatement() throws java.sql.SQLException
-
-    private static var getStatement_MethodID_298: jmethodID?
-
-    open func getStatement() throws /* java.sql.SQLException */ -> Statement! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getStatement", methodSig: "()Ljava/sql/Statement;", methodCache: &ResultSetForward.getStatement_MethodID_298, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? StatementForward( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract java.sql.Blob java.sql.ResultSet.getBlob(int) throws java.sql.SQLException
-
-    private static var getBlob_MethodID_299: jmethodID?
-
-    open func getBlob( columnIndex: Int ) throws /* java.sql.SQLException */ -> Blob! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBlob", methodSig: "(I)Ljava/sql/Blob;", methodCache: &ResultSetForward.getBlob_MethodID_299, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? BlobForward( javaObject: __return ) : nil
-    }
-
-    open func getBlob( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Blob! {
-        return try getBlob( columnIndex: _columnIndex )
-    }
-
-    /// public abstract java.sql.Blob java.sql.ResultSet.getBlob(java.lang.String) throws java.sql.SQLException
-
-    private static var getBlob_MethodID_300: jmethodID?
-
-    open func getBlob( columnLabel: String? ) throws /* java.sql.SQLException */ -> Blob! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBlob", methodSig: "(Ljava/lang/String;)Ljava/sql/Blob;", methodCache: &ResultSetForward.getBlob_MethodID_300, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? BlobForward( javaObject: __return ) : nil
-    }
-
-    open func getBlob( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Blob! {
-        return try getBlob( columnLabel: _columnLabel )
-    }
-
-    /// public abstract java.sql.Clob java.sql.ResultSet.getClob(java.lang.String) throws java.sql.SQLException
-
-    private static var getClob_MethodID_301: jmethodID?
-
-    open func getClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> Clob! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClob", methodSig: "(Ljava/lang/String;)Ljava/sql/Clob;", methodCache: &ResultSetForward.getClob_MethodID_301, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ClobForward( javaObject: __return ) : nil
-    }
-
-    open func getClob( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Clob! {
-        return try getClob( columnLabel: _columnLabel )
-    }
-
-    /// public abstract java.sql.Clob java.sql.ResultSet.getClob(int) throws java.sql.SQLException
-
-    private static var getClob_MethodID_302: jmethodID?
-
-    open func getClob( columnIndex: Int ) throws /* java.sql.SQLException */ -> Clob! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClob", methodSig: "(I)Ljava/sql/Clob;", methodCache: &ResultSetForward.getClob_MethodID_302, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ClobForward( javaObject: __return ) : nil
-    }
-
-    open func getClob( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Clob! {
-        return try getClob( columnIndex: _columnIndex )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateRef(int,java.sql.Ref) throws java.sql.SQLException
-
-    private static var updateRef_MethodID_303: jmethodID?
-
-    open func updateRef( columnIndex: Int, x: Ref? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRef", methodSig: "(ILjava/sql/Ref;)V", methodCache: &ResultSetForward.updateRef_MethodID_303, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateRef( _ _columnIndex: Int, _ _x: Ref? ) throws /* java.sql.SQLException */ {
-        try updateRef( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateRef(java.lang.String,java.sql.Ref) throws java.sql.SQLException
-
-    private static var updateRef_MethodID_304: jmethodID?
-
-    open func updateRef( columnLabel: String?, x: Ref? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRef", methodSig: "(Ljava/lang/String;Ljava/sql/Ref;)V", methodCache: &ResultSetForward.updateRef_MethodID_304, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateRef( _ _columnLabel: String?, _ _x: Ref? ) throws /* java.sql.SQLException */ {
-        try updateRef( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBlob(int,java.io.InputStream) throws java.sql.SQLException
-
-    private static var updateBlob_MethodID_305: jmethodID?
-
-    open func updateBlob( columnIndex: Int, inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: inputStream != nil ? inputStream! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(ILjava/io/InputStream;)V", methodCache: &ResultSetForward.updateBlob_MethodID_305, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBlob( _ _columnIndex: Int, _ _inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateBlob( columnIndex: _columnIndex, inputStream: _inputStream )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.io.InputStream) throws java.sql.SQLException
-
-    private static var updateBlob_MethodID_306: jmethodID?
-
-    open func updateBlob( columnLabel: String?, inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: inputStream != nil ? inputStream! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;)V", methodCache: &ResultSetForward.updateBlob_MethodID_306, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBlob( _ _columnLabel: String?, _ _inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateBlob( columnLabel: _columnLabel, inputStream: _inputStream )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBlob(int,java.io.InputStream,long) throws java.sql.SQLException
-
-    private static var updateBlob_MethodID_307: jmethodID?
-
-    open func updateBlob( columnIndex: Int, inputStream: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: inputStream != nil ? inputStream! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBlob_MethodID_307, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBlob( _ _columnIndex: Int, _ _inputStream: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateBlob( columnIndex: _columnIndex, inputStream: _inputStream, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
-
-    private static var updateBlob_MethodID_308: jmethodID?
-
-    open func updateBlob( columnLabel: String?, inputStream: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: inputStream != nil ? inputStream! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBlob_MethodID_308, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBlob( _ _columnLabel: String?, _ _inputStream: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateBlob( columnLabel: _columnLabel, inputStream: _inputStream, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.sql.Blob) throws java.sql.SQLException
-
-    private static var updateBlob_MethodID_309: jmethodID?
-
-    open func updateBlob( columnLabel: String?, x: Blob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(Ljava/lang/String;Ljava/sql/Blob;)V", methodCache: &ResultSetForward.updateBlob_MethodID_309, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBlob( _ _columnLabel: String?, _ _x: Blob? ) throws /* java.sql.SQLException */ {
-        try updateBlob( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateBlob(int,java.sql.Blob) throws java.sql.SQLException
-
-    private static var updateBlob_MethodID_310: jmethodID?
-
-    open func updateBlob( columnIndex: Int, x: Blob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(ILjava/sql/Blob;)V", methodCache: &ResultSetForward.updateBlob_MethodID_310, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateBlob( _ _columnIndex: Int, _ _x: Blob? ) throws /* java.sql.SQLException */ {
-        try updateBlob( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateClob_MethodID_311: jmethodID?
-
-    open func updateClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateClob_MethodID_311, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateClob( columnLabel: _columnLabel, reader: _reader, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateClob(int,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateClob_MethodID_312: jmethodID?
-
-    open func updateClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateClob_MethodID_312, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateClob( columnIndex: _columnIndex, reader: _reader )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateClob(int,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateClob_MethodID_313: jmethodID?
-
-    open func updateClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateClob_MethodID_313, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateClob( columnIndex: _columnIndex, reader: _reader, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.sql.Clob) throws java.sql.SQLException
-
-    private static var updateClob_MethodID_314: jmethodID?
-
-    open func updateClob( columnLabel: String?, x: Clob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(Ljava/lang/String;Ljava/sql/Clob;)V", methodCache: &ResultSetForward.updateClob_MethodID_314, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateClob( _ _columnLabel: String?, _ _x: Clob? ) throws /* java.sql.SQLException */ {
-        try updateClob( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateClob_MethodID_315: jmethodID?
-
-    open func updateClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateClob_MethodID_315, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateClob( columnLabel: _columnLabel, reader: _reader )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateClob(int,java.sql.Clob) throws java.sql.SQLException
-
-    private static var updateClob_MethodID_316: jmethodID?
-
-    open func updateClob( columnIndex: Int, x: Clob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(ILjava/sql/Clob;)V", methodCache: &ResultSetForward.updateClob_MethodID_316, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateClob( _ _columnIndex: Int, _ _x: Clob? ) throws /* java.sql.SQLException */ {
-        try updateClob( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateArray(int,java.sql.Array) throws java.sql.SQLException
-
-    private static var updateArray_MethodID_317: jmethodID?
-
-    open func updateArray( columnIndex: Int, x: Array? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateArray", methodSig: "(ILjava/sql/Array;)V", methodCache: &ResultSetForward.updateArray_MethodID_317, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateArray( _ _columnIndex: Int, _ _x: Array? ) throws /* java.sql.SQLException */ {
-        try updateArray( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateArray(java.lang.String,java.sql.Array) throws java.sql.SQLException
-
-    private static var updateArray_MethodID_318: jmethodID?
-
-    open func updateArray( columnLabel: String?, x: Array? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateArray", methodSig: "(Ljava/lang/String;Ljava/sql/Array;)V", methodCache: &ResultSetForward.updateArray_MethodID_318, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateArray( _ _columnLabel: String?, _ _x: Array? ) throws /* java.sql.SQLException */ {
-        try updateArray( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract java.sql.RowId java.sql.ResultSet.getRowId(java.lang.String) throws java.sql.SQLException
-
-    private static var getRowId_MethodID_319: jmethodID?
-
-    open func getRowId( columnLabel: String? ) throws /* java.sql.SQLException */ -> RowId! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRowId", methodSig: "(Ljava/lang/String;)Ljava/sql/RowId;", methodCache: &ResultSetForward.getRowId_MethodID_319, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? RowIdForward( javaObject: __return ) : nil
-    }
-
-    open func getRowId( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> RowId! {
-        return try getRowId( columnLabel: _columnLabel )
-    }
-
-    /// public abstract java.sql.RowId java.sql.ResultSet.getRowId(int) throws java.sql.SQLException
-
-    private static var getRowId_MethodID_320: jmethodID?
-
-    open func getRowId( columnIndex: Int ) throws /* java.sql.SQLException */ -> RowId! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRowId", methodSig: "(I)Ljava/sql/RowId;", methodCache: &ResultSetForward.getRowId_MethodID_320, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? RowIdForward( javaObject: __return ) : nil
-    }
-
-    open func getRowId( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> RowId! {
-        return try getRowId( columnIndex: _columnIndex )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateRowId(java.lang.String,java.sql.RowId) throws java.sql.SQLException
-
-    private static var updateRowId_MethodID_321: jmethodID?
-
-    open func updateRowId( columnLabel: String?, x: RowId? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRowId", methodSig: "(Ljava/lang/String;Ljava/sql/RowId;)V", methodCache: &ResultSetForward.updateRowId_MethodID_321, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateRowId( _ _columnLabel: String?, _ _x: RowId? ) throws /* java.sql.SQLException */ {
-        try updateRowId( columnLabel: _columnLabel, x: _x )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateRowId(int,java.sql.RowId) throws java.sql.SQLException
-
-    private static var updateRowId_MethodID_322: jmethodID?
-
-    open func updateRowId( columnIndex: Int, x: RowId? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRowId", methodSig: "(ILjava/sql/RowId;)V", methodCache: &ResultSetForward.updateRowId_MethodID_322, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateRowId( _ _columnIndex: Int, _ _x: RowId? ) throws /* java.sql.SQLException */ {
-        try updateRowId( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract int java.sql.ResultSet.getHoldability() throws java.sql.SQLException
-
-    private static var getHoldability_MethodID_323: jmethodID?
-
-    open func getHoldability() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getHoldability", methodSig: "()I", methodCache: &ResultSetForward.getHoldability_MethodID_323, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.ResultSet.isClosed() throws java.sql.SQLException
-
-    private static var isClosed_MethodID_324: jmethodID?
-
-    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isClosed", methodSig: "()Z", methodCache: &ResultSetForward.isClosed_MethodID_324, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract void java.sql.ResultSet.updateNString(int,java.lang.String) throws java.sql.SQLException
-
-    private static var updateNString_MethodID_325: jmethodID?
-
-    open func updateNString( columnIndex: Int, nString: String? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: nString, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNString", methodSig: "(ILjava/lang/String;)V", methodCache: &ResultSetForward.updateNString_MethodID_325, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNString( _ _columnIndex: Int, _ _nString: String? ) throws /* java.sql.SQLException */ {
-        try updateNString( columnIndex: _columnIndex, nString: _nString )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNString(java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var updateNString_MethodID_326: jmethodID?
-
-    open func updateNString( columnLabel: String?, nString: String? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: nString, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNString", methodSig: "(Ljava/lang/String;Ljava/lang/String;)V", methodCache: &ResultSetForward.updateNString_MethodID_326, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNString( _ _columnLabel: String?, _ _nString: String? ) throws /* java.sql.SQLException */ {
-        try updateNString( columnLabel: _columnLabel, nString: _nString )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateNClob_MethodID_327: jmethodID?
-
-    open func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateNClob_MethodID_327, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateNClob( columnIndex: _columnIndex, reader: _reader, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateNClob_MethodID_328: jmethodID?
-
-    open func updateNClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateNClob_MethodID_328, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateNClob( columnLabel: _columnLabel, reader: _reader, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.sql.NClob) throws java.sql.SQLException
-
-    private static var updateNClob_MethodID_329: jmethodID?
-
-    open func updateNClob( columnLabel: String?, nClob: NClob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: nClob, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(Ljava/lang/String;Ljava/sql/NClob;)V", methodCache: &ResultSetForward.updateNClob_MethodID_329, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNClob( _ _columnLabel: String?, _ _nClob: NClob? ) throws /* java.sql.SQLException */ {
-        try updateNClob( columnLabel: _columnLabel, nClob: _nClob )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNClob(int,java.sql.NClob) throws java.sql.SQLException
-
-    private static var updateNClob_MethodID_330: jmethodID?
-
-    open func updateNClob( columnIndex: Int, nClob: NClob? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: nClob, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(ILjava/sql/NClob;)V", methodCache: &ResultSetForward.updateNClob_MethodID_330, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNClob( _ _columnIndex: Int, _ _nClob: NClob? ) throws /* java.sql.SQLException */ {
-        try updateNClob( columnIndex: _columnIndex, nClob: _nClob )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateNClob_MethodID_331: jmethodID?
-
-    open func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateNClob_MethodID_331, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateNClob( columnIndex: _columnIndex, reader: _reader )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateNClob_MethodID_332: jmethodID?
-
-    open func updateNClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateNClob_MethodID_332, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateNClob( columnLabel: _columnLabel, reader: _reader )
-    }
-
-    /// public abstract java.sql.NClob java.sql.ResultSet.getNClob(java.lang.String) throws java.sql.SQLException
-
-    private static var getNClob_MethodID_333: jmethodID?
-
-    open func getNClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> NClob! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNClob", methodSig: "(Ljava/lang/String;)Ljava/sql/NClob;", methodCache: &ResultSetForward.getNClob_MethodID_333, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? NClobForward( javaObject: __return ) : nil
-    }
-
-    open func getNClob( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> NClob! {
-        return try getNClob( columnLabel: _columnLabel )
-    }
-
-    /// public abstract java.sql.NClob java.sql.ResultSet.getNClob(int) throws java.sql.SQLException
-
-    private static var getNClob_MethodID_334: jmethodID?
-
-    open func getNClob( columnIndex: Int ) throws /* java.sql.SQLException */ -> NClob! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNClob", methodSig: "(I)Ljava/sql/NClob;", methodCache: &ResultSetForward.getNClob_MethodID_334, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? NClobForward( javaObject: __return ) : nil
-    }
-
-    open func getNClob( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> NClob! {
-        return try getNClob( columnIndex: _columnIndex )
-    }
-
-    /// public abstract java.sql.SQLXML java.sql.ResultSet.getSQLXML(int) throws java.sql.SQLException
-
-    private static var getSQLXML_MethodID_335: jmethodID?
-
-    open func getSQLXML( columnIndex: Int ) throws /* java.sql.SQLException */ -> SQLXML! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLXML", methodSig: "(I)Ljava/sql/SQLXML;", methodCache: &ResultSetForward.getSQLXML_MethodID_335, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? SQLXMLForward( javaObject: __return ) : nil
-    }
-
-    open func getSQLXML( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> SQLXML! {
-        return try getSQLXML( columnIndex: _columnIndex )
-    }
-
-    /// public abstract java.sql.SQLXML java.sql.ResultSet.getSQLXML(java.lang.String) throws java.sql.SQLException
-
-    private static var getSQLXML_MethodID_336: jmethodID?
-
-    open func getSQLXML( columnLabel: String? ) throws /* java.sql.SQLException */ -> SQLXML! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLXML", methodSig: "(Ljava/lang/String;)Ljava/sql/SQLXML;", methodCache: &ResultSetForward.getSQLXML_MethodID_336, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? SQLXMLForward( javaObject: __return ) : nil
-    }
-
-    open func getSQLXML( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> SQLXML! {
-        return try getSQLXML( columnLabel: _columnLabel )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateSQLXML(java.lang.String,java.sql.SQLXML) throws java.sql.SQLException
-
-    private static var updateSQLXML_MethodID_337: jmethodID?
-
-    open func updateSQLXML( columnLabel: String?, xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: xmlObject, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateSQLXML", methodSig: "(Ljava/lang/String;Ljava/sql/SQLXML;)V", methodCache: &ResultSetForward.updateSQLXML_MethodID_337, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateSQLXML( _ _columnLabel: String?, _ _xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
-        try updateSQLXML( columnLabel: _columnLabel, xmlObject: _xmlObject )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateSQLXML(int,java.sql.SQLXML) throws java.sql.SQLException
-
-    private static var updateSQLXML_MethodID_338: jmethodID?
-
-    open func updateSQLXML( columnIndex: Int, xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: xmlObject, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateSQLXML", methodSig: "(ILjava/sql/SQLXML;)V", methodCache: &ResultSetForward.updateSQLXML_MethodID_338, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateSQLXML( _ _columnIndex: Int, _ _xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
-        try updateSQLXML( columnIndex: _columnIndex, xmlObject: _xmlObject )
-    }
-
-    /// public abstract java.lang.String java.sql.ResultSet.getNString(java.lang.String) throws java.sql.SQLException
-
-    private static var getNString_MethodID_339: jmethodID?
-
-    open func getNString( columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNString", methodSig: "(Ljava/lang/String;)Ljava/lang/String;", methodCache: &ResultSetForward.getNString_MethodID_339, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open func getNString( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
-        return try getNString( columnLabel: _columnLabel )
-    }
-
-    /// public abstract java.lang.String java.sql.ResultSet.getNString(int) throws java.sql.SQLException
-
-    private static var getNString_MethodID_340: jmethodID?
-
-    open func getNString( columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNString", methodSig: "(I)Ljava/lang/String;", methodCache: &ResultSetForward.getNString_MethodID_340, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open func getNString( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
-        return try getNString( columnIndex: _columnIndex )
-    }
-
-    /// public abstract java.io.Reader java.sql.ResultSet.getNCharacterStream(java.lang.String) throws java.sql.SQLException
-
-    /// public abstract java.io.Reader java.sql.ResultSet.getNCharacterStream(int) throws java.sql.SQLException
-
-    /// public abstract void java.sql.ResultSet.updateNCharacterStream(java.lang.String,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateNCharacterStream_MethodID_341: jmethodID?
-
-    open func updateNCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_341, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateNCharacterStream( columnLabel: _columnLabel, reader: _reader )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNCharacterStream(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateNCharacterStream_MethodID_342: jmethodID?
-
-    open func updateNCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: reader != nil ? reader! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_342, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateNCharacterStream( columnLabel: _columnLabel, reader: _reader, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNCharacterStream(int,java.io.Reader,long) throws java.sql.SQLException
-
-    private static var updateNCharacterStream_MethodID_343: jmethodID?
-
-    open func updateNCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        __args[2] = JNIType.toJava( value: length, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_343, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
-        try updateNCharacterStream( columnIndex: _columnIndex, x: _x, length: _length )
-    }
-
-    /// public abstract void java.sql.ResultSet.updateNCharacterStream(int,java.io.Reader) throws java.sql.SQLException
-
-    private static var updateNCharacterStream_MethodID_344: jmethodID?
-
-    open func updateNCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: x != nil ? x! as JNIObject : nil, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_344, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func updateNCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
-        try updateNCharacterStream( columnIndex: _columnIndex, x: _x )
-    }
-
-    /// public abstract java.lang.String java.sql.ResultSet.getString(int) throws java.sql.SQLException
-
-    private static var getString_MethodID_345: jmethodID?
-
-    open func getString( columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getString", methodSig: "(I)Ljava/lang/String;", methodCache: &ResultSetForward.getString_MethodID_345, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open func getString( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
-        return try getString( columnIndex: _columnIndex )
-    }
-
-    /// public abstract java.lang.String java.sql.ResultSet.getString(java.lang.String) throws java.sql.SQLException
-
-    private static var getString_MethodID_346: jmethodID?
-
-    open func getString( columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getString", methodSig: "(Ljava/lang/String;)Ljava/lang/String;", methodCache: &ResultSetForward.getString_MethodID_346, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-    open func getString( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
-        return try getString( columnLabel: _columnLabel )
+    open func getTime( _ _columnLabel: String?, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time! {
+        return try getTime( columnLabel: _columnLabel, cal: _cal )
     }
 
     /// public abstract java.sql.Time java.sql.ResultSet.getTime(int,java.util.Calendar) throws java.sql.SQLException
 
-    private static var getTime_MethodID_347: jmethodID?
+    private static var getTime_MethodID_213: jmethodID?
 
     open func getTime( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(ILjava/util/Calendar;)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_347, args: &__args, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cal, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(ILjava/util/Calendar;)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_213, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -4082,13 +1589,13 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     /// public abstract java.sql.Time java.sql.ResultSet.getTime(int) throws java.sql.SQLException
 
-    private static var getTime_MethodID_348: jmethodID?
+    private static var getTime_MethodID_214: jmethodID?
 
     open func getTime( columnIndex: Int ) throws /* java.sql.SQLException */ -> Time! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(I)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_348, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(I)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_214, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -4102,13 +1609,13 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     /// public abstract java.sql.Time java.sql.ResultSet.getTime(java.lang.String) throws java.sql.SQLException
 
-    private static var getTime_MethodID_349: jmethodID?
+    private static var getTime_MethodID_215: jmethodID?
 
     open func getTime( columnLabel: String? ) throws /* java.sql.SQLException */ -> Time! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(Ljava/lang/String;)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_349, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(Ljava/lang/String;)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_215, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -4120,56 +1627,15 @@ open class ResultSetForward: WrapperForward, ResultSet {
         return try getTime( columnLabel: _columnLabel )
     }
 
-    /// public abstract java.sql.Time java.sql.ResultSet.getTime(java.lang.String,java.util.Calendar) throws java.sql.SQLException
-
-    private static var getTime_MethodID_350: jmethodID?
-
-    open func getTime( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTime", methodSig: "(Ljava/lang/String;Ljava/util/Calendar;)Ljava/sql/Time;", methodCache: &ResultSetForward.getTime_MethodID_350, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? Time( javaObject: __return ) : nil
-    }
-
-    open func getTime( _ _columnLabel: String?, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Time! {
-        return try getTime( columnLabel: _columnLabel, cal: _cal )
-    }
-
-    /// public abstract java.sql.Date java.sql.ResultSet.getDate(int) throws java.sql.SQLException
-
-    private static var getDate_MethodID_351: jmethodID?
-
-    open func getDate( columnIndex: Int ) throws /* java.sql.SQLException */ -> Date! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(I)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_351, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? Date( javaObject: __return ) : nil
-    }
-
-    open func getDate( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Date! {
-        return try getDate( columnIndex: _columnIndex )
-    }
-
     /// public abstract java.sql.Date java.sql.ResultSet.getDate(java.lang.String) throws java.sql.SQLException
 
-    private static var getDate_MethodID_352: jmethodID?
+    private static var getDate_MethodID_216: jmethodID?
 
     open func getDate( columnLabel: String? ) throws /* java.sql.SQLException */ -> Date! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(Ljava/lang/String;)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_352, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(Ljava/lang/String;)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_216, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -4183,14 +1649,14 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     /// public abstract java.sql.Date java.sql.ResultSet.getDate(int,java.util.Calendar) throws java.sql.SQLException
 
-    private static var getDate_MethodID_353: jmethodID?
+    private static var getDate_MethodID_217: jmethodID?
 
     open func getDate( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Date! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(ILjava/util/Calendar;)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_353, args: &__args, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cal, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(ILjava/util/Calendar;)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_217, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -4202,16 +1668,36 @@ open class ResultSetForward: WrapperForward, ResultSet {
         return try getDate( columnIndex: _columnIndex, cal: _cal )
     }
 
+    /// public abstract java.sql.Date java.sql.ResultSet.getDate(int) throws java.sql.SQLException
+
+    private static var getDate_MethodID_218: jmethodID?
+
+    open func getDate( columnIndex: Int ) throws /* java.sql.SQLException */ -> Date! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(I)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_218, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? Date( javaObject: __return ) : nil
+    }
+
+    open func getDate( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Date! {
+        return try getDate( columnIndex: _columnIndex )
+    }
+
     /// public abstract java.sql.Date java.sql.ResultSet.getDate(java.lang.String,java.util.Calendar) throws java.sql.SQLException
 
-    private static var getDate_MethodID_354: jmethodID?
+    private static var getDate_MethodID_219: jmethodID?
 
     open func getDate( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Date! {
         var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cal != nil ? cal! as JNIObject : nil, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(Ljava/lang/String;Ljava/util/Calendar;)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_354, args: &__args, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cal, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDate", methodSig: "(Ljava/lang/String;Ljava/util/Calendar;)Ljava/sql/Date;", methodCache: &ResultSetForward.getDate_MethodID_219, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -4223,6 +1709,2520 @@ open class ResultSetForward: WrapperForward, ResultSet {
         return try getDate( columnLabel: _columnLabel, cal: _cal )
     }
 
+    /// public abstract java.lang.String java.sql.ResultSet.getString(java.lang.String) throws java.sql.SQLException
+
+    private static var getString_MethodID_220: jmethodID?
+
+    open func getString( columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getString", methodSig: "(Ljava/lang/String;)Ljava/lang/String;", methodCache: &ResultSetForward.getString_MethodID_220, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+    open func getString( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
+        return try getString( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.lang.String java.sql.ResultSet.getString(int) throws java.sql.SQLException
+
+    private static var getString_MethodID_221: jmethodID?
+
+    open func getString( columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getString", methodSig: "(I)Ljava/lang/String;", methodCache: &ResultSetForward.getString_MethodID_221, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+    open func getString( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
+        return try getString( columnIndex: _columnIndex )
+    }
+
+    /// public abstract boolean java.sql.ResultSet.wasNull() throws java.sql.SQLException
+
+    private static var wasNull_MethodID_222: jmethodID?
+
+    open func wasNull() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "wasNull", methodSig: "()Z", methodCache: &ResultSetForward.wasNull_MethodID_222, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(int,int) throws java.sql.SQLException
+
+    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(java.lang.String) throws java.sql.SQLException
+
+    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(java.lang.String,int) throws java.sql.SQLException
+
+    /// public abstract java.math.BigDecimal java.sql.ResultSet.getBigDecimal(int) throws java.sql.SQLException
+
+    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(java.lang.String,java.util.Calendar) throws java.sql.SQLException
+
+    private static var getTimestamp_MethodID_223: jmethodID?
+
+    open func getTimestamp( columnLabel: String?, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cal, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(Ljava/lang/String;Ljava/util/Calendar;)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_223, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? Timestamp( javaObject: __return ) : nil
+    }
+
+    open func getTimestamp( _ _columnLabel: String?, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
+        return try getTimestamp( columnLabel: _columnLabel, cal: _cal )
+    }
+
+    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int,java.util.Calendar) throws java.sql.SQLException
+
+    private static var getTimestamp_MethodID_224: jmethodID?
+
+    open func getTimestamp( columnIndex: Int, cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cal, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(ILjava/util/Calendar;)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_224, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? Timestamp( javaObject: __return ) : nil
+    }
+
+    open func getTimestamp( _ _columnIndex: Int, _ _cal: java_util.Calendar? ) throws /* java.sql.SQLException */ -> Timestamp! {
+        return try getTimestamp( columnIndex: _columnIndex, cal: _cal )
+    }
+
+    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(java.lang.String) throws java.sql.SQLException
+
+    private static var getTimestamp_MethodID_225: jmethodID?
+
+    open func getTimestamp( columnLabel: String? ) throws /* java.sql.SQLException */ -> Timestamp! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(Ljava/lang/String;)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_225, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? Timestamp( javaObject: __return ) : nil
+    }
+
+    open func getTimestamp( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Timestamp! {
+        return try getTimestamp( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.sql.Timestamp java.sql.ResultSet.getTimestamp(int) throws java.sql.SQLException
+
+    private static var getTimestamp_MethodID_226: jmethodID?
+
+    open func getTimestamp( columnIndex: Int ) throws /* java.sql.SQLException */ -> Timestamp! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimestamp", methodSig: "(I)Ljava/sql/Timestamp;", methodCache: &ResultSetForward.getTimestamp_MethodID_226, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? Timestamp( javaObject: __return ) : nil
+    }
+
+    open func getTimestamp( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Timestamp! {
+        return try getTimestamp( columnIndex: _columnIndex )
+    }
+
+    /// public abstract java.io.InputStream java.sql.ResultSet.getAsciiStream(int) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.ResultSet.getAsciiStream(java.lang.String) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.ResultSet.getUnicodeStream(int) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.ResultSet.getUnicodeStream(java.lang.String) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.ResultSet.getBinaryStream(int) throws java.sql.SQLException
+
+    /// public abstract java.io.InputStream java.sql.ResultSet.getBinaryStream(java.lang.String) throws java.sql.SQLException
+
+    /// public abstract java.sql.SQLWarning java.sql.ResultSet.getWarnings() throws java.sql.SQLException
+
+    private static var getWarnings_MethodID_227: jmethodID?
+
+    open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getWarnings", methodSig: "()Ljava/sql/SQLWarning;", methodCache: &ResultSetForward.getWarnings_MethodID_227, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? SQLWarning( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract void java.sql.ResultSet.clearWarnings() throws java.sql.SQLException
+
+    private static var clearWarnings_MethodID_228: jmethodID?
+
+    open func clearWarnings() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "clearWarnings", methodSig: "()V", methodCache: &ResultSetForward.clearWarnings_MethodID_228, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract java.lang.String java.sql.ResultSet.getCursorName() throws java.sql.SQLException
+
+    private static var getCursorName_MethodID_229: jmethodID?
+
+    open func getCursorName() throws /* java.sql.SQLException */ -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCursorName", methodSig: "()Ljava/lang/String;", methodCache: &ResultSetForward.getCursorName_MethodID_229, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+
+    /// public abstract java.sql.ResultSetMetaData java.sql.ResultSet.getMetaData() throws java.sql.SQLException
+
+    private static var getMetaData_MethodID_230: jmethodID?
+
+    open func getMetaData() throws /* java.sql.SQLException */ -> ResultSetMetaData! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMetaData", methodSig: "()Ljava/sql/ResultSetMetaData;", methodCache: &ResultSetForward.getMetaData_MethodID_230, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetMetaDataForward( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract int java.sql.ResultSet.findColumn(java.lang.String) throws java.sql.SQLException
+
+    private static var findColumn_MethodID_231: jmethodID?
+
+    open func findColumn( columnLabel: String? ) throws /* java.sql.SQLException */ -> Int {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "findColumn", methodSig: "(Ljava/lang/String;)I", methodCache: &ResultSetForward.findColumn_MethodID_231, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Int(), from: __return )
+    }
+
+    open func findColumn( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Int {
+        return try findColumn( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.io.Reader java.sql.ResultSet.getCharacterStream(int) throws java.sql.SQLException
+
+    /// public abstract java.io.Reader java.sql.ResultSet.getCharacterStream(java.lang.String) throws java.sql.SQLException
+
+    /// public abstract boolean java.sql.ResultSet.isBeforeFirst() throws java.sql.SQLException
+
+    private static var isBeforeFirst_MethodID_232: jmethodID?
+
+    open func isBeforeFirst() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isBeforeFirst", methodSig: "()Z", methodCache: &ResultSetForward.isBeforeFirst_MethodID_232, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.isAfterLast() throws java.sql.SQLException
+
+    private static var isAfterLast_MethodID_233: jmethodID?
+
+    open func isAfterLast() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isAfterLast", methodSig: "()Z", methodCache: &ResultSetForward.isAfterLast_MethodID_233, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.isFirst() throws java.sql.SQLException
+
+    private static var isFirst_MethodID_234: jmethodID?
+
+    open func isFirst() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isFirst", methodSig: "()Z", methodCache: &ResultSetForward.isFirst_MethodID_234, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.isLast() throws java.sql.SQLException
+
+    private static var isLast_MethodID_235: jmethodID?
+
+    open func isLast() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isLast", methodSig: "()Z", methodCache: &ResultSetForward.isLast_MethodID_235, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract void java.sql.ResultSet.beforeFirst() throws java.sql.SQLException
+
+    private static var beforeFirst_MethodID_236: jmethodID?
+
+    open func beforeFirst() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "beforeFirst", methodSig: "()V", methodCache: &ResultSetForward.beforeFirst_MethodID_236, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract void java.sql.ResultSet.afterLast() throws java.sql.SQLException
+
+    private static var afterLast_MethodID_237: jmethodID?
+
+    open func afterLast() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "afterLast", methodSig: "()V", methodCache: &ResultSetForward.afterLast_MethodID_237, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract int java.sql.ResultSet.getRow() throws java.sql.SQLException
+
+    private static var getRow_MethodID_238: jmethodID?
+
+    open func getRow() throws /* java.sql.SQLException */ -> Int {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getRow", methodSig: "()I", methodCache: &ResultSetForward.getRow_MethodID_238, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Int(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.absolute(int) throws java.sql.SQLException
+
+    private static var absolute_MethodID_239: jmethodID?
+
+    open func absolute( row: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: row, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "absolute", methodSig: "(I)Z", methodCache: &ResultSetForward.absolute_MethodID_239, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+    open func absolute( _ _row: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try absolute( row: _row )
+    }
+
+    /// public abstract boolean java.sql.ResultSet.relative(int) throws java.sql.SQLException
+
+    private static var relative_MethodID_240: jmethodID?
+
+    open func relative( rows: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: rows, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "relative", methodSig: "(I)Z", methodCache: &ResultSetForward.relative_MethodID_240, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+    open func relative( _ _rows: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try relative( rows: _rows )
+    }
+
+    /// public abstract void java.sql.ResultSet.setFetchDirection(int) throws java.sql.SQLException
+
+    private static var setFetchDirection_MethodID_241: jmethodID?
+
+    open func setFetchDirection( direction: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: direction, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchDirection", methodSig: "(I)V", methodCache: &ResultSetForward.setFetchDirection_MethodID_241, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func setFetchDirection( _ _direction: Int ) throws /* java.sql.SQLException */ {
+        try setFetchDirection( direction: _direction )
+    }
+
+    /// public abstract int java.sql.ResultSet.getFetchDirection() throws java.sql.SQLException
+
+    private static var getFetchDirection_MethodID_242: jmethodID?
+
+    open func getFetchDirection() throws /* java.sql.SQLException */ -> Int {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchDirection", methodSig: "()I", methodCache: &ResultSetForward.getFetchDirection_MethodID_242, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Int(), from: __return )
+    }
+
+
+    /// public abstract void java.sql.ResultSet.setFetchSize(int) throws java.sql.SQLException
+
+    private static var setFetchSize_MethodID_243: jmethodID?
+
+    open func setFetchSize( rows: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: rows, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "setFetchSize", methodSig: "(I)V", methodCache: &ResultSetForward.setFetchSize_MethodID_243, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func setFetchSize( _ _rows: Int ) throws /* java.sql.SQLException */ {
+        try setFetchSize( rows: _rows )
+    }
+
+    /// public abstract int java.sql.ResultSet.getFetchSize() throws java.sql.SQLException
+
+    private static var getFetchSize_MethodID_244: jmethodID?
+
+    open func getFetchSize() throws /* java.sql.SQLException */ -> Int {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getFetchSize", methodSig: "()I", methodCache: &ResultSetForward.getFetchSize_MethodID_244, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Int(), from: __return )
+    }
+
+
+    /// public abstract int java.sql.ResultSet.getConcurrency() throws java.sql.SQLException
+
+    private static var getConcurrency_MethodID_245: jmethodID?
+
+    open func getConcurrency() throws /* java.sql.SQLException */ -> Int {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getConcurrency", methodSig: "()I", methodCache: &ResultSetForward.getConcurrency_MethodID_245, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Int(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.rowUpdated() throws java.sql.SQLException
+
+    private static var rowUpdated_MethodID_246: jmethodID?
+
+    open func rowUpdated() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "rowUpdated", methodSig: "()Z", methodCache: &ResultSetForward.rowUpdated_MethodID_246, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.rowInserted() throws java.sql.SQLException
+
+    private static var rowInserted_MethodID_247: jmethodID?
+
+    open func rowInserted() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "rowInserted", methodSig: "()Z", methodCache: &ResultSetForward.rowInserted_MethodID_247, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.rowDeleted() throws java.sql.SQLException
+
+    private static var rowDeleted_MethodID_248: jmethodID?
+
+    open func rowDeleted() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "rowDeleted", methodSig: "()Z", methodCache: &ResultSetForward.rowDeleted_MethodID_248, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract void java.sql.ResultSet.updateNull(int) throws java.sql.SQLException
+
+    private static var updateNull_MethodID_249: jmethodID?
+
+    open func updateNull( columnIndex: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNull", methodSig: "(I)V", methodCache: &ResultSetForward.updateNull_MethodID_249, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNull( _ _columnIndex: Int ) throws /* java.sql.SQLException */ {
+        try updateNull( columnIndex: _columnIndex )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNull(java.lang.String) throws java.sql.SQLException
+
+    private static var updateNull_MethodID_250: jmethodID?
+
+    open func updateNull( columnLabel: String? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNull", methodSig: "(Ljava/lang/String;)V", methodCache: &ResultSetForward.updateNull_MethodID_250, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNull( _ _columnLabel: String? ) throws /* java.sql.SQLException */ {
+        try updateNull( columnLabel: _columnLabel )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBoolean(java.lang.String,boolean) throws java.sql.SQLException
+
+    private static var updateBoolean_MethodID_251: jmethodID?
+
+    open func updateBoolean( columnLabel: String?, x: Bool ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBoolean", methodSig: "(Ljava/lang/String;Z)V", methodCache: &ResultSetForward.updateBoolean_MethodID_251, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBoolean( _ _columnLabel: String?, _ _x: Bool ) throws /* java.sql.SQLException */ {
+        try updateBoolean( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBoolean(int,boolean) throws java.sql.SQLException
+
+    private static var updateBoolean_MethodID_252: jmethodID?
+
+    open func updateBoolean( columnIndex: Int, x: Bool ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBoolean", methodSig: "(IZ)V", methodCache: &ResultSetForward.updateBoolean_MethodID_252, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBoolean( _ _columnIndex: Int, _ _x: Bool ) throws /* java.sql.SQLException */ {
+        try updateBoolean( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateByte(java.lang.String,byte) throws java.sql.SQLException
+
+    private static var updateByte_MethodID_253: jmethodID?
+
+    open func updateByte( columnLabel: String?, x: Int8 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateByte", methodSig: "(Ljava/lang/String;B)V", methodCache: &ResultSetForward.updateByte_MethodID_253, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateByte( _ _columnLabel: String?, _ _x: Int8 ) throws /* java.sql.SQLException */ {
+        try updateByte( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateByte(int,byte) throws java.sql.SQLException
+
+    private static var updateByte_MethodID_254: jmethodID?
+
+    open func updateByte( columnIndex: Int, x: Int8 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateByte", methodSig: "(IB)V", methodCache: &ResultSetForward.updateByte_MethodID_254, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateByte( _ _columnIndex: Int, _ _x: Int8 ) throws /* java.sql.SQLException */ {
+        try updateByte( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateShort(java.lang.String,short) throws java.sql.SQLException
+
+    private static var updateShort_MethodID_255: jmethodID?
+
+    open func updateShort( columnLabel: String?, x: Int16 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateShort", methodSig: "(Ljava/lang/String;S)V", methodCache: &ResultSetForward.updateShort_MethodID_255, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateShort( _ _columnLabel: String?, _ _x: Int16 ) throws /* java.sql.SQLException */ {
+        try updateShort( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateShort(int,short) throws java.sql.SQLException
+
+    private static var updateShort_MethodID_256: jmethodID?
+
+    open func updateShort( columnIndex: Int, x: Int16 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateShort", methodSig: "(IS)V", methodCache: &ResultSetForward.updateShort_MethodID_256, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateShort( _ _columnIndex: Int, _ _x: Int16 ) throws /* java.sql.SQLException */ {
+        try updateShort( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateInt(java.lang.String,int) throws java.sql.SQLException
+
+    private static var updateInt_MethodID_257: jmethodID?
+
+    open func updateInt( columnLabel: String?, x: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateInt", methodSig: "(Ljava/lang/String;I)V", methodCache: &ResultSetForward.updateInt_MethodID_257, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateInt( _ _columnLabel: String?, _ _x: Int ) throws /* java.sql.SQLException */ {
+        try updateInt( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateInt(int,int) throws java.sql.SQLException
+
+    private static var updateInt_MethodID_258: jmethodID?
+
+    open func updateInt( columnIndex: Int, x: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateInt", methodSig: "(II)V", methodCache: &ResultSetForward.updateInt_MethodID_258, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateInt( _ _columnIndex: Int, _ _x: Int ) throws /* java.sql.SQLException */ {
+        try updateInt( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateLong(int,long) throws java.sql.SQLException
+
+    private static var updateLong_MethodID_259: jmethodID?
+
+    open func updateLong( columnIndex: Int, x: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateLong", methodSig: "(IJ)V", methodCache: &ResultSetForward.updateLong_MethodID_259, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateLong( _ _columnIndex: Int, _ _x: Int64 ) throws /* java.sql.SQLException */ {
+        try updateLong( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateLong(java.lang.String,long) throws java.sql.SQLException
+
+    private static var updateLong_MethodID_260: jmethodID?
+
+    open func updateLong( columnLabel: String?, x: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateLong", methodSig: "(Ljava/lang/String;J)V", methodCache: &ResultSetForward.updateLong_MethodID_260, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateLong( _ _columnLabel: String?, _ _x: Int64 ) throws /* java.sql.SQLException */ {
+        try updateLong( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateFloat(java.lang.String,float) throws java.sql.SQLException
+
+    private static var updateFloat_MethodID_261: jmethodID?
+
+    open func updateFloat( columnLabel: String?, x: Float ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateFloat", methodSig: "(Ljava/lang/String;F)V", methodCache: &ResultSetForward.updateFloat_MethodID_261, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateFloat( _ _columnLabel: String?, _ _x: Float ) throws /* java.sql.SQLException */ {
+        try updateFloat( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateFloat(int,float) throws java.sql.SQLException
+
+    private static var updateFloat_MethodID_262: jmethodID?
+
+    open func updateFloat( columnIndex: Int, x: Float ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateFloat", methodSig: "(IF)V", methodCache: &ResultSetForward.updateFloat_MethodID_262, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateFloat( _ _columnIndex: Int, _ _x: Float ) throws /* java.sql.SQLException */ {
+        try updateFloat( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateDouble(java.lang.String,double) throws java.sql.SQLException
+
+    private static var updateDouble_MethodID_263: jmethodID?
+
+    open func updateDouble( columnLabel: String?, x: Double ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDouble", methodSig: "(Ljava/lang/String;D)V", methodCache: &ResultSetForward.updateDouble_MethodID_263, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateDouble( _ _columnLabel: String?, _ _x: Double ) throws /* java.sql.SQLException */ {
+        try updateDouble( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateDouble(int,double) throws java.sql.SQLException
+
+    private static var updateDouble_MethodID_264: jmethodID?
+
+    open func updateDouble( columnIndex: Int, x: Double ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDouble", methodSig: "(ID)V", methodCache: &ResultSetForward.updateDouble_MethodID_264, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateDouble( _ _columnIndex: Int, _ _x: Double ) throws /* java.sql.SQLException */ {
+        try updateDouble( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBigDecimal(int,java.math.BigDecimal) throws java.sql.SQLException
+
+    private static var updateBigDecimal_MethodID_265: jmethodID?
+
+    open func updateBigDecimal( columnIndex: Int, x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBigDecimal", methodSig: "(ILjava/math/BigDecimal;)V", methodCache: &ResultSetForward.updateBigDecimal_MethodID_265, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBigDecimal( _ _columnIndex: Int, _ _x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateBigDecimal( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBigDecimal(java.lang.String,java.math.BigDecimal) throws java.sql.SQLException
+
+    private static var updateBigDecimal_MethodID_266: jmethodID?
+
+    open func updateBigDecimal( columnLabel: String?, x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBigDecimal", methodSig: "(Ljava/lang/String;Ljava/math/BigDecimal;)V", methodCache: &ResultSetForward.updateBigDecimal_MethodID_266, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBigDecimal( _ _columnLabel: String?, _ _x: /* java.math.BigDecimal */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateBigDecimal( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateString(int,java.lang.String) throws java.sql.SQLException
+
+    private static var updateString_MethodID_267: jmethodID?
+
+    open func updateString( columnIndex: Int, x: String? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateString", methodSig: "(ILjava/lang/String;)V", methodCache: &ResultSetForward.updateString_MethodID_267, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateString( _ _columnIndex: Int, _ _x: String? ) throws /* java.sql.SQLException */ {
+        try updateString( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateString(java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var updateString_MethodID_268: jmethodID?
+
+    open func updateString( columnLabel: String?, x: String? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateString", methodSig: "(Ljava/lang/String;Ljava/lang/String;)V", methodCache: &ResultSetForward.updateString_MethodID_268, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateString( _ _columnLabel: String?, _ _x: String? ) throws /* java.sql.SQLException */ {
+        try updateString( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateDate(int,java.sql.Date) throws java.sql.SQLException
+
+    private static var updateDate_MethodID_269: jmethodID?
+
+    open func updateDate( columnIndex: Int, x: Date? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDate", methodSig: "(ILjava/sql/Date;)V", methodCache: &ResultSetForward.updateDate_MethodID_269, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateDate( _ _columnIndex: Int, _ _x: Date? ) throws /* java.sql.SQLException */ {
+        try updateDate( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateDate(java.lang.String,java.sql.Date) throws java.sql.SQLException
+
+    private static var updateDate_MethodID_270: jmethodID?
+
+    open func updateDate( columnLabel: String?, x: Date? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateDate", methodSig: "(Ljava/lang/String;Ljava/sql/Date;)V", methodCache: &ResultSetForward.updateDate_MethodID_270, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateDate( _ _columnLabel: String?, _ _x: Date? ) throws /* java.sql.SQLException */ {
+        try updateDate( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateTime(java.lang.String,java.sql.Time) throws java.sql.SQLException
+
+    private static var updateTime_MethodID_271: jmethodID?
+
+    open func updateTime( columnLabel: String?, x: Time? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTime", methodSig: "(Ljava/lang/String;Ljava/sql/Time;)V", methodCache: &ResultSetForward.updateTime_MethodID_271, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateTime( _ _columnLabel: String?, _ _x: Time? ) throws /* java.sql.SQLException */ {
+        try updateTime( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateTime(int,java.sql.Time) throws java.sql.SQLException
+
+    private static var updateTime_MethodID_272: jmethodID?
+
+    open func updateTime( columnIndex: Int, x: Time? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTime", methodSig: "(ILjava/sql/Time;)V", methodCache: &ResultSetForward.updateTime_MethodID_272, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateTime( _ _columnIndex: Int, _ _x: Time? ) throws /* java.sql.SQLException */ {
+        try updateTime( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateTimestamp(java.lang.String,java.sql.Timestamp) throws java.sql.SQLException
+
+    private static var updateTimestamp_MethodID_273: jmethodID?
+
+    open func updateTimestamp( columnLabel: String?, x: Timestamp? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTimestamp", methodSig: "(Ljava/lang/String;Ljava/sql/Timestamp;)V", methodCache: &ResultSetForward.updateTimestamp_MethodID_273, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateTimestamp( _ _columnLabel: String?, _ _x: Timestamp? ) throws /* java.sql.SQLException */ {
+        try updateTimestamp( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateTimestamp(int,java.sql.Timestamp) throws java.sql.SQLException
+
+    private static var updateTimestamp_MethodID_274: jmethodID?
+
+    open func updateTimestamp( columnIndex: Int, x: Timestamp? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateTimestamp", methodSig: "(ILjava/sql/Timestamp;)V", methodCache: &ResultSetForward.updateTimestamp_MethodID_274, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateTimestamp( _ _columnIndex: Int, _ _x: Timestamp? ) throws /* java.sql.SQLException */ {
+        try updateTimestamp( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
+
+    private static var updateAsciiStream_MethodID_275: jmethodID?
+
+    open func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;J)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_275, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateAsciiStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateAsciiStream( columnLabel: _columnLabel, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,long) throws java.sql.SQLException
+
+    private static var updateAsciiStream_MethodID_276: jmethodID?
+
+    open func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_276, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateAsciiStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateAsciiStream( columnIndex: _columnIndex, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream,int) throws java.sql.SQLException
+
+    private static var updateAsciiStream_MethodID_277: jmethodID?
+
+    open func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(ILjava/io/InputStream;I)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_277, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateAsciiStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
+        try updateAsciiStream( columnIndex: _columnIndex, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(int,java.io.InputStream) throws java.sql.SQLException
+
+    private static var updateAsciiStream_MethodID_278: jmethodID?
+
+    open func updateAsciiStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(ILjava/io/InputStream;)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_278, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateAsciiStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateAsciiStream( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
+
+    private static var updateAsciiStream_MethodID_279: jmethodID?
+
+    open func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_279, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateAsciiStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateAsciiStream( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateAsciiStream(java.lang.String,java.io.InputStream,int) throws java.sql.SQLException
+
+    private static var updateAsciiStream_MethodID_280: jmethodID?
+
+    open func updateAsciiStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateAsciiStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;I)V", methodCache: &ResultSetForward.updateAsciiStream_MethodID_280, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateAsciiStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
+        try updateAsciiStream( columnLabel: _columnLabel, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream,long) throws java.sql.SQLException
+
+    private static var updateBinaryStream_MethodID_281: jmethodID?
+
+    open func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_281, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBinaryStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateBinaryStream( columnIndex: _columnIndex, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream) throws java.sql.SQLException
+
+    private static var updateBinaryStream_MethodID_282: jmethodID?
+
+    open func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_282, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBinaryStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateBinaryStream( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream,int) throws java.sql.SQLException
+
+    private static var updateBinaryStream_MethodID_283: jmethodID?
+
+    open func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(ILjava/io/InputStream;I)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_283, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBinaryStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
+        try updateBinaryStream( columnIndex: _columnIndex, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,int) throws java.sql.SQLException
+
+    private static var updateBinaryStream_MethodID_284: jmethodID?
+
+    open func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;I)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_284, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBinaryStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
+        try updateBinaryStream( columnLabel: _columnLabel, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
+
+    private static var updateBinaryStream_MethodID_285: jmethodID?
+
+    open func updateBinaryStream( columnLabel: String?, x: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_285, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBinaryStream( _ _columnLabel: String?, _ _x: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateBinaryStream( columnLabel: _columnLabel, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBinaryStream(int,java.io.InputStream) throws java.sql.SQLException
+
+    private static var updateBinaryStream_MethodID_286: jmethodID?
+
+    open func updateBinaryStream( columnIndex: Int, x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBinaryStream", methodSig: "(ILjava/io/InputStream;)V", methodCache: &ResultSetForward.updateBinaryStream_MethodID_286, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBinaryStream( _ _columnIndex: Int, _ _x: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateBinaryStream( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader,int) throws java.sql.SQLException
+
+    private static var updateCharacterStream_MethodID_287: jmethodID?
+
+    open func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(ILjava/io/Reader;I)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_287, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
+        try updateCharacterStream( columnIndex: _columnIndex, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateCharacterStream_MethodID_288: jmethodID?
+
+    open func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_288, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateCharacterStream( columnLabel: _columnLabel, reader: _reader )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateCharacterStream_MethodID_289: jmethodID?
+
+    open func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_289, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateCharacterStream( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(int,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateCharacterStream_MethodID_290: jmethodID?
+
+    open func updateCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_290, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateCharacterStream( columnIndex: _columnIndex, x: _x, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader,int) throws java.sql.SQLException
+
+    private static var updateCharacterStream_MethodID_291: jmethodID?
+
+    open func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;I)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_291, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int ) throws /* java.sql.SQLException */ {
+        try updateCharacterStream( columnLabel: _columnLabel, reader: _reader, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateCharacterStream(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateCharacterStream_MethodID_292: jmethodID?
+
+    open func updateCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateCharacterStream_MethodID_292, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateCharacterStream( columnLabel: _columnLabel, reader: _reader, length: _length )
+    }
+
+    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType,int) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_293: jmethodID?
+
+    open func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
+        __args[3] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;Ljava/sql/SQLType;I)V", methodCache: &ResultSetForward.updateObject_MethodID_293, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        try updateObject( columnIndex: _columnIndex, x: _x, targetSqlType: _targetSqlType, scaleOrLength: _scaleOrLength )
+    }
+
+    /// public default void java.sql.ResultSet.updateObject(int,java.lang.Object,java.sql.SQLType) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_294: jmethodID?
+
+    open func updateObject( columnIndex: Int, x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;Ljava/sql/SQLType;)V", methodCache: &ResultSetForward.updateObject_MethodID_294, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
+        try updateObject( columnIndex: _columnIndex, x: _x, targetSqlType: _targetSqlType )
+    }
+
+    /// public default void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,java.sql.SQLType,int) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_295: jmethodID?
+
+    open func updateObject( columnLabel: String?, x: java_swift.JavaObject?, targetSqlType: SQLType?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
+        __args[3] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;I)V", methodCache: &ResultSetForward.updateObject_MethodID_295, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        try updateObject( columnLabel: _columnLabel, x: _x, targetSqlType: _targetSqlType, scaleOrLength: _scaleOrLength )
+    }
+
+    /// public default void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,java.sql.SQLType) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_296: jmethodID?
+
+    open func updateObject( columnLabel: String?, x: java_swift.JavaObject?, targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: targetSqlType, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;Ljava/sql/SQLType;)V", methodCache: &ResultSetForward.updateObject_MethodID_296, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject?, _ _targetSqlType: SQLType? ) throws /* java.sql.SQLException */ {
+        try updateObject( columnLabel: _columnLabel, x: _x, targetSqlType: _targetSqlType )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object,int) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_297: jmethodID?
+
+    open func updateObject( columnLabel: String?, x: java_swift.JavaObject?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;I)V", methodCache: &ResultSetForward.updateObject_MethodID_297, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        try updateObject( columnLabel: _columnLabel, x: _x, scaleOrLength: _scaleOrLength )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateObject(int,java.lang.Object) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_298: jmethodID?
+
+    open func updateObject( columnIndex: Int, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;)V", methodCache: &ResultSetForward.updateObject_MethodID_298, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
+        try updateObject( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateObject(int,java.lang.Object,int) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_299: jmethodID?
+
+    open func updateObject( columnIndex: Int, x: java_swift.JavaObject?, scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: scaleOrLength, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(ILjava/lang/Object;I)V", methodCache: &ResultSetForward.updateObject_MethodID_299, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnIndex: Int, _ _x: java_swift.JavaObject?, _ _scaleOrLength: Int ) throws /* java.sql.SQLException */ {
+        try updateObject( columnIndex: _columnIndex, x: _x, scaleOrLength: _scaleOrLength )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateObject(java.lang.String,java.lang.Object) throws java.sql.SQLException
+
+    private static var updateObject_MethodID_300: jmethodID?
+
+    open func updateObject( columnLabel: String?, x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateObject", methodSig: "(Ljava/lang/String;Ljava/lang/Object;)V", methodCache: &ResultSetForward.updateObject_MethodID_300, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateObject( _ _columnLabel: String?, _ _x: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
+        try updateObject( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.insertRow() throws java.sql.SQLException
+
+    private static var insertRow_MethodID_301: jmethodID?
+
+    open func insertRow() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "insertRow", methodSig: "()V", methodCache: &ResultSetForward.insertRow_MethodID_301, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract void java.sql.ResultSet.updateRow() throws java.sql.SQLException
+
+    private static var updateRow_MethodID_302: jmethodID?
+
+    open func updateRow() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRow", methodSig: "()V", methodCache: &ResultSetForward.updateRow_MethodID_302, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract void java.sql.ResultSet.deleteRow() throws java.sql.SQLException
+
+    private static var deleteRow_MethodID_303: jmethodID?
+
+    open func deleteRow() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "deleteRow", methodSig: "()V", methodCache: &ResultSetForward.deleteRow_MethodID_303, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract void java.sql.ResultSet.refreshRow() throws java.sql.SQLException
+
+    private static var refreshRow_MethodID_304: jmethodID?
+
+    open func refreshRow() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "refreshRow", methodSig: "()V", methodCache: &ResultSetForward.refreshRow_MethodID_304, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract void java.sql.ResultSet.cancelRowUpdates() throws java.sql.SQLException
+
+    private static var cancelRowUpdates_MethodID_305: jmethodID?
+
+    open func cancelRowUpdates() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "cancelRowUpdates", methodSig: "()V", methodCache: &ResultSetForward.cancelRowUpdates_MethodID_305, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract void java.sql.ResultSet.moveToInsertRow() throws java.sql.SQLException
+
+    private static var moveToInsertRow_MethodID_306: jmethodID?
+
+    open func moveToInsertRow() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "moveToInsertRow", methodSig: "()V", methodCache: &ResultSetForward.moveToInsertRow_MethodID_306, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract void java.sql.ResultSet.moveToCurrentRow() throws java.sql.SQLException
+
+    private static var moveToCurrentRow_MethodID_307: jmethodID?
+
+    open func moveToCurrentRow() throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "moveToCurrentRow", methodSig: "()V", methodCache: &ResultSetForward.moveToCurrentRow_MethodID_307, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+
+    /// public abstract java.sql.Statement java.sql.ResultSet.getStatement() throws java.sql.SQLException
+
+    private static var getStatement_MethodID_308: jmethodID?
+
+    open func getStatement() throws /* java.sql.SQLException */ -> Statement! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getStatement", methodSig: "()Ljava/sql/Statement;", methodCache: &ResultSetForward.getStatement_MethodID_308, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? StatementForward( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.Blob java.sql.ResultSet.getBlob(java.lang.String) throws java.sql.SQLException
+
+    private static var getBlob_MethodID_309: jmethodID?
+
+    open func getBlob( columnLabel: String? ) throws /* java.sql.SQLException */ -> Blob! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBlob", methodSig: "(Ljava/lang/String;)Ljava/sql/Blob;", methodCache: &ResultSetForward.getBlob_MethodID_309, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? BlobForward( javaObject: __return ) : nil
+    }
+
+    open func getBlob( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Blob! {
+        return try getBlob( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.sql.Blob java.sql.ResultSet.getBlob(int) throws java.sql.SQLException
+
+    private static var getBlob_MethodID_310: jmethodID?
+
+    open func getBlob( columnIndex: Int ) throws /* java.sql.SQLException */ -> Blob! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBlob", methodSig: "(I)Ljava/sql/Blob;", methodCache: &ResultSetForward.getBlob_MethodID_310, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? BlobForward( javaObject: __return ) : nil
+    }
+
+    open func getBlob( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Blob! {
+        return try getBlob( columnIndex: _columnIndex )
+    }
+
+    /// public abstract java.sql.Clob java.sql.ResultSet.getClob(int) throws java.sql.SQLException
+
+    private static var getClob_MethodID_311: jmethodID?
+
+    open func getClob( columnIndex: Int ) throws /* java.sql.SQLException */ -> Clob! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClob", methodSig: "(I)Ljava/sql/Clob;", methodCache: &ResultSetForward.getClob_MethodID_311, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ClobForward( javaObject: __return ) : nil
+    }
+
+    open func getClob( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> Clob! {
+        return try getClob( columnIndex: _columnIndex )
+    }
+
+    /// public abstract java.sql.Clob java.sql.ResultSet.getClob(java.lang.String) throws java.sql.SQLException
+
+    private static var getClob_MethodID_312: jmethodID?
+
+    open func getClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> Clob! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClob", methodSig: "(Ljava/lang/String;)Ljava/sql/Clob;", methodCache: &ResultSetForward.getClob_MethodID_312, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ClobForward( javaObject: __return ) : nil
+    }
+
+    open func getClob( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> Clob! {
+        return try getClob( columnLabel: _columnLabel )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateRef(int,java.sql.Ref) throws java.sql.SQLException
+
+    private static var updateRef_MethodID_313: jmethodID?
+
+    open func updateRef( columnIndex: Int, x: Ref? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRef", methodSig: "(ILjava/sql/Ref;)V", methodCache: &ResultSetForward.updateRef_MethodID_313, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateRef( _ _columnIndex: Int, _ _x: Ref? ) throws /* java.sql.SQLException */ {
+        try updateRef( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateRef(java.lang.String,java.sql.Ref) throws java.sql.SQLException
+
+    private static var updateRef_MethodID_314: jmethodID?
+
+    open func updateRef( columnLabel: String?, x: Ref? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRef", methodSig: "(Ljava/lang/String;Ljava/sql/Ref;)V", methodCache: &ResultSetForward.updateRef_MethodID_314, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateRef( _ _columnLabel: String?, _ _x: Ref? ) throws /* java.sql.SQLException */ {
+        try updateRef( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.io.InputStream,long) throws java.sql.SQLException
+
+    private static var updateBlob_MethodID_315: jmethodID?
+
+    open func updateBlob( columnLabel: String?, inputStream: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: inputStream, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBlob_MethodID_315, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBlob( _ _columnLabel: String?, _ _inputStream: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateBlob( columnLabel: _columnLabel, inputStream: _inputStream, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.io.InputStream) throws java.sql.SQLException
+
+    private static var updateBlob_MethodID_316: jmethodID?
+
+    open func updateBlob( columnLabel: String?, inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: inputStream, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(Ljava/lang/String;Ljava/io/InputStream;)V", methodCache: &ResultSetForward.updateBlob_MethodID_316, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBlob( _ _columnLabel: String?, _ _inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateBlob( columnLabel: _columnLabel, inputStream: _inputStream )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBlob(int,java.io.InputStream) throws java.sql.SQLException
+
+    private static var updateBlob_MethodID_317: jmethodID?
+
+    open func updateBlob( columnIndex: Int, inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: inputStream, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(ILjava/io/InputStream;)V", methodCache: &ResultSetForward.updateBlob_MethodID_317, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBlob( _ _columnIndex: Int, _ _inputStream: /* java.io.InputStream */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateBlob( columnIndex: _columnIndex, inputStream: _inputStream )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBlob(int,java.io.InputStream,long) throws java.sql.SQLException
+
+    private static var updateBlob_MethodID_318: jmethodID?
+
+    open func updateBlob( columnIndex: Int, inputStream: /* java.io.InputStream */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: inputStream, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(ILjava/io/InputStream;J)V", methodCache: &ResultSetForward.updateBlob_MethodID_318, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBlob( _ _columnIndex: Int, _ _inputStream: /* java.io.InputStream */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateBlob( columnIndex: _columnIndex, inputStream: _inputStream, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBlob(java.lang.String,java.sql.Blob) throws java.sql.SQLException
+
+    private static var updateBlob_MethodID_319: jmethodID?
+
+    open func updateBlob( columnLabel: String?, x: Blob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(Ljava/lang/String;Ljava/sql/Blob;)V", methodCache: &ResultSetForward.updateBlob_MethodID_319, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBlob( _ _columnLabel: String?, _ _x: Blob? ) throws /* java.sql.SQLException */ {
+        try updateBlob( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateBlob(int,java.sql.Blob) throws java.sql.SQLException
+
+    private static var updateBlob_MethodID_320: jmethodID?
+
+    open func updateBlob( columnIndex: Int, x: Blob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateBlob", methodSig: "(ILjava/sql/Blob;)V", methodCache: &ResultSetForward.updateBlob_MethodID_320, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateBlob( _ _columnIndex: Int, _ _x: Blob? ) throws /* java.sql.SQLException */ {
+        try updateBlob( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.sql.Clob) throws java.sql.SQLException
+
+    private static var updateClob_MethodID_321: jmethodID?
+
+    open func updateClob( columnLabel: String?, x: Clob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(Ljava/lang/String;Ljava/sql/Clob;)V", methodCache: &ResultSetForward.updateClob_MethodID_321, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateClob( _ _columnLabel: String?, _ _x: Clob? ) throws /* java.sql.SQLException */ {
+        try updateClob( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateClob(int,java.sql.Clob) throws java.sql.SQLException
+
+    private static var updateClob_MethodID_322: jmethodID?
+
+    open func updateClob( columnIndex: Int, x: Clob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(ILjava/sql/Clob;)V", methodCache: &ResultSetForward.updateClob_MethodID_322, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateClob( _ _columnIndex: Int, _ _x: Clob? ) throws /* java.sql.SQLException */ {
+        try updateClob( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateClob(int,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateClob_MethodID_323: jmethodID?
+
+    open func updateClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateClob_MethodID_323, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateClob( columnIndex: _columnIndex, reader: _reader, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateClob(int,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateClob_MethodID_324: jmethodID?
+
+    open func updateClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateClob_MethodID_324, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateClob( columnIndex: _columnIndex, reader: _reader )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateClob_MethodID_325: jmethodID?
+
+    open func updateClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateClob_MethodID_325, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateClob( columnLabel: _columnLabel, reader: _reader )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateClob(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateClob_MethodID_326: jmethodID?
+
+    open func updateClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateClob_MethodID_326, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateClob( columnLabel: _columnLabel, reader: _reader, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateArray(int,java.sql.Array) throws java.sql.SQLException
+
+    private static var updateArray_MethodID_327: jmethodID?
+
+    open func updateArray( columnIndex: Int, x: Array? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateArray", methodSig: "(ILjava/sql/Array;)V", methodCache: &ResultSetForward.updateArray_MethodID_327, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateArray( _ _columnIndex: Int, _ _x: Array? ) throws /* java.sql.SQLException */ {
+        try updateArray( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateArray(java.lang.String,java.sql.Array) throws java.sql.SQLException
+
+    private static var updateArray_MethodID_328: jmethodID?
+
+    open func updateArray( columnLabel: String?, x: Array? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateArray", methodSig: "(Ljava/lang/String;Ljava/sql/Array;)V", methodCache: &ResultSetForward.updateArray_MethodID_328, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateArray( _ _columnLabel: String?, _ _x: Array? ) throws /* java.sql.SQLException */ {
+        try updateArray( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract java.sql.RowId java.sql.ResultSet.getRowId(java.lang.String) throws java.sql.SQLException
+
+    private static var getRowId_MethodID_329: jmethodID?
+
+    open func getRowId( columnLabel: String? ) throws /* java.sql.SQLException */ -> RowId! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRowId", methodSig: "(Ljava/lang/String;)Ljava/sql/RowId;", methodCache: &ResultSetForward.getRowId_MethodID_329, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? RowIdForward( javaObject: __return ) : nil
+    }
+
+    open func getRowId( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> RowId! {
+        return try getRowId( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.sql.RowId java.sql.ResultSet.getRowId(int) throws java.sql.SQLException
+
+    private static var getRowId_MethodID_330: jmethodID?
+
+    open func getRowId( columnIndex: Int ) throws /* java.sql.SQLException */ -> RowId! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRowId", methodSig: "(I)Ljava/sql/RowId;", methodCache: &ResultSetForward.getRowId_MethodID_330, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? RowIdForward( javaObject: __return ) : nil
+    }
+
+    open func getRowId( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> RowId! {
+        return try getRowId( columnIndex: _columnIndex )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateRowId(int,java.sql.RowId) throws java.sql.SQLException
+
+    private static var updateRowId_MethodID_331: jmethodID?
+
+    open func updateRowId( columnIndex: Int, x: RowId? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRowId", methodSig: "(ILjava/sql/RowId;)V", methodCache: &ResultSetForward.updateRowId_MethodID_331, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateRowId( _ _columnIndex: Int, _ _x: RowId? ) throws /* java.sql.SQLException */ {
+        try updateRowId( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateRowId(java.lang.String,java.sql.RowId) throws java.sql.SQLException
+
+    private static var updateRowId_MethodID_332: jmethodID?
+
+    open func updateRowId( columnLabel: String?, x: RowId? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateRowId", methodSig: "(Ljava/lang/String;Ljava/sql/RowId;)V", methodCache: &ResultSetForward.updateRowId_MethodID_332, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateRowId( _ _columnLabel: String?, _ _x: RowId? ) throws /* java.sql.SQLException */ {
+        try updateRowId( columnLabel: _columnLabel, x: _x )
+    }
+
+    /// public abstract int java.sql.ResultSet.getHoldability() throws java.sql.SQLException
+
+    private static var getHoldability_MethodID_333: jmethodID?
+
+    open func getHoldability() throws /* java.sql.SQLException */ -> Int {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getHoldability", methodSig: "()I", methodCache: &ResultSetForward.getHoldability_MethodID_333, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Int(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.ResultSet.isClosed() throws java.sql.SQLException
+
+    private static var isClosed_MethodID_334: jmethodID?
+
+    open func isClosed() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isClosed", methodSig: "()Z", methodCache: &ResultSetForward.isClosed_MethodID_334, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
+    }
+
+
+    /// public abstract void java.sql.ResultSet.updateNString(java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var updateNString_MethodID_335: jmethodID?
+
+    open func updateNString( columnLabel: String?, nString: String? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: nString, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNString", methodSig: "(Ljava/lang/String;Ljava/lang/String;)V", methodCache: &ResultSetForward.updateNString_MethodID_335, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNString( _ _columnLabel: String?, _ _nString: String? ) throws /* java.sql.SQLException */ {
+        try updateNString( columnLabel: _columnLabel, nString: _nString )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNString(int,java.lang.String) throws java.sql.SQLException
+
+    private static var updateNString_MethodID_336: jmethodID?
+
+    open func updateNString( columnIndex: Int, nString: String? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: nString, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNString", methodSig: "(ILjava/lang/String;)V", methodCache: &ResultSetForward.updateNString_MethodID_336, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNString( _ _columnIndex: Int, _ _nString: String? ) throws /* java.sql.SQLException */ {
+        try updateNString( columnIndex: _columnIndex, nString: _nString )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateNClob_MethodID_337: jmethodID?
+
+    open func updateNClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateNClob_MethodID_337, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateNClob( columnLabel: _columnLabel, reader: _reader )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateNClob_MethodID_338: jmethodID?
+
+    open func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateNClob_MethodID_338, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateNClob( columnIndex: _columnIndex, reader: _reader )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNClob(int,java.sql.NClob) throws java.sql.SQLException
+
+    private static var updateNClob_MethodID_339: jmethodID?
+
+    open func updateNClob( columnIndex: Int, nClob: NClob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: nClob, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(ILjava/sql/NClob;)V", methodCache: &ResultSetForward.updateNClob_MethodID_339, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNClob( _ _columnIndex: Int, _ _nClob: NClob? ) throws /* java.sql.SQLException */ {
+        try updateNClob( columnIndex: _columnIndex, nClob: _nClob )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateNClob_MethodID_340: jmethodID?
+
+    open func updateNClob( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateNClob_MethodID_340, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNClob( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateNClob( columnLabel: _columnLabel, reader: _reader, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNClob(java.lang.String,java.sql.NClob) throws java.sql.SQLException
+
+    private static var updateNClob_MethodID_341: jmethodID?
+
+    open func updateNClob( columnLabel: String?, nClob: NClob? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: nClob, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(Ljava/lang/String;Ljava/sql/NClob;)V", methodCache: &ResultSetForward.updateNClob_MethodID_341, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNClob( _ _columnLabel: String?, _ _nClob: NClob? ) throws /* java.sql.SQLException */ {
+        try updateNClob( columnLabel: _columnLabel, nClob: _nClob )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNClob(int,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateNClob_MethodID_342: jmethodID?
+
+    open func updateNClob( columnIndex: Int, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNClob", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateNClob_MethodID_342, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNClob( _ _columnIndex: Int, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateNClob( columnIndex: _columnIndex, reader: _reader, length: _length )
+    }
+
+    /// public abstract java.sql.NClob java.sql.ResultSet.getNClob(int) throws java.sql.SQLException
+
+    private static var getNClob_MethodID_343: jmethodID?
+
+    open func getNClob( columnIndex: Int ) throws /* java.sql.SQLException */ -> NClob! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNClob", methodSig: "(I)Ljava/sql/NClob;", methodCache: &ResultSetForward.getNClob_MethodID_343, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? NClobForward( javaObject: __return ) : nil
+    }
+
+    open func getNClob( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> NClob! {
+        return try getNClob( columnIndex: _columnIndex )
+    }
+
+    /// public abstract java.sql.NClob java.sql.ResultSet.getNClob(java.lang.String) throws java.sql.SQLException
+
+    private static var getNClob_MethodID_344: jmethodID?
+
+    open func getNClob( columnLabel: String? ) throws /* java.sql.SQLException */ -> NClob! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNClob", methodSig: "(Ljava/lang/String;)Ljava/sql/NClob;", methodCache: &ResultSetForward.getNClob_MethodID_344, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? NClobForward( javaObject: __return ) : nil
+    }
+
+    open func getNClob( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> NClob! {
+        return try getNClob( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.sql.SQLXML java.sql.ResultSet.getSQLXML(java.lang.String) throws java.sql.SQLException
+
+    private static var getSQLXML_MethodID_345: jmethodID?
+
+    open func getSQLXML( columnLabel: String? ) throws /* java.sql.SQLException */ -> SQLXML! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLXML", methodSig: "(Ljava/lang/String;)Ljava/sql/SQLXML;", methodCache: &ResultSetForward.getSQLXML_MethodID_345, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? SQLXMLForward( javaObject: __return ) : nil
+    }
+
+    open func getSQLXML( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> SQLXML! {
+        return try getSQLXML( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.sql.SQLXML java.sql.ResultSet.getSQLXML(int) throws java.sql.SQLException
+
+    private static var getSQLXML_MethodID_346: jmethodID?
+
+    open func getSQLXML( columnIndex: Int ) throws /* java.sql.SQLException */ -> SQLXML! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLXML", methodSig: "(I)Ljava/sql/SQLXML;", methodCache: &ResultSetForward.getSQLXML_MethodID_346, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? SQLXMLForward( javaObject: __return ) : nil
+    }
+
+    open func getSQLXML( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> SQLXML! {
+        return try getSQLXML( columnIndex: _columnIndex )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateSQLXML(java.lang.String,java.sql.SQLXML) throws java.sql.SQLException
+
+    private static var updateSQLXML_MethodID_347: jmethodID?
+
+    open func updateSQLXML( columnLabel: String?, xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: xmlObject, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateSQLXML", methodSig: "(Ljava/lang/String;Ljava/sql/SQLXML;)V", methodCache: &ResultSetForward.updateSQLXML_MethodID_347, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateSQLXML( _ _columnLabel: String?, _ _xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
+        try updateSQLXML( columnLabel: _columnLabel, xmlObject: _xmlObject )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateSQLXML(int,java.sql.SQLXML) throws java.sql.SQLException
+
+    private static var updateSQLXML_MethodID_348: jmethodID?
+
+    open func updateSQLXML( columnIndex: Int, xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: xmlObject, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateSQLXML", methodSig: "(ILjava/sql/SQLXML;)V", methodCache: &ResultSetForward.updateSQLXML_MethodID_348, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateSQLXML( _ _columnIndex: Int, _ _xmlObject: SQLXML? ) throws /* java.sql.SQLException */ {
+        try updateSQLXML( columnIndex: _columnIndex, xmlObject: _xmlObject )
+    }
+
+    /// public abstract java.lang.String java.sql.ResultSet.getNString(java.lang.String) throws java.sql.SQLException
+
+    private static var getNString_MethodID_349: jmethodID?
+
+    open func getNString( columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNString", methodSig: "(Ljava/lang/String;)Ljava/lang/String;", methodCache: &ResultSetForward.getNString_MethodID_349, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+    open func getNString( _ _columnLabel: String? ) throws /* java.sql.SQLException */ -> String! {
+        return try getNString( columnLabel: _columnLabel )
+    }
+
+    /// public abstract java.lang.String java.sql.ResultSet.getNString(int) throws java.sql.SQLException
+
+    private static var getNString_MethodID_350: jmethodID?
+
+    open func getNString( columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNString", methodSig: "(I)Ljava/lang/String;", methodCache: &ResultSetForward.getNString_MethodID_350, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: String(), from: __return )
+    }
+
+    open func getNString( _ _columnIndex: Int ) throws /* java.sql.SQLException */ -> String! {
+        return try getNString( columnIndex: _columnIndex )
+    }
+
+    /// public abstract java.io.Reader java.sql.ResultSet.getNCharacterStream(int) throws java.sql.SQLException
+
+    /// public abstract java.io.Reader java.sql.ResultSet.getNCharacterStream(java.lang.String) throws java.sql.SQLException
+
+    /// public abstract void java.sql.ResultSet.updateNCharacterStream(int,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateNCharacterStream_MethodID_351: jmethodID?
+
+    open func updateNCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(ILjava/io/Reader;)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_351, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateNCharacterStream( columnIndex: _columnIndex, x: _x )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNCharacterStream(java.lang.String,java.io.Reader) throws java.sql.SQLException
+
+    private static var updateNCharacterStream_MethodID_352: jmethodID?
+
+    open func updateNCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_352, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject? ) throws /* java.sql.SQLException */ {
+        try updateNCharacterStream( columnLabel: _columnLabel, reader: _reader )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNCharacterStream(java.lang.String,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateNCharacterStream_MethodID_353: jmethodID?
+
+    open func updateNCharacterStream( columnLabel: String?, reader: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnLabel, locals: &__locals )
+        __args[1] = JNIType.toJava( value: reader, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(Ljava/lang/String;Ljava/io/Reader;J)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_353, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNCharacterStream( _ _columnLabel: String?, _ _reader: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateNCharacterStream( columnLabel: _columnLabel, reader: _reader, length: _length )
+    }
+
+    /// public abstract void java.sql.ResultSet.updateNCharacterStream(int,java.io.Reader,long) throws java.sql.SQLException
+
+    private static var updateNCharacterStream_MethodID_354: jmethodID?
+
+    open func updateNCharacterStream( columnIndex: Int, x: /* java.io.Reader */ UnclassedObject?, length: Int64 ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: columnIndex, locals: &__locals )
+        __args[1] = JNIType.toJava( value: x, locals: &__locals )
+        __args[2] = JNIType.toJava( value: length, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "updateNCharacterStream", methodSig: "(ILjava/io/Reader;J)V", methodCache: &ResultSetForward.updateNCharacterStream_MethodID_354, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func updateNCharacterStream( _ _columnIndex: Int, _ _x: /* java.io.Reader */ UnclassedObject?, _ _length: Int64 ) throws /* java.sql.SQLException */ {
+        try updateNCharacterStream( columnIndex: _columnIndex, x: _x, length: _length )
+    }
+
     /// public abstract java.lang.Object java.sql.Wrapper.unwrap(java.lang.Class) throws java.sql.SQLException
 
     private static var unwrap_MethodID_355: jmethodID?
@@ -4230,7 +4230,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
     override open func unwrap( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unwrap", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &ResultSetForward.unwrap_MethodID_355, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -4250,7 +4250,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
     override open func isWrapperFor( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isWrapperFor", methodSig: "(Ljava/lang/Class;)Z", methodCache: &ResultSetForward.isWrapperFor_MethodID_356, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )

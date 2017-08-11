@@ -545,7 +545,7 @@ open class ResultSetMetaDataForward: WrapperForward, ResultSetMetaData {
     override open func unwrap( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unwrap", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &ResultSetMetaDataForward.unwrap_MethodID_43, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -565,7 +565,7 @@ open class ResultSetMetaDataForward: WrapperForward, ResultSetMetaData {
     override open func isWrapperFor( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isWrapperFor", methodSig: "(Ljava/lang/Class;)Z", methodCache: &ResultSetMetaDataForward.isWrapperFor_MethodID_44, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )

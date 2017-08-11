@@ -213,6 +213,10 @@ public protocol Connection: Wrapper, java_lang.AutoCloseable {
 
     func getNetworkTimeout() throws /* java.sql.SQLException */ -> Int
 
+    /// public abstract void java.sql.Connection.abort(java.util.concurrent.Executor) throws java.sql.SQLException
+
+    func abort( executor: java_util.Executor? ) throws /* java.sql.SQLException */
+
     /// public abstract java.sql.SQLWarning java.sql.Connection.getWarnings() throws java.sql.SQLException
 
     func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning!
@@ -232,10 +236,6 @@ public protocol Connection: Wrapper, java_lang.AutoCloseable {
     /// public abstract boolean java.sql.Connection.isClosed() throws java.sql.SQLException
 
     func isClosed() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract void java.sql.Connection.abort(java.util.concurrent.Executor) throws java.sql.SQLException
-
-    func abort( executor: java_util.Executor? ) throws /* java.sql.SQLException */
 
 }
 
@@ -1132,14 +1132,32 @@ open class ConnectionForward: WrapperForward, Connection {
     }
 
 
+    /// public abstract void java.sql.Connection.abort(java.util.concurrent.Executor) throws java.sql.SQLException
+
+    private static var abort_MethodID_99: jmethodID?
+
+    open func abort( executor: java_util.Executor? ) throws /* java.sql.SQLException */ {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        __args[0] = JNIType.toJava( value: executor, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "abort", methodSig: "(Ljava/util/concurrent/Executor;)V", methodCache: &ConnectionForward.abort_MethodID_99, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+    }
+
+    open func abort( _ _executor: java_util.Executor? ) throws /* java.sql.SQLException */ {
+        try abort( executor: _executor )
+    }
+
     /// public abstract java.sql.SQLWarning java.sql.Connection.getWarnings() throws java.sql.SQLException
 
-    private static var getWarnings_MethodID_99: jmethodID?
+    private static var getWarnings_MethodID_100: jmethodID?
 
     open func getWarnings() throws /* java.sql.SQLException */ -> SQLWarning! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getWarnings", methodSig: "()Ljava/sql/SQLWarning;", methodCache: &ConnectionForward.getWarnings_MethodID_99, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getWarnings", methodSig: "()Ljava/sql/SQLWarning;", methodCache: &ConnectionForward.getWarnings_MethodID_100, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -1150,12 +1168,12 @@ open class ConnectionForward: WrapperForward, Connection {
 
     /// public abstract void java.sql.Connection.clearWarnings() throws java.sql.SQLException
 
-    private static var clearWarnings_MethodID_100: jmethodID?
+    private static var clearWarnings_MethodID_101: jmethodID?
 
     open func clearWarnings() throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "clearWarnings", methodSig: "()V", methodCache: &ConnectionForward.clearWarnings_MethodID_100, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "clearWarnings", methodSig: "()V", methodCache: &ConnectionForward.clearWarnings_MethodID_101, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -1164,12 +1182,12 @@ open class ConnectionForward: WrapperForward, Connection {
 
     /// public abstract java.sql.DatabaseMetaData java.sql.Connection.getMetaData() throws java.sql.SQLException
 
-    private static var getMetaData_MethodID_101: jmethodID?
+    private static var getMetaData_MethodID_102: jmethodID?
 
     open func getMetaData() throws /* java.sql.SQLException */ -> DatabaseMetaData! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMetaData", methodSig: "()Ljava/sql/DatabaseMetaData;", methodCache: &ConnectionForward.getMetaData_MethodID_101, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getMetaData", methodSig: "()Ljava/sql/DatabaseMetaData;", methodCache: &ConnectionForward.getMetaData_MethodID_102, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
@@ -1180,12 +1198,12 @@ open class ConnectionForward: WrapperForward, Connection {
 
     /// public abstract int java.sql.Connection.getHoldability() throws java.sql.SQLException
 
-    private static var getHoldability_MethodID_102: jmethodID?
+    private static var getHoldability_MethodID_103: jmethodID?
 
     open func getHoldability() throws /* java.sql.SQLException */ -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getHoldability", methodSig: "()I", methodCache: &ConnectionForward.getHoldability_MethodID_102, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getHoldability", methodSig: "()I", methodCache: &ConnectionForward.getHoldability_MethodID_103, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
@@ -1195,36 +1213,18 @@ open class ConnectionForward: WrapperForward, Connection {
 
     /// public abstract boolean java.sql.Connection.isClosed() throws java.sql.SQLException
 
-    private static var isClosed_MethodID_103: jmethodID?
+    private static var isClosed_MethodID_104: jmethodID?
 
     open func isClosed() throws /* java.sql.SQLException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isClosed", methodSig: "()Z", methodCache: &ConnectionForward.isClosed_MethodID_103, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isClosed", methodSig: "()Z", methodCache: &ConnectionForward.isClosed_MethodID_104, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
         return JNIType.toSwift( type: Bool(), from: __return )
     }
 
-
-    /// public abstract void java.sql.Connection.abort(java.util.concurrent.Executor) throws java.sql.SQLException
-
-    private static var abort_MethodID_104: jmethodID?
-
-    open func abort( executor: java_util.Executor? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: executor, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "abort", methodSig: "(Ljava/util/concurrent/Executor;)V", methodCache: &ConnectionForward.abort_MethodID_104, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-    open func abort( _ _executor: java_util.Executor? ) throws /* java.sql.SQLException */ {
-        try abort( executor: _executor )
-    }
 
     /// public abstract java.lang.Object java.sql.Wrapper.unwrap(java.lang.Class) throws java.sql.SQLException
 
@@ -1233,7 +1233,7 @@ open class ConnectionForward: WrapperForward, Connection {
     override open func unwrap( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unwrap", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &ConnectionForward.unwrap_MethodID_105, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -1253,7 +1253,7 @@ open class ConnectionForward: WrapperForward, Connection {
     override open func isWrapperFor( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface != nil ? iface! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isWrapperFor", methodSig: "(Ljava/lang/Class;)Z", methodCache: &ConnectionForward.isWrapperFor_MethodID_106, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )

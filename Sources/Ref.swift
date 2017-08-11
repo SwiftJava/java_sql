@@ -73,7 +73,7 @@ open class RefForward: JNIObjectForward, Ref {
     open func setObject( value: java_swift.JavaObject? ) throws /* java.sql.SQLException */ {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: value != nil ? value! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: value, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setObject", methodSig: "(Ljava/lang/Object;)V", methodCache: &RefForward.setObject_MethodID_7, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )

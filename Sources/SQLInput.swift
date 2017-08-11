@@ -101,13 +101,13 @@ public protocol SQLInput: JavaProtocol {
 
     func readArray() throws /* java.sql.SQLException */ -> Array!
 
-    /// public abstract boolean java.sql.SQLInput.wasNull() throws java.sql.SQLException
-
-    func wasNull() throws /* java.sql.SQLException */ -> Bool
-
     /// public abstract float java.sql.SQLInput.readFloat() throws java.sql.SQLException
 
     func readFloat() throws /* java.sql.SQLException */ -> Float
+
+    /// public abstract boolean java.sql.SQLInput.wasNull() throws java.sql.SQLException
+
+    func wasNull() throws /* java.sql.SQLException */ -> Bool
 
 }
 
@@ -123,7 +123,7 @@ open class SQLInputForward: JNIObjectForward, SQLInput {
     open func readObject( type: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> java_swift.JavaObject! {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type != nil ? type! as JNIObject : nil, locals: &__locals )
+        __args[0] = JNIType.toJava( value: type, locals: &__locals )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "readObject", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &SQLInputForward.readObject_MethodID_24, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
@@ -457,33 +457,33 @@ open class SQLInputForward: JNIObjectForward, SQLInput {
     }
 
 
-    /// public abstract boolean java.sql.SQLInput.wasNull() throws java.sql.SQLException
-
-    private static var wasNull_MethodID_45: jmethodID?
-
-    open func wasNull() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "wasNull", methodSig: "()Z", methodCache: &SQLInputForward.wasNull_MethodID_45, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
     /// public abstract float java.sql.SQLInput.readFloat() throws java.sql.SQLException
 
-    private static var readFloat_MethodID_46: jmethodID?
+    private static var readFloat_MethodID_45: jmethodID?
 
     open func readFloat() throws /* java.sql.SQLException */ -> Float {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallFloatMethod( object: javaObject, methodName: "readFloat", methodSig: "()F", methodCache: &SQLInputForward.readFloat_MethodID_46, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallFloatMethod( object: javaObject, methodName: "readFloat", methodSig: "()F", methodCache: &SQLInputForward.readFloat_MethodID_45, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
             throw SQLException( javaObject: throwable )
         }
         return JNIType.toSwift( type: Float(), from: __return )
+    }
+
+
+    /// public abstract boolean java.sql.SQLInput.wasNull() throws java.sql.SQLException
+
+    private static var wasNull_MethodID_46: jmethodID?
+
+    open func wasNull() throws /* java.sql.SQLException */ -> Bool {
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        var __locals = [jobject]()
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "wasNull", methodSig: "()Z", methodCache: &SQLInputForward.wasNull_MethodID_46, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: Bool(), from: __return )
     }
 
 
