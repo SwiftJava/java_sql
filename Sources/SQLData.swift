@@ -7,6 +7,10 @@ import java_swift
 
 public protocol SQLData: JavaProtocol {
 
+    /// public abstract java.lang.String java.sql.SQLData.getSQLTypeName() throws java.sql.SQLException
+
+    func getSQLTypeName() throws /* java.sql.SQLException */ -> String!
+
     /// public abstract void java.sql.SQLData.readSQL(java.sql.SQLInput,java.lang.String) throws java.sql.SQLException
 
     func readSQL( stream: SQLInput?, typeName: String? ) throws /* java.sql.SQLException */
@@ -15,10 +19,6 @@ public protocol SQLData: JavaProtocol {
 
     func writeSQL( stream: SQLOutput? ) throws /* java.sql.SQLException */
 
-    /// public abstract java.lang.String java.sql.SQLData.getSQLTypeName() throws java.sql.SQLException
-
-    func getSQLTypeName() throws /* java.sql.SQLException */ -> String!
-
 }
 
 
@@ -26,17 +26,35 @@ open class SQLDataForward: JNIObjectForward, SQLData {
 
     private static var SQLDataJNIClass: jclass?
 
+    /// public abstract java.lang.String java.sql.SQLData.getSQLTypeName() throws java.sql.SQLException
+
+    private static var getSQLTypeName_MethodID_4: jmethodID?
+
+    open func getSQLTypeName() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLTypeName", methodSig: "()Ljava/lang/String;", methodCache: &SQLDataForward.getSQLTypeName_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
     /// public abstract void java.sql.SQLData.readSQL(java.sql.SQLInput,java.lang.String) throws java.sql.SQLException
 
-    private static var readSQL_MethodID_4: jmethodID?
+    private static var readSQL_MethodID_5: jmethodID?
 
     open func readSQL( stream: SQLInput?, typeName: String? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: stream, locals: &__locals )
         __args[1] = JNIType.toJava( value: typeName, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "readSQL", methodSig: "(Ljava/sql/SQLInput;Ljava/lang/String;)V", methodCache: &SQLDataForward.readSQL_MethodID_4, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "readSQL", methodSig: "(Ljava/sql/SQLInput;Ljava/lang/String;)V", methodCache: &SQLDataForward.readSQL_MethodID_5, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
     }
@@ -47,14 +65,15 @@ open class SQLDataForward: JNIObjectForward, SQLData {
 
     /// public abstract void java.sql.SQLData.writeSQL(java.sql.SQLOutput) throws java.sql.SQLException
 
-    private static var writeSQL_MethodID_5: jmethodID?
+    private static var writeSQL_MethodID_6: jmethodID?
 
     open func writeSQL( stream: SQLOutput? ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: stream, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeSQL", methodSig: "(Ljava/sql/SQLOutput;)V", methodCache: &SQLDataForward.writeSQL_MethodID_5, args: &__args, locals: &__locals )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "writeSQL", methodSig: "(Ljava/sql/SQLOutput;)V", methodCache: &SQLDataForward.writeSQL_MethodID_6, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
     }
@@ -63,21 +82,5 @@ open class SQLDataForward: JNIObjectForward, SQLData {
         try writeSQL( stream: _stream )
     }
 
-    /// public abstract java.lang.String java.sql.SQLData.getSQLTypeName() throws java.sql.SQLException
-
-    private static var getSQLTypeName_MethodID_6: jmethodID?
-
-    open func getSQLTypeName() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLTypeName", methodSig: "()Ljava/lang/String;", methodCache: &SQLDataForward.getSQLTypeName_MethodID_6, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
 }
-
 

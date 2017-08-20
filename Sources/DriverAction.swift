@@ -23,12 +23,11 @@ open class DriverActionForward: JNIObjectForward, DriverAction {
     private static var deregister_MethodID_2: jmethodID?
 
     open func deregister() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "deregister", methodSig: "()V", methodCache: &DriverActionForward.deregister_MethodID_2, args: &__args, locals: &__locals )
     }
 
 
 }
-
 

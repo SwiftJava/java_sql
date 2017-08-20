@@ -6,60 +6,96 @@ import java_lang
 
 /// class java.sql.JDBCType ///
 
-open class JDBCType: java_lang.Enum, SQLType {
+public enum JDBCType: Int, JNIObjectProtocol, JNIObjectInit {
 
-    public convenience init?( casting object: java_swift.JavaObject, _ file: StaticString = #file, _ line: Int = #line ) {
-        self.init( javaObject: nil )
-        if !object.validDownCast( toJavaClass: "java.sql.JDBCType", file, line ) {
-            return nil
-        }
-        object.withJavaObject {
-            self.javaObject = $0
-        }
+    case BIT, TINYINT, SMALLINT, INTEGER, BIGINT, FLOAT, REAL, DOUBLE, NUMERIC, DECIMAL, CHAR, VARCHAR, LONGVARCHAR, DATE, TIME, TIMESTAMP, BINARY, VARBINARY, LONGVARBINARY, NULL, OTHER, JAVA_OBJECT, DISTINCT, STRUCT, ARRAY, BLOB, CLOB, REF, DATALINK, BOOLEAN, ROWID, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML, REF_CURSOR, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE
+
+    static let enumConstants = try! JavaClass.forName("java.sql.JDBCType")
+        .getEnumConstants()!.map { JDBCTypeForward( javaObject: $0.javaObject ) }
+
+    public func underlier() -> JDBCTypeForward {
+        return JDBCType.enumConstants[self.rawValue]
     }
+
+    public func localJavaObject(_ locals: UnsafeMutablePointer<[jobject]>) -> jobject? {
+        return underlier().localJavaObject( locals )
+    }
+
+    public init( javaObject: jobject? ) {
+        self = JDBCType( rawValue: JavaEnum( javaObject: javaObject ).ordinal() )!
+    }
+
+    /// public static java.sql.JDBCType java.sql.JDBCType.valueOf(int)
+
+    private static var valueOf_MethodID_1: jmethodID?
+
+    public static func valueOf( type: Int ) -> JDBCType! {
+        return JDBCTypeForward.valueOf( type: type )
+    }
+    public static func valueOf( _ _type: Int ) -> JDBCType! {
+        return valueOf( type: _type )
+    }
+
+    /// public static java.sql.JDBCType java.sql.JDBCType.valueOf(java.lang.String)
+
+    private static var valueOf_MethodID_2: jmethodID?
+
+    public static func valueOf( name: String? ) -> JDBCType! {
+        return JDBCTypeForward.valueOf( name: name )
+    }
+    public static func valueOf( _ _name: String? ) -> JDBCType! {
+        return valueOf( name: _name )
+    }
+
+    /// public static java.sql.JDBCType[] java.sql.JDBCType.values()
+
+    private static var values_MethodID_3: jmethodID?
+
+    public static func values() -> [JDBCType]! {
+        return JDBCTypeForward.values( )
+    }
+
+    /// public java.lang.String java.sql.JDBCType.getName()
+
+    private static var getName_MethodID_4: jmethodID?
+
+    public func getName() -> String! {
+        return underlier().getName( )
+    }
+
+    /// public java.lang.String java.sql.JDBCType.getVendor()
+
+    private static var getVendor_MethodID_5: jmethodID?
+
+    public func getVendor() -> String! {
+        return underlier().getVendor( )
+    }
+
+    /// public java.lang.Integer java.sql.JDBCType.getVendorTypeNumber()
+
+    private static var getVendorTypeNumber_MethodID_6: jmethodID?
+
+    public func getVendorTypeNumber() -> java_lang.Integer! {
+        return underlier().getVendorTypeNumber( )
+    }
+
+}
+
+
+open class JDBCTypeForward: SQLTypeForward {
 
     private static var JDBCTypeJNIClass: jclass?
 
-    /// public static final java.sql.JDBCType java.sql.JDBCType.BIT
+    /// private static final java.sql.JDBCType[] java.sql.JDBCType.$VALUES
 
-    private static var BIT_FieldID: jfieldID?
+    /// public static final java.sql.JDBCType java.sql.JDBCType.ARRAY
 
-    open static var BIT: JDBCType! {
+    private static var ARRAY_FieldID: jfieldID?
+
+    open static var ARRAY: JDBCType! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "BIT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BIT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.TINYINT
-
-    private static var TINYINT_FieldID: jfieldID?
-
-    open static var TINYINT: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "TINYINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TINYINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.SMALLINT
-
-    private static var SMALLINT_FieldID: jfieldID?
-
-    open static var SMALLINT: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "SMALLINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &SMALLINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.INTEGER
-
-    private static var INTEGER_FieldID: jfieldID?
-
-    open static var INTEGER: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "INTEGER", fieldType: "Ljava/sql/JDBCType;", fieldCache: &INTEGER_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "ARRAY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &ARRAY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -71,127 +107,7 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var BIGINT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BIGINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BIGINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.FLOAT
-
-    private static var FLOAT_FieldID: jfieldID?
-
-    open static var FLOAT: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "FLOAT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &FLOAT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.REAL
-
-    private static var REAL_FieldID: jfieldID?
-
-    open static var REAL: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "REAL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REAL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.DOUBLE
-
-    private static var DOUBLE_FieldID: jfieldID?
-
-    open static var DOUBLE: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "DOUBLE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DOUBLE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.NUMERIC
-
-    private static var NUMERIC_FieldID: jfieldID?
-
-    open static var NUMERIC: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "NUMERIC", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NUMERIC_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.DECIMAL
-
-    private static var DECIMAL_FieldID: jfieldID?
-
-    open static var DECIMAL: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "DECIMAL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DECIMAL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.CHAR
-
-    private static var CHAR_FieldID: jfieldID?
-
-    open static var CHAR: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "CHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &CHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.VARCHAR
-
-    private static var VARCHAR_FieldID: jfieldID?
-
-    open static var VARCHAR: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "VARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &VARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.LONGVARCHAR
-
-    private static var LONGVARCHAR_FieldID: jfieldID?
-
-    open static var LONGVARCHAR: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "LONGVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.DATE
-
-    private static var DATE_FieldID: jfieldID?
-
-    open static var DATE: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "DATE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DATE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.TIME
-
-    private static var TIME_FieldID: jfieldID?
-
-    open static var TIME: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "TIME", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIME_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.TIMESTAMP
-
-    private static var TIMESTAMP_FieldID: jfieldID?
-
-    open static var TIMESTAMP: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "TIMESTAMP", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIMESTAMP_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -203,94 +119,19 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var BINARY: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
 
-    /// public static final java.sql.JDBCType java.sql.JDBCType.VARBINARY
+    /// public static final java.sql.JDBCType java.sql.JDBCType.BIT
 
-    private static var VARBINARY_FieldID: jfieldID?
+    private static var BIT_FieldID: jfieldID?
 
-    open static var VARBINARY: JDBCType! {
+    open static var BIT: JDBCType! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "VARBINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &VARBINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.LONGVARBINARY
-
-    private static var LONGVARBINARY_FieldID: jfieldID?
-
-    open static var LONGVARBINARY: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "LONGVARBINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGVARBINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.NULL
-
-    private static var NULL_FieldID: jfieldID?
-
-    open static var NULL: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "NULL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NULL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.OTHER
-
-    private static var OTHER_FieldID: jfieldID?
-
-    open static var OTHER: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "OTHER", fieldType: "Ljava/sql/JDBCType;", fieldCache: &OTHER_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.JAVA_OBJECT
-
-    private static var JAVA_OBJECT_FieldID: jfieldID?
-
-    open static var JAVA_OBJECT: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "JAVA_OBJECT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &JAVA_OBJECT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.DISTINCT
-
-    private static var DISTINCT_FieldID: jfieldID?
-
-    open static var DISTINCT: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "DISTINCT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DISTINCT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.STRUCT
-
-    private static var STRUCT_FieldID: jfieldID?
-
-    open static var STRUCT: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "STRUCT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &STRUCT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.ARRAY
-
-    private static var ARRAY_FieldID: jfieldID?
-
-    open static var ARRAY: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "ARRAY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &ARRAY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "BIT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BIT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -302,39 +143,7 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var BLOB: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BLOB", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BLOB_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.CLOB
-
-    private static var CLOB_FieldID: jfieldID?
-
-    open static var CLOB: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "CLOB", fieldType: "Ljava/sql/JDBCType;", fieldCache: &CLOB_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.REF
-
-    private static var REF_FieldID: jfieldID?
-
-    open static var REF: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "REF", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REF_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
-            return __value != nil ? JDBCType( javaObject: __value ) : nil
-        }
-    }
-
-    /// public static final java.sql.JDBCType java.sql.JDBCType.DATALINK
-
-    private static var DATALINK_FieldID: jfieldID?
-
-    open static var DATALINK: JDBCType! {
-        get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "DATALINK", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DATALINK_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -346,39 +155,127 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var BOOLEAN: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BOOLEAN", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BOOLEAN_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
 
-    /// public static final java.sql.JDBCType java.sql.JDBCType.ROWID
+    /// public static final java.sql.JDBCType java.sql.JDBCType.CHAR
 
-    private static var ROWID_FieldID: jfieldID?
+    private static var CHAR_FieldID: jfieldID?
 
-    open static var ROWID: JDBCType! {
+    open static var CHAR: JDBCType! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "ROWID", fieldType: "Ljava/sql/JDBCType;", fieldCache: &ROWID_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "CHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &CHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
 
-    /// public static final java.sql.JDBCType java.sql.JDBCType.NCHAR
+    /// public static final java.sql.JDBCType java.sql.JDBCType.CLOB
 
-    private static var NCHAR_FieldID: jfieldID?
+    private static var CLOB_FieldID: jfieldID?
 
-    open static var NCHAR: JDBCType! {
+    open static var CLOB: JDBCType! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "NCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "CLOB", fieldType: "Ljava/sql/JDBCType;", fieldCache: &CLOB_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
 
-    /// public static final java.sql.JDBCType java.sql.JDBCType.NVARCHAR
+    /// public static final java.sql.JDBCType java.sql.JDBCType.DATALINK
 
-    private static var NVARCHAR_FieldID: jfieldID?
+    private static var DATALINK_FieldID: jfieldID?
 
-    open static var NVARCHAR: JDBCType! {
+    open static var DATALINK: JDBCType! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "NVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "DATALINK", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DATALINK_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.DATE
+
+    private static var DATE_FieldID: jfieldID?
+
+    open static var DATE: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "DATE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DATE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.DECIMAL
+
+    private static var DECIMAL_FieldID: jfieldID?
+
+    open static var DECIMAL: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "DECIMAL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DECIMAL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.DISTINCT
+
+    private static var DISTINCT_FieldID: jfieldID?
+
+    open static var DISTINCT: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "DISTINCT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DISTINCT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.DOUBLE
+
+    private static var DOUBLE_FieldID: jfieldID?
+
+    open static var DOUBLE: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "DOUBLE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DOUBLE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.FLOAT
+
+    private static var FLOAT_FieldID: jfieldID?
+
+    open static var FLOAT: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "FLOAT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &FLOAT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.INTEGER
+
+    private static var INTEGER_FieldID: jfieldID?
+
+    open static var INTEGER: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "INTEGER", fieldType: "Ljava/sql/JDBCType;", fieldCache: &INTEGER_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.JAVA_OBJECT
+
+    private static var JAVA_OBJECT_FieldID: jfieldID?
+
+    open static var JAVA_OBJECT: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "JAVA_OBJECT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &JAVA_OBJECT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -390,6 +287,43 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var LONGNVARCHAR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LONGNVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGNVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.LONGVARBINARY
+
+    private static var LONGVARBINARY_FieldID: jfieldID?
+
+    open static var LONGVARBINARY: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "LONGVARBINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGVARBINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.LONGVARCHAR
+
+    private static var LONGVARCHAR_FieldID: jfieldID?
+
+    open static var LONGVARCHAR: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "LONGVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.NCHAR
+
+    private static var NCHAR_FieldID: jfieldID?
+
+    open static var NCHAR: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "NCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -401,17 +335,79 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var NCLOB: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NCLOB", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NCLOB_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
 
-    /// public static final java.sql.JDBCType java.sql.JDBCType.SQLXML
+    /// public static final java.sql.JDBCType java.sql.JDBCType.NULL
 
-    private static var SQLXML_FieldID: jfieldID?
+    private static var NULL_FieldID: jfieldID?
 
-    open static var SQLXML: JDBCType! {
+    open static var NULL: JDBCType! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "SQLXML", fieldType: "Ljava/sql/JDBCType;", fieldCache: &SQLXML_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "NULL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NULL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.NUMERIC
+
+    private static var NUMERIC_FieldID: jfieldID?
+
+    open static var NUMERIC: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "NUMERIC", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NUMERIC_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.NVARCHAR
+
+    private static var NVARCHAR_FieldID: jfieldID?
+
+    open static var NVARCHAR: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "NVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.OTHER
+
+    private static var OTHER_FieldID: jfieldID?
+
+    open static var OTHER: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "OTHER", fieldType: "Ljava/sql/JDBCType;", fieldCache: &OTHER_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.REAL
+
+    private static var REAL_FieldID: jfieldID?
+
+    open static var REAL: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "REAL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REAL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.REF
+
+    private static var REF_FieldID: jfieldID?
+
+    open static var REF: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "REF", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REF_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -423,17 +419,79 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var REF_CURSOR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REF_CURSOR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REF_CURSOR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
 
-    /// public static final java.sql.JDBCType java.sql.JDBCType.TIME_WITH_TIMEZONE
+    /// public static final java.sql.JDBCType java.sql.JDBCType.ROWID
 
-    private static var TIME_WITH_TIMEZONE_FieldID: jfieldID?
+    private static var ROWID_FieldID: jfieldID?
 
-    open static var TIME_WITH_TIMEZONE: JDBCType! {
+    open static var ROWID: JDBCType! {
         get {
-            let __value = JNIField.GetStaticObjectField( fieldName: "TIME_WITH_TIMEZONE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIME_WITH_TIMEZONE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            let __value = JNIField.GetStaticObjectField( fieldName: "ROWID", fieldType: "Ljava/sql/JDBCType;", fieldCache: &ROWID_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.SMALLINT
+
+    private static var SMALLINT_FieldID: jfieldID?
+
+    open static var SMALLINT: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "SMALLINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &SMALLINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.SQLXML
+
+    private static var SQLXML_FieldID: jfieldID?
+
+    open static var SQLXML: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "SQLXML", fieldType: "Ljava/sql/JDBCType;", fieldCache: &SQLXML_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.STRUCT
+
+    private static var STRUCT_FieldID: jfieldID?
+
+    open static var STRUCT: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "STRUCT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &STRUCT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.TIME
+
+    private static var TIME_FieldID: jfieldID?
+
+    open static var TIME: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "TIME", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIME_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.TIMESTAMP
+
+    private static var TIMESTAMP_FieldID: jfieldID?
+
+    open static var TIMESTAMP: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "TIMESTAMP", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIMESTAMP_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
@@ -445,58 +503,70 @@ open class JDBCType: java_lang.Enum, SQLType {
     open static var TIMESTAMP_WITH_TIMEZONE: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIMESTAMP_WITH_TIMEZONE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIMESTAMP_WITH_TIMEZONE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.TIME_WITH_TIMEZONE
+
+    private static var TIME_WITH_TIMEZONE_FieldID: jfieldID?
+
+    open static var TIME_WITH_TIMEZONE: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "TIME_WITH_TIMEZONE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIME_WITH_TIMEZONE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.TINYINT
+
+    private static var TINYINT_FieldID: jfieldID?
+
+    open static var TINYINT: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "TINYINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TINYINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.VARBINARY
+
+    private static var VARBINARY_FieldID: jfieldID?
+
+    open static var VARBINARY: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "VARBINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &VARBINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? JDBCType( javaObject: __value ) : nil
+        }
+    }
+
+    /// public static final java.sql.JDBCType java.sql.JDBCType.VARCHAR
+
+    private static var VARCHAR_FieldID: jfieldID?
+
+    open static var VARCHAR: JDBCType! {
+        get {
+            let __value = JNIField.GetStaticObjectField( fieldName: "VARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &VARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
+            defer { JNI.DeleteLocalRef( __value ) }
             return __value != nil ? JDBCType( javaObject: __value ) : nil
         }
     }
 
     /// private java.lang.Integer java.sql.JDBCType.type
 
-    /// private static final java.sql.JDBCType[] java.sql.JDBCType.$VALUES
-
-    /// private final java.lang.String java.lang.Enum.name
-
-    /// private final int java.lang.Enum.ordinal
-
-    /// private java.sql.JDBCType(java.lang.String,int,java.lang.Integer)
-
-    /// public static java.sql.JDBCType[] java.sql.JDBCType.values()
-
-    private static var values_MethodID_1: jmethodID?
-
-    open class func values() -> [JDBCType]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass, methodName: "values", methodSig: "()[Ljava/sql/JDBCType;", methodCache: &values_MethodID_1, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [JDBCType](), from: __return )
-    }
-
-
-    /// public static java.sql.JDBCType java.sql.JDBCType.valueOf(java.lang.String)
-
-    private static var valueOf_MethodID_2: jmethodID?
-
-    open class func valueOf( name: String? ) -> JDBCType! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: name, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/sql/JDBCType;", methodCache: &valueOf_MethodID_2, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? JDBCType( javaObject: __return ) : nil
-    }
-
-    open class func valueOf( _ _name: String? ) -> JDBCType! {
-        return valueOf( name: _name )
-    }
-
     /// public static java.sql.JDBCType java.sql.JDBCType.valueOf(int)
 
-    private static var valueOf_MethodID_3: jmethodID?
+    private static var valueOf_MethodID_7: jmethodID?
 
     open class func valueOf( type: Int ) -> JDBCType! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass, methodName: "valueOf", methodSig: "(I)Ljava/sql/JDBCType;", methodCache: &valueOf_MethodID_3, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass, methodName: "valueOf", methodSig: "(I)Ljava/sql/JDBCType;", methodCache: &valueOf_MethodID_7, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? JDBCType( javaObject: __return ) : nil
     }
@@ -505,42 +575,147 @@ open class JDBCType: java_lang.Enum, SQLType {
         return valueOf( type: _type )
     }
 
+    /// public static java.sql.JDBCType java.sql.JDBCType.valueOf(java.lang.String)
+
+    private static var valueOf_MethodID_8: jmethodID?
+
+    open class func valueOf( name: String? ) -> JDBCType! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: name, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/sql/JDBCType;", methodCache: &valueOf_MethodID_8, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? JDBCType( javaObject: __return ) : nil
+    }
+
+    open class func valueOf( _ _name: String? ) -> JDBCType! {
+        return valueOf( name: _name )
+    }
+
+    /// public static java.lang.Enum java.lang.Enum.valueOf(java.lang.Class,java.lang.String)
+
+    private static var valueOf_MethodID_9: jmethodID?
+
+    open class func valueOf( enumType: java_swift.JavaClass?, name: String? ) -> java_swift.JavaEnum! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: enumType, locals: &__locals )
+        __args[1] = JNIType.toJava( value: name, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;", methodCache: &valueOf_MethodID_9, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? java_swift.JavaEnum( javaObject: __return ) : nil
+    }
+
+    open class func valueOf( _ _enumType: java_swift.JavaClass?, _ _name: String? ) -> java_swift.JavaEnum! {
+        return valueOf( enumType: _enumType, name: _name )
+    }
+
+    /// public static java.sql.JDBCType[] java.sql.JDBCType.values()
+
+    private static var values_MethodID_10: jmethodID?
+
+    open class func values() -> [JDBCType]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass, methodName: "values", methodSig: "()[Ljava/sql/JDBCType;", methodCache: &values_MethodID_10, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [JDBCType].self, from: __return )
+    }
+
+
+    /// public final int java.lang.Enum.compareTo(java.lang.Enum)
+
+    // Skipping method: false true false false false 
+
+    /// public int java.lang.Enum.compareTo(java.lang.Object)
+
+    // Skipping method: false true false false false 
+
+    /// public final boolean java.lang.Enum.equals(java.lang.Object)
+
+    // Skipping method: false true false false false 
+
+    /// public final native java.lang.Class java.lang.Object.getClass()
+
+    // Skipping method: false true false false false 
+
+    /// public final java.lang.Class java.lang.Enum.getDeclaringClass()
+
+    // Skipping method: false true false false false 
+
     /// public java.lang.String java.sql.JDBCType.getName()
 
-    private static var getName_MethodID_4: jmethodID?
+    private static var getName_MethodID_11: jmethodID?
 
-    open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    override open func getName() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &JDBCType.getName_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &JDBCTypeForward.getName_MethodID_11, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
     /// public java.lang.String java.sql.JDBCType.getVendor()
 
-    private static var getVendor_MethodID_5: jmethodID?
+    private static var getVendor_MethodID_12: jmethodID?
 
-    open func getVendor() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    override open func getVendor() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVendor", methodSig: "()Ljava/lang/String;", methodCache: &JDBCType.getVendor_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVendor", methodSig: "()Ljava/lang/String;", methodCache: &JDBCTypeForward.getVendor_MethodID_12, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
     /// public java.lang.Integer java.sql.JDBCType.getVendorTypeNumber()
 
-    private static var getVendorTypeNumber_MethodID_6: jmethodID?
+    private static var getVendorTypeNumber_MethodID_13: jmethodID?
 
-    open func getVendorTypeNumber() -> java_lang.Integer! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    override open func getVendorTypeNumber() -> java_lang.Integer! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVendorTypeNumber", methodSig: "()Ljava/lang/Integer;", methodCache: &JDBCType.getVendorTypeNumber_MethodID_6, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVendorTypeNumber", methodSig: "()Ljava/lang/Integer;", methodCache: &JDBCTypeForward.getVendorTypeNumber_MethodID_13, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_lang.Integer( javaObject: __return ) : nil
     }
 
+
+    /// public final int java.lang.Enum.hashCode()
+
+    // Skipping method: false true false false false 
+
+    /// public final java.lang.String java.lang.Enum.name()
+
+    // Skipping method: false true false false false 
+
+    /// public final native void java.lang.Object.notify()
+
+    // Skipping method: false true false false false 
+
+    /// public final native void java.lang.Object.notifyAll()
+
+    // Skipping method: false true false false false 
+
+    /// public final int java.lang.Enum.ordinal()
+
+    // Skipping method: false true false false false 
+
+    /// public java.lang.String java.lang.Enum.toString()
+
+    // Skipping method: false true false false false 
+
+    /// public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+
+    // Skipping method: false true false false false 
+
+    /// public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+
+    // Skipping method: false true false false false 
+
+    /// public final void java.lang.Object.wait() throws java.lang.InterruptedException
+
+    // Skipping method: false true false false false 
 
 }
 

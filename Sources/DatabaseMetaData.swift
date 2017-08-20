@@ -7,269 +7,249 @@ import java_swift
 
 public protocol DatabaseMetaData: Wrapper {
 
-    /// public static final int java.sql.DatabaseMetaData.procedureResultUnknown
-
-    static var procedureResultUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNoResult
-
-    static var procedureNoResult: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureReturnsResult
-
-    static var procedureReturnsResult: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnUnknown
-
-    static var procedureColumnUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnIn
-
-    static var procedureColumnIn: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnInOut
-
-    static var procedureColumnInOut: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnOut
-
-    static var procedureColumnOut: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnReturn
-
-    static var procedureColumnReturn: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnResult
-
-    static var procedureColumnResult: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNoNulls
-
-    static var procedureNoNulls: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNullable
-
-    static var procedureNullable: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNullableUnknown
-
-    static var procedureNullableUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.columnNoNulls
-
-    static var columnNoNulls: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.columnNullable
-
-    static var columnNullable: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.columnNullableUnknown
-
-    static var columnNullableUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowTemporary
-
-    static var bestRowTemporary: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowTransaction
-
-    static var bestRowTransaction: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowSession
-
-    static var bestRowSession: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowUnknown
-
-    static var bestRowUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowNotPseudo
-
-    static var bestRowNotPseudo: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowPseudo
-
-    static var bestRowPseudo: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.versionColumnUnknown
-
-    static var versionColumnUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.versionColumnNotPseudo
-
-    static var versionColumnNotPseudo: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.versionColumnPseudo
-
-    static var versionColumnPseudo: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyCascade
-
-    static var importedKeyCascade: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyRestrict
-
-    static var importedKeyRestrict: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeySetNull
-
-    static var importedKeySetNull: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyNoAction
-
-    static var importedKeyNoAction: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeySetDefault
-
-    static var importedKeySetDefault: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyDeferred
-
-    static var importedKeyInitiallyDeferred: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyImmediate
-
-    static var importedKeyInitiallyImmediate: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyNotDeferrable
-
-    static var importedKeyNotDeferrable: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.typeNoNulls
-
-    static var typeNoNulls: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.typeNullable
-
-    static var typeNullable: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.typeNullableUnknown
-
-    static var typeNullableUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.typePredNone
-
-    static var typePredNone: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.typePredChar
-
-    static var typePredChar: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.typePredBasic
-
-    static var typePredBasic: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.typeSearchable
-
-    static var typeSearchable: Int { get }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexStatistic
-
-    static var tableIndexStatistic: Int16 { get }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexClustered
-
-    static var tableIndexClustered: Int16 { get }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexHashed
-
-    static var tableIndexHashed: Int16 { get }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexOther
-
-    static var tableIndexOther: Int16 { get }
-
     /// public static final short java.sql.DatabaseMetaData.attributeNoNulls
 
-    static var attributeNoNulls: Int16 { get }
+    // Skipping field: false false false false false true 
 
     /// public static final short java.sql.DatabaseMetaData.attributeNullable
 
-    static var attributeNullable: Int16 { get }
+    // Skipping field: false false false false false true 
 
     /// public static final short java.sql.DatabaseMetaData.attributeNullableUnknown
 
-    static var attributeNullableUnknown: Int16 { get }
+    // Skipping field: false false false false false true 
 
-    /// public static final int java.sql.DatabaseMetaData.sqlStateXOpen
+    /// public static final int java.sql.DatabaseMetaData.bestRowNotPseudo
 
-    static var sqlStateXOpen: Int { get }
+    // Skipping field: false false false false false true 
 
-    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL
+    /// public static final int java.sql.DatabaseMetaData.bestRowPseudo
 
-    static var sqlStateSQL: Int { get }
+    // Skipping field: false false false false false true 
 
-    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL99
+    /// public static final int java.sql.DatabaseMetaData.bestRowSession
 
-    static var sqlStateSQL99: Int { get }
+    // Skipping field: false false false false false true 
 
-    /// public static final int java.sql.DatabaseMetaData.functionColumnUnknown
+    /// public static final int java.sql.DatabaseMetaData.bestRowTemporary
 
-    static var functionColumnUnknown: Int { get }
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.bestRowTransaction
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.bestRowUnknown
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.columnNoNulls
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.columnNullable
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.columnNullableUnknown
+
+    // Skipping field: false false false false false true 
 
     /// public static final int java.sql.DatabaseMetaData.functionColumnIn
 
-    static var functionColumnIn: Int { get }
+    // Skipping field: false false false false false true 
 
     /// public static final int java.sql.DatabaseMetaData.functionColumnInOut
 
-    static var functionColumnInOut: Int { get }
+    // Skipping field: false false false false false true 
 
     /// public static final int java.sql.DatabaseMetaData.functionColumnOut
 
-    static var functionColumnOut: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.functionReturn
-
-    static var functionReturn: Int { get }
+    // Skipping field: false false false false false true 
 
     /// public static final int java.sql.DatabaseMetaData.functionColumnResult
 
-    static var functionColumnResult: Int { get }
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.functionColumnUnknown
+
+    // Skipping field: false false false false false true 
 
     /// public static final int java.sql.DatabaseMetaData.functionNoNulls
 
-    static var functionNoNulls: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.functionNullable
-
-    static var functionNullable: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.functionNullableUnknown
-
-    static var functionNullableUnknown: Int { get }
-
-    /// public static final int java.sql.DatabaseMetaData.functionResultUnknown
-
-    static var functionResultUnknown: Int { get }
+    // Skipping field: false false false false false true 
 
     /// public static final int java.sql.DatabaseMetaData.functionNoTable
 
-    static var functionNoTable: Int { get }
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.functionNullable
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.functionNullableUnknown
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.functionResultUnknown
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.functionReturn
+
+    // Skipping field: false false false false false true 
 
     /// public static final int java.sql.DatabaseMetaData.functionReturnsTable
 
-    static var functionReturnsTable: Int { get }
+    // Skipping field: false false false false false true 
 
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getURL() throws java.sql.SQLException
+    /// public static final int java.sql.DatabaseMetaData.importedKeyCascade
 
-    func getURL() throws /* java.sql.SQLException */ -> String!
+    // Skipping field: false false false false false true 
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getAttributes(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyDeferred
 
-    func getAttributes( catalog: String?, schemaPattern: String?, typeNamePattern: String?, attributeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    // Skipping field: false false false false false true 
 
-    /// public abstract boolean java.sql.DatabaseMetaData.isReadOnly() throws java.sql.SQLException
+    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyImmediate
 
-    func isReadOnly() throws /* java.sql.SQLException */ -> Bool
+    // Skipping field: false false false false false true 
 
-    /// public abstract java.sql.Connection java.sql.DatabaseMetaData.getConnection() throws java.sql.SQLException
+    /// public static final int java.sql.DatabaseMetaData.importedKeyNoAction
 
-    func getConnection() throws /* java.sql.SQLException */ -> Connection!
+    // Skipping field: false false false false false true 
 
-    /// public abstract int java.sql.DatabaseMetaData.getResultSetHoldability() throws java.sql.SQLException
+    /// public static final int java.sql.DatabaseMetaData.importedKeyNotDeferrable
 
-    func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeyRestrict
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeySetDefault
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeySetNull
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnIn
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnInOut
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnOut
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnResult
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnReturn
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnUnknown
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNoNulls
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNoResult
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNullable
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNullableUnknown
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureResultUnknown
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.procedureReturnsResult
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL99
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.sqlStateXOpen
+
+    // Skipping field: false false false false false true 
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexClustered
+
+    // Skipping field: false false false false false true 
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexHashed
+
+    // Skipping field: false false false false false true 
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexOther
+
+    // Skipping field: false false false false false true 
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexStatistic
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.typeNoNulls
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.typeNullable
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.typeNullableUnknown
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.typePredBasic
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.typePredChar
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.typePredNone
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.typeSearchable
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.versionColumnNotPseudo
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.versionColumnPseudo
+
+    // Skipping field: false false false false false true 
+
+    /// public static final int java.sql.DatabaseMetaData.versionColumnUnknown
+
+    // Skipping field: false false false false false true 
 
     /// public abstract boolean java.sql.DatabaseMetaData.allProceduresAreCallable() throws java.sql.SQLException
 
@@ -279,25 +259,77 @@ public protocol DatabaseMetaData: Wrapper {
 
     func allTablesAreSelectable() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getUserName() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.autoCommitFailureClosesAllResultSets() throws java.sql.SQLException
 
-    func getUserName() throws /* java.sql.SQLException */ -> String!
+    func autoCommitFailureClosesAllResultSets() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedHigh() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionCausesTransactionCommit() throws java.sql.SQLException
 
-    func nullsAreSortedHigh() throws /* java.sql.SQLException */ -> Bool
+    func dataDefinitionCausesTransactionCommit() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedLow() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionIgnoredInTransactions() throws java.sql.SQLException
 
-    func nullsAreSortedLow() throws /* java.sql.SQLException */ -> Bool
+    func dataDefinitionIgnoredInTransactions() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtStart() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.deletesAreDetected(int) throws java.sql.SQLException
 
-    func nullsAreSortedAtStart() throws /* java.sql.SQLException */ -> Bool
+    func deletesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtEnd() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.doesMaxRowSizeIncludeBlobs() throws java.sql.SQLException
 
-    func nullsAreSortedAtEnd() throws /* java.sql.SQLException */ -> Bool
+    func doesMaxRowSizeIncludeBlobs() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.generatedKeyAlwaysReturned() throws java.sql.SQLException
+
+    func generatedKeyAlwaysReturned() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getAttributes(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    func getAttributes( catalog: String?, schemaPattern: String?, typeNamePattern: String?, attributeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getBestRowIdentifier(java.lang.String,java.lang.String,java.lang.String,int,boolean) throws java.sql.SQLException
+
+    func getBestRowIdentifier( catalog: String?, schema: String?, table: String?, scope: Int, nullable: Bool ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogSeparator() throws java.sql.SQLException
+
+    func getCatalogSeparator() throws /* java.sql.SQLException */ -> String!
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogTerm() throws java.sql.SQLException
+
+    func getCatalogTerm() throws /* java.sql.SQLException */ -> String!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCatalogs() throws java.sql.SQLException
+
+    func getCatalogs() throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getClientInfoProperties() throws java.sql.SQLException
+
+    func getClientInfoProperties() throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumnPrivileges(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    func getColumnPrivileges( catalog: String?, schema: String?, table: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    func getColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.sql.Connection java.sql.DatabaseMetaData.getConnection() throws java.sql.SQLException
+
+    func getConnection() throws /* java.sql.SQLException */ -> Connection!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCrossReference(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    func getCrossReference( parentCatalog: String?, parentSchema: String?, parentTable: String?, foreignCatalog: String?, foreignSchema: String?, foreignTable: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMajorVersion() throws java.sql.SQLException
+
+    func getDatabaseMajorVersion() throws /* java.sql.SQLException */ -> Int
+
+    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMinorVersion() throws java.sql.SQLException
+
+    func getDatabaseMinorVersion() throws /* java.sql.SQLException */ -> Int
 
     /// public abstract java.lang.String java.sql.DatabaseMetaData.getDatabaseProductName() throws java.sql.SQLException
 
@@ -307,13 +339,9 @@ public protocol DatabaseMetaData: Wrapper {
 
     func getDatabaseProductVersion() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverName() throws java.sql.SQLException
+    /// public abstract int java.sql.DatabaseMetaData.getDefaultTransactionIsolation() throws java.sql.SQLException
 
-    func getDriverName() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverVersion() throws java.sql.SQLException
-
-    func getDriverVersion() throws /* java.sql.SQLException */ -> String!
+    func getDefaultTransactionIsolation() throws /* java.sql.SQLException */ -> Int
 
     /// public abstract int java.sql.DatabaseMetaData.getDriverMajorVersion()
 
@@ -323,309 +351,57 @@ public protocol DatabaseMetaData: Wrapper {
 
     func getDriverMinorVersion() -> Int
 
-    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFiles() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverName() throws java.sql.SQLException
 
-    func usesLocalFiles() throws /* java.sql.SQLException */ -> Bool
+    func getDriverName() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFilePerTable() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverVersion() throws java.sql.SQLException
 
-    func usesLocalFilePerTable() throws /* java.sql.SQLException */ -> Bool
+    func getDriverVersion() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseIdentifiers() throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getExportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func supportsMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseIdentifiers() throws java.sql.SQLException
-
-    func storesUpperCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseIdentifiers() throws java.sql.SQLException
-
-    func storesLowerCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseIdentifiers() throws java.sql.SQLException
-
-    func storesMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    func supportsMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    func storesUpperCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    func storesLowerCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    func storesMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getIdentifierQuoteString() throws java.sql.SQLException
-
-    func getIdentifierQuoteString() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSQLKeywords() throws java.sql.SQLException
-
-    func getSQLKeywords() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getNumericFunctions() throws java.sql.SQLException
-
-    func getNumericFunctions() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getStringFunctions() throws java.sql.SQLException
-
-    func getStringFunctions() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSystemFunctions() throws java.sql.SQLException
-
-    func getSystemFunctions() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getTimeDateFunctions() throws java.sql.SQLException
-
-    func getTimeDateFunctions() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSearchStringEscape() throws java.sql.SQLException
-
-    func getSearchStringEscape() throws /* java.sql.SQLException */ -> String!
+    func getExportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
     /// public abstract java.lang.String java.sql.DatabaseMetaData.getExtraNameCharacters() throws java.sql.SQLException
 
     func getExtraNameCharacters() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithAddColumn() throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctionColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func supportsAlterTableWithAddColumn() throws /* java.sql.SQLException */ -> Bool
+    func getFunctionColumns( catalog: String?, schemaPattern: String?, functionNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithDropColumn() throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctions(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func supportsAlterTableWithDropColumn() throws /* java.sql.SQLException */ -> Bool
+    func getFunctions( catalog: String?, schemaPattern: String?, functionNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsColumnAliasing() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getIdentifierQuoteString() throws java.sql.SQLException
 
-    func supportsColumnAliasing() throws /* java.sql.SQLException */ -> Bool
+    func getIdentifierQuoteString() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.nullPlusNonNullIsNull() throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getImportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func nullPlusNonNullIsNull() throws /* java.sql.SQLException */ -> Bool
+    func getImportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert() throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getIndexInfo(java.lang.String,java.lang.String,java.lang.String,boolean,boolean) throws java.sql.SQLException
 
-    func supportsConvert() throws /* java.sql.SQLException */ -> Bool
+    func getIndexInfo( catalog: String?, schema: String?, table: String?, unique: Bool, approximate: Bool ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert(int,int) throws java.sql.SQLException
+    /// public abstract int java.sql.DatabaseMetaData.getJDBCMajorVersion() throws java.sql.SQLException
 
-    func supportsConvert( fromType: Int, toType: Int ) throws /* java.sql.SQLException */ -> Bool
+    func getJDBCMajorVersion() throws /* java.sql.SQLException */ -> Int
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsTableCorrelationNames() throws java.sql.SQLException
+    /// public abstract int java.sql.DatabaseMetaData.getJDBCMinorVersion() throws java.sql.SQLException
 
-    func supportsTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsDifferentTableCorrelationNames() throws java.sql.SQLException
-
-    func supportsDifferentTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsExpressionsInOrderBy() throws java.sql.SQLException
-
-    func supportsExpressionsInOrderBy() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOrderByUnrelated() throws java.sql.SQLException
-
-    func supportsOrderByUnrelated() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupBy() throws java.sql.SQLException
-
-    func supportsGroupBy() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByUnrelated() throws java.sql.SQLException
-
-    func supportsGroupByUnrelated() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByBeyondSelect() throws java.sql.SQLException
-
-    func supportsGroupByBeyondSelect() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsLikeEscapeClause() throws java.sql.SQLException
-
-    func supportsLikeEscapeClause() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleResultSets() throws java.sql.SQLException
-
-    func supportsMultipleResultSets() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleTransactions() throws java.sql.SQLException
-
-    func supportsMultipleTransactions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsNonNullableColumns() throws java.sql.SQLException
-
-    func supportsNonNullableColumns() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMinimumSQLGrammar() throws java.sql.SQLException
-
-    func supportsMinimumSQLGrammar() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCoreSQLGrammar() throws java.sql.SQLException
-
-    func supportsCoreSQLGrammar() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsExtendedSQLGrammar() throws java.sql.SQLException
-
-    func supportsExtendedSQLGrammar() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92EntryLevelSQL() throws java.sql.SQLException
-
-    func supportsANSI92EntryLevelSQL() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92IntermediateSQL() throws java.sql.SQLException
-
-    func supportsANSI92IntermediateSQL() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92FullSQL() throws java.sql.SQLException
-
-    func supportsANSI92FullSQL() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsIntegrityEnhancementFacility() throws java.sql.SQLException
-
-    func supportsIntegrityEnhancementFacility() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOuterJoins() throws java.sql.SQLException
-
-    func supportsOuterJoins() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsFullOuterJoins() throws java.sql.SQLException
-
-    func supportsFullOuterJoins() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsLimitedOuterJoins() throws java.sql.SQLException
-
-    func supportsLimitedOuterJoins() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSchemaTerm() throws java.sql.SQLException
-
-    func getSchemaTerm() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getProcedureTerm() throws java.sql.SQLException
-
-    func getProcedureTerm() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogTerm() throws java.sql.SQLException
-
-    func getCatalogTerm() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract boolean java.sql.DatabaseMetaData.isCatalogAtStart() throws java.sql.SQLException
-
-    func isCatalogAtStart() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogSeparator() throws java.sql.SQLException
-
-    func getCatalogSeparator() throws /* java.sql.SQLException */ -> String!
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInDataManipulation() throws java.sql.SQLException
-
-    func supportsSchemasInDataManipulation() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInProcedureCalls() throws java.sql.SQLException
-
-    func supportsSchemasInProcedureCalls() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInTableDefinitions() throws java.sql.SQLException
-
-    func supportsSchemasInTableDefinitions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInIndexDefinitions() throws java.sql.SQLException
-
-    func supportsSchemasInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInPrivilegeDefinitions() throws java.sql.SQLException
-
-    func supportsSchemasInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInDataManipulation() throws java.sql.SQLException
-
-    func supportsCatalogsInDataManipulation() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInProcedureCalls() throws java.sql.SQLException
-
-    func supportsCatalogsInProcedureCalls() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInTableDefinitions() throws java.sql.SQLException
-
-    func supportsCatalogsInTableDefinitions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInIndexDefinitions() throws java.sql.SQLException
-
-    func supportsCatalogsInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInPrivilegeDefinitions() throws java.sql.SQLException
-
-    func supportsCatalogsInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedDelete() throws java.sql.SQLException
-
-    func supportsPositionedDelete() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedUpdate() throws java.sql.SQLException
-
-    func supportsPositionedUpdate() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSelectForUpdate() throws java.sql.SQLException
-
-    func supportsSelectForUpdate() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsStoredProcedures() throws java.sql.SQLException
-
-    func supportsStoredProcedures() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInComparisons() throws java.sql.SQLException
-
-    func supportsSubqueriesInComparisons() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInExists() throws java.sql.SQLException
-
-    func supportsSubqueriesInExists() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInIns() throws java.sql.SQLException
-
-    func supportsSubqueriesInIns() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInQuantifieds() throws java.sql.SQLException
-
-    func supportsSubqueriesInQuantifieds() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCorrelatedSubqueries() throws java.sql.SQLException
-
-    func supportsCorrelatedSubqueries() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnion() throws java.sql.SQLException
-
-    func supportsUnion() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnionAll() throws java.sql.SQLException
-
-    func supportsUnionAll() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossCommit() throws java.sql.SQLException
-
-    func supportsOpenCursorsAcrossCommit() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossRollback() throws java.sql.SQLException
-
-    func supportsOpenCursorsAcrossRollback() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossCommit() throws java.sql.SQLException
-
-    func supportsOpenStatementsAcrossCommit() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossRollback() throws java.sql.SQLException
-
-    func supportsOpenStatementsAcrossRollback() throws /* java.sql.SQLException */ -> Bool
+    func getJDBCMinorVersion() throws /* java.sql.SQLException */ -> Int
 
     /// public abstract int java.sql.DatabaseMetaData.getMaxBinaryLiteralLength() throws java.sql.SQLException
 
     func getMaxBinaryLiteralLength() throws /* java.sql.SQLException */ -> Int
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxCatalogNameLength() throws java.sql.SQLException
+
+    func getMaxCatalogNameLength() throws /* java.sql.SQLException */ -> Int
 
     /// public abstract int java.sql.DatabaseMetaData.getMaxCharLiteralLength() throws java.sql.SQLException
 
@@ -667,25 +443,21 @@ public protocol DatabaseMetaData: Wrapper {
 
     func getMaxIndexLength() throws /* java.sql.SQLException */ -> Int
 
-    /// public abstract int java.sql.DatabaseMetaData.getMaxSchemaNameLength() throws java.sql.SQLException
+    /// public default long java.sql.DatabaseMetaData.getMaxLogicalLobSize() throws java.sql.SQLException
 
-    func getMaxSchemaNameLength() throws /* java.sql.SQLException */ -> Int
+    func getMaxLogicalLobSize() throws /* java.sql.SQLException */ -> Int64
 
     /// public abstract int java.sql.DatabaseMetaData.getMaxProcedureNameLength() throws java.sql.SQLException
 
     func getMaxProcedureNameLength() throws /* java.sql.SQLException */ -> Int
 
-    /// public abstract int java.sql.DatabaseMetaData.getMaxCatalogNameLength() throws java.sql.SQLException
-
-    func getMaxCatalogNameLength() throws /* java.sql.SQLException */ -> Int
-
     /// public abstract int java.sql.DatabaseMetaData.getMaxRowSize() throws java.sql.SQLException
 
     func getMaxRowSize() throws /* java.sql.SQLException */ -> Int
 
-    /// public abstract boolean java.sql.DatabaseMetaData.doesMaxRowSizeIncludeBlobs() throws java.sql.SQLException
+    /// public abstract int java.sql.DatabaseMetaData.getMaxSchemaNameLength() throws java.sql.SQLException
 
-    func doesMaxRowSizeIncludeBlobs() throws /* java.sql.SQLException */ -> Bool
+    func getMaxSchemaNameLength() throws /* java.sql.SQLException */ -> Int
 
     /// public abstract int java.sql.DatabaseMetaData.getMaxStatementLength() throws java.sql.SQLException
 
@@ -707,45 +479,49 @@ public protocol DatabaseMetaData: Wrapper {
 
     func getMaxUserNameLength() throws /* java.sql.SQLException */ -> Int
 
-    /// public abstract int java.sql.DatabaseMetaData.getDefaultTransactionIsolation() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getNumericFunctions() throws java.sql.SQLException
 
-    func getDefaultTransactionIsolation() throws /* java.sql.SQLException */ -> Int
+    func getNumericFunctions() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactions() throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPrimaryKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func supportsTransactions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactionIsolationLevel(int) throws java.sql.SQLException
-
-    func supportsTransactionIsolationLevel( level: Int ) throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataDefinitionAndDataManipulationTransactions() throws java.sql.SQLException
-
-    func supportsDataDefinitionAndDataManipulationTransactions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataManipulationTransactionsOnly() throws java.sql.SQLException
-
-    func supportsDataManipulationTransactionsOnly() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionCausesTransactionCommit() throws java.sql.SQLException
-
-    func dataDefinitionCausesTransactionCommit() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionIgnoredInTransactions() throws java.sql.SQLException
-
-    func dataDefinitionIgnoredInTransactions() throws /* java.sql.SQLException */ -> Bool
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getProcedures(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    func getProcedures( catalog: String?, schemaPattern: String?, procedureNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getPrimaryKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getProcedureColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
     func getProcedureColumns( catalog: String?, schemaPattern: String?, procedureNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTables(java.lang.String,java.lang.String,java.lang.String,java.lang.String[]) throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getProcedureTerm() throws java.sql.SQLException
 
-    func getTables( catalog: String?, schemaPattern: String?, tableNamePattern: String?, types: [String]? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getProcedureTerm() throws /* java.sql.SQLException */ -> String!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getProcedures(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    func getProcedures( catalog: String?, schemaPattern: String?, procedureNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPseudoColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    func getPseudoColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract int java.sql.DatabaseMetaData.getResultSetHoldability() throws java.sql.SQLException
+
+    func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int
+
+    /// public abstract java.sql.RowIdLifetime java.sql.DatabaseMetaData.getRowIdLifetime() throws java.sql.SQLException
+
+    func getRowIdLifetime() throws /* java.sql.SQLException */ -> RowIdLifetime!
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSQLKeywords() throws java.sql.SQLException
+
+    func getSQLKeywords() throws /* java.sql.SQLException */ -> String!
+
+    /// public abstract int java.sql.DatabaseMetaData.getSQLStateType() throws java.sql.SQLException
+
+    func getSQLStateType() throws /* java.sql.SQLException */ -> Int
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSchemaTerm() throws java.sql.SQLException
+
+    func getSchemaTerm() throws /* java.sql.SQLException */ -> String!
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSchemas(java.lang.String,java.lang.String) throws java.sql.SQLException
 
@@ -755,81 +531,97 @@ public protocol DatabaseMetaData: Wrapper {
 
     func getSchemas() throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCatalogs() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSearchStringEscape() throws java.sql.SQLException
 
-    func getCatalogs() throws /* java.sql.SQLException */ -> ResultSet!
+    func getSearchStringEscape() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTableTypes() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getStringFunctions() throws java.sql.SQLException
 
-    func getTableTypes() throws /* java.sql.SQLException */ -> ResultSet!
+    func getStringFunctions() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSuperTables(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func getColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getSuperTables( catalog: String?, schemaPattern: String?, tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumnPrivileges(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSuperTypes(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func getColumnPrivileges( catalog: String?, schema: String?, table: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getSuperTypes( catalog: String?, schemaPattern: String?, typeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSystemFunctions() throws java.sql.SQLException
+
+    func getSystemFunctions() throws /* java.sql.SQLException */ -> String!
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTablePrivileges(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
     func getTablePrivileges( catalog: String?, schemaPattern: String?, tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getBestRowIdentifier(java.lang.String,java.lang.String,java.lang.String,int,boolean) throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTableTypes() throws java.sql.SQLException
 
-    func getBestRowIdentifier( catalog: String?, schema: String?, table: String?, scope: Int, nullable: Bool ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getTableTypes() throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getVersionColumns(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTables(java.lang.String,java.lang.String,java.lang.String,java.lang.String[]) throws java.sql.SQLException
 
-    func getVersionColumns( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getTables( catalog: String?, schemaPattern: String?, tableNamePattern: String?, types: [String]? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPrimaryKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getTimeDateFunctions() throws java.sql.SQLException
 
-    func getPrimaryKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getImportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    func getImportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getExportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    func getExportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCrossReference(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    func getCrossReference( parentCatalog: String?, parentSchema: String?, parentTable: String?, foreignCatalog: String?, foreignSchema: String?, foreignTable: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getTimeDateFunctions() throws /* java.sql.SQLException */ -> String!
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTypeInfo() throws java.sql.SQLException
 
     func getTypeInfo() throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getIndexInfo(java.lang.String,java.lang.String,java.lang.String,boolean,boolean) throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getUDTs(java.lang.String,java.lang.String,java.lang.String,int[]) throws java.sql.SQLException
 
-    func getIndexInfo( catalog: String?, schema: String?, table: String?, unique: Bool, approximate: Bool ) throws /* java.sql.SQLException */ -> ResultSet!
+    func getUDTs( catalog: String?, schemaPattern: String?, typeNamePattern: String?, types: [Int32]? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetType(int) throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getURL() throws java.sql.SQLException
 
-    func supportsResultSetType( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func getURL() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetConcurrency(int,int) throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getUserName() throws java.sql.SQLException
 
-    func supportsResultSetConcurrency( type: Int, concurrency: Int ) throws /* java.sql.SQLException */ -> Bool
+    func getUserName() throws /* java.sql.SQLException */ -> String!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.ownUpdatesAreVisible(int) throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getVersionColumns(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    func ownUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func getVersionColumns( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet!
 
-    /// public abstract boolean java.sql.DatabaseMetaData.ownDeletesAreVisible(int) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.insertsAreDetected(int) throws java.sql.SQLException
 
-    func ownDeletesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func insertsAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.ownInsertsAreVisible(int) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.isCatalogAtStart() throws java.sql.SQLException
 
-    func ownInsertsAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func isCatalogAtStart() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.othersUpdatesAreVisible(int) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.isReadOnly() throws java.sql.SQLException
 
-    func othersUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func isReadOnly() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.locatorsUpdateCopy() throws java.sql.SQLException
+
+    func locatorsUpdateCopy() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullPlusNonNullIsNull() throws java.sql.SQLException
+
+    func nullPlusNonNullIsNull() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtEnd() throws java.sql.SQLException
+
+    func nullsAreSortedAtEnd() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtStart() throws java.sql.SQLException
+
+    func nullsAreSortedAtStart() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedHigh() throws java.sql.SQLException
+
+    func nullsAreSortedHigh() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedLow() throws java.sql.SQLException
+
+    func nullsAreSortedLow() throws /* java.sql.SQLException */ -> Bool
 
     /// public abstract boolean java.sql.DatabaseMetaData.othersDeletesAreVisible(int) throws java.sql.SQLException
 
@@ -839,121 +631,329 @@ public protocol DatabaseMetaData: Wrapper {
 
     func othersInsertsAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.updatesAreDetected(int) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.othersUpdatesAreVisible(int) throws java.sql.SQLException
 
-    func updatesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func othersUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.deletesAreDetected(int) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.ownDeletesAreVisible(int) throws java.sql.SQLException
 
-    func deletesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func ownDeletesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.insertsAreDetected(int) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.ownInsertsAreVisible(int) throws java.sql.SQLException
 
-    func insertsAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool
+    func ownInsertsAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.ownUpdatesAreVisible(int) throws java.sql.SQLException
+
+    func ownUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseIdentifiers() throws java.sql.SQLException
+
+    func storesLowerCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    func storesLowerCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseIdentifiers() throws java.sql.SQLException
+
+    func storesMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    func storesMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseIdentifiers() throws java.sql.SQLException
+
+    func storesUpperCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    func storesUpperCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92EntryLevelSQL() throws java.sql.SQLException
+
+    func supportsANSI92EntryLevelSQL() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92FullSQL() throws java.sql.SQLException
+
+    func supportsANSI92FullSQL() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92IntermediateSQL() throws java.sql.SQLException
+
+    func supportsANSI92IntermediateSQL() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithAddColumn() throws java.sql.SQLException
+
+    func supportsAlterTableWithAddColumn() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithDropColumn() throws java.sql.SQLException
+
+    func supportsAlterTableWithDropColumn() throws /* java.sql.SQLException */ -> Bool
 
     /// public abstract boolean java.sql.DatabaseMetaData.supportsBatchUpdates() throws java.sql.SQLException
 
     func supportsBatchUpdates() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getUDTs(java.lang.String,java.lang.String,java.lang.String,int[]) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInDataManipulation() throws java.sql.SQLException
 
-    func getUDTs( catalog: String?, schemaPattern: String?, typeNamePattern: String?, types: [Int32]? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func supportsCatalogsInDataManipulation() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSavepoints() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInIndexDefinitions() throws java.sql.SQLException
 
-    func supportsSavepoints() throws /* java.sql.SQLException */ -> Bool
+    func supportsCatalogsInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsNamedParameters() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInPrivilegeDefinitions() throws java.sql.SQLException
 
-    func supportsNamedParameters() throws /* java.sql.SQLException */ -> Bool
+    func supportsCatalogsInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleOpenResults() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInProcedureCalls() throws java.sql.SQLException
 
-    func supportsMultipleOpenResults() throws /* java.sql.SQLException */ -> Bool
+    func supportsCatalogsInProcedureCalls() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInTableDefinitions() throws java.sql.SQLException
+
+    func supportsCatalogsInTableDefinitions() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsColumnAliasing() throws java.sql.SQLException
+
+    func supportsColumnAliasing() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert(int,int) throws java.sql.SQLException
+
+    func supportsConvert( fromType: Int, toType: Int ) throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert() throws java.sql.SQLException
+
+    func supportsConvert() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCoreSQLGrammar() throws java.sql.SQLException
+
+    func supportsCoreSQLGrammar() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCorrelatedSubqueries() throws java.sql.SQLException
+
+    func supportsCorrelatedSubqueries() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataDefinitionAndDataManipulationTransactions() throws java.sql.SQLException
+
+    func supportsDataDefinitionAndDataManipulationTransactions() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataManipulationTransactionsOnly() throws java.sql.SQLException
+
+    func supportsDataManipulationTransactionsOnly() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsDifferentTableCorrelationNames() throws java.sql.SQLException
+
+    func supportsDifferentTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsExpressionsInOrderBy() throws java.sql.SQLException
+
+    func supportsExpressionsInOrderBy() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsExtendedSQLGrammar() throws java.sql.SQLException
+
+    func supportsExtendedSQLGrammar() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsFullOuterJoins() throws java.sql.SQLException
+
+    func supportsFullOuterJoins() throws /* java.sql.SQLException */ -> Bool
 
     /// public abstract boolean java.sql.DatabaseMetaData.supportsGetGeneratedKeys() throws java.sql.SQLException
 
     func supportsGetGeneratedKeys() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSuperTypes(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupBy() throws java.sql.SQLException
 
-    func getSuperTypes( catalog: String?, schemaPattern: String?, typeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func supportsGroupBy() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSuperTables(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByBeyondSelect() throws java.sql.SQLException
 
-    func getSuperTables( catalog: String?, schemaPattern: String?, tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func supportsGroupByBeyondSelect() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByUnrelated() throws java.sql.SQLException
+
+    func supportsGroupByUnrelated() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsIntegrityEnhancementFacility() throws java.sql.SQLException
+
+    func supportsIntegrityEnhancementFacility() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsLikeEscapeClause() throws java.sql.SQLException
+
+    func supportsLikeEscapeClause() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsLimitedOuterJoins() throws java.sql.SQLException
+
+    func supportsLimitedOuterJoins() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMinimumSQLGrammar() throws java.sql.SQLException
+
+    func supportsMinimumSQLGrammar() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseIdentifiers() throws java.sql.SQLException
+
+    func supportsMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    func supportsMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleOpenResults() throws java.sql.SQLException
+
+    func supportsMultipleOpenResults() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleResultSets() throws java.sql.SQLException
+
+    func supportsMultipleResultSets() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleTransactions() throws java.sql.SQLException
+
+    func supportsMultipleTransactions() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsNamedParameters() throws java.sql.SQLException
+
+    func supportsNamedParameters() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsNonNullableColumns() throws java.sql.SQLException
+
+    func supportsNonNullableColumns() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossCommit() throws java.sql.SQLException
+
+    func supportsOpenCursorsAcrossCommit() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossRollback() throws java.sql.SQLException
+
+    func supportsOpenCursorsAcrossRollback() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossCommit() throws java.sql.SQLException
+
+    func supportsOpenStatementsAcrossCommit() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossRollback() throws java.sql.SQLException
+
+    func supportsOpenStatementsAcrossRollback() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOrderByUnrelated() throws java.sql.SQLException
+
+    func supportsOrderByUnrelated() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOuterJoins() throws java.sql.SQLException
+
+    func supportsOuterJoins() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedDelete() throws java.sql.SQLException
+
+    func supportsPositionedDelete() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedUpdate() throws java.sql.SQLException
+
+    func supportsPositionedUpdate() throws /* java.sql.SQLException */ -> Bool
+
+    /// public default boolean java.sql.DatabaseMetaData.supportsRefCursors() throws java.sql.SQLException
+
+    func supportsRefCursors() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetConcurrency(int,int) throws java.sql.SQLException
+
+    func supportsResultSetConcurrency( type: Int, concurrency: Int ) throws /* java.sql.SQLException */ -> Bool
 
     /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetHoldability(int) throws java.sql.SQLException
 
     func supportsResultSetHoldability( holdability: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMajorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetType(int) throws java.sql.SQLException
 
-    func getDatabaseMajorVersion() throws /* java.sql.SQLException */ -> Int
+    func supportsResultSetType( type: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMinorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSavepoints() throws java.sql.SQLException
 
-    func getDatabaseMinorVersion() throws /* java.sql.SQLException */ -> Int
+    func supportsSavepoints() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract int java.sql.DatabaseMetaData.getJDBCMajorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInDataManipulation() throws java.sql.SQLException
 
-    func getJDBCMajorVersion() throws /* java.sql.SQLException */ -> Int
+    func supportsSchemasInDataManipulation() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract int java.sql.DatabaseMetaData.getJDBCMinorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInIndexDefinitions() throws java.sql.SQLException
 
-    func getJDBCMinorVersion() throws /* java.sql.SQLException */ -> Int
+    func supportsSchemasInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract int java.sql.DatabaseMetaData.getSQLStateType() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInPrivilegeDefinitions() throws java.sql.SQLException
 
-    func getSQLStateType() throws /* java.sql.SQLException */ -> Int
+    func supportsSchemasInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.locatorsUpdateCopy() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInProcedureCalls() throws java.sql.SQLException
 
-    func locatorsUpdateCopy() throws /* java.sql.SQLException */ -> Bool
+    func supportsSchemasInProcedureCalls() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInTableDefinitions() throws java.sql.SQLException
+
+    func supportsSchemasInTableDefinitions() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSelectForUpdate() throws java.sql.SQLException
+
+    func supportsSelectForUpdate() throws /* java.sql.SQLException */ -> Bool
 
     /// public abstract boolean java.sql.DatabaseMetaData.supportsStatementPooling() throws java.sql.SQLException
 
     func supportsStatementPooling() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.RowIdLifetime java.sql.DatabaseMetaData.getRowIdLifetime() throws java.sql.SQLException
-
-    func getRowIdLifetime() throws /* java.sql.SQLException */ -> RowIdLifetime!
-
     /// public abstract boolean java.sql.DatabaseMetaData.supportsStoredFunctionsUsingCallSyntax() throws java.sql.SQLException
 
     func supportsStoredFunctionsUsingCallSyntax() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.autoCommitFailureClosesAllResultSets() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsStoredProcedures() throws java.sql.SQLException
 
-    func autoCommitFailureClosesAllResultSets() throws /* java.sql.SQLException */ -> Bool
+    func supportsStoredProcedures() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getClientInfoProperties() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInComparisons() throws java.sql.SQLException
 
-    func getClientInfoProperties() throws /* java.sql.SQLException */ -> ResultSet!
+    func supportsSubqueriesInComparisons() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctions(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInExists() throws java.sql.SQLException
 
-    func getFunctions( catalog: String?, schemaPattern: String?, functionNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func supportsSubqueriesInExists() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctionColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInIns() throws java.sql.SQLException
 
-    func getFunctionColumns( catalog: String?, schemaPattern: String?, functionNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func supportsSubqueriesInIns() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPseudoColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInQuantifieds() throws java.sql.SQLException
 
-    func getPseudoColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet!
+    func supportsSubqueriesInQuantifieds() throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract boolean java.sql.DatabaseMetaData.generatedKeyAlwaysReturned() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsTableCorrelationNames() throws java.sql.SQLException
 
-    func generatedKeyAlwaysReturned() throws /* java.sql.SQLException */ -> Bool
+    func supportsTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool
 
-    /// public default long java.sql.DatabaseMetaData.getMaxLogicalLobSize() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactionIsolationLevel(int) throws java.sql.SQLException
 
-    func getMaxLogicalLobSize() throws /* java.sql.SQLException */ -> Int64
+    func supportsTransactionIsolationLevel( level: Int ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public default boolean java.sql.DatabaseMetaData.supportsRefCursors() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactions() throws java.sql.SQLException
 
-    func supportsRefCursors() throws /* java.sql.SQLException */ -> Bool
+    func supportsTransactions() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnion() throws java.sql.SQLException
+
+    func supportsUnion() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnionAll() throws java.sql.SQLException
+
+    func supportsUnionAll() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.updatesAreDetected(int) throws java.sql.SQLException
+
+    func updatesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFilePerTable() throws java.sql.SQLException
+
+    func usesLocalFilePerTable() throws /* java.sql.SQLException */ -> Bool
+
+    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFiles() throws java.sql.SQLException
+
+    func usesLocalFiles() throws /* java.sql.SQLException */ -> Bool
 
 }
 
@@ -962,479 +962,6 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var DatabaseMetaDataJNIClass: jclass?
 
-    /// public static final int java.sql.DatabaseMetaData.procedureResultUnknown
-
-    private static var procedureResultUnknown_FieldID: jfieldID?
-
-    open static var procedureResultUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureResultUnknown", fieldType: "I", fieldCache: &procedureResultUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNoResult
-
-    private static var procedureNoResult_FieldID: jfieldID?
-
-    open static var procedureNoResult: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureNoResult", fieldType: "I", fieldCache: &procedureNoResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureReturnsResult
-
-    private static var procedureReturnsResult_FieldID: jfieldID?
-
-    open static var procedureReturnsResult: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureReturnsResult", fieldType: "I", fieldCache: &procedureReturnsResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnUnknown
-
-    private static var procedureColumnUnknown_FieldID: jfieldID?
-
-    open static var procedureColumnUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnUnknown", fieldType: "I", fieldCache: &procedureColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnIn
-
-    private static var procedureColumnIn_FieldID: jfieldID?
-
-    open static var procedureColumnIn: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnIn", fieldType: "I", fieldCache: &procedureColumnIn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnInOut
-
-    private static var procedureColumnInOut_FieldID: jfieldID?
-
-    open static var procedureColumnInOut: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnInOut", fieldType: "I", fieldCache: &procedureColumnInOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnOut
-
-    private static var procedureColumnOut_FieldID: jfieldID?
-
-    open static var procedureColumnOut: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnOut", fieldType: "I", fieldCache: &procedureColumnOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnReturn
-
-    private static var procedureColumnReturn_FieldID: jfieldID?
-
-    open static var procedureColumnReturn: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnReturn", fieldType: "I", fieldCache: &procedureColumnReturn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureColumnResult
-
-    private static var procedureColumnResult_FieldID: jfieldID?
-
-    open static var procedureColumnResult: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnResult", fieldType: "I", fieldCache: &procedureColumnResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNoNulls
-
-    private static var procedureNoNulls_FieldID: jfieldID?
-
-    open static var procedureNoNulls: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureNoNulls", fieldType: "I", fieldCache: &procedureNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNullable
-
-    private static var procedureNullable_FieldID: jfieldID?
-
-    open static var procedureNullable: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureNullable", fieldType: "I", fieldCache: &procedureNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.procedureNullableUnknown
-
-    private static var procedureNullableUnknown_FieldID: jfieldID?
-
-    open static var procedureNullableUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "procedureNullableUnknown", fieldType: "I", fieldCache: &procedureNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.columnNoNulls
-
-    private static var columnNoNulls_FieldID: jfieldID?
-
-    open static var columnNoNulls: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "columnNoNulls", fieldType: "I", fieldCache: &columnNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.columnNullable
-
-    private static var columnNullable_FieldID: jfieldID?
-
-    open static var columnNullable: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "columnNullable", fieldType: "I", fieldCache: &columnNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.columnNullableUnknown
-
-    private static var columnNullableUnknown_FieldID: jfieldID?
-
-    open static var columnNullableUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "columnNullableUnknown", fieldType: "I", fieldCache: &columnNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowTemporary
-
-    private static var bestRowTemporary_FieldID: jfieldID?
-
-    open static var bestRowTemporary: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "bestRowTemporary", fieldType: "I", fieldCache: &bestRowTemporary_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowTransaction
-
-    private static var bestRowTransaction_FieldID: jfieldID?
-
-    open static var bestRowTransaction: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "bestRowTransaction", fieldType: "I", fieldCache: &bestRowTransaction_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowSession
-
-    private static var bestRowSession_FieldID: jfieldID?
-
-    open static var bestRowSession: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "bestRowSession", fieldType: "I", fieldCache: &bestRowSession_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowUnknown
-
-    private static var bestRowUnknown_FieldID: jfieldID?
-
-    open static var bestRowUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "bestRowUnknown", fieldType: "I", fieldCache: &bestRowUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowNotPseudo
-
-    private static var bestRowNotPseudo_FieldID: jfieldID?
-
-    open static var bestRowNotPseudo: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "bestRowNotPseudo", fieldType: "I", fieldCache: &bestRowNotPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.bestRowPseudo
-
-    private static var bestRowPseudo_FieldID: jfieldID?
-
-    open static var bestRowPseudo: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "bestRowPseudo", fieldType: "I", fieldCache: &bestRowPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.versionColumnUnknown
-
-    private static var versionColumnUnknown_FieldID: jfieldID?
-
-    open static var versionColumnUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "versionColumnUnknown", fieldType: "I", fieldCache: &versionColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.versionColumnNotPseudo
-
-    private static var versionColumnNotPseudo_FieldID: jfieldID?
-
-    open static var versionColumnNotPseudo: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "versionColumnNotPseudo", fieldType: "I", fieldCache: &versionColumnNotPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.versionColumnPseudo
-
-    private static var versionColumnPseudo_FieldID: jfieldID?
-
-    open static var versionColumnPseudo: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "versionColumnPseudo", fieldType: "I", fieldCache: &versionColumnPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyCascade
-
-    private static var importedKeyCascade_FieldID: jfieldID?
-
-    open static var importedKeyCascade: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyCascade", fieldType: "I", fieldCache: &importedKeyCascade_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyRestrict
-
-    private static var importedKeyRestrict_FieldID: jfieldID?
-
-    open static var importedKeyRestrict: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyRestrict", fieldType: "I", fieldCache: &importedKeyRestrict_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeySetNull
-
-    private static var importedKeySetNull_FieldID: jfieldID?
-
-    open static var importedKeySetNull: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeySetNull", fieldType: "I", fieldCache: &importedKeySetNull_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyNoAction
-
-    private static var importedKeyNoAction_FieldID: jfieldID?
-
-    open static var importedKeyNoAction: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyNoAction", fieldType: "I", fieldCache: &importedKeyNoAction_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeySetDefault
-
-    private static var importedKeySetDefault_FieldID: jfieldID?
-
-    open static var importedKeySetDefault: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeySetDefault", fieldType: "I", fieldCache: &importedKeySetDefault_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyDeferred
-
-    private static var importedKeyInitiallyDeferred_FieldID: jfieldID?
-
-    open static var importedKeyInitiallyDeferred: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyInitiallyDeferred", fieldType: "I", fieldCache: &importedKeyInitiallyDeferred_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyImmediate
-
-    private static var importedKeyInitiallyImmediate_FieldID: jfieldID?
-
-    open static var importedKeyInitiallyImmediate: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyInitiallyImmediate", fieldType: "I", fieldCache: &importedKeyInitiallyImmediate_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.importedKeyNotDeferrable
-
-    private static var importedKeyNotDeferrable_FieldID: jfieldID?
-
-    open static var importedKeyNotDeferrable: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyNotDeferrable", fieldType: "I", fieldCache: &importedKeyNotDeferrable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.typeNoNulls
-
-    private static var typeNoNulls_FieldID: jfieldID?
-
-    open static var typeNoNulls: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "typeNoNulls", fieldType: "I", fieldCache: &typeNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.typeNullable
-
-    private static var typeNullable_FieldID: jfieldID?
-
-    open static var typeNullable: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "typeNullable", fieldType: "I", fieldCache: &typeNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.typeNullableUnknown
-
-    private static var typeNullableUnknown_FieldID: jfieldID?
-
-    open static var typeNullableUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "typeNullableUnknown", fieldType: "I", fieldCache: &typeNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.typePredNone
-
-    private static var typePredNone_FieldID: jfieldID?
-
-    open static var typePredNone: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "typePredNone", fieldType: "I", fieldCache: &typePredNone_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.typePredChar
-
-    private static var typePredChar_FieldID: jfieldID?
-
-    open static var typePredChar: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "typePredChar", fieldType: "I", fieldCache: &typePredChar_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.typePredBasic
-
-    private static var typePredBasic_FieldID: jfieldID?
-
-    open static var typePredBasic: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "typePredBasic", fieldType: "I", fieldCache: &typePredBasic_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.typeSearchable
-
-    private static var typeSearchable_FieldID: jfieldID?
-
-    open static var typeSearchable: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "typeSearchable", fieldType: "I", fieldCache: &typeSearchable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexStatistic
-
-    private static var tableIndexStatistic_FieldID: jfieldID?
-
-    open static var tableIndexStatistic: Int16 {
-        get {
-            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexStatistic", fieldType: "S", fieldCache: &tableIndexStatistic_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
-        }
-    }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexClustered
-
-    private static var tableIndexClustered_FieldID: jfieldID?
-
-    open static var tableIndexClustered: Int16 {
-        get {
-            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexClustered", fieldType: "S", fieldCache: &tableIndexClustered_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
-        }
-    }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexHashed
-
-    private static var tableIndexHashed_FieldID: jfieldID?
-
-    open static var tableIndexHashed: Int16 {
-        get {
-            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexHashed", fieldType: "S", fieldCache: &tableIndexHashed_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
-        }
-    }
-
-    /// public static final short java.sql.DatabaseMetaData.tableIndexOther
-
-    private static var tableIndexOther_FieldID: jfieldID?
-
-    open static var tableIndexOther: Int16 {
-        get {
-            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexOther", fieldType: "S", fieldCache: &tableIndexOther_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
-        }
-    }
-
     /// public static final short java.sql.DatabaseMetaData.attributeNoNulls
 
     private static var attributeNoNulls_FieldID: jfieldID?
@@ -1442,7 +969,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var attributeNoNulls: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "attributeNoNulls", fieldType: "S", fieldCache: &attributeNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
+            return __value
         }
     }
 
@@ -1453,7 +980,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var attributeNullable: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "attributeNullable", fieldType: "S", fieldCache: &attributeNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
+            return __value
         }
     }
 
@@ -1464,51 +991,106 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var attributeNullableUnknown: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "attributeNullableUnknown", fieldType: "S", fieldCache: &attributeNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int16(), from: __value )
+            return __value
         }
     }
 
-    /// public static final int java.sql.DatabaseMetaData.sqlStateXOpen
+    /// public static final int java.sql.DatabaseMetaData.bestRowNotPseudo
 
-    private static var sqlStateXOpen_FieldID: jfieldID?
+    private static var bestRowNotPseudo_FieldID: jfieldID?
 
-    open static var sqlStateXOpen: Int {
+    open static var bestRowNotPseudo: Int {
         get {
-            let __value = JNIField.GetStaticIntField( fieldName: "sqlStateXOpen", fieldType: "I", fieldCache: &sqlStateXOpen_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            let __value = JNIField.GetStaticIntField( fieldName: "bestRowNotPseudo", fieldType: "I", fieldCache: &bestRowNotPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
         }
     }
 
-    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL
+    /// public static final int java.sql.DatabaseMetaData.bestRowPseudo
 
-    private static var sqlStateSQL_FieldID: jfieldID?
+    private static var bestRowPseudo_FieldID: jfieldID?
 
-    open static var sqlStateSQL: Int {
+    open static var bestRowPseudo: Int {
         get {
-            let __value = JNIField.GetStaticIntField( fieldName: "sqlStateSQL", fieldType: "I", fieldCache: &sqlStateSQL_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            let __value = JNIField.GetStaticIntField( fieldName: "bestRowPseudo", fieldType: "I", fieldCache: &bestRowPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
         }
     }
 
-    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL99
+    /// public static final int java.sql.DatabaseMetaData.bestRowSession
 
-    private static var sqlStateSQL99_FieldID: jfieldID?
+    private static var bestRowSession_FieldID: jfieldID?
 
-    open static var sqlStateSQL99: Int {
+    open static var bestRowSession: Int {
         get {
-            let __value = JNIField.GetStaticIntField( fieldName: "sqlStateSQL99", fieldType: "I", fieldCache: &sqlStateSQL99_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            let __value = JNIField.GetStaticIntField( fieldName: "bestRowSession", fieldType: "I", fieldCache: &bestRowSession_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
         }
     }
 
-    /// public static final int java.sql.DatabaseMetaData.functionColumnUnknown
+    /// public static final int java.sql.DatabaseMetaData.bestRowTemporary
 
-    private static var functionColumnUnknown_FieldID: jfieldID?
+    private static var bestRowTemporary_FieldID: jfieldID?
 
-    open static var functionColumnUnknown: Int {
+    open static var bestRowTemporary: Int {
         get {
-            let __value = JNIField.GetStaticIntField( fieldName: "functionColumnUnknown", fieldType: "I", fieldCache: &functionColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            let __value = JNIField.GetStaticIntField( fieldName: "bestRowTemporary", fieldType: "I", fieldCache: &bestRowTemporary_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.bestRowTransaction
+
+    private static var bestRowTransaction_FieldID: jfieldID?
+
+    open static var bestRowTransaction: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "bestRowTransaction", fieldType: "I", fieldCache: &bestRowTransaction_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.bestRowUnknown
+
+    private static var bestRowUnknown_FieldID: jfieldID?
+
+    open static var bestRowUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "bestRowUnknown", fieldType: "I", fieldCache: &bestRowUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.columnNoNulls
+
+    private static var columnNoNulls_FieldID: jfieldID?
+
+    open static var columnNoNulls: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "columnNoNulls", fieldType: "I", fieldCache: &columnNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.columnNullable
+
+    private static var columnNullable_FieldID: jfieldID?
+
+    open static var columnNullable: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "columnNullable", fieldType: "I", fieldCache: &columnNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.columnNullableUnknown
+
+    private static var columnNullableUnknown_FieldID: jfieldID?
+
+    open static var columnNullableUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "columnNullableUnknown", fieldType: "I", fieldCache: &columnNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
         }
     }
 
@@ -1519,7 +1101,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var functionColumnIn: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnIn", fieldType: "I", fieldCache: &functionColumnIn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
@@ -1530,7 +1112,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var functionColumnInOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnInOut", fieldType: "I", fieldCache: &functionColumnInOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
@@ -1541,18 +1123,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var functionColumnOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnOut", fieldType: "I", fieldCache: &functionColumnOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.functionReturn
-
-    private static var functionReturn_FieldID: jfieldID?
-
-    open static var functionReturn: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "functionReturn", fieldType: "I", fieldCache: &functionReturn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
@@ -1563,7 +1134,18 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var functionColumnResult: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnResult", fieldType: "I", fieldCache: &functionColumnResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.functionColumnUnknown
+
+    private static var functionColumnUnknown_FieldID: jfieldID?
+
+    open static var functionColumnUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "functionColumnUnknown", fieldType: "I", fieldCache: &functionColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
         }
     }
 
@@ -1574,40 +1156,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var functionNoNulls: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionNoNulls", fieldType: "I", fieldCache: &functionNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.functionNullable
-
-    private static var functionNullable_FieldID: jfieldID?
-
-    open static var functionNullable: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "functionNullable", fieldType: "I", fieldCache: &functionNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.functionNullableUnknown
-
-    private static var functionNullableUnknown_FieldID: jfieldID?
-
-    open static var functionNullableUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "functionNullableUnknown", fieldType: "I", fieldCache: &functionNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
-        }
-    }
-
-    /// public static final int java.sql.DatabaseMetaData.functionResultUnknown
-
-    private static var functionResultUnknown_FieldID: jfieldID?
-
-    open static var functionResultUnknown: Int {
-        get {
-            let __value = JNIField.GetStaticIntField( fieldName: "functionResultUnknown", fieldType: "I", fieldCache: &functionResultUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
@@ -1618,7 +1167,51 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var functionNoTable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionNoTable", fieldType: "I", fieldCache: &functionNoTable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.functionNullable
+
+    private static var functionNullable_FieldID: jfieldID?
+
+    open static var functionNullable: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "functionNullable", fieldType: "I", fieldCache: &functionNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.functionNullableUnknown
+
+    private static var functionNullableUnknown_FieldID: jfieldID?
+
+    open static var functionNullableUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "functionNullableUnknown", fieldType: "I", fieldCache: &functionNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.functionResultUnknown
+
+    private static var functionResultUnknown_FieldID: jfieldID?
+
+    open static var functionResultUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "functionResultUnknown", fieldType: "I", fieldCache: &functionResultUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.functionReturn
+
+    private static var functionReturn_FieldID: jfieldID?
+
+    open static var functionReturn: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "functionReturn", fieldType: "I", fieldCache: &functionReturn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
         }
     }
 
@@ -1629,39 +1222,564 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
     open static var functionReturnsTable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionReturnsTable", fieldType: "I", fieldCache: &functionReturnsTable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
-            return JNIType.toSwift( type: Int(), from: __value )
+            return Int(__value)
         }
     }
 
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getURL() throws java.sql.SQLException
+    /// public static final int java.sql.DatabaseMetaData.importedKeyCascade
 
-    private static var getURL_MethodID_177: jmethodID?
+    private static var importedKeyCascade_FieldID: jfieldID?
 
-    open func getURL() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open static var importedKeyCascade: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyCascade", fieldType: "I", fieldCache: &importedKeyCascade_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyDeferred
+
+    private static var importedKeyInitiallyDeferred_FieldID: jfieldID?
+
+    open static var importedKeyInitiallyDeferred: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyInitiallyDeferred", fieldType: "I", fieldCache: &importedKeyInitiallyDeferred_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeyInitiallyImmediate
+
+    private static var importedKeyInitiallyImmediate_FieldID: jfieldID?
+
+    open static var importedKeyInitiallyImmediate: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyInitiallyImmediate", fieldType: "I", fieldCache: &importedKeyInitiallyImmediate_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeyNoAction
+
+    private static var importedKeyNoAction_FieldID: jfieldID?
+
+    open static var importedKeyNoAction: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyNoAction", fieldType: "I", fieldCache: &importedKeyNoAction_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeyNotDeferrable
+
+    private static var importedKeyNotDeferrable_FieldID: jfieldID?
+
+    open static var importedKeyNotDeferrable: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyNotDeferrable", fieldType: "I", fieldCache: &importedKeyNotDeferrable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeyRestrict
+
+    private static var importedKeyRestrict_FieldID: jfieldID?
+
+    open static var importedKeyRestrict: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeyRestrict", fieldType: "I", fieldCache: &importedKeyRestrict_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeySetDefault
+
+    private static var importedKeySetDefault_FieldID: jfieldID?
+
+    open static var importedKeySetDefault: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeySetDefault", fieldType: "I", fieldCache: &importedKeySetDefault_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.importedKeySetNull
+
+    private static var importedKeySetNull_FieldID: jfieldID?
+
+    open static var importedKeySetNull: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "importedKeySetNull", fieldType: "I", fieldCache: &importedKeySetNull_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnIn
+
+    private static var procedureColumnIn_FieldID: jfieldID?
+
+    open static var procedureColumnIn: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnIn", fieldType: "I", fieldCache: &procedureColumnIn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnInOut
+
+    private static var procedureColumnInOut_FieldID: jfieldID?
+
+    open static var procedureColumnInOut: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnInOut", fieldType: "I", fieldCache: &procedureColumnInOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnOut
+
+    private static var procedureColumnOut_FieldID: jfieldID?
+
+    open static var procedureColumnOut: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnOut", fieldType: "I", fieldCache: &procedureColumnOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnResult
+
+    private static var procedureColumnResult_FieldID: jfieldID?
+
+    open static var procedureColumnResult: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnResult", fieldType: "I", fieldCache: &procedureColumnResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnReturn
+
+    private static var procedureColumnReturn_FieldID: jfieldID?
+
+    open static var procedureColumnReturn: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnReturn", fieldType: "I", fieldCache: &procedureColumnReturn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureColumnUnknown
+
+    private static var procedureColumnUnknown_FieldID: jfieldID?
+
+    open static var procedureColumnUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnUnknown", fieldType: "I", fieldCache: &procedureColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNoNulls
+
+    private static var procedureNoNulls_FieldID: jfieldID?
+
+    open static var procedureNoNulls: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureNoNulls", fieldType: "I", fieldCache: &procedureNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNoResult
+
+    private static var procedureNoResult_FieldID: jfieldID?
+
+    open static var procedureNoResult: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureNoResult", fieldType: "I", fieldCache: &procedureNoResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNullable
+
+    private static var procedureNullable_FieldID: jfieldID?
+
+    open static var procedureNullable: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureNullable", fieldType: "I", fieldCache: &procedureNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureNullableUnknown
+
+    private static var procedureNullableUnknown_FieldID: jfieldID?
+
+    open static var procedureNullableUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureNullableUnknown", fieldType: "I", fieldCache: &procedureNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureResultUnknown
+
+    private static var procedureResultUnknown_FieldID: jfieldID?
+
+    open static var procedureResultUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureResultUnknown", fieldType: "I", fieldCache: &procedureResultUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.procedureReturnsResult
+
+    private static var procedureReturnsResult_FieldID: jfieldID?
+
+    open static var procedureReturnsResult: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "procedureReturnsResult", fieldType: "I", fieldCache: &procedureReturnsResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL
+
+    private static var sqlStateSQL_FieldID: jfieldID?
+
+    open static var sqlStateSQL: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "sqlStateSQL", fieldType: "I", fieldCache: &sqlStateSQL_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.sqlStateSQL99
+
+    private static var sqlStateSQL99_FieldID: jfieldID?
+
+    open static var sqlStateSQL99: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "sqlStateSQL99", fieldType: "I", fieldCache: &sqlStateSQL99_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.sqlStateXOpen
+
+    private static var sqlStateXOpen_FieldID: jfieldID?
+
+    open static var sqlStateXOpen: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "sqlStateXOpen", fieldType: "I", fieldCache: &sqlStateXOpen_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexClustered
+
+    private static var tableIndexClustered_FieldID: jfieldID?
+
+    open static var tableIndexClustered: Int16 {
+        get {
+            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexClustered", fieldType: "S", fieldCache: &tableIndexClustered_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexHashed
+
+    private static var tableIndexHashed_FieldID: jfieldID?
+
+    open static var tableIndexHashed: Int16 {
+        get {
+            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexHashed", fieldType: "S", fieldCache: &tableIndexHashed_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexOther
+
+    private static var tableIndexOther_FieldID: jfieldID?
+
+    open static var tableIndexOther: Int16 {
+        get {
+            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexOther", fieldType: "S", fieldCache: &tableIndexOther_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final short java.sql.DatabaseMetaData.tableIndexStatistic
+
+    private static var tableIndexStatistic_FieldID: jfieldID?
+
+    open static var tableIndexStatistic: Int16 {
+        get {
+            let __value = JNIField.GetStaticShortField( fieldName: "tableIndexStatistic", fieldType: "S", fieldCache: &tableIndexStatistic_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return __value
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.typeNoNulls
+
+    private static var typeNoNulls_FieldID: jfieldID?
+
+    open static var typeNoNulls: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "typeNoNulls", fieldType: "I", fieldCache: &typeNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.typeNullable
+
+    private static var typeNullable_FieldID: jfieldID?
+
+    open static var typeNullable: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "typeNullable", fieldType: "I", fieldCache: &typeNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.typeNullableUnknown
+
+    private static var typeNullableUnknown_FieldID: jfieldID?
+
+    open static var typeNullableUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "typeNullableUnknown", fieldType: "I", fieldCache: &typeNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.typePredBasic
+
+    private static var typePredBasic_FieldID: jfieldID?
+
+    open static var typePredBasic: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "typePredBasic", fieldType: "I", fieldCache: &typePredBasic_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.typePredChar
+
+    private static var typePredChar_FieldID: jfieldID?
+
+    open static var typePredChar: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "typePredChar", fieldType: "I", fieldCache: &typePredChar_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.typePredNone
+
+    private static var typePredNone_FieldID: jfieldID?
+
+    open static var typePredNone: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "typePredNone", fieldType: "I", fieldCache: &typePredNone_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.typeSearchable
+
+    private static var typeSearchable_FieldID: jfieldID?
+
+    open static var typeSearchable: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "typeSearchable", fieldType: "I", fieldCache: &typeSearchable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.versionColumnNotPseudo
+
+    private static var versionColumnNotPseudo_FieldID: jfieldID?
+
+    open static var versionColumnNotPseudo: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "versionColumnNotPseudo", fieldType: "I", fieldCache: &versionColumnNotPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.versionColumnPseudo
+
+    private static var versionColumnPseudo_FieldID: jfieldID?
+
+    open static var versionColumnPseudo: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "versionColumnPseudo", fieldType: "I", fieldCache: &versionColumnPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public static final int java.sql.DatabaseMetaData.versionColumnUnknown
+
+    private static var versionColumnUnknown_FieldID: jfieldID?
+
+    open static var versionColumnUnknown: Int {
+        get {
+            let __value = JNIField.GetStaticIntField( fieldName: "versionColumnUnknown", fieldType: "I", fieldCache: &versionColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
+            return Int(__value)
+        }
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.allProceduresAreCallable() throws java.sql.SQLException
+
+    private static var allProceduresAreCallable_MethodID_177: jmethodID?
+
+    open func allProceduresAreCallable() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getURL", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getURL_MethodID_177, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "allProceduresAreCallable", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.allProceduresAreCallable_MethodID_177, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: String(), from: __return )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.allTablesAreSelectable() throws java.sql.SQLException
+
+    private static var allTablesAreSelectable_MethodID_178: jmethodID?
+
+    open func allTablesAreSelectable() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "allTablesAreSelectable", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.allTablesAreSelectable_MethodID_178, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.autoCommitFailureClosesAllResultSets() throws java.sql.SQLException
+
+    private static var autoCommitFailureClosesAllResultSets_MethodID_179: jmethodID?
+
+    open func autoCommitFailureClosesAllResultSets() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "autoCommitFailureClosesAllResultSets", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.autoCommitFailureClosesAllResultSets_MethodID_179, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionCausesTransactionCommit() throws java.sql.SQLException
+
+    private static var dataDefinitionCausesTransactionCommit_MethodID_180: jmethodID?
+
+    open func dataDefinitionCausesTransactionCommit() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "dataDefinitionCausesTransactionCommit", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.dataDefinitionCausesTransactionCommit_MethodID_180, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionIgnoredInTransactions() throws java.sql.SQLException
+
+    private static var dataDefinitionIgnoredInTransactions_MethodID_181: jmethodID?
+
+    open func dataDefinitionIgnoredInTransactions() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "dataDefinitionIgnoredInTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.dataDefinitionIgnoredInTransactions_MethodID_181, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.deletesAreDetected(int) throws java.sql.SQLException
+
+    private static var deletesAreDetected_MethodID_182: jmethodID?
+
+    open func deletesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "deletesAreDetected", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.deletesAreDetected_MethodID_182, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func deletesAreDetected( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try deletesAreDetected( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.doesMaxRowSizeIncludeBlobs() throws java.sql.SQLException
+
+    private static var doesMaxRowSizeIncludeBlobs_MethodID_183: jmethodID?
+
+    open func doesMaxRowSizeIncludeBlobs() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "doesMaxRowSizeIncludeBlobs", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.doesMaxRowSizeIncludeBlobs_MethodID_183, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.generatedKeyAlwaysReturned() throws java.sql.SQLException
+
+    private static var generatedKeyAlwaysReturned_MethodID_184: jmethodID?
+
+    open func generatedKeyAlwaysReturned() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "generatedKeyAlwaysReturned", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.generatedKeyAlwaysReturned_MethodID_184, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
     }
 
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getAttributes(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    private static var getAttributes_MethodID_178: jmethodID?
+    private static var getAttributes_MethodID_185: jmethodID?
 
     open func getAttributes( catalog: String?, schemaPattern: String?, typeNamePattern: String?, attributeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
         __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
         __args[2] = JNIType.toJava( value: typeNamePattern, locals: &__locals )
         __args[3] = JNIType.toJava( value: attributeNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAttributes", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getAttributes_MethodID_178, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAttributes", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getAttributes_MethodID_185, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ResultSetForward( javaObject: __return ) : nil
@@ -1671,1831 +1789,905 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
         return try getAttributes( catalog: _catalog, schemaPattern: _schemaPattern, typeNamePattern: _typeNamePattern, attributeNamePattern: _attributeNamePattern )
     }
 
-    /// public abstract boolean java.sql.DatabaseMetaData.isReadOnly() throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getBestRowIdentifier(java.lang.String,java.lang.String,java.lang.String,int,boolean) throws java.sql.SQLException
 
-    private static var isReadOnly_MethodID_179: jmethodID?
+    private static var getBestRowIdentifier_MethodID_186: jmethodID?
 
-    open func isReadOnly() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getBestRowIdentifier( catalog: String?, schema: String?, table: String?, scope: Int, nullable: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isReadOnly", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.isReadOnly_MethodID_179, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 5 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: table, locals: &__locals )
+        __args[3] = jvalue( i: jint(scope) )
+        __args[4] = jvalue( z: jboolean(nullable ? JNI_TRUE : JNI_FALSE) )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBestRowIdentifier", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getBestRowIdentifier_MethodID_186, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getBestRowIdentifier( _ _catalog: String?, _ _schema: String?, _ _table: String?, _ _scope: Int, _ _nullable: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getBestRowIdentifier( catalog: _catalog, schema: _schema, table: _table, scope: _scope, nullable: _nullable )
+    }
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogSeparator() throws java.sql.SQLException
+
+    private static var getCatalogSeparator_MethodID_187: jmethodID?
+
+    open func getCatalogSeparator() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCatalogSeparator", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getCatalogSeparator_MethodID_187, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
-    /// public abstract java.sql.Connection java.sql.DatabaseMetaData.getConnection() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogTerm() throws java.sql.SQLException
 
-    private static var getConnection_MethodID_180: jmethodID?
+    private static var getCatalogTerm_MethodID_188: jmethodID?
 
-    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getCatalogTerm() throws /* java.sql.SQLException */ -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getConnection", methodSig: "()Ljava/sql/Connection;", methodCache: &DatabaseMetaDataForward.getConnection_MethodID_180, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCatalogTerm", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getCatalogTerm_MethodID_188, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCatalogs() throws java.sql.SQLException
+
+    private static var getCatalogs_MethodID_189: jmethodID?
+
+    open func getCatalogs() throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCatalogs", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getCatalogs_MethodID_189, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getClientInfoProperties() throws java.sql.SQLException
+
+    private static var getClientInfoProperties_MethodID_190: jmethodID?
+
+    open func getClientInfoProperties() throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClientInfoProperties", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getClientInfoProperties_MethodID_190, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumnPrivileges(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getColumnPrivileges_MethodID_191: jmethodID?
+
+    open func getColumnPrivileges( catalog: String?, schema: String?, table: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: table, locals: &__locals )
+        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getColumnPrivileges", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getColumnPrivileges_MethodID_191, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getColumnPrivileges( _ _catalog: String?, _ _schema: String?, _ _table: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getColumnPrivileges( catalog: _catalog, schema: _schema, table: _table, columnNamePattern: _columnNamePattern )
+    }
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getColumns_MethodID_192: jmethodID?
+
+    open func getColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
+        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getColumns_MethodID_192, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getColumns( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getColumns( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern, columnNamePattern: _columnNamePattern )
+    }
+
+    /// public abstract java.sql.Connection java.sql.DatabaseMetaData.getConnection() throws java.sql.SQLException
+
+    private static var getConnection_MethodID_193: jmethodID?
+
+    open func getConnection() throws /* java.sql.SQLException */ -> Connection! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getConnection", methodSig: "()Ljava/sql/Connection;", methodCache: &DatabaseMetaDataForward.getConnection_MethodID_193, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ConnectionForward( javaObject: __return ) : nil
     }
 
 
-    /// public abstract int java.sql.DatabaseMetaData.getResultSetHoldability() throws java.sql.SQLException
-
-    private static var getResultSetHoldability_MethodID_181: jmethodID?
-
-    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getResultSetHoldability", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getResultSetHoldability_MethodID_181, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.allProceduresAreCallable() throws java.sql.SQLException
-
-    private static var allProceduresAreCallable_MethodID_182: jmethodID?
-
-    open func allProceduresAreCallable() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "allProceduresAreCallable", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.allProceduresAreCallable_MethodID_182, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.allTablesAreSelectable() throws java.sql.SQLException
-
-    private static var allTablesAreSelectable_MethodID_183: jmethodID?
-
-    open func allTablesAreSelectable() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "allTablesAreSelectable", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.allTablesAreSelectable_MethodID_183, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getUserName() throws java.sql.SQLException
-
-    private static var getUserName_MethodID_184: jmethodID?
-
-    open func getUserName() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUserName", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getUserName_MethodID_184, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedHigh() throws java.sql.SQLException
-
-    private static var nullsAreSortedHigh_MethodID_185: jmethodID?
-
-    open func nullsAreSortedHigh() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedHigh", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedHigh_MethodID_185, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedLow() throws java.sql.SQLException
-
-    private static var nullsAreSortedLow_MethodID_186: jmethodID?
-
-    open func nullsAreSortedLow() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedLow", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedLow_MethodID_186, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtStart() throws java.sql.SQLException
-
-    private static var nullsAreSortedAtStart_MethodID_187: jmethodID?
-
-    open func nullsAreSortedAtStart() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedAtStart", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedAtStart_MethodID_187, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtEnd() throws java.sql.SQLException
-
-    private static var nullsAreSortedAtEnd_MethodID_188: jmethodID?
-
-    open func nullsAreSortedAtEnd() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedAtEnd", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedAtEnd_MethodID_188, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDatabaseProductName() throws java.sql.SQLException
-
-    private static var getDatabaseProductName_MethodID_189: jmethodID?
-
-    open func getDatabaseProductName() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDatabaseProductName", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDatabaseProductName_MethodID_189, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDatabaseProductVersion() throws java.sql.SQLException
-
-    private static var getDatabaseProductVersion_MethodID_190: jmethodID?
-
-    open func getDatabaseProductVersion() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDatabaseProductVersion", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDatabaseProductVersion_MethodID_190, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverName() throws java.sql.SQLException
-
-    private static var getDriverName_MethodID_191: jmethodID?
-
-    open func getDriverName() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDriverName", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDriverName_MethodID_191, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverVersion() throws java.sql.SQLException
-
-    private static var getDriverVersion_MethodID_192: jmethodID?
-
-    open func getDriverVersion() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDriverVersion", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDriverVersion_MethodID_192, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getDriverMajorVersion()
-
-    private static var getDriverMajorVersion_MethodID_193: jmethodID?
-
-    open func getDriverMajorVersion() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDriverMajorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDriverMajorVersion_MethodID_193, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getDriverMinorVersion()
-
-    private static var getDriverMinorVersion_MethodID_194: jmethodID?
-
-    open func getDriverMinorVersion() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDriverMinorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDriverMinorVersion_MethodID_194, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFiles() throws java.sql.SQLException
-
-    private static var usesLocalFiles_MethodID_195: jmethodID?
-
-    open func usesLocalFiles() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "usesLocalFiles", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.usesLocalFiles_MethodID_195, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFilePerTable() throws java.sql.SQLException
-
-    private static var usesLocalFilePerTable_MethodID_196: jmethodID?
-
-    open func usesLocalFilePerTable() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "usesLocalFilePerTable", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.usesLocalFilePerTable_MethodID_196, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseIdentifiers() throws java.sql.SQLException
-
-    private static var supportsMixedCaseIdentifiers_MethodID_197: jmethodID?
-
-    open func supportsMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMixedCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMixedCaseIdentifiers_MethodID_197, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseIdentifiers() throws java.sql.SQLException
-
-    private static var storesUpperCaseIdentifiers_MethodID_198: jmethodID?
-
-    open func storesUpperCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesUpperCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesUpperCaseIdentifiers_MethodID_198, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseIdentifiers() throws java.sql.SQLException
-
-    private static var storesLowerCaseIdentifiers_MethodID_199: jmethodID?
-
-    open func storesLowerCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesLowerCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesLowerCaseIdentifiers_MethodID_199, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseIdentifiers() throws java.sql.SQLException
-
-    private static var storesMixedCaseIdentifiers_MethodID_200: jmethodID?
-
-    open func storesMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesMixedCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesMixedCaseIdentifiers_MethodID_200, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    private static var supportsMixedCaseQuotedIdentifiers_MethodID_201: jmethodID?
-
-    open func supportsMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMixedCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMixedCaseQuotedIdentifiers_MethodID_201, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    private static var storesUpperCaseQuotedIdentifiers_MethodID_202: jmethodID?
-
-    open func storesUpperCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesUpperCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesUpperCaseQuotedIdentifiers_MethodID_202, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    private static var storesLowerCaseQuotedIdentifiers_MethodID_203: jmethodID?
-
-    open func storesLowerCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesLowerCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesLowerCaseQuotedIdentifiers_MethodID_203, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseQuotedIdentifiers() throws java.sql.SQLException
-
-    private static var storesMixedCaseQuotedIdentifiers_MethodID_204: jmethodID?
-
-    open func storesMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesMixedCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesMixedCaseQuotedIdentifiers_MethodID_204, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getIdentifierQuoteString() throws java.sql.SQLException
-
-    private static var getIdentifierQuoteString_MethodID_205: jmethodID?
-
-    open func getIdentifierQuoteString() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getIdentifierQuoteString", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getIdentifierQuoteString_MethodID_205, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSQLKeywords() throws java.sql.SQLException
-
-    private static var getSQLKeywords_MethodID_206: jmethodID?
-
-    open func getSQLKeywords() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLKeywords", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSQLKeywords_MethodID_206, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getNumericFunctions() throws java.sql.SQLException
-
-    private static var getNumericFunctions_MethodID_207: jmethodID?
-
-    open func getNumericFunctions() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNumericFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getNumericFunctions_MethodID_207, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getStringFunctions() throws java.sql.SQLException
-
-    private static var getStringFunctions_MethodID_208: jmethodID?
-
-    open func getStringFunctions() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getStringFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getStringFunctions_MethodID_208, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSystemFunctions() throws java.sql.SQLException
-
-    private static var getSystemFunctions_MethodID_209: jmethodID?
-
-    open func getSystemFunctions() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSystemFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSystemFunctions_MethodID_209, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getTimeDateFunctions() throws java.sql.SQLException
-
-    private static var getTimeDateFunctions_MethodID_210: jmethodID?
-
-    open func getTimeDateFunctions() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimeDateFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getTimeDateFunctions_MethodID_210, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSearchStringEscape() throws java.sql.SQLException
-
-    private static var getSearchStringEscape_MethodID_211: jmethodID?
-
-    open func getSearchStringEscape() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSearchStringEscape", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSearchStringEscape_MethodID_211, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getExtraNameCharacters() throws java.sql.SQLException
-
-    private static var getExtraNameCharacters_MethodID_212: jmethodID?
-
-    open func getExtraNameCharacters() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getExtraNameCharacters", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getExtraNameCharacters_MethodID_212, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithAddColumn() throws java.sql.SQLException
-
-    private static var supportsAlterTableWithAddColumn_MethodID_213: jmethodID?
-
-    open func supportsAlterTableWithAddColumn() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsAlterTableWithAddColumn", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsAlterTableWithAddColumn_MethodID_213, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithDropColumn() throws java.sql.SQLException
-
-    private static var supportsAlterTableWithDropColumn_MethodID_214: jmethodID?
-
-    open func supportsAlterTableWithDropColumn() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsAlterTableWithDropColumn", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsAlterTableWithDropColumn_MethodID_214, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsColumnAliasing() throws java.sql.SQLException
-
-    private static var supportsColumnAliasing_MethodID_215: jmethodID?
-
-    open func supportsColumnAliasing() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsColumnAliasing", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsColumnAliasing_MethodID_215, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.nullPlusNonNullIsNull() throws java.sql.SQLException
-
-    private static var nullPlusNonNullIsNull_MethodID_216: jmethodID?
-
-    open func nullPlusNonNullIsNull() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullPlusNonNullIsNull", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullPlusNonNullIsNull_MethodID_216, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert() throws java.sql.SQLException
-
-    private static var supportsConvert_MethodID_217: jmethodID?
-
-    open func supportsConvert() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsConvert", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsConvert_MethodID_217, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert(int,int) throws java.sql.SQLException
-
-    private static var supportsConvert_MethodID_218: jmethodID?
-
-    open func supportsConvert( fromType: Int, toType: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: fromType, locals: &__locals )
-        __args[1] = JNIType.toJava( value: toType, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsConvert", methodSig: "(II)Z", methodCache: &DatabaseMetaDataForward.supportsConvert_MethodID_218, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func supportsConvert( _ _fromType: Int, _ _toType: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try supportsConvert( fromType: _fromType, toType: _toType )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsTableCorrelationNames() throws java.sql.SQLException
-
-    private static var supportsTableCorrelationNames_MethodID_219: jmethodID?
-
-    open func supportsTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsTableCorrelationNames", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsTableCorrelationNames_MethodID_219, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsDifferentTableCorrelationNames() throws java.sql.SQLException
-
-    private static var supportsDifferentTableCorrelationNames_MethodID_220: jmethodID?
-
-    open func supportsDifferentTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsDifferentTableCorrelationNames", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsDifferentTableCorrelationNames_MethodID_220, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsExpressionsInOrderBy() throws java.sql.SQLException
-
-    private static var supportsExpressionsInOrderBy_MethodID_221: jmethodID?
-
-    open func supportsExpressionsInOrderBy() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsExpressionsInOrderBy", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsExpressionsInOrderBy_MethodID_221, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOrderByUnrelated() throws java.sql.SQLException
-
-    private static var supportsOrderByUnrelated_MethodID_222: jmethodID?
-
-    open func supportsOrderByUnrelated() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOrderByUnrelated", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOrderByUnrelated_MethodID_222, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupBy() throws java.sql.SQLException
-
-    private static var supportsGroupBy_MethodID_223: jmethodID?
-
-    open func supportsGroupBy() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGroupBy", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGroupBy_MethodID_223, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByUnrelated() throws java.sql.SQLException
-
-    private static var supportsGroupByUnrelated_MethodID_224: jmethodID?
-
-    open func supportsGroupByUnrelated() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGroupByUnrelated", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGroupByUnrelated_MethodID_224, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByBeyondSelect() throws java.sql.SQLException
-
-    private static var supportsGroupByBeyondSelect_MethodID_225: jmethodID?
-
-    open func supportsGroupByBeyondSelect() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGroupByBeyondSelect", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGroupByBeyondSelect_MethodID_225, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsLikeEscapeClause() throws java.sql.SQLException
-
-    private static var supportsLikeEscapeClause_MethodID_226: jmethodID?
-
-    open func supportsLikeEscapeClause() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsLikeEscapeClause", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsLikeEscapeClause_MethodID_226, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleResultSets() throws java.sql.SQLException
-
-    private static var supportsMultipleResultSets_MethodID_227: jmethodID?
-
-    open func supportsMultipleResultSets() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMultipleResultSets", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMultipleResultSets_MethodID_227, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleTransactions() throws java.sql.SQLException
-
-    private static var supportsMultipleTransactions_MethodID_228: jmethodID?
-
-    open func supportsMultipleTransactions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMultipleTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMultipleTransactions_MethodID_228, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsNonNullableColumns() throws java.sql.SQLException
-
-    private static var supportsNonNullableColumns_MethodID_229: jmethodID?
-
-    open func supportsNonNullableColumns() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsNonNullableColumns", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsNonNullableColumns_MethodID_229, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMinimumSQLGrammar() throws java.sql.SQLException
-
-    private static var supportsMinimumSQLGrammar_MethodID_230: jmethodID?
-
-    open func supportsMinimumSQLGrammar() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMinimumSQLGrammar", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMinimumSQLGrammar_MethodID_230, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCoreSQLGrammar() throws java.sql.SQLException
-
-    private static var supportsCoreSQLGrammar_MethodID_231: jmethodID?
-
-    open func supportsCoreSQLGrammar() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCoreSQLGrammar", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCoreSQLGrammar_MethodID_231, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsExtendedSQLGrammar() throws java.sql.SQLException
-
-    private static var supportsExtendedSQLGrammar_MethodID_232: jmethodID?
-
-    open func supportsExtendedSQLGrammar() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsExtendedSQLGrammar", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsExtendedSQLGrammar_MethodID_232, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92EntryLevelSQL() throws java.sql.SQLException
-
-    private static var supportsANSI92EntryLevelSQL_MethodID_233: jmethodID?
-
-    open func supportsANSI92EntryLevelSQL() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsANSI92EntryLevelSQL", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsANSI92EntryLevelSQL_MethodID_233, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92IntermediateSQL() throws java.sql.SQLException
-
-    private static var supportsANSI92IntermediateSQL_MethodID_234: jmethodID?
-
-    open func supportsANSI92IntermediateSQL() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsANSI92IntermediateSQL", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsANSI92IntermediateSQL_MethodID_234, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92FullSQL() throws java.sql.SQLException
-
-    private static var supportsANSI92FullSQL_MethodID_235: jmethodID?
-
-    open func supportsANSI92FullSQL() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsANSI92FullSQL", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsANSI92FullSQL_MethodID_235, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsIntegrityEnhancementFacility() throws java.sql.SQLException
-
-    private static var supportsIntegrityEnhancementFacility_MethodID_236: jmethodID?
-
-    open func supportsIntegrityEnhancementFacility() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsIntegrityEnhancementFacility", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsIntegrityEnhancementFacility_MethodID_236, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOuterJoins() throws java.sql.SQLException
-
-    private static var supportsOuterJoins_MethodID_237: jmethodID?
-
-    open func supportsOuterJoins() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOuterJoins", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOuterJoins_MethodID_237, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsFullOuterJoins() throws java.sql.SQLException
-
-    private static var supportsFullOuterJoins_MethodID_238: jmethodID?
-
-    open func supportsFullOuterJoins() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsFullOuterJoins", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsFullOuterJoins_MethodID_238, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsLimitedOuterJoins() throws java.sql.SQLException
-
-    private static var supportsLimitedOuterJoins_MethodID_239: jmethodID?
-
-    open func supportsLimitedOuterJoins() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsLimitedOuterJoins", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsLimitedOuterJoins_MethodID_239, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSchemaTerm() throws java.sql.SQLException
-
-    private static var getSchemaTerm_MethodID_240: jmethodID?
-
-    open func getSchemaTerm() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSchemaTerm", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSchemaTerm_MethodID_240, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getProcedureTerm() throws java.sql.SQLException
-
-    private static var getProcedureTerm_MethodID_241: jmethodID?
-
-    open func getProcedureTerm() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getProcedureTerm", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getProcedureTerm_MethodID_241, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogTerm() throws java.sql.SQLException
-
-    private static var getCatalogTerm_MethodID_242: jmethodID?
-
-    open func getCatalogTerm() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCatalogTerm", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getCatalogTerm_MethodID_242, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.isCatalogAtStart() throws java.sql.SQLException
-
-    private static var isCatalogAtStart_MethodID_243: jmethodID?
-
-    open func isCatalogAtStart() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCatalogAtStart", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.isCatalogAtStart_MethodID_243, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.lang.String java.sql.DatabaseMetaData.getCatalogSeparator() throws java.sql.SQLException
-
-    private static var getCatalogSeparator_MethodID_244: jmethodID?
-
-    open func getCatalogSeparator() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCatalogSeparator", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getCatalogSeparator_MethodID_244, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: String(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInDataManipulation() throws java.sql.SQLException
-
-    private static var supportsSchemasInDataManipulation_MethodID_245: jmethodID?
-
-    open func supportsSchemasInDataManipulation() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInDataManipulation", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInDataManipulation_MethodID_245, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInProcedureCalls() throws java.sql.SQLException
-
-    private static var supportsSchemasInProcedureCalls_MethodID_246: jmethodID?
-
-    open func supportsSchemasInProcedureCalls() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInProcedureCalls", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInProcedureCalls_MethodID_246, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInTableDefinitions() throws java.sql.SQLException
-
-    private static var supportsSchemasInTableDefinitions_MethodID_247: jmethodID?
-
-    open func supportsSchemasInTableDefinitions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInTableDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInTableDefinitions_MethodID_247, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInIndexDefinitions() throws java.sql.SQLException
-
-    private static var supportsSchemasInIndexDefinitions_MethodID_248: jmethodID?
-
-    open func supportsSchemasInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInIndexDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInIndexDefinitions_MethodID_248, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInPrivilegeDefinitions() throws java.sql.SQLException
-
-    private static var supportsSchemasInPrivilegeDefinitions_MethodID_249: jmethodID?
-
-    open func supportsSchemasInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInPrivilegeDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInPrivilegeDefinitions_MethodID_249, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInDataManipulation() throws java.sql.SQLException
-
-    private static var supportsCatalogsInDataManipulation_MethodID_250: jmethodID?
-
-    open func supportsCatalogsInDataManipulation() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInDataManipulation", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInDataManipulation_MethodID_250, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInProcedureCalls() throws java.sql.SQLException
-
-    private static var supportsCatalogsInProcedureCalls_MethodID_251: jmethodID?
-
-    open func supportsCatalogsInProcedureCalls() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInProcedureCalls", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInProcedureCalls_MethodID_251, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInTableDefinitions() throws java.sql.SQLException
-
-    private static var supportsCatalogsInTableDefinitions_MethodID_252: jmethodID?
-
-    open func supportsCatalogsInTableDefinitions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInTableDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInTableDefinitions_MethodID_252, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInIndexDefinitions() throws java.sql.SQLException
-
-    private static var supportsCatalogsInIndexDefinitions_MethodID_253: jmethodID?
-
-    open func supportsCatalogsInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInIndexDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInIndexDefinitions_MethodID_253, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInPrivilegeDefinitions() throws java.sql.SQLException
-
-    private static var supportsCatalogsInPrivilegeDefinitions_MethodID_254: jmethodID?
-
-    open func supportsCatalogsInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInPrivilegeDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInPrivilegeDefinitions_MethodID_254, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedDelete() throws java.sql.SQLException
-
-    private static var supportsPositionedDelete_MethodID_255: jmethodID?
-
-    open func supportsPositionedDelete() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsPositionedDelete", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsPositionedDelete_MethodID_255, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedUpdate() throws java.sql.SQLException
-
-    private static var supportsPositionedUpdate_MethodID_256: jmethodID?
-
-    open func supportsPositionedUpdate() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsPositionedUpdate", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsPositionedUpdate_MethodID_256, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSelectForUpdate() throws java.sql.SQLException
-
-    private static var supportsSelectForUpdate_MethodID_257: jmethodID?
-
-    open func supportsSelectForUpdate() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSelectForUpdate", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSelectForUpdate_MethodID_257, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsStoredProcedures() throws java.sql.SQLException
-
-    private static var supportsStoredProcedures_MethodID_258: jmethodID?
-
-    open func supportsStoredProcedures() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsStoredProcedures", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsStoredProcedures_MethodID_258, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInComparisons() throws java.sql.SQLException
-
-    private static var supportsSubqueriesInComparisons_MethodID_259: jmethodID?
-
-    open func supportsSubqueriesInComparisons() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInComparisons", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInComparisons_MethodID_259, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInExists() throws java.sql.SQLException
-
-    private static var supportsSubqueriesInExists_MethodID_260: jmethodID?
-
-    open func supportsSubqueriesInExists() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInExists", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInExists_MethodID_260, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInIns() throws java.sql.SQLException
-
-    private static var supportsSubqueriesInIns_MethodID_261: jmethodID?
-
-    open func supportsSubqueriesInIns() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInIns", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInIns_MethodID_261, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInQuantifieds() throws java.sql.SQLException
-
-    private static var supportsSubqueriesInQuantifieds_MethodID_262: jmethodID?
-
-    open func supportsSubqueriesInQuantifieds() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInQuantifieds", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInQuantifieds_MethodID_262, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsCorrelatedSubqueries() throws java.sql.SQLException
-
-    private static var supportsCorrelatedSubqueries_MethodID_263: jmethodID?
-
-    open func supportsCorrelatedSubqueries() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCorrelatedSubqueries", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCorrelatedSubqueries_MethodID_263, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnion() throws java.sql.SQLException
-
-    private static var supportsUnion_MethodID_264: jmethodID?
-
-    open func supportsUnion() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsUnion", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsUnion_MethodID_264, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnionAll() throws java.sql.SQLException
-
-    private static var supportsUnionAll_MethodID_265: jmethodID?
-
-    open func supportsUnionAll() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsUnionAll", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsUnionAll_MethodID_265, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossCommit() throws java.sql.SQLException
-
-    private static var supportsOpenCursorsAcrossCommit_MethodID_266: jmethodID?
-
-    open func supportsOpenCursorsAcrossCommit() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenCursorsAcrossCommit", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenCursorsAcrossCommit_MethodID_266, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossRollback() throws java.sql.SQLException
-
-    private static var supportsOpenCursorsAcrossRollback_MethodID_267: jmethodID?
-
-    open func supportsOpenCursorsAcrossRollback() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenCursorsAcrossRollback", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenCursorsAcrossRollback_MethodID_267, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossCommit() throws java.sql.SQLException
-
-    private static var supportsOpenStatementsAcrossCommit_MethodID_268: jmethodID?
-
-    open func supportsOpenStatementsAcrossCommit() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenStatementsAcrossCommit", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenStatementsAcrossCommit_MethodID_268, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossRollback() throws java.sql.SQLException
-
-    private static var supportsOpenStatementsAcrossRollback_MethodID_269: jmethodID?
-
-    open func supportsOpenStatementsAcrossRollback() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenStatementsAcrossRollback", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenStatementsAcrossRollback_MethodID_269, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxBinaryLiteralLength() throws java.sql.SQLException
-
-    private static var getMaxBinaryLiteralLength_MethodID_270: jmethodID?
-
-    open func getMaxBinaryLiteralLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxBinaryLiteralLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxBinaryLiteralLength_MethodID_270, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxCharLiteralLength() throws java.sql.SQLException
-
-    private static var getMaxCharLiteralLength_MethodID_271: jmethodID?
-
-    open func getMaxCharLiteralLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxCharLiteralLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxCharLiteralLength_MethodID_271, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnNameLength() throws java.sql.SQLException
-
-    private static var getMaxColumnNameLength_MethodID_272: jmethodID?
-
-    open func getMaxColumnNameLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnNameLength_MethodID_272, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInGroupBy() throws java.sql.SQLException
-
-    private static var getMaxColumnsInGroupBy_MethodID_273: jmethodID?
-
-    open func getMaxColumnsInGroupBy() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInGroupBy", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInGroupBy_MethodID_273, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInIndex() throws java.sql.SQLException
-
-    private static var getMaxColumnsInIndex_MethodID_274: jmethodID?
-
-    open func getMaxColumnsInIndex() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInIndex", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInIndex_MethodID_274, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInOrderBy() throws java.sql.SQLException
-
-    private static var getMaxColumnsInOrderBy_MethodID_275: jmethodID?
-
-    open func getMaxColumnsInOrderBy() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInOrderBy", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInOrderBy_MethodID_275, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInSelect() throws java.sql.SQLException
-
-    private static var getMaxColumnsInSelect_MethodID_276: jmethodID?
-
-    open func getMaxColumnsInSelect() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInSelect", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInSelect_MethodID_276, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInTable() throws java.sql.SQLException
-
-    private static var getMaxColumnsInTable_MethodID_277: jmethodID?
-
-    open func getMaxColumnsInTable() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInTable", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInTable_MethodID_277, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxConnections() throws java.sql.SQLException
-
-    private static var getMaxConnections_MethodID_278: jmethodID?
-
-    open func getMaxConnections() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxConnections", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxConnections_MethodID_278, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxCursorNameLength() throws java.sql.SQLException
-
-    private static var getMaxCursorNameLength_MethodID_279: jmethodID?
-
-    open func getMaxCursorNameLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxCursorNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxCursorNameLength_MethodID_279, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxIndexLength() throws java.sql.SQLException
-
-    private static var getMaxIndexLength_MethodID_280: jmethodID?
-
-    open func getMaxIndexLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxIndexLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxIndexLength_MethodID_280, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxSchemaNameLength() throws java.sql.SQLException
-
-    private static var getMaxSchemaNameLength_MethodID_281: jmethodID?
-
-    open func getMaxSchemaNameLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxSchemaNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxSchemaNameLength_MethodID_281, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxProcedureNameLength() throws java.sql.SQLException
-
-    private static var getMaxProcedureNameLength_MethodID_282: jmethodID?
-
-    open func getMaxProcedureNameLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxProcedureNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxProcedureNameLength_MethodID_282, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxCatalogNameLength() throws java.sql.SQLException
-
-    private static var getMaxCatalogNameLength_MethodID_283: jmethodID?
-
-    open func getMaxCatalogNameLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxCatalogNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxCatalogNameLength_MethodID_283, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxRowSize() throws java.sql.SQLException
-
-    private static var getMaxRowSize_MethodID_284: jmethodID?
-
-    open func getMaxRowSize() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxRowSize", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxRowSize_MethodID_284, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.doesMaxRowSizeIncludeBlobs() throws java.sql.SQLException
-
-    private static var doesMaxRowSizeIncludeBlobs_MethodID_285: jmethodID?
-
-    open func doesMaxRowSizeIncludeBlobs() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "doesMaxRowSizeIncludeBlobs", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.doesMaxRowSizeIncludeBlobs_MethodID_285, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxStatementLength() throws java.sql.SQLException
-
-    private static var getMaxStatementLength_MethodID_286: jmethodID?
-
-    open func getMaxStatementLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxStatementLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxStatementLength_MethodID_286, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxStatements() throws java.sql.SQLException
-
-    private static var getMaxStatements_MethodID_287: jmethodID?
-
-    open func getMaxStatements() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxStatements", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxStatements_MethodID_287, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxTableNameLength() throws java.sql.SQLException
-
-    private static var getMaxTableNameLength_MethodID_288: jmethodID?
-
-    open func getMaxTableNameLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxTableNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxTableNameLength_MethodID_288, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxTablesInSelect() throws java.sql.SQLException
-
-    private static var getMaxTablesInSelect_MethodID_289: jmethodID?
-
-    open func getMaxTablesInSelect() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxTablesInSelect", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxTablesInSelect_MethodID_289, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getMaxUserNameLength() throws java.sql.SQLException
-
-    private static var getMaxUserNameLength_MethodID_290: jmethodID?
-
-    open func getMaxUserNameLength() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxUserNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxUserNameLength_MethodID_290, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract int java.sql.DatabaseMetaData.getDefaultTransactionIsolation() throws java.sql.SQLException
-
-    private static var getDefaultTransactionIsolation_MethodID_291: jmethodID?
-
-    open func getDefaultTransactionIsolation() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDefaultTransactionIsolation", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDefaultTransactionIsolation_MethodID_291, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactions() throws java.sql.SQLException
-
-    private static var supportsTransactions_MethodID_292: jmethodID?
-
-    open func supportsTransactions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsTransactions_MethodID_292, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactionIsolationLevel(int) throws java.sql.SQLException
-
-    private static var supportsTransactionIsolationLevel_MethodID_293: jmethodID?
-
-    open func supportsTransactionIsolationLevel( level: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: level, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsTransactionIsolationLevel", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.supportsTransactionIsolationLevel_MethodID_293, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func supportsTransactionIsolationLevel( _ _level: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try supportsTransactionIsolationLevel( level: _level )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataDefinitionAndDataManipulationTransactions() throws java.sql.SQLException
-
-    private static var supportsDataDefinitionAndDataManipulationTransactions_MethodID_294: jmethodID?
-
-    open func supportsDataDefinitionAndDataManipulationTransactions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsDataDefinitionAndDataManipulationTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsDataDefinitionAndDataManipulationTransactions_MethodID_294, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataManipulationTransactionsOnly() throws java.sql.SQLException
-
-    private static var supportsDataManipulationTransactionsOnly_MethodID_295: jmethodID?
-
-    open func supportsDataManipulationTransactionsOnly() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsDataManipulationTransactionsOnly", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsDataManipulationTransactionsOnly_MethodID_295, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionCausesTransactionCommit() throws java.sql.SQLException
-
-    private static var dataDefinitionCausesTransactionCommit_MethodID_296: jmethodID?
-
-    open func dataDefinitionCausesTransactionCommit() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "dataDefinitionCausesTransactionCommit", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.dataDefinitionCausesTransactionCommit_MethodID_296, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.dataDefinitionIgnoredInTransactions() throws java.sql.SQLException
-
-    private static var dataDefinitionIgnoredInTransactions_MethodID_297: jmethodID?
-
-    open func dataDefinitionIgnoredInTransactions() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "dataDefinitionIgnoredInTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.dataDefinitionIgnoredInTransactions_MethodID_297, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getProcedures(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getProcedures_MethodID_298: jmethodID?
-
-    open func getProcedures( catalog: String?, schemaPattern: String?, procedureNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: procedureNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getProcedures", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getProcedures_MethodID_298, args: &__args, locals: &__locals )
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCrossReference(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getCrossReference_MethodID_194: jmethodID?
+
+    open func getCrossReference( parentCatalog: String?, parentSchema: String?, parentTable: String?, foreignCatalog: String?, foreignSchema: String?, foreignTable: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 6 )
+        __args[0] = JNIType.toJava( value: parentCatalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: parentSchema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: parentTable, locals: &__locals )
+        __args[3] = JNIType.toJava( value: foreignCatalog, locals: &__locals )
+        __args[4] = JNIType.toJava( value: foreignSchema, locals: &__locals )
+        __args[5] = JNIType.toJava( value: foreignTable, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCrossReference", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getCrossReference_MethodID_194, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ResultSetForward( javaObject: __return ) : nil
     }
 
-    open func getProcedures( _ _catalog: String?, _ _schemaPattern: String?, _ _procedureNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getProcedures( catalog: _catalog, schemaPattern: _schemaPattern, procedureNamePattern: _procedureNamePattern )
+    open func getCrossReference( _ _parentCatalog: String?, _ _parentSchema: String?, _ _parentTable: String?, _ _foreignCatalog: String?, _ _foreignSchema: String?, _ _foreignTable: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getCrossReference( parentCatalog: _parentCatalog, parentSchema: _parentSchema, parentTable: _parentTable, foreignCatalog: _foreignCatalog, foreignSchema: _foreignSchema, foreignTable: _foreignTable )
+    }
+
+    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMajorVersion() throws java.sql.SQLException
+
+    private static var getDatabaseMajorVersion_MethodID_195: jmethodID?
+
+    open func getDatabaseMajorVersion() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDatabaseMajorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDatabaseMajorVersion_MethodID_195, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMinorVersion() throws java.sql.SQLException
+
+    private static var getDatabaseMinorVersion_MethodID_196: jmethodID?
+
+    open func getDatabaseMinorVersion() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDatabaseMinorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDatabaseMinorVersion_MethodID_196, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDatabaseProductName() throws java.sql.SQLException
+
+    private static var getDatabaseProductName_MethodID_197: jmethodID?
+
+    open func getDatabaseProductName() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDatabaseProductName", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDatabaseProductName_MethodID_197, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDatabaseProductVersion() throws java.sql.SQLException
+
+    private static var getDatabaseProductVersion_MethodID_198: jmethodID?
+
+    open func getDatabaseProductVersion() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDatabaseProductVersion", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDatabaseProductVersion_MethodID_198, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getDefaultTransactionIsolation() throws java.sql.SQLException
+
+    private static var getDefaultTransactionIsolation_MethodID_199: jmethodID?
+
+    open func getDefaultTransactionIsolation() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDefaultTransactionIsolation", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDefaultTransactionIsolation_MethodID_199, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getDriverMajorVersion()
+
+    private static var getDriverMajorVersion_MethodID_200: jmethodID?
+
+    open func getDriverMajorVersion() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDriverMajorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDriverMajorVersion_MethodID_200, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getDriverMinorVersion()
+
+    private static var getDriverMinorVersion_MethodID_201: jmethodID?
+
+    open func getDriverMinorVersion() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDriverMinorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDriverMinorVersion_MethodID_201, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverName() throws java.sql.SQLException
+
+    private static var getDriverName_MethodID_202: jmethodID?
+
+    open func getDriverName() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDriverName", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDriverName_MethodID_202, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getDriverVersion() throws java.sql.SQLException
+
+    private static var getDriverVersion_MethodID_203: jmethodID?
+
+    open func getDriverVersion() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getDriverVersion", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getDriverVersion_MethodID_203, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getExportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getExportedKeys_MethodID_204: jmethodID?
+
+    open func getExportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: table, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getExportedKeys", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getExportedKeys_MethodID_204, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getExportedKeys( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getExportedKeys( catalog: _catalog, schema: _schema, table: _table )
+    }
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getExtraNameCharacters() throws java.sql.SQLException
+
+    private static var getExtraNameCharacters_MethodID_205: jmethodID?
+
+    open func getExtraNameCharacters() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getExtraNameCharacters", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getExtraNameCharacters_MethodID_205, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctionColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getFunctionColumns_MethodID_206: jmethodID?
+
+    open func getFunctionColumns( catalog: String?, schemaPattern: String?, functionNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: functionNamePattern, locals: &__locals )
+        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getFunctionColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getFunctionColumns_MethodID_206, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getFunctionColumns( _ _catalog: String?, _ _schemaPattern: String?, _ _functionNamePattern: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getFunctionColumns( catalog: _catalog, schemaPattern: _schemaPattern, functionNamePattern: _functionNamePattern, columnNamePattern: _columnNamePattern )
+    }
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctions(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getFunctions_MethodID_207: jmethodID?
+
+    open func getFunctions( catalog: String?, schemaPattern: String?, functionNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: functionNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getFunctions", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getFunctions_MethodID_207, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getFunctions( _ _catalog: String?, _ _schemaPattern: String?, _ _functionNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getFunctions( catalog: _catalog, schemaPattern: _schemaPattern, functionNamePattern: _functionNamePattern )
+    }
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getIdentifierQuoteString() throws java.sql.SQLException
+
+    private static var getIdentifierQuoteString_MethodID_208: jmethodID?
+
+    open func getIdentifierQuoteString() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getIdentifierQuoteString", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getIdentifierQuoteString_MethodID_208, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getImportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getImportedKeys_MethodID_209: jmethodID?
+
+    open func getImportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: table, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImportedKeys", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getImportedKeys_MethodID_209, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getImportedKeys( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getImportedKeys( catalog: _catalog, schema: _schema, table: _table )
+    }
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getIndexInfo(java.lang.String,java.lang.String,java.lang.String,boolean,boolean) throws java.sql.SQLException
+
+    private static var getIndexInfo_MethodID_210: jmethodID?
+
+    open func getIndexInfo( catalog: String?, schema: String?, table: String?, unique: Bool, approximate: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 5 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: table, locals: &__locals )
+        __args[3] = jvalue( z: jboolean(unique ? JNI_TRUE : JNI_FALSE) )
+        __args[4] = jvalue( z: jboolean(approximate ? JNI_TRUE : JNI_FALSE) )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getIndexInfo", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getIndexInfo_MethodID_210, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getIndexInfo( _ _catalog: String?, _ _schema: String?, _ _table: String?, _ _unique: Bool, _ _approximate: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getIndexInfo( catalog: _catalog, schema: _schema, table: _table, unique: _unique, approximate: _approximate )
+    }
+
+    /// public abstract int java.sql.DatabaseMetaData.getJDBCMajorVersion() throws java.sql.SQLException
+
+    private static var getJDBCMajorVersion_MethodID_211: jmethodID?
+
+    open func getJDBCMajorVersion() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getJDBCMajorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getJDBCMajorVersion_MethodID_211, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getJDBCMinorVersion() throws java.sql.SQLException
+
+    private static var getJDBCMinorVersion_MethodID_212: jmethodID?
+
+    open func getJDBCMinorVersion() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getJDBCMinorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getJDBCMinorVersion_MethodID_212, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxBinaryLiteralLength() throws java.sql.SQLException
+
+    private static var getMaxBinaryLiteralLength_MethodID_213: jmethodID?
+
+    open func getMaxBinaryLiteralLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxBinaryLiteralLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxBinaryLiteralLength_MethodID_213, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxCatalogNameLength() throws java.sql.SQLException
+
+    private static var getMaxCatalogNameLength_MethodID_214: jmethodID?
+
+    open func getMaxCatalogNameLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxCatalogNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxCatalogNameLength_MethodID_214, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxCharLiteralLength() throws java.sql.SQLException
+
+    private static var getMaxCharLiteralLength_MethodID_215: jmethodID?
+
+    open func getMaxCharLiteralLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxCharLiteralLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxCharLiteralLength_MethodID_215, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnNameLength() throws java.sql.SQLException
+
+    private static var getMaxColumnNameLength_MethodID_216: jmethodID?
+
+    open func getMaxColumnNameLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnNameLength_MethodID_216, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInGroupBy() throws java.sql.SQLException
+
+    private static var getMaxColumnsInGroupBy_MethodID_217: jmethodID?
+
+    open func getMaxColumnsInGroupBy() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInGroupBy", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInGroupBy_MethodID_217, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInIndex() throws java.sql.SQLException
+
+    private static var getMaxColumnsInIndex_MethodID_218: jmethodID?
+
+    open func getMaxColumnsInIndex() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInIndex", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInIndex_MethodID_218, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInOrderBy() throws java.sql.SQLException
+
+    private static var getMaxColumnsInOrderBy_MethodID_219: jmethodID?
+
+    open func getMaxColumnsInOrderBy() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInOrderBy", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInOrderBy_MethodID_219, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInSelect() throws java.sql.SQLException
+
+    private static var getMaxColumnsInSelect_MethodID_220: jmethodID?
+
+    open func getMaxColumnsInSelect() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInSelect", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInSelect_MethodID_220, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxColumnsInTable() throws java.sql.SQLException
+
+    private static var getMaxColumnsInTable_MethodID_221: jmethodID?
+
+    open func getMaxColumnsInTable() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxColumnsInTable", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxColumnsInTable_MethodID_221, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxConnections() throws java.sql.SQLException
+
+    private static var getMaxConnections_MethodID_222: jmethodID?
+
+    open func getMaxConnections() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxConnections", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxConnections_MethodID_222, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxCursorNameLength() throws java.sql.SQLException
+
+    private static var getMaxCursorNameLength_MethodID_223: jmethodID?
+
+    open func getMaxCursorNameLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxCursorNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxCursorNameLength_MethodID_223, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxIndexLength() throws java.sql.SQLException
+
+    private static var getMaxIndexLength_MethodID_224: jmethodID?
+
+    open func getMaxIndexLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxIndexLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxIndexLength_MethodID_224, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public default long java.sql.DatabaseMetaData.getMaxLogicalLobSize() throws java.sql.SQLException
+
+    private static var getMaxLogicalLobSize_MethodID_225: jmethodID?
+
+    open func getMaxLogicalLobSize() throws /* java.sql.SQLException */ -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getMaxLogicalLobSize", methodSig: "()J", methodCache: &DatabaseMetaDataForward.getMaxLogicalLobSize_MethodID_225, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxProcedureNameLength() throws java.sql.SQLException
+
+    private static var getMaxProcedureNameLength_MethodID_226: jmethodID?
+
+    open func getMaxProcedureNameLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxProcedureNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxProcedureNameLength_MethodID_226, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxRowSize() throws java.sql.SQLException
+
+    private static var getMaxRowSize_MethodID_227: jmethodID?
+
+    open func getMaxRowSize() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxRowSize", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxRowSize_MethodID_227, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxSchemaNameLength() throws java.sql.SQLException
+
+    private static var getMaxSchemaNameLength_MethodID_228: jmethodID?
+
+    open func getMaxSchemaNameLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxSchemaNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxSchemaNameLength_MethodID_228, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxStatementLength() throws java.sql.SQLException
+
+    private static var getMaxStatementLength_MethodID_229: jmethodID?
+
+    open func getMaxStatementLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxStatementLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxStatementLength_MethodID_229, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxStatements() throws java.sql.SQLException
+
+    private static var getMaxStatements_MethodID_230: jmethodID?
+
+    open func getMaxStatements() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxStatements", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxStatements_MethodID_230, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxTableNameLength() throws java.sql.SQLException
+
+    private static var getMaxTableNameLength_MethodID_231: jmethodID?
+
+    open func getMaxTableNameLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxTableNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxTableNameLength_MethodID_231, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxTablesInSelect() throws java.sql.SQLException
+
+    private static var getMaxTablesInSelect_MethodID_232: jmethodID?
+
+    open func getMaxTablesInSelect() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxTablesInSelect", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxTablesInSelect_MethodID_232, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getMaxUserNameLength() throws java.sql.SQLException
+
+    private static var getMaxUserNameLength_MethodID_233: jmethodID?
+
+    open func getMaxUserNameLength() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMaxUserNameLength", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getMaxUserNameLength_MethodID_233, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getNumericFunctions() throws java.sql.SQLException
+
+    private static var getNumericFunctions_MethodID_234: jmethodID?
+
+    open func getNumericFunctions() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNumericFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getNumericFunctions_MethodID_234, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPrimaryKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getPrimaryKeys_MethodID_235: jmethodID?
+
+    open func getPrimaryKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: table, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPrimaryKeys", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getPrimaryKeys_MethodID_235, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getPrimaryKeys( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getPrimaryKeys( catalog: _catalog, schema: _schema, table: _table )
     }
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getProcedureColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    private static var getProcedureColumns_MethodID_299: jmethodID?
+    private static var getProcedureColumns_MethodID_236: jmethodID?
 
     open func getProcedureColumns( catalog: String?, schemaPattern: String?, procedureNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
         __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
         __args[2] = JNIType.toJava( value: procedureNamePattern, locals: &__locals )
         __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getProcedureColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getProcedureColumns_MethodID_299, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getProcedureColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getProcedureColumns_MethodID_236, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ResultSetForward( javaObject: __return ) : nil
@@ -3505,41 +2697,166 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
         return try getProcedureColumns( catalog: _catalog, schemaPattern: _schemaPattern, procedureNamePattern: _procedureNamePattern, columnNamePattern: _columnNamePattern )
     }
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTables(java.lang.String,java.lang.String,java.lang.String,java.lang.String[]) throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getProcedureTerm() throws java.sql.SQLException
 
-    private static var getTables_MethodID_300: jmethodID?
+    private static var getProcedureTerm_MethodID_237: jmethodID?
 
-    open func getTables( catalog: String?, schemaPattern: String?, tableNamePattern: String?, types: [String]? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+    open func getProcedureTerm() throws /* java.sql.SQLException */ -> String! {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
-        __args[3] = JNIType.toJava( value: types, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTables", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTables_MethodID_300, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getProcedureTerm", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getProcedureTerm_MethodID_237, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getProcedures(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getProcedures_MethodID_238: jmethodID?
+
+    open func getProcedures( catalog: String?, schemaPattern: String?, procedureNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: procedureNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getProcedures", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getProcedures_MethodID_238, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ResultSetForward( javaObject: __return ) : nil
     }
 
-    open func getTables( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String?, _ _types: [String]? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getTables( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern, types: _types )
+    open func getProcedures( _ _catalog: String?, _ _schemaPattern: String?, _ _procedureNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getProcedures( catalog: _catalog, schemaPattern: _schemaPattern, procedureNamePattern: _procedureNamePattern )
     }
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPseudoColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getPseudoColumns_MethodID_239: jmethodID?
+
+    open func getPseudoColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
+        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPseudoColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getPseudoColumns_MethodID_239, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getPseudoColumns( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getPseudoColumns( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern, columnNamePattern: _columnNamePattern )
+    }
+
+    /// public abstract int java.sql.DatabaseMetaData.getResultSetHoldability() throws java.sql.SQLException
+
+    private static var getResultSetHoldability_MethodID_240: jmethodID?
+
+    open func getResultSetHoldability() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getResultSetHoldability", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getResultSetHoldability_MethodID_240, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract java.sql.RowIdLifetime java.sql.DatabaseMetaData.getRowIdLifetime() throws java.sql.SQLException
+
+    private static var getRowIdLifetime_MethodID_241: jmethodID?
+
+    open func getRowIdLifetime() throws /* java.sql.SQLException */ -> RowIdLifetime! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRowIdLifetime", methodSig: "()Ljava/sql/RowIdLifetime;", methodCache: &DatabaseMetaDataForward.getRowIdLifetime_MethodID_241, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? RowIdLifetime( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSQLKeywords() throws java.sql.SQLException
+
+    private static var getSQLKeywords_MethodID_242: jmethodID?
+
+    open func getSQLKeywords() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLKeywords", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSQLKeywords_MethodID_242, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract int java.sql.DatabaseMetaData.getSQLStateType() throws java.sql.SQLException
+
+    private static var getSQLStateType_MethodID_243: jmethodID?
+
+    open func getSQLStateType() throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getSQLStateType", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getSQLStateType_MethodID_243, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSchemaTerm() throws java.sql.SQLException
+
+    private static var getSchemaTerm_MethodID_244: jmethodID?
+
+    open func getSchemaTerm() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSchemaTerm", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSchemaTerm_MethodID_244, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSchemas(java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    private static var getSchemas_MethodID_301: jmethodID?
+    private static var getSchemas_MethodID_245: jmethodID?
 
     open func getSchemas( catalog: String?, schemaPattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
         __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSchemas", methodSig: "(Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSchemas_MethodID_301, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSchemas", methodSig: "(Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSchemas_MethodID_245, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ResultSetForward( javaObject: __return ) : nil
@@ -3551,640 +2868,69 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSchemas() throws java.sql.SQLException
 
-    private static var getSchemas_MethodID_302: jmethodID?
+    private static var getSchemas_MethodID_246: jmethodID?
 
     open func getSchemas() throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSchemas", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSchemas_MethodID_302, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSchemas", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSchemas_MethodID_246, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ResultSetForward( javaObject: __return ) : nil
     }
 
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCatalogs() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSearchStringEscape() throws java.sql.SQLException
 
-    private static var getCatalogs_MethodID_303: jmethodID?
+    private static var getSearchStringEscape_MethodID_247: jmethodID?
 
-    open func getCatalogs() throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getSearchStringEscape() throws /* java.sql.SQLException */ -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCatalogs", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getCatalogs_MethodID_303, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSearchStringEscape", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSearchStringEscape_MethodID_247, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTableTypes() throws java.sql.SQLException
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getStringFunctions() throws java.sql.SQLException
 
-    private static var getTableTypes_MethodID_304: jmethodID?
+    private static var getStringFunctions_MethodID_248: jmethodID?
 
-    open func getTableTypes() throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getStringFunctions() throws /* java.sql.SQLException */ -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTableTypes", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTableTypes_MethodID_304, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getStringFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getStringFunctions_MethodID_248, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getColumns_MethodID_305: jmethodID?
-
-    open func getColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
-        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getColumns_MethodID_305, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getColumns( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getColumns( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern, columnNamePattern: _columnNamePattern )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getColumnPrivileges(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getColumnPrivileges_MethodID_306: jmethodID?
-
-    open func getColumnPrivileges( catalog: String?, schema: String?, table: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: table, locals: &__locals )
-        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getColumnPrivileges", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getColumnPrivileges_MethodID_306, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getColumnPrivileges( _ _catalog: String?, _ _schema: String?, _ _table: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getColumnPrivileges( catalog: _catalog, schema: _schema, table: _table, columnNamePattern: _columnNamePattern )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTablePrivileges(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getTablePrivileges_MethodID_307: jmethodID?
-
-    open func getTablePrivileges( catalog: String?, schemaPattern: String?, tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTablePrivileges", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTablePrivileges_MethodID_307, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getTablePrivileges( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getTablePrivileges( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getBestRowIdentifier(java.lang.String,java.lang.String,java.lang.String,int,boolean) throws java.sql.SQLException
-
-    private static var getBestRowIdentifier_MethodID_308: jmethodID?
-
-    open func getBestRowIdentifier( catalog: String?, schema: String?, table: String?, scope: Int, nullable: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 5 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: table, locals: &__locals )
-        __args[3] = JNIType.toJava( value: scope, locals: &__locals )
-        __args[4] = JNIType.toJava( value: nullable, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBestRowIdentifier", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getBestRowIdentifier_MethodID_308, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getBestRowIdentifier( _ _catalog: String?, _ _schema: String?, _ _table: String?, _ _scope: Int, _ _nullable: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getBestRowIdentifier( catalog: _catalog, schema: _schema, table: _table, scope: _scope, nullable: _nullable )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getVersionColumns(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getVersionColumns_MethodID_309: jmethodID?
-
-    open func getVersionColumns( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: table, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVersionColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getVersionColumns_MethodID_309, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getVersionColumns( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getVersionColumns( catalog: _catalog, schema: _schema, table: _table )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPrimaryKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getPrimaryKeys_MethodID_310: jmethodID?
-
-    open func getPrimaryKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: table, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPrimaryKeys", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getPrimaryKeys_MethodID_310, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getPrimaryKeys( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getPrimaryKeys( catalog: _catalog, schema: _schema, table: _table )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getImportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getImportedKeys_MethodID_311: jmethodID?
-
-    open func getImportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: table, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getImportedKeys", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getImportedKeys_MethodID_311, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getImportedKeys( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getImportedKeys( catalog: _catalog, schema: _schema, table: _table )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getExportedKeys(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getExportedKeys_MethodID_312: jmethodID?
-
-    open func getExportedKeys( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: table, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getExportedKeys", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getExportedKeys_MethodID_312, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getExportedKeys( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getExportedKeys( catalog: _catalog, schema: _schema, table: _table )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getCrossReference(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getCrossReference_MethodID_313: jmethodID?
-
-    open func getCrossReference( parentCatalog: String?, parentSchema: String?, parentTable: String?, foreignCatalog: String?, foreignSchema: String?, foreignTable: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 6 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: parentCatalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: parentSchema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: parentTable, locals: &__locals )
-        __args[3] = JNIType.toJava( value: foreignCatalog, locals: &__locals )
-        __args[4] = JNIType.toJava( value: foreignSchema, locals: &__locals )
-        __args[5] = JNIType.toJava( value: foreignTable, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getCrossReference", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getCrossReference_MethodID_313, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getCrossReference( _ _parentCatalog: String?, _ _parentSchema: String?, _ _parentTable: String?, _ _foreignCatalog: String?, _ _foreignSchema: String?, _ _foreignTable: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getCrossReference( parentCatalog: _parentCatalog, parentSchema: _parentSchema, parentTable: _parentTable, foreignCatalog: _foreignCatalog, foreignSchema: _foreignSchema, foreignTable: _foreignTable )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTypeInfo() throws java.sql.SQLException
-
-    private static var getTypeInfo_MethodID_314: jmethodID?
-
-    open func getTypeInfo() throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeInfo", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTypeInfo_MethodID_314, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getIndexInfo(java.lang.String,java.lang.String,java.lang.String,boolean,boolean) throws java.sql.SQLException
-
-    private static var getIndexInfo_MethodID_315: jmethodID?
-
-    open func getIndexInfo( catalog: String?, schema: String?, table: String?, unique: Bool, approximate: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 5 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
-        __args[2] = JNIType.toJava( value: table, locals: &__locals )
-        __args[3] = JNIType.toJava( value: unique, locals: &__locals )
-        __args[4] = JNIType.toJava( value: approximate, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getIndexInfo", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getIndexInfo_MethodID_315, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getIndexInfo( _ _catalog: String?, _ _schema: String?, _ _table: String?, _ _unique: Bool, _ _approximate: Bool ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getIndexInfo( catalog: _catalog, schema: _schema, table: _table, unique: _unique, approximate: _approximate )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetType(int) throws java.sql.SQLException
-
-    private static var supportsResultSetType_MethodID_316: jmethodID?
-
-    open func supportsResultSetType( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsResultSetType", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.supportsResultSetType_MethodID_316, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func supportsResultSetType( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try supportsResultSetType( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetConcurrency(int,int) throws java.sql.SQLException
-
-    private static var supportsResultSetConcurrency_MethodID_317: jmethodID?
-
-    open func supportsResultSetConcurrency( type: Int, concurrency: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        __args[1] = JNIType.toJava( value: concurrency, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsResultSetConcurrency", methodSig: "(II)Z", methodCache: &DatabaseMetaDataForward.supportsResultSetConcurrency_MethodID_317, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func supportsResultSetConcurrency( _ _type: Int, _ _concurrency: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try supportsResultSetConcurrency( type: _type, concurrency: _concurrency )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.ownUpdatesAreVisible(int) throws java.sql.SQLException
-
-    private static var ownUpdatesAreVisible_MethodID_318: jmethodID?
-
-    open func ownUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "ownUpdatesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.ownUpdatesAreVisible_MethodID_318, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func ownUpdatesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try ownUpdatesAreVisible( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.ownDeletesAreVisible(int) throws java.sql.SQLException
-
-    private static var ownDeletesAreVisible_MethodID_319: jmethodID?
-
-    open func ownDeletesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "ownDeletesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.ownDeletesAreVisible_MethodID_319, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func ownDeletesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try ownDeletesAreVisible( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.ownInsertsAreVisible(int) throws java.sql.SQLException
-
-    private static var ownInsertsAreVisible_MethodID_320: jmethodID?
-
-    open func ownInsertsAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "ownInsertsAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.ownInsertsAreVisible_MethodID_320, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func ownInsertsAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try ownInsertsAreVisible( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.othersUpdatesAreVisible(int) throws java.sql.SQLException
-
-    private static var othersUpdatesAreVisible_MethodID_321: jmethodID?
-
-    open func othersUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "othersUpdatesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.othersUpdatesAreVisible_MethodID_321, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func othersUpdatesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try othersUpdatesAreVisible( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.othersDeletesAreVisible(int) throws java.sql.SQLException
-
-    private static var othersDeletesAreVisible_MethodID_322: jmethodID?
-
-    open func othersDeletesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "othersDeletesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.othersDeletesAreVisible_MethodID_322, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func othersDeletesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try othersDeletesAreVisible( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.othersInsertsAreVisible(int) throws java.sql.SQLException
-
-    private static var othersInsertsAreVisible_MethodID_323: jmethodID?
-
-    open func othersInsertsAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "othersInsertsAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.othersInsertsAreVisible_MethodID_323, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func othersInsertsAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try othersInsertsAreVisible( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.updatesAreDetected(int) throws java.sql.SQLException
-
-    private static var updatesAreDetected_MethodID_324: jmethodID?
-
-    open func updatesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "updatesAreDetected", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.updatesAreDetected_MethodID_324, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func updatesAreDetected( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try updatesAreDetected( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.deletesAreDetected(int) throws java.sql.SQLException
-
-    private static var deletesAreDetected_MethodID_325: jmethodID?
-
-    open func deletesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "deletesAreDetected", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.deletesAreDetected_MethodID_325, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func deletesAreDetected( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try deletesAreDetected( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.insertsAreDetected(int) throws java.sql.SQLException
-
-    private static var insertsAreDetected_MethodID_326: jmethodID?
-
-    open func insertsAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: type, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "insertsAreDetected", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.insertsAreDetected_MethodID_326, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func insertsAreDetected( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
-        return try insertsAreDetected( type: _type )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsBatchUpdates() throws java.sql.SQLException
-
-    private static var supportsBatchUpdates_MethodID_327: jmethodID?
-
-    open func supportsBatchUpdates() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsBatchUpdates", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsBatchUpdates_MethodID_327, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getUDTs(java.lang.String,java.lang.String,java.lang.String,int[]) throws java.sql.SQLException
-
-    private static var getUDTs_MethodID_328: jmethodID?
-
-    open func getUDTs( catalog: String?, schemaPattern: String?, typeNamePattern: String?, types: [Int32]? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: typeNamePattern, locals: &__locals )
-        __args[3] = JNIType.toJava( value: types, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUDTs", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[I)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getUDTs_MethodID_328, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getUDTs( _ _catalog: String?, _ _schemaPattern: String?, _ _typeNamePattern: String?, _ _types: [Int32]? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getUDTs( catalog: _catalog, schemaPattern: _schemaPattern, typeNamePattern: _typeNamePattern, types: _types )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsSavepoints() throws java.sql.SQLException
-
-    private static var supportsSavepoints_MethodID_329: jmethodID?
-
-    open func supportsSavepoints() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSavepoints", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSavepoints_MethodID_329, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsNamedParameters() throws java.sql.SQLException
-
-    private static var supportsNamedParameters_MethodID_330: jmethodID?
-
-    open func supportsNamedParameters() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsNamedParameters", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsNamedParameters_MethodID_330, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleOpenResults() throws java.sql.SQLException
-
-    private static var supportsMultipleOpenResults_MethodID_331: jmethodID?
-
-    open func supportsMultipleOpenResults() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMultipleOpenResults", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMultipleOpenResults_MethodID_331, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsGetGeneratedKeys() throws java.sql.SQLException
-
-    private static var supportsGetGeneratedKeys_MethodID_332: jmethodID?
-
-    open func supportsGetGeneratedKeys() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGetGeneratedKeys", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGetGeneratedKeys_MethodID_332, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSuperTypes(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getSuperTypes_MethodID_333: jmethodID?
-
-    open func getSuperTypes( catalog: String?, schemaPattern: String?, typeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: typeNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSuperTypes", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSuperTypes_MethodID_333, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getSuperTypes( _ _catalog: String?, _ _schemaPattern: String?, _ _typeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getSuperTypes( catalog: _catalog, schemaPattern: _schemaPattern, typeNamePattern: _typeNamePattern )
-    }
 
     /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSuperTables(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    private static var getSuperTables_MethodID_334: jmethodID?
+    private static var getSuperTables_MethodID_249: jmethodID?
 
     open func getSuperTables( catalog: String?, schemaPattern: String?, tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
         __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
         __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSuperTables", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSuperTables_MethodID_334, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSuperTables", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSuperTables_MethodID_249, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ResultSetForward( javaObject: __return ) : nil
@@ -4194,316 +2940,1731 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
         return try getSuperTables( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern )
     }
 
-    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetHoldability(int) throws java.sql.SQLException
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getSuperTypes(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
 
-    private static var supportsResultSetHoldability_MethodID_335: jmethodID?
+    private static var getSuperTypes_MethodID_250: jmethodID?
 
-    open func supportsResultSetHoldability( holdability: Int ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getSuperTypes( catalog: String?, schemaPattern: String?, typeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: holdability, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsResultSetHoldability", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.supportsResultSetHoldability_MethodID_335, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: typeNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSuperTypes", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getSuperTypes_MethodID_250, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getSuperTypes( _ _catalog: String?, _ _schemaPattern: String?, _ _typeNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getSuperTypes( catalog: _catalog, schemaPattern: _schemaPattern, typeNamePattern: _typeNamePattern )
+    }
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getSystemFunctions() throws java.sql.SQLException
+
+    private static var getSystemFunctions_MethodID_251: jmethodID?
+
+    open func getSystemFunctions() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSystemFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getSystemFunctions_MethodID_251, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTablePrivileges(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getTablePrivileges_MethodID_252: jmethodID?
+
+    open func getTablePrivileges( catalog: String?, schemaPattern: String?, tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTablePrivileges", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTablePrivileges_MethodID_252, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getTablePrivileges( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getTablePrivileges( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern )
+    }
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTableTypes() throws java.sql.SQLException
+
+    private static var getTableTypes_MethodID_253: jmethodID?
+
+    open func getTableTypes() throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTableTypes", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTableTypes_MethodID_253, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTables(java.lang.String,java.lang.String,java.lang.String,java.lang.String[]) throws java.sql.SQLException
+
+    private static var getTables_MethodID_254: jmethodID?
+
+    open func getTables( catalog: String?, schemaPattern: String?, tableNamePattern: String?, types: [String]? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
+        __args[3] = JNIType.toJava( value: types, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTables", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTables_MethodID_254, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getTables( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String?, _ _types: [String]? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getTables( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern, types: _types )
+    }
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getTimeDateFunctions() throws java.sql.SQLException
+
+    private static var getTimeDateFunctions_MethodID_255: jmethodID?
+
+    open func getTimeDateFunctions() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTimeDateFunctions", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getTimeDateFunctions_MethodID_255, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getTypeInfo() throws java.sql.SQLException
+
+    private static var getTypeInfo_MethodID_256: jmethodID?
+
+    open func getTypeInfo() throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getTypeInfo", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getTypeInfo_MethodID_256, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getUDTs(java.lang.String,java.lang.String,java.lang.String,int[]) throws java.sql.SQLException
+
+    private static var getUDTs_MethodID_257: jmethodID?
+
+    open func getUDTs( catalog: String?, schemaPattern: String?, typeNamePattern: String?, types: [Int32]? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
+        __args[2] = JNIType.toJava( value: typeNamePattern, locals: &__locals )
+        __args[3] = JNIType.toJava( value: types, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUDTs", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[I)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getUDTs_MethodID_257, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getUDTs( _ _catalog: String?, _ _schemaPattern: String?, _ _typeNamePattern: String?, _ _types: [Int32]? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getUDTs( catalog: _catalog, schemaPattern: _schemaPattern, typeNamePattern: _typeNamePattern, types: _types )
+    }
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getURL() throws java.sql.SQLException
+
+    private static var getURL_MethodID_258: jmethodID?
+
+    open func getURL() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getURL", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getURL_MethodID_258, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.lang.String java.sql.DatabaseMetaData.getUserName() throws java.sql.SQLException
+
+    private static var getUserName_MethodID_259: jmethodID?
+
+    open func getUserName() throws /* java.sql.SQLException */ -> String! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUserName", methodSig: "()Ljava/lang/String;", methodCache: &DatabaseMetaDataForward.getUserName_MethodID_259, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? String( javaObject: __return ) : nil
+    }
+
+
+    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getVersionColumns(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+
+    private static var getVersionColumns_MethodID_260: jmethodID?
+
+    open func getVersionColumns( catalog: String?, schema: String?, table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
+        __args[1] = JNIType.toJava( value: schema, locals: &__locals )
+        __args[2] = JNIType.toJava( value: table, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVersionColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getVersionColumns_MethodID_260, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+    }
+
+    open func getVersionColumns( _ _catalog: String?, _ _schema: String?, _ _table: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
+        return try getVersionColumns( catalog: _catalog, schema: _schema, table: _table )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.insertsAreDetected(int) throws java.sql.SQLException
+
+    private static var insertsAreDetected_MethodID_261: jmethodID?
+
+    open func insertsAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "insertsAreDetected", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.insertsAreDetected_MethodID_261, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func insertsAreDetected( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try insertsAreDetected( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.isCatalogAtStart() throws java.sql.SQLException
+
+    private static var isCatalogAtStart_MethodID_262: jmethodID?
+
+    open func isCatalogAtStart() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isCatalogAtStart", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.isCatalogAtStart_MethodID_262, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.isReadOnly() throws java.sql.SQLException
+
+    private static var isReadOnly_MethodID_263: jmethodID?
+
+    open func isReadOnly() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isReadOnly", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.isReadOnly_MethodID_263, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.Wrapper.isWrapperFor(java.lang.Class) throws java.sql.SQLException
+
+    private static var isWrapperFor_MethodID_264: jmethodID?
+
+    override open func isWrapperFor( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isWrapperFor", methodSig: "(Ljava/lang/Class;)Z", methodCache: &DatabaseMetaDataForward.isWrapperFor_MethodID_264, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    override open func isWrapperFor( _ _iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
+        return try isWrapperFor( iface: _iface )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.locatorsUpdateCopy() throws java.sql.SQLException
+
+    private static var locatorsUpdateCopy_MethodID_265: jmethodID?
+
+    open func locatorsUpdateCopy() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "locatorsUpdateCopy", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.locatorsUpdateCopy_MethodID_265, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullPlusNonNullIsNull() throws java.sql.SQLException
+
+    private static var nullPlusNonNullIsNull_MethodID_266: jmethodID?
+
+    open func nullPlusNonNullIsNull() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullPlusNonNullIsNull", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullPlusNonNullIsNull_MethodID_266, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtEnd() throws java.sql.SQLException
+
+    private static var nullsAreSortedAtEnd_MethodID_267: jmethodID?
+
+    open func nullsAreSortedAtEnd() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedAtEnd", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedAtEnd_MethodID_267, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedAtStart() throws java.sql.SQLException
+
+    private static var nullsAreSortedAtStart_MethodID_268: jmethodID?
+
+    open func nullsAreSortedAtStart() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedAtStart", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedAtStart_MethodID_268, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedHigh() throws java.sql.SQLException
+
+    private static var nullsAreSortedHigh_MethodID_269: jmethodID?
+
+    open func nullsAreSortedHigh() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedHigh", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedHigh_MethodID_269, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.nullsAreSortedLow() throws java.sql.SQLException
+
+    private static var nullsAreSortedLow_MethodID_270: jmethodID?
+
+    open func nullsAreSortedLow() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "nullsAreSortedLow", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.nullsAreSortedLow_MethodID_270, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.othersDeletesAreVisible(int) throws java.sql.SQLException
+
+    private static var othersDeletesAreVisible_MethodID_271: jmethodID?
+
+    open func othersDeletesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "othersDeletesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.othersDeletesAreVisible_MethodID_271, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func othersDeletesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try othersDeletesAreVisible( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.othersInsertsAreVisible(int) throws java.sql.SQLException
+
+    private static var othersInsertsAreVisible_MethodID_272: jmethodID?
+
+    open func othersInsertsAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "othersInsertsAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.othersInsertsAreVisible_MethodID_272, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func othersInsertsAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try othersInsertsAreVisible( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.othersUpdatesAreVisible(int) throws java.sql.SQLException
+
+    private static var othersUpdatesAreVisible_MethodID_273: jmethodID?
+
+    open func othersUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "othersUpdatesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.othersUpdatesAreVisible_MethodID_273, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func othersUpdatesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try othersUpdatesAreVisible( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.ownDeletesAreVisible(int) throws java.sql.SQLException
+
+    private static var ownDeletesAreVisible_MethodID_274: jmethodID?
+
+    open func ownDeletesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "ownDeletesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.ownDeletesAreVisible_MethodID_274, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func ownDeletesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try ownDeletesAreVisible( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.ownInsertsAreVisible(int) throws java.sql.SQLException
+
+    private static var ownInsertsAreVisible_MethodID_275: jmethodID?
+
+    open func ownInsertsAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "ownInsertsAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.ownInsertsAreVisible_MethodID_275, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func ownInsertsAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try ownInsertsAreVisible( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.ownUpdatesAreVisible(int) throws java.sql.SQLException
+
+    private static var ownUpdatesAreVisible_MethodID_276: jmethodID?
+
+    open func ownUpdatesAreVisible( type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "ownUpdatesAreVisible", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.ownUpdatesAreVisible_MethodID_276, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func ownUpdatesAreVisible( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try ownUpdatesAreVisible( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseIdentifiers() throws java.sql.SQLException
+
+    private static var storesLowerCaseIdentifiers_MethodID_277: jmethodID?
+
+    open func storesLowerCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesLowerCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesLowerCaseIdentifiers_MethodID_277, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesLowerCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    private static var storesLowerCaseQuotedIdentifiers_MethodID_278: jmethodID?
+
+    open func storesLowerCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesLowerCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesLowerCaseQuotedIdentifiers_MethodID_278, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseIdentifiers() throws java.sql.SQLException
+
+    private static var storesMixedCaseIdentifiers_MethodID_279: jmethodID?
+
+    open func storesMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesMixedCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesMixedCaseIdentifiers_MethodID_279, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesMixedCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    private static var storesMixedCaseQuotedIdentifiers_MethodID_280: jmethodID?
+
+    open func storesMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesMixedCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesMixedCaseQuotedIdentifiers_MethodID_280, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseIdentifiers() throws java.sql.SQLException
+
+    private static var storesUpperCaseIdentifiers_MethodID_281: jmethodID?
+
+    open func storesUpperCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesUpperCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesUpperCaseIdentifiers_MethodID_281, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.storesUpperCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    private static var storesUpperCaseQuotedIdentifiers_MethodID_282: jmethodID?
+
+    open func storesUpperCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "storesUpperCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.storesUpperCaseQuotedIdentifiers_MethodID_282, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92EntryLevelSQL() throws java.sql.SQLException
+
+    private static var supportsANSI92EntryLevelSQL_MethodID_283: jmethodID?
+
+    open func supportsANSI92EntryLevelSQL() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsANSI92EntryLevelSQL", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsANSI92EntryLevelSQL_MethodID_283, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92FullSQL() throws java.sql.SQLException
+
+    private static var supportsANSI92FullSQL_MethodID_284: jmethodID?
+
+    open func supportsANSI92FullSQL() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsANSI92FullSQL", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsANSI92FullSQL_MethodID_284, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsANSI92IntermediateSQL() throws java.sql.SQLException
+
+    private static var supportsANSI92IntermediateSQL_MethodID_285: jmethodID?
+
+    open func supportsANSI92IntermediateSQL() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsANSI92IntermediateSQL", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsANSI92IntermediateSQL_MethodID_285, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithAddColumn() throws java.sql.SQLException
+
+    private static var supportsAlterTableWithAddColumn_MethodID_286: jmethodID?
+
+    open func supportsAlterTableWithAddColumn() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsAlterTableWithAddColumn", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsAlterTableWithAddColumn_MethodID_286, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsAlterTableWithDropColumn() throws java.sql.SQLException
+
+    private static var supportsAlterTableWithDropColumn_MethodID_287: jmethodID?
+
+    open func supportsAlterTableWithDropColumn() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsAlterTableWithDropColumn", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsAlterTableWithDropColumn_MethodID_287, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsBatchUpdates() throws java.sql.SQLException
+
+    private static var supportsBatchUpdates_MethodID_288: jmethodID?
+
+    open func supportsBatchUpdates() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsBatchUpdates", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsBatchUpdates_MethodID_288, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInDataManipulation() throws java.sql.SQLException
+
+    private static var supportsCatalogsInDataManipulation_MethodID_289: jmethodID?
+
+    open func supportsCatalogsInDataManipulation() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInDataManipulation", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInDataManipulation_MethodID_289, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInIndexDefinitions() throws java.sql.SQLException
+
+    private static var supportsCatalogsInIndexDefinitions_MethodID_290: jmethodID?
+
+    open func supportsCatalogsInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInIndexDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInIndexDefinitions_MethodID_290, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInPrivilegeDefinitions() throws java.sql.SQLException
+
+    private static var supportsCatalogsInPrivilegeDefinitions_MethodID_291: jmethodID?
+
+    open func supportsCatalogsInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInPrivilegeDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInPrivilegeDefinitions_MethodID_291, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInProcedureCalls() throws java.sql.SQLException
+
+    private static var supportsCatalogsInProcedureCalls_MethodID_292: jmethodID?
+
+    open func supportsCatalogsInProcedureCalls() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInProcedureCalls", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInProcedureCalls_MethodID_292, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCatalogsInTableDefinitions() throws java.sql.SQLException
+
+    private static var supportsCatalogsInTableDefinitions_MethodID_293: jmethodID?
+
+    open func supportsCatalogsInTableDefinitions() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCatalogsInTableDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCatalogsInTableDefinitions_MethodID_293, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsColumnAliasing() throws java.sql.SQLException
+
+    private static var supportsColumnAliasing_MethodID_294: jmethodID?
+
+    open func supportsColumnAliasing() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsColumnAliasing", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsColumnAliasing_MethodID_294, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert(int,int) throws java.sql.SQLException
+
+    private static var supportsConvert_MethodID_295: jmethodID?
+
+    open func supportsConvert( fromType: Int, toType: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( i: jint(fromType) )
+        __args[1] = jvalue( i: jint(toType) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsConvert", methodSig: "(II)Z", methodCache: &DatabaseMetaDataForward.supportsConvert_MethodID_295, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func supportsConvert( _ _fromType: Int, _ _toType: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try supportsConvert( fromType: _fromType, toType: _toType )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsConvert() throws java.sql.SQLException
+
+    private static var supportsConvert_MethodID_296: jmethodID?
+
+    open func supportsConvert() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsConvert", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsConvert_MethodID_296, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCoreSQLGrammar() throws java.sql.SQLException
+
+    private static var supportsCoreSQLGrammar_MethodID_297: jmethodID?
+
+    open func supportsCoreSQLGrammar() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCoreSQLGrammar", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCoreSQLGrammar_MethodID_297, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsCorrelatedSubqueries() throws java.sql.SQLException
+
+    private static var supportsCorrelatedSubqueries_MethodID_298: jmethodID?
+
+    open func supportsCorrelatedSubqueries() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsCorrelatedSubqueries", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsCorrelatedSubqueries_MethodID_298, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataDefinitionAndDataManipulationTransactions() throws java.sql.SQLException
+
+    private static var supportsDataDefinitionAndDataManipulationTransactions_MethodID_299: jmethodID?
+
+    open func supportsDataDefinitionAndDataManipulationTransactions() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsDataDefinitionAndDataManipulationTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsDataDefinitionAndDataManipulationTransactions_MethodID_299, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsDataManipulationTransactionsOnly() throws java.sql.SQLException
+
+    private static var supportsDataManipulationTransactionsOnly_MethodID_300: jmethodID?
+
+    open func supportsDataManipulationTransactionsOnly() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsDataManipulationTransactionsOnly", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsDataManipulationTransactionsOnly_MethodID_300, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsDifferentTableCorrelationNames() throws java.sql.SQLException
+
+    private static var supportsDifferentTableCorrelationNames_MethodID_301: jmethodID?
+
+    open func supportsDifferentTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsDifferentTableCorrelationNames", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsDifferentTableCorrelationNames_MethodID_301, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsExpressionsInOrderBy() throws java.sql.SQLException
+
+    private static var supportsExpressionsInOrderBy_MethodID_302: jmethodID?
+
+    open func supportsExpressionsInOrderBy() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsExpressionsInOrderBy", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsExpressionsInOrderBy_MethodID_302, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsExtendedSQLGrammar() throws java.sql.SQLException
+
+    private static var supportsExtendedSQLGrammar_MethodID_303: jmethodID?
+
+    open func supportsExtendedSQLGrammar() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsExtendedSQLGrammar", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsExtendedSQLGrammar_MethodID_303, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsFullOuterJoins() throws java.sql.SQLException
+
+    private static var supportsFullOuterJoins_MethodID_304: jmethodID?
+
+    open func supportsFullOuterJoins() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsFullOuterJoins", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsFullOuterJoins_MethodID_304, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsGetGeneratedKeys() throws java.sql.SQLException
+
+    private static var supportsGetGeneratedKeys_MethodID_305: jmethodID?
+
+    open func supportsGetGeneratedKeys() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGetGeneratedKeys", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGetGeneratedKeys_MethodID_305, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupBy() throws java.sql.SQLException
+
+    private static var supportsGroupBy_MethodID_306: jmethodID?
+
+    open func supportsGroupBy() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGroupBy", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGroupBy_MethodID_306, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByBeyondSelect() throws java.sql.SQLException
+
+    private static var supportsGroupByBeyondSelect_MethodID_307: jmethodID?
+
+    open func supportsGroupByBeyondSelect() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGroupByBeyondSelect", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGroupByBeyondSelect_MethodID_307, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsGroupByUnrelated() throws java.sql.SQLException
+
+    private static var supportsGroupByUnrelated_MethodID_308: jmethodID?
+
+    open func supportsGroupByUnrelated() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsGroupByUnrelated", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsGroupByUnrelated_MethodID_308, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsIntegrityEnhancementFacility() throws java.sql.SQLException
+
+    private static var supportsIntegrityEnhancementFacility_MethodID_309: jmethodID?
+
+    open func supportsIntegrityEnhancementFacility() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsIntegrityEnhancementFacility", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsIntegrityEnhancementFacility_MethodID_309, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsLikeEscapeClause() throws java.sql.SQLException
+
+    private static var supportsLikeEscapeClause_MethodID_310: jmethodID?
+
+    open func supportsLikeEscapeClause() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsLikeEscapeClause", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsLikeEscapeClause_MethodID_310, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsLimitedOuterJoins() throws java.sql.SQLException
+
+    private static var supportsLimitedOuterJoins_MethodID_311: jmethodID?
+
+    open func supportsLimitedOuterJoins() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsLimitedOuterJoins", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsLimitedOuterJoins_MethodID_311, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMinimumSQLGrammar() throws java.sql.SQLException
+
+    private static var supportsMinimumSQLGrammar_MethodID_312: jmethodID?
+
+    open func supportsMinimumSQLGrammar() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMinimumSQLGrammar", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMinimumSQLGrammar_MethodID_312, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseIdentifiers() throws java.sql.SQLException
+
+    private static var supportsMixedCaseIdentifiers_MethodID_313: jmethodID?
+
+    open func supportsMixedCaseIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMixedCaseIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMixedCaseIdentifiers_MethodID_313, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMixedCaseQuotedIdentifiers() throws java.sql.SQLException
+
+    private static var supportsMixedCaseQuotedIdentifiers_MethodID_314: jmethodID?
+
+    open func supportsMixedCaseQuotedIdentifiers() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMixedCaseQuotedIdentifiers", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMixedCaseQuotedIdentifiers_MethodID_314, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleOpenResults() throws java.sql.SQLException
+
+    private static var supportsMultipleOpenResults_MethodID_315: jmethodID?
+
+    open func supportsMultipleOpenResults() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMultipleOpenResults", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMultipleOpenResults_MethodID_315, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleResultSets() throws java.sql.SQLException
+
+    private static var supportsMultipleResultSets_MethodID_316: jmethodID?
+
+    open func supportsMultipleResultSets() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMultipleResultSets", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMultipleResultSets_MethodID_316, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsMultipleTransactions() throws java.sql.SQLException
+
+    private static var supportsMultipleTransactions_MethodID_317: jmethodID?
+
+    open func supportsMultipleTransactions() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsMultipleTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsMultipleTransactions_MethodID_317, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsNamedParameters() throws java.sql.SQLException
+
+    private static var supportsNamedParameters_MethodID_318: jmethodID?
+
+    open func supportsNamedParameters() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsNamedParameters", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsNamedParameters_MethodID_318, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsNonNullableColumns() throws java.sql.SQLException
+
+    private static var supportsNonNullableColumns_MethodID_319: jmethodID?
+
+    open func supportsNonNullableColumns() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsNonNullableColumns", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsNonNullableColumns_MethodID_319, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossCommit() throws java.sql.SQLException
+
+    private static var supportsOpenCursorsAcrossCommit_MethodID_320: jmethodID?
+
+    open func supportsOpenCursorsAcrossCommit() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenCursorsAcrossCommit", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenCursorsAcrossCommit_MethodID_320, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenCursorsAcrossRollback() throws java.sql.SQLException
+
+    private static var supportsOpenCursorsAcrossRollback_MethodID_321: jmethodID?
+
+    open func supportsOpenCursorsAcrossRollback() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenCursorsAcrossRollback", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenCursorsAcrossRollback_MethodID_321, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossCommit() throws java.sql.SQLException
+
+    private static var supportsOpenStatementsAcrossCommit_MethodID_322: jmethodID?
+
+    open func supportsOpenStatementsAcrossCommit() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenStatementsAcrossCommit", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenStatementsAcrossCommit_MethodID_322, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOpenStatementsAcrossRollback() throws java.sql.SQLException
+
+    private static var supportsOpenStatementsAcrossRollback_MethodID_323: jmethodID?
+
+    open func supportsOpenStatementsAcrossRollback() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOpenStatementsAcrossRollback", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOpenStatementsAcrossRollback_MethodID_323, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOrderByUnrelated() throws java.sql.SQLException
+
+    private static var supportsOrderByUnrelated_MethodID_324: jmethodID?
+
+    open func supportsOrderByUnrelated() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOrderByUnrelated", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOrderByUnrelated_MethodID_324, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsOuterJoins() throws java.sql.SQLException
+
+    private static var supportsOuterJoins_MethodID_325: jmethodID?
+
+    open func supportsOuterJoins() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsOuterJoins", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsOuterJoins_MethodID_325, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedDelete() throws java.sql.SQLException
+
+    private static var supportsPositionedDelete_MethodID_326: jmethodID?
+
+    open func supportsPositionedDelete() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsPositionedDelete", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsPositionedDelete_MethodID_326, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsPositionedUpdate() throws java.sql.SQLException
+
+    private static var supportsPositionedUpdate_MethodID_327: jmethodID?
+
+    open func supportsPositionedUpdate() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsPositionedUpdate", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsPositionedUpdate_MethodID_327, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public default boolean java.sql.DatabaseMetaData.supportsRefCursors() throws java.sql.SQLException
+
+    private static var supportsRefCursors_MethodID_328: jmethodID?
+
+    open func supportsRefCursors() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsRefCursors", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsRefCursors_MethodID_328, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetConcurrency(int,int) throws java.sql.SQLException
+
+    private static var supportsResultSetConcurrency_MethodID_329: jmethodID?
+
+    open func supportsResultSetConcurrency( type: Int, concurrency: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( i: jint(type) )
+        __args[1] = jvalue( i: jint(concurrency) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsResultSetConcurrency", methodSig: "(II)Z", methodCache: &DatabaseMetaDataForward.supportsResultSetConcurrency_MethodID_329, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func supportsResultSetConcurrency( _ _type: Int, _ _concurrency: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try supportsResultSetConcurrency( type: _type, concurrency: _concurrency )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetHoldability(int) throws java.sql.SQLException
+
+    private static var supportsResultSetHoldability_MethodID_330: jmethodID?
+
+    open func supportsResultSetHoldability( holdability: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(holdability) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsResultSetHoldability", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.supportsResultSetHoldability_MethodID_330, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
     }
 
     open func supportsResultSetHoldability( _ _holdability: Int ) throws /* java.sql.SQLException */ -> Bool {
         return try supportsResultSetHoldability( holdability: _holdability )
     }
 
-    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMajorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsResultSetType(int) throws java.sql.SQLException
 
-    private static var getDatabaseMajorVersion_MethodID_336: jmethodID?
+    private static var supportsResultSetType_MethodID_331: jmethodID?
 
-    open func getDatabaseMajorVersion() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsResultSetType( type: Int ) throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDatabaseMajorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDatabaseMajorVersion_MethodID_336, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsResultSetType", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.supportsResultSetType_MethodID_331, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int(), from: __return )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func supportsResultSetType( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try supportsResultSetType( type: _type )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSavepoints() throws java.sql.SQLException
+
+    private static var supportsSavepoints_MethodID_332: jmethodID?
+
+    open func supportsSavepoints() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSavepoints", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSavepoints_MethodID_332, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract int java.sql.DatabaseMetaData.getDatabaseMinorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInDataManipulation() throws java.sql.SQLException
 
-    private static var getDatabaseMinorVersion_MethodID_337: jmethodID?
+    private static var supportsSchemasInDataManipulation_MethodID_333: jmethodID?
 
-    open func getDatabaseMinorVersion() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsSchemasInDataManipulation() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDatabaseMinorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getDatabaseMinorVersion_MethodID_337, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInDataManipulation", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInDataManipulation_MethodID_333, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract int java.sql.DatabaseMetaData.getJDBCMajorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInIndexDefinitions() throws java.sql.SQLException
 
-    private static var getJDBCMajorVersion_MethodID_338: jmethodID?
+    private static var supportsSchemasInIndexDefinitions_MethodID_334: jmethodID?
 
-    open func getJDBCMajorVersion() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsSchemasInIndexDefinitions() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getJDBCMajorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getJDBCMajorVersion_MethodID_338, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInIndexDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInIndexDefinitions_MethodID_334, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract int java.sql.DatabaseMetaData.getJDBCMinorVersion() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInPrivilegeDefinitions() throws java.sql.SQLException
 
-    private static var getJDBCMinorVersion_MethodID_339: jmethodID?
+    private static var supportsSchemasInPrivilegeDefinitions_MethodID_335: jmethodID?
 
-    open func getJDBCMinorVersion() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsSchemasInPrivilegeDefinitions() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getJDBCMinorVersion", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getJDBCMinorVersion_MethodID_339, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInPrivilegeDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInPrivilegeDefinitions_MethodID_335, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract int java.sql.DatabaseMetaData.getSQLStateType() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInProcedureCalls() throws java.sql.SQLException
 
-    private static var getSQLStateType_MethodID_340: jmethodID?
+    private static var supportsSchemasInProcedureCalls_MethodID_336: jmethodID?
 
-    open func getSQLStateType() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsSchemasInProcedureCalls() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getSQLStateType", methodSig: "()I", methodCache: &DatabaseMetaDataForward.getSQLStateType_MethodID_340, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInProcedureCalls", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInProcedureCalls_MethodID_336, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract boolean java.sql.DatabaseMetaData.locatorsUpdateCopy() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSchemasInTableDefinitions() throws java.sql.SQLException
 
-    private static var locatorsUpdateCopy_MethodID_341: jmethodID?
+    private static var supportsSchemasInTableDefinitions_MethodID_337: jmethodID?
 
-    open func locatorsUpdateCopy() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsSchemasInTableDefinitions() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "locatorsUpdateCopy", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.locatorsUpdateCopy_MethodID_341, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSchemasInTableDefinitions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSchemasInTableDefinitions_MethodID_337, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSelectForUpdate() throws java.sql.SQLException
+
+    private static var supportsSelectForUpdate_MethodID_338: jmethodID?
+
+    open func supportsSelectForUpdate() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSelectForUpdate", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSelectForUpdate_MethodID_338, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
     }
 
 
     /// public abstract boolean java.sql.DatabaseMetaData.supportsStatementPooling() throws java.sql.SQLException
 
-    private static var supportsStatementPooling_MethodID_342: jmethodID?
+    private static var supportsStatementPooling_MethodID_339: jmethodID?
 
     open func supportsStatementPooling() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsStatementPooling", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsStatementPooling_MethodID_342, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsStatementPooling", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsStatementPooling_MethodID_339, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public abstract java.sql.RowIdLifetime java.sql.DatabaseMetaData.getRowIdLifetime() throws java.sql.SQLException
-
-    private static var getRowIdLifetime_MethodID_343: jmethodID?
-
-    open func getRowIdLifetime() throws /* java.sql.SQLException */ -> RowIdLifetime! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getRowIdLifetime", methodSig: "()Ljava/sql/RowIdLifetime;", methodCache: &DatabaseMetaDataForward.getRowIdLifetime_MethodID_343, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? RowIdLifetime( javaObject: __return ) : nil
+        return __return != jboolean(JNI_FALSE)
     }
 
 
     /// public abstract boolean java.sql.DatabaseMetaData.supportsStoredFunctionsUsingCallSyntax() throws java.sql.SQLException
 
-    private static var supportsStoredFunctionsUsingCallSyntax_MethodID_344: jmethodID?
+    private static var supportsStoredFunctionsUsingCallSyntax_MethodID_340: jmethodID?
 
     open func supportsStoredFunctionsUsingCallSyntax() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsStoredFunctionsUsingCallSyntax", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsStoredFunctionsUsingCallSyntax_MethodID_344, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsStoredFunctionsUsingCallSyntax", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsStoredFunctionsUsingCallSyntax_MethodID_340, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract boolean java.sql.DatabaseMetaData.autoCommitFailureClosesAllResultSets() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsStoredProcedures() throws java.sql.SQLException
 
-    private static var autoCommitFailureClosesAllResultSets_MethodID_345: jmethodID?
+    private static var supportsStoredProcedures_MethodID_341: jmethodID?
 
-    open func autoCommitFailureClosesAllResultSets() throws /* java.sql.SQLException */ -> Bool {
+    open func supportsStoredProcedures() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "autoCommitFailureClosesAllResultSets", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.autoCommitFailureClosesAllResultSets_MethodID_345, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsStoredProcedures", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsStoredProcedures_MethodID_341, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getClientInfoProperties() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInComparisons() throws java.sql.SQLException
 
-    private static var getClientInfoProperties_MethodID_346: jmethodID?
+    private static var supportsSubqueriesInComparisons_MethodID_342: jmethodID?
 
-    open func getClientInfoProperties() throws /* java.sql.SQLException */ -> ResultSet! {
+    open func supportsSubqueriesInComparisons() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getClientInfoProperties", methodSig: "()Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getClientInfoProperties_MethodID_346, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInComparisons", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInComparisons_MethodID_342, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctions(java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInExists() throws java.sql.SQLException
 
-    private static var getFunctions_MethodID_347: jmethodID?
+    private static var supportsSubqueriesInExists_MethodID_343: jmethodID?
 
-    open func getFunctions( catalog: String?, schemaPattern: String?, functionNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+    open func supportsSubqueriesInExists() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: functionNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getFunctions", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getFunctions_MethodID_347, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getFunctions( _ _catalog: String?, _ _schemaPattern: String?, _ _functionNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getFunctions( catalog: _catalog, schemaPattern: _schemaPattern, functionNamePattern: _functionNamePattern )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getFunctionColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getFunctionColumns_MethodID_348: jmethodID?
-
-    open func getFunctionColumns( catalog: String?, schemaPattern: String?, functionNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: functionNamePattern, locals: &__locals )
-        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getFunctionColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getFunctionColumns_MethodID_348, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getFunctionColumns( _ _catalog: String?, _ _schemaPattern: String?, _ _functionNamePattern: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getFunctionColumns( catalog: _catalog, schemaPattern: _schemaPattern, functionNamePattern: _functionNamePattern, columnNamePattern: _columnNamePattern )
-    }
-
-    /// public abstract java.sql.ResultSet java.sql.DatabaseMetaData.getPseudoColumns(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.sql.SQLException
-
-    private static var getPseudoColumns_MethodID_349: jmethodID?
-
-    open func getPseudoColumns( catalog: String?, schemaPattern: String?, tableNamePattern: String?, columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: catalog, locals: &__locals )
-        __args[1] = JNIType.toJava( value: schemaPattern, locals: &__locals )
-        __args[2] = JNIType.toJava( value: tableNamePattern, locals: &__locals )
-        __args[3] = JNIType.toJava( value: columnNamePattern, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPseudoColumns", methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/ResultSet;", methodCache: &DatabaseMetaDataForward.getPseudoColumns_MethodID_349, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return __return != nil ? ResultSetForward( javaObject: __return ) : nil
-    }
-
-    open func getPseudoColumns( _ _catalog: String?, _ _schemaPattern: String?, _ _tableNamePattern: String?, _ _columnNamePattern: String? ) throws /* java.sql.SQLException */ -> ResultSet! {
-        return try getPseudoColumns( catalog: _catalog, schemaPattern: _schemaPattern, tableNamePattern: _tableNamePattern, columnNamePattern: _columnNamePattern )
-    }
-
-    /// public abstract boolean java.sql.DatabaseMetaData.generatedKeyAlwaysReturned() throws java.sql.SQLException
-
-    private static var generatedKeyAlwaysReturned_MethodID_350: jmethodID?
-
-    open func generatedKeyAlwaysReturned() throws /* java.sql.SQLException */ -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "generatedKeyAlwaysReturned", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.generatedKeyAlwaysReturned_MethodID_350, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInExists", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInExists_MethodID_343, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public default long java.sql.DatabaseMetaData.getMaxLogicalLobSize() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInIns() throws java.sql.SQLException
 
-    private static var getMaxLogicalLobSize_MethodID_351: jmethodID?
+    private static var supportsSubqueriesInIns_MethodID_344: jmethodID?
 
-    open func getMaxLogicalLobSize() throws /* java.sql.SQLException */ -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsSubqueriesInIns() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "getMaxLogicalLobSize", methodSig: "()J", methodCache: &DatabaseMetaDataForward.getMaxLogicalLobSize_MethodID_351, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInIns", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInIns_MethodID_344, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int64(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
 
-    /// public default boolean java.sql.DatabaseMetaData.supportsRefCursors() throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsSubqueriesInQuantifieds() throws java.sql.SQLException
 
-    private static var supportsRefCursors_MethodID_352: jmethodID?
+    private static var supportsSubqueriesInQuantifieds_MethodID_345: jmethodID?
 
-    open func supportsRefCursors() throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func supportsSubqueriesInQuantifieds() throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsRefCursors", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsRefCursors_MethodID_352, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsSubqueriesInQuantifieds", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsSubqueriesInQuantifieds_MethodID_345, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsTableCorrelationNames() throws java.sql.SQLException
+
+    private static var supportsTableCorrelationNames_MethodID_346: jmethodID?
+
+    open func supportsTableCorrelationNames() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsTableCorrelationNames", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsTableCorrelationNames_MethodID_346, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactionIsolationLevel(int) throws java.sql.SQLException
+
+    private static var supportsTransactionIsolationLevel_MethodID_347: jmethodID?
+
+    open func supportsTransactionIsolationLevel( level: Int ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(level) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsTransactionIsolationLevel", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.supportsTransactionIsolationLevel_MethodID_347, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func supportsTransactionIsolationLevel( _ _level: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try supportsTransactionIsolationLevel( level: _level )
+    }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsTransactions() throws java.sql.SQLException
+
+    private static var supportsTransactions_MethodID_348: jmethodID?
+
+    open func supportsTransactions() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsTransactions", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsTransactions_MethodID_348, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnion() throws java.sql.SQLException
+
+    private static var supportsUnion_MethodID_349: jmethodID?
+
+    open func supportsUnion() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsUnion", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsUnion_MethodID_349, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.supportsUnionAll() throws java.sql.SQLException
+
+    private static var supportsUnionAll_MethodID_350: jmethodID?
+
+    open func supportsUnionAll() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "supportsUnionAll", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.supportsUnionAll_MethodID_350, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
     }
 
 
     /// public abstract java.lang.Object java.sql.Wrapper.unwrap(java.lang.Class) throws java.sql.SQLException
 
-    private static var unwrap_MethodID_353: jmethodID?
+    private static var unwrap_MethodID_351: jmethodID?
 
     override open func unwrap( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> java_swift.JavaObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: iface, locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unwrap", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &DatabaseMetaDataForward.unwrap_MethodID_353, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "unwrap", methodSig: "(Ljava/lang/Class;)Ljava/lang/Object;", methodCache: &DatabaseMetaDataForward.unwrap_MethodID_351, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? java_swift.JavaObject( javaObject: __return ) : nil
@@ -4513,25 +4674,57 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
         return try unwrap( iface: _iface )
     }
 
-    /// public abstract boolean java.sql.Wrapper.isWrapperFor(java.lang.Class) throws java.sql.SQLException
+    /// public abstract boolean java.sql.DatabaseMetaData.updatesAreDetected(int) throws java.sql.SQLException
 
-    private static var isWrapperFor_MethodID_354: jmethodID?
+    private static var updatesAreDetected_MethodID_352: jmethodID?
 
-    override open func isWrapperFor( iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func updatesAreDetected( type: Int ) throws /* java.sql.SQLException */ -> Bool {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: iface, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "isWrapperFor", methodSig: "(Ljava/lang/Class;)Z", methodCache: &DatabaseMetaDataForward.isWrapperFor_MethodID_354, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(type) )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "updatesAreDetected", methodSig: "(I)Z", methodCache: &DatabaseMetaDataForward.updatesAreDetected_MethodID_352, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
-    override open func isWrapperFor( _ _iface: java_swift.JavaClass? ) throws /* java.sql.SQLException */ -> Bool {
-        return try isWrapperFor( iface: _iface )
+    open func updatesAreDetected( _ _type: Int ) throws /* java.sql.SQLException */ -> Bool {
+        return try updatesAreDetected( type: _type )
     }
+
+    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFilePerTable() throws java.sql.SQLException
+
+    private static var usesLocalFilePerTable_MethodID_353: jmethodID?
+
+    open func usesLocalFilePerTable() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "usesLocalFilePerTable", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.usesLocalFilePerTable_MethodID_353, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public abstract boolean java.sql.DatabaseMetaData.usesLocalFiles() throws java.sql.SQLException
+
+    private static var usesLocalFiles_MethodID_354: jmethodID?
+
+    open func usesLocalFiles() throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "usesLocalFiles", methodSig: "()Z", methodCache: &DatabaseMetaDataForward.usesLocalFiles_MethodID_354, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
 
 }
-
 

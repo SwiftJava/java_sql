@@ -18,164 +18,69 @@ open class SQLWarning: SQLException {
 
     /// private static final long java.sql.SQLWarning.serialVersionUID
 
-    /// private java.lang.String java.sql.SQLException.SQLState
-
-    /// private int java.sql.SQLException.vendorCode
-
-    /// private volatile java.sql.SQLException java.sql.SQLException.next
-
     /// private static final java.util.concurrent.atomic.AtomicReferenceFieldUpdater java.sql.SQLException.nextUpdater
 
     /// private static final long java.sql.SQLException.serialVersionUID
 
+    /// private java.lang.String java.sql.SQLException.SQLState
+
+    /// private volatile java.sql.SQLException java.sql.SQLException.next
+
+    /// private int java.sql.SQLException.vendorCode
+
     /// static final long java.lang.Exception.serialVersionUID
 
-    /// private static final long java.lang.Throwable.serialVersionUID
+    // Skipping field: true true false false false false 
 
-    /// private java.lang.String java.lang.Throwable.detailMessage
+    /// static final boolean java.lang.Throwable.$assertionsDisabled
 
-    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+    // Skipping field: true false false false false false 
 
-    /// private java.lang.Throwable java.lang.Throwable.cause
+    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
 
-    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
-
-    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
-
-    /// private java.util.List java.lang.Throwable.suppressedExceptions
+    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
 
     /// private static final java.lang.String java.lang.Throwable.NULL_CAUSE_MESSAGE
 
     /// private static final java.lang.String java.lang.Throwable.SELF_SUPPRESSION_MESSAGE
 
-    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
-
     /// private static final java.lang.String java.lang.Throwable.SUPPRESSED_CAPTION
 
-    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
+    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
 
-    /// static final boolean java.lang.Throwable.$assertionsDisabled
+    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
 
-    /// public java.sql.SQLWarning(java.lang.Throwable)
+    /// private static final long java.lang.Throwable.serialVersionUID
+
+    /// private java.lang.Throwable java.lang.Throwable.cause
+
+    /// private java.lang.String java.lang.Throwable.detailMessage
+
+    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
+
+    /// private java.util.List java.lang.Throwable.suppressedExceptions
+
+    /// public java.sql.SQLWarning()
 
     private static var new_MethodID_1: jmethodID?
 
-    public convenience init( cause: java_swift.Throwable? ) {
+    public convenience init() {
+        var __locals = [jobject]()
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_1, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "()V", methodCache: &SQLWarning.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _cause: java_swift.Throwable? ) {
-        self.init( cause: _cause )
-    }
-
-    /// public java.sql.SQLWarning(java.lang.String,java.lang.Throwable)
-
-    private static var new_MethodID_2: jmethodID?
-
-    public convenience init( reason: String?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_2, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _cause: java_swift.Throwable? ) {
-        self.init( reason: _reason, cause: _cause )
-    }
-
-    /// public java.sql.SQLWarning(java.lang.String,java.lang.String,java.lang.Throwable)
-
-    private static var new_MethodID_3: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_3, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _cause: java_swift.Throwable? ) {
-        self.init( reason: _reason, SQLState: _SQLState, cause: _cause )
-    }
-
-    /// public java.sql.SQLWarning(java.lang.String,java.lang.String,int,java.lang.Throwable)
-
-    private static var new_MethodID_4: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String?, vendorCode: Int, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
-        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_4, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _vendorCode: Int, _ _cause: java_swift.Throwable? ) {
-        self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode, cause: _cause )
-    }
-
-    /// public java.sql.SQLWarning(java.lang.String,java.lang.String,int)
-
-    private static var new_MethodID_5: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String?, vendorCode: Int ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I)V", methodCache: &SQLWarning.new_MethodID_5, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _vendorCode: Int ) {
-        self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode )
-    }
-
-    /// public java.sql.SQLWarning(java.lang.String,java.lang.String)
-
-    private static var new_MethodID_6: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;)V", methodCache: &SQLWarning.new_MethodID_6, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _SQLState: String? ) {
-        self.init( reason: _reason, SQLState: _SQLState )
     }
 
     /// public java.sql.SQLWarning(java.lang.String)
 
-    private static var new_MethodID_7: jmethodID?
+    private static var new_MethodID_2: jmethodID?
 
     public convenience init( reason: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &SQLWarning.new_MethodID_7, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;)V", methodCache: &SQLWarning.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -184,16 +89,115 @@ open class SQLWarning: SQLException {
         self.init( reason: _reason )
     }
 
-    /// public java.sql.SQLWarning()
+    /// public java.sql.SQLWarning(java.lang.String,java.lang.String)
+
+    private static var new_MethodID_3: jmethodID?
+
+    public convenience init( reason: String?, SQLState: String? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;)V", methodCache: &SQLWarning.new_MethodID_3, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _SQLState: String? ) {
+        self.init( reason: _reason, SQLState: _SQLState )
+    }
+
+    /// public java.sql.SQLWarning(java.lang.String,java.lang.String,int)
+
+    private static var new_MethodID_4: jmethodID?
+
+    public convenience init( reason: String?, SQLState: String?, vendorCode: Int ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
+        __args[2] = jvalue( i: jint(vendorCode) )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I)V", methodCache: &SQLWarning.new_MethodID_4, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _vendorCode: Int ) {
+        self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode )
+    }
+
+    /// public java.sql.SQLWarning(java.lang.String,java.lang.String,int,java.lang.Throwable)
+
+    private static var new_MethodID_5: jmethodID?
+
+    public convenience init( reason: String?, SQLState: String?, vendorCode: Int, cause: java_swift.Throwable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
+        __args[2] = jvalue( i: jint(vendorCode) )
+        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_5, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _vendorCode: Int, _ _cause: java_swift.Throwable? ) {
+        self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode, cause: _cause )
+    }
+
+    /// public java.sql.SQLWarning(java.lang.String,java.lang.String,java.lang.Throwable)
+
+    private static var new_MethodID_6: jmethodID?
+
+    public convenience init( reason: String?, SQLState: String?, cause: java_swift.Throwable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
+        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_6, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _cause: java_swift.Throwable? ) {
+        self.init( reason: _reason, SQLState: _SQLState, cause: _cause )
+    }
+
+    /// public java.sql.SQLWarning(java.lang.String,java.lang.Throwable)
+
+    private static var new_MethodID_7: jmethodID?
+
+    public convenience init( reason: String?, cause: java_swift.Throwable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_7, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _cause: java_swift.Throwable? ) {
+        self.init( reason: _reason, cause: _cause )
+    }
+
+    /// public java.sql.SQLWarning(java.lang.Throwable)
 
     private static var new_MethodID_8: jmethodID?
 
-    public convenience init() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( cause: java_swift.Throwable? ) {
         var __locals = [jobject]()
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "()V", methodCache: &SQLWarning.new_MethodID_8, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLWarning", classCache: &SQLWarning.SQLWarningJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &SQLWarning.new_MethodID_8, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _cause: java_swift.Throwable? ) {
+        self.init( cause: _cause )
     }
 
     /// public java.sql.SQLWarning java.sql.SQLWarning.getNextWarning()
@@ -201,8 +205,8 @@ open class SQLWarning: SQLException {
     private static var getNextWarning_MethodID_9: jmethodID?
 
     open func getNextWarning() -> SQLWarning! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getNextWarning", methodSig: "()Ljava/sql/SQLWarning;", methodCache: &SQLWarning.getNextWarning_MethodID_9, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? SQLWarning( javaObject: __return ) : nil
@@ -214,8 +218,8 @@ open class SQLWarning: SQLException {
     private static var setNextWarning_MethodID_10: jmethodID?
 
     open func setNextWarning( w: SQLWarning? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: w, locals: &__locals )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNextWarning", methodSig: "(Ljava/sql/SQLWarning;)V", methodCache: &SQLWarning.setNextWarning_MethodID_10, args: &__args, locals: &__locals )
     }

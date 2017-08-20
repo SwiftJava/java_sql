@@ -8,17 +8,13 @@ import java_util
 
 public protocol Driver: JavaProtocol {
 
-    /// public abstract java.sql.Connection java.sql.Driver.connect(java.lang.String,java.util.Properties) throws java.sql.SQLException
-
-    func connect( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> Connection!
-
     /// public abstract boolean java.sql.Driver.acceptsURL(java.lang.String) throws java.sql.SQLException
 
     func acceptsURL( url: String? ) throws /* java.sql.SQLException */ -> Bool
 
-    /// public abstract java.sql.DriverPropertyInfo[] java.sql.Driver.getPropertyInfo(java.lang.String,java.util.Properties) throws java.sql.SQLException
+    /// public abstract java.sql.Connection java.sql.Driver.connect(java.lang.String,java.util.Properties) throws java.sql.SQLException
 
-    func getPropertyInfo( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> [DriverPropertyInfo]!
+    func connect( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> Connection!
 
     /// public abstract int java.sql.Driver.getMajorVersion()
 
@@ -28,13 +24,17 @@ public protocol Driver: JavaProtocol {
 
     func getMinorVersion() -> Int
 
-    /// public abstract boolean java.sql.Driver.jdbcCompliant()
-
-    func jdbcCompliant() -> Bool
-
     /// public abstract java.util.logging.Logger java.sql.Driver.getParentLogger() throws java.sql.SQLFeatureNotSupportedException
 
     func getParentLogger() throws /* java.sql.SQLFeatureNotSupportedException */ -> java_util.Logger!
+
+    /// public abstract java.sql.DriverPropertyInfo[] java.sql.Driver.getPropertyInfo(java.lang.String,java.util.Properties) throws java.sql.SQLException
+
+    func getPropertyInfo( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> [DriverPropertyInfo]!
+
+    /// public abstract boolean java.sql.Driver.jdbcCompliant()
+
+    func jdbcCompliant() -> Bool
 
 }
 
@@ -43,18 +43,39 @@ open class DriverForward: JNIObjectForward, Driver {
 
     private static var DriverJNIClass: jclass?
 
+    /// public abstract boolean java.sql.Driver.acceptsURL(java.lang.String) throws java.sql.SQLException
+
+    private static var acceptsURL_MethodID_8: jmethodID?
+
+    open func acceptsURL( url: String? ) throws /* java.sql.SQLException */ -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: url, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "acceptsURL", methodSig: "(Ljava/lang/String;)Z", methodCache: &DriverForward.acceptsURL_MethodID_8, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func acceptsURL( _ _url: String? ) throws /* java.sql.SQLException */ -> Bool {
+        return try acceptsURL( url: _url )
+    }
+
     /// public abstract java.sql.Connection java.sql.Driver.connect(java.lang.String,java.util.Properties) throws java.sql.SQLException
 
-    private static var connect_MethodID_8: jmethodID?
+    private static var connect_MethodID_9: jmethodID?
 
     open func connect( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> Connection! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: url, locals: &__locals )
         __args[1] = JNIType.toJava( value: info, mapClass: "java/util/Properties", locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "connect", methodSig: "(Ljava/lang/String;Ljava/util/Properties;)Ljava/sql/Connection;", methodCache: &DriverForward.connect_MethodID_8, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "connect", methodSig: "(Ljava/lang/String;Ljava/util/Properties;)Ljava/sql/Connection;", methodCache: &DriverForward.connect_MethodID_9, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
         return __return != nil ? ConnectionForward( javaObject: __return ) : nil
@@ -64,97 +85,79 @@ open class DriverForward: JNIObjectForward, Driver {
         return try connect( url: _url, info: _info )
     }
 
-    /// public abstract boolean java.sql.Driver.acceptsURL(java.lang.String) throws java.sql.SQLException
-
-    private static var acceptsURL_MethodID_9: jmethodID?
-
-    open func acceptsURL( url: String? ) throws /* java.sql.SQLException */ -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: url, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "acceptsURL", methodSig: "(Ljava/lang/String;)Z", methodCache: &DriverForward.acceptsURL_MethodID_9, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func acceptsURL( _ _url: String? ) throws /* java.sql.SQLException */ -> Bool {
-        return try acceptsURL( url: _url )
-    }
-
-    /// public abstract java.sql.DriverPropertyInfo[] java.sql.Driver.getPropertyInfo(java.lang.String,java.util.Properties) throws java.sql.SQLException
-
-    private static var getPropertyInfo_MethodID_10: jmethodID?
-
-    open func getPropertyInfo( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> [DriverPropertyInfo]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: url, locals: &__locals )
-        __args[1] = JNIType.toJava( value: info, mapClass: "java/util/Properties", locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPropertyInfo", methodSig: "(Ljava/lang/String;Ljava/util/Properties;)[Ljava/sql/DriverPropertyInfo;", methodCache: &DriverForward.getPropertyInfo_MethodID_10, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: [DriverPropertyInfo](), from: __return )
-    }
-
-    open func getPropertyInfo( _ _url: String?, _ _info: java_util.Properties? ) throws /* java.sql.SQLException */ -> [DriverPropertyInfo]! {
-        return try getPropertyInfo( url: _url, info: _info )
-    }
-
     /// public abstract int java.sql.Driver.getMajorVersion()
 
-    private static var getMajorVersion_MethodID_11: jmethodID?
+    private static var getMajorVersion_MethodID_10: jmethodID?
 
     open func getMajorVersion() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMajorVersion", methodSig: "()I", methodCache: &DriverForward.getMajorVersion_MethodID_11, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMajorVersion", methodSig: "()I", methodCache: &DriverForward.getMajorVersion_MethodID_10, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
     /// public abstract int java.sql.Driver.getMinorVersion()
 
-    private static var getMinorVersion_MethodID_12: jmethodID?
+    private static var getMinorVersion_MethodID_11: jmethodID?
 
     open func getMinorVersion() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMinorVersion", methodSig: "()I", methodCache: &DriverForward.getMinorVersion_MethodID_12, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public abstract boolean java.sql.Driver.jdbcCompliant()
-
-    private static var jdbcCompliant_MethodID_13: jmethodID?
-
-    open func jdbcCompliant() -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "jdbcCompliant", methodSig: "()Z", methodCache: &DriverForward.jdbcCompliant_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getMinorVersion", methodSig: "()I", methodCache: &DriverForward.getMinorVersion_MethodID_11, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
     /// public abstract java.util.logging.Logger java.sql.Driver.getParentLogger() throws java.sql.SQLFeatureNotSupportedException
 
-    private static var getParentLogger_MethodID_14: jmethodID?
+    private static var getParentLogger_MethodID_12: jmethodID?
 
     open func getParentLogger() throws /* java.sql.SQLFeatureNotSupportedException */ -> java_util.Logger! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getParentLogger", methodSig: "()Ljava/util/logging/Logger;", methodCache: &DriverForward.getParentLogger_MethodID_14, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getParentLogger", methodSig: "()Ljava/util/logging/Logger;", methodCache: &DriverForward.getParentLogger_MethodID_12, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLFeatureNotSupportedException( javaObject: throwable )
         }
         return __return != nil ? java_util.Logger( javaObject: __return ) : nil
     }
 
 
-}
+    /// public abstract java.sql.DriverPropertyInfo[] java.sql.Driver.getPropertyInfo(java.lang.String,java.util.Properties) throws java.sql.SQLException
 
+    private static var getPropertyInfo_MethodID_13: jmethodID?
+
+    open func getPropertyInfo( url: String?, info: java_util.Properties? ) throws /* java.sql.SQLException */ -> [DriverPropertyInfo]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: url, locals: &__locals )
+        __args[1] = JNIType.toJava( value: info, mapClass: "java/util/Properties", locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getPropertyInfo", methodSig: "(Ljava/lang/String;Ljava/util/Properties;)[Ljava/sql/DriverPropertyInfo;", methodCache: &DriverForward.getPropertyInfo_MethodID_13, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: [DriverPropertyInfo].self, from: __return )
+    }
+
+    open func getPropertyInfo( _ _url: String?, _ _info: java_util.Properties? ) throws /* java.sql.SQLException */ -> [DriverPropertyInfo]! {
+        return try getPropertyInfo( url: _url, info: _info )
+    }
+
+    /// public abstract boolean java.sql.Driver.jdbcCompliant()
+
+    private static var jdbcCompliant_MethodID_14: jmethodID?
+
+    open func jdbcCompliant() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "jdbcCompliant", methodSig: "()Z", methodCache: &DriverForward.jdbcCompliant_MethodID_14, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+}
 

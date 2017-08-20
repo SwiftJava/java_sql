@@ -16,4 +16,3 @@ open class NClobForward: ClobForward, NClob {
 
 }
 
-

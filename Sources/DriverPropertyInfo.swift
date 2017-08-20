@@ -16,20 +16,19 @@ open class DriverPropertyInfo: java_swift.JavaObject {
 
     private static var DriverPropertyInfoJNIClass: jclass?
 
-    /// public java.lang.String java.sql.DriverPropertyInfo.name
+    /// public java.lang.String[] java.sql.DriverPropertyInfo.choices
 
-    private static var name_FieldID: jfieldID?
+    private static var choices_FieldID: jfieldID?
 
-    open var name: String! {
+    open var choices: [String]! {
         get {
-            var __locals = [jobject]()
-            let __value = JNIField.GetObjectField( fieldName: "name", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.name_FieldID, object: javaObject, locals: &__locals )
-            return JNIType.toSwift( type: String(), from: __value )
+            let __value = JNIField.GetObjectField( fieldName: "choices", fieldType: "[Ljava/lang/String;", fieldCache: &DriverPropertyInfo.choices_FieldID, object: javaObject )
+            return JNIType.toSwift( type: [String].self, from: __value )
         }
         set(newValue) {
             var __locals = [jobject]()
             let __value = JNIType.toJava( value: newValue, locals: &__locals )
-            JNIField.SetObjectField( fieldName: "name", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.name_FieldID, object: javaObject, value: __value.l, locals: &__locals )
+            JNIField.SetObjectField( fieldName: "choices", fieldType: "[Ljava/lang/String;", fieldCache: &DriverPropertyInfo.choices_FieldID, object: javaObject, value: __value.l, locals: &__locals )
         }
     }
 
@@ -39,14 +38,31 @@ open class DriverPropertyInfo: java_swift.JavaObject {
 
     open var description: String! {
         get {
-            var __locals = [jobject]()
-            let __value = JNIField.GetObjectField( fieldName: "description", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.description_FieldID, object: javaObject, locals: &__locals )
-            return JNIType.toSwift( type: String(), from: __value )
+            let __value = JNIField.GetObjectField( fieldName: "description", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.description_FieldID, object: javaObject )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
         }
         set(newValue) {
             var __locals = [jobject]()
             let __value = JNIType.toJava( value: newValue, locals: &__locals )
             JNIField.SetObjectField( fieldName: "description", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.description_FieldID, object: javaObject, value: __value.l, locals: &__locals )
+        }
+    }
+
+    /// public java.lang.String java.sql.DriverPropertyInfo.name
+
+    private static var name_FieldID: jfieldID?
+
+    open var name: String! {
+        get {
+            let __value = JNIField.GetObjectField( fieldName: "name", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.name_FieldID, object: javaObject )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
+        }
+        set(newValue) {
+            var __locals = [jobject]()
+            let __value = JNIType.toJava( value: newValue, locals: &__locals )
+            JNIField.SetObjectField( fieldName: "name", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.name_FieldID, object: javaObject, value: __value.l, locals: &__locals )
         }
     }
 
@@ -56,13 +72,12 @@ open class DriverPropertyInfo: java_swift.JavaObject {
 
     open var required: Bool {
         get {
-            var __locals = [jobject]()
-            let __value = JNIField.GetBooleanField( fieldName: "required", fieldType: "Z", fieldCache: &DriverPropertyInfo.required_FieldID, object: javaObject, locals: &__locals )
-            return JNIType.toSwift( type: Bool(), from: __value )
+            let __value = JNIField.GetBooleanField( fieldName: "required", fieldType: "Z", fieldCache: &DriverPropertyInfo.required_FieldID, object: javaObject )
+            return __value != jboolean(JNI_FALSE)
         }
         set(newValue) {
             var __locals = [jobject]()
-            let __value = JNIType.toJava( value: newValue, locals: &__locals )
+            let __value = jvalue( z: jboolean(newValue ? JNI_TRUE : JNI_FALSE) )
             JNIField.SetBooleanField( fieldName: "required", fieldType: "Z", fieldCache: &DriverPropertyInfo.required_FieldID, object: javaObject, value: __value.z, locals: &__locals )
         }
     }
@@ -73,9 +88,9 @@ open class DriverPropertyInfo: java_swift.JavaObject {
 
     open var value: String! {
         get {
-            var __locals = [jobject]()
-            let __value = JNIField.GetObjectField( fieldName: "value", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.value_FieldID, object: javaObject, locals: &__locals )
-            return JNIType.toSwift( type: String(), from: __value )
+            let __value = JNIField.GetObjectField( fieldName: "value", fieldType: "Ljava/lang/String;", fieldCache: &DriverPropertyInfo.value_FieldID, object: javaObject )
+            defer { JNI.DeleteLocalRef( __value ) }
+            return __value != nil ? String( javaObject: __value ) : nil
         }
         set(newValue) {
             var __locals = [jobject]()
@@ -84,30 +99,13 @@ open class DriverPropertyInfo: java_swift.JavaObject {
         }
     }
 
-    /// public java.lang.String[] java.sql.DriverPropertyInfo.choices
-
-    private static var choices_FieldID: jfieldID?
-
-    open var choices: [String]! {
-        get {
-            var __locals = [jobject]()
-            let __value = JNIField.GetObjectField( fieldName: "choices", fieldType: "[Ljava/lang/String;", fieldCache: &DriverPropertyInfo.choices_FieldID, object: javaObject, locals: &__locals )
-            return JNIType.toSwift( type: [String](), from: __value )
-        }
-        set(newValue) {
-            var __locals = [jobject]()
-            let __value = JNIType.toJava( value: newValue, locals: &__locals )
-            JNIField.SetObjectField( fieldName: "choices", fieldType: "[Ljava/lang/String;", fieldCache: &DriverPropertyInfo.choices_FieldID, object: javaObject, value: __value.l, locals: &__locals )
-        }
-    }
-
     /// public java.sql.DriverPropertyInfo(java.lang.String,java.lang.String)
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( name: String?, value: String? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: name, locals: &__locals )
         __args[1] = JNIType.toJava( value: value, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/DriverPropertyInfo", classCache: &DriverPropertyInfo.DriverPropertyInfoJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;)V", methodCache: &DriverPropertyInfo.new_MethodID_1, args: &__args, locals: &__locals )

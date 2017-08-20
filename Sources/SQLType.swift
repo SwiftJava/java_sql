@@ -32,10 +32,11 @@ open class SQLTypeForward: JNIObjectForward, SQLType {
     private static var getName_MethodID_4: jmethodID?
 
     open func getName() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getName", methodSig: "()Ljava/lang/String;", methodCache: &SQLTypeForward.getName_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
@@ -44,10 +45,11 @@ open class SQLTypeForward: JNIObjectForward, SQLType {
     private static var getVendor_MethodID_5: jmethodID?
 
     open func getVendor() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVendor", methodSig: "()Ljava/lang/String;", methodCache: &SQLTypeForward.getVendor_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
@@ -56,8 +58,8 @@ open class SQLTypeForward: JNIObjectForward, SQLType {
     private static var getVendorTypeNumber_MethodID_6: jmethodID?
 
     open func getVendorTypeNumber() -> java_lang.Integer! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getVendorTypeNumber", methodSig: "()Ljava/lang/Integer;", methodCache: &SQLTypeForward.getVendorTypeNumber_MethodID_6, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? java_lang.Integer( javaObject: __return ) : nil
@@ -65,5 +67,4 @@ open class SQLTypeForward: JNIObjectForward, SQLType {
 
 
 }
-
 

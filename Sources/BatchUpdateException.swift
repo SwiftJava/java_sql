@@ -16,137 +16,99 @@ open class BatchUpdateException: SQLException {
 
     private static var BatchUpdateExceptionJNIClass: jclass?
 
-    /// private int[] java.sql.BatchUpdateException.updateCounts
+    /// private static final long java.sql.BatchUpdateException.serialVersionUID
 
     /// private long[] java.sql.BatchUpdateException.longUpdateCounts
 
-    /// private static final long java.sql.BatchUpdateException.serialVersionUID
-
-    /// private java.lang.String java.sql.SQLException.SQLState
-
-    /// private int java.sql.SQLException.vendorCode
-
-    /// private volatile java.sql.SQLException java.sql.SQLException.next
+    /// private int[] java.sql.BatchUpdateException.updateCounts
 
     /// private static final java.util.concurrent.atomic.AtomicReferenceFieldUpdater java.sql.SQLException.nextUpdater
 
     /// private static final long java.sql.SQLException.serialVersionUID
 
+    /// private java.lang.String java.sql.SQLException.SQLState
+
+    /// private volatile java.sql.SQLException java.sql.SQLException.next
+
+    /// private int java.sql.SQLException.vendorCode
+
     /// static final long java.lang.Exception.serialVersionUID
 
-    /// private static final long java.lang.Throwable.serialVersionUID
+    // Skipping field: true true false false false false 
 
-    /// private java.lang.String java.lang.Throwable.detailMessage
+    /// static final boolean java.lang.Throwable.$assertionsDisabled
 
-    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+    // Skipping field: true false false false false false 
 
-    /// private java.lang.Throwable java.lang.Throwable.cause
+    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
 
-    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
-
-    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
-
-    /// private java.util.List java.lang.Throwable.suppressedExceptions
+    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
 
     /// private static final java.lang.String java.lang.Throwable.NULL_CAUSE_MESSAGE
 
     /// private static final java.lang.String java.lang.Throwable.SELF_SUPPRESSION_MESSAGE
 
-    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
-
     /// private static final java.lang.String java.lang.Throwable.SUPPRESSED_CAPTION
 
-    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
+    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
 
-    /// static final boolean java.lang.Throwable.$assertionsDisabled
+    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
 
-    /// public java.sql.BatchUpdateException(java.lang.Throwable)
+    /// private static final long java.lang.Throwable.serialVersionUID
+
+    /// private java.lang.Throwable java.lang.Throwable.cause
+
+    /// private java.lang.String java.lang.Throwable.detailMessage
+
+    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
+
+    /// private java.util.List java.lang.Throwable.suppressedExceptions
+
+    /// public java.sql.BatchUpdateException()
 
     private static var new_MethodID_1: jmethodID?
 
-    public convenience init( cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init() {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_1, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "()V", methodCache: &BatchUpdateException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
 
-    public convenience init( _ _cause: java_swift.Throwable? ) {
-        self.init( cause: _cause )
-    }
-
-    /// public java.sql.BatchUpdateException(int[],java.lang.Throwable)
+    /// public java.sql.BatchUpdateException(java.lang.String,java.lang.String,int,int[])
 
     private static var new_MethodID_2: jmethodID?
 
-    public convenience init( updateCounts: [Int32]?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+    public convenience init( reason: String?, SQLState: String?, vendorCode: Int, updateCounts: [Int32]? ) {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: updateCounts, locals: &__locals )
-        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "([ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_2, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _updateCounts: [Int32]?, _ _cause: java_swift.Throwable? ) {
-        self.init( updateCounts: _updateCounts, cause: _cause )
-    }
-
-    /// public java.sql.BatchUpdateException(java.lang.String,int[],java.lang.Throwable)
-
-    private static var new_MethodID_3: jmethodID?
-
-    public convenience init( reason: String?, updateCounts: [Int32]?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: updateCounts, locals: &__locals )
-        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;[ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_3, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _updateCounts: [Int32]?, _ _cause: java_swift.Throwable? ) {
-        self.init( reason: _reason, updateCounts: _updateCounts, cause: _cause )
-    }
-
-    /// public java.sql.BatchUpdateException(java.lang.String,java.lang.String,int[],java.lang.Throwable)
-
-    private static var new_MethodID_4: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String?, updateCounts: [Int32]?, cause: java_swift.Throwable? ) {
         var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: updateCounts, locals: &__locals )
-        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;[ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_4, args: &__args, locals: &__locals )
+        __args[2] = jvalue( i: jint(vendorCode) )
+        __args[3] = JNIType.toJava( value: updateCounts, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I[I)V", methodCache: &BatchUpdateException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
 
-    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _updateCounts: [Int32]?, _ _cause: java_swift.Throwable? ) {
-        self.init( reason: _reason, SQLState: _SQLState, updateCounts: _updateCounts, cause: _cause )
+    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _vendorCode: Int, _ _updateCounts: [Int32]? ) {
+        self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode, updateCounts: _updateCounts )
     }
 
     /// public java.sql.BatchUpdateException(java.lang.String,java.lang.String,int,int[],java.lang.Throwable)
 
-    private static var new_MethodID_5: jmethodID?
+    private static var new_MethodID_3: jmethodID?
 
     public convenience init( reason: String?, SQLState: String?, vendorCode: Int, updateCounts: [Int32]?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 5 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 5 )
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
+        __args[2] = jvalue( i: jint(vendorCode) )
         __args[3] = JNIType.toJava( value: updateCounts, locals: &__locals )
         __args[4] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I[ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_5, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I[ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_3, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -157,17 +119,17 @@ open class BatchUpdateException: SQLException {
 
     /// public java.sql.BatchUpdateException(java.lang.String,java.lang.String,int,long[],java.lang.Throwable)
 
-    private static var new_MethodID_6: jmethodID?
+    private static var new_MethodID_4: jmethodID?
 
     public convenience init( reason: String?, SQLState: String?, vendorCode: Int, updateCounts: [Int64]?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 5 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 5 )
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
+        __args[2] = jvalue( i: jint(vendorCode) )
         __args[3] = JNIType.toJava( value: updateCounts, locals: &__locals )
         __args[4] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I[JLjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_6, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I[JLjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_4, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -176,37 +138,17 @@ open class BatchUpdateException: SQLException {
         self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode, updateCounts: _updateCounts, cause: _cause )
     }
 
-    /// public java.sql.BatchUpdateException(java.lang.String,java.lang.String,int,int[])
-
-    private static var new_MethodID_7: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String?, vendorCode: Int, updateCounts: [Int32]? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
-        __args[3] = JNIType.toJava( value: updateCounts, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;I[I)V", methodCache: &BatchUpdateException.new_MethodID_7, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _vendorCode: Int, _ _updateCounts: [Int32]? ) {
-        self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode, updateCounts: _updateCounts )
-    }
-
     /// public java.sql.BatchUpdateException(java.lang.String,java.lang.String,int[])
 
-    private static var new_MethodID_8: jmethodID?
+    private static var new_MethodID_5: jmethodID?
 
     public convenience init( reason: String?, SQLState: String?, updateCounts: [Int32]? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
         __args[2] = JNIType.toJava( value: updateCounts, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;[I)V", methodCache: &BatchUpdateException.new_MethodID_8, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;[I)V", methodCache: &BatchUpdateException.new_MethodID_5, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -215,16 +157,36 @@ open class BatchUpdateException: SQLException {
         self.init( reason: _reason, SQLState: _SQLState, updateCounts: _updateCounts )
     }
 
+    /// public java.sql.BatchUpdateException(java.lang.String,java.lang.String,int[],java.lang.Throwable)
+
+    private static var new_MethodID_6: jmethodID?
+
+    public convenience init( reason: String?, SQLState: String?, updateCounts: [Int32]?, cause: java_swift.Throwable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
+        __args[2] = JNIType.toJava( value: updateCounts, locals: &__locals )
+        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;[ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_6, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _updateCounts: [Int32]?, _ _cause: java_swift.Throwable? ) {
+        self.init( reason: _reason, SQLState: _SQLState, updateCounts: _updateCounts, cause: _cause )
+    }
+
     /// public java.sql.BatchUpdateException(java.lang.String,int[])
 
-    private static var new_MethodID_9: jmethodID?
+    private static var new_MethodID_7: jmethodID?
 
     public convenience init( reason: String?, updateCounts: [Int32]? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: updateCounts, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;[I)V", methodCache: &BatchUpdateException.new_MethodID_9, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;[I)V", methodCache: &BatchUpdateException.new_MethodID_7, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -233,27 +195,34 @@ open class BatchUpdateException: SQLException {
         self.init( reason: _reason, updateCounts: _updateCounts )
     }
 
-    /// public java.sql.BatchUpdateException()
+    /// public java.sql.BatchUpdateException(java.lang.String,int[],java.lang.Throwable)
 
-    private static var new_MethodID_10: jmethodID?
+    private static var new_MethodID_8: jmethodID?
 
-    public convenience init() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( reason: String?, updateCounts: [Int32]?, cause: java_swift.Throwable? ) {
         var __locals = [jobject]()
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "()V", methodCache: &BatchUpdateException.new_MethodID_10, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: updateCounts, locals: &__locals )
+        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/String;[ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_8, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
 
+    public convenience init( _ _reason: String?, _ _updateCounts: [Int32]?, _ _cause: java_swift.Throwable? ) {
+        self.init( reason: _reason, updateCounts: _updateCounts, cause: _cause )
+    }
+
     /// public java.sql.BatchUpdateException(int[])
 
-    private static var new_MethodID_11: jmethodID?
+    private static var new_MethodID_9: jmethodID?
 
     public convenience init( updateCounts: [Int32]? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: updateCounts, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "([I)V", methodCache: &BatchUpdateException.new_MethodID_11, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "([I)V", methodCache: &BatchUpdateException.new_MethodID_9, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -262,37 +231,72 @@ open class BatchUpdateException: SQLException {
         self.init( updateCounts: _updateCounts )
     }
 
-    /// private void java.sql.BatchUpdateException.readObject(java.io.ObjectInputStream) throws java.io.IOException,java.lang.ClassNotFoundException
+    /// public java.sql.BatchUpdateException(int[],java.lang.Throwable)
 
-    /// private void java.sql.BatchUpdateException.writeObject(java.io.ObjectOutputStream) throws java.io.IOException,java.lang.ClassNotFoundException
+    private static var new_MethodID_10: jmethodID?
 
-    /// public int[] java.sql.BatchUpdateException.getUpdateCounts()
-
-    private static var getUpdateCounts_MethodID_12: jmethodID?
-
-    open func getUpdateCounts() -> [Int32]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( updateCounts: [Int32]?, cause: java_swift.Throwable? ) {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUpdateCounts", methodSig: "()[I", methodCache: &BatchUpdateException.getUpdateCounts_MethodID_12, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [Int32](), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: updateCounts, locals: &__locals )
+        __args[1] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "([ILjava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_10, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
     }
 
-
-    /// public long[] java.sql.BatchUpdateException.getLargeUpdateCounts()
-
-    private static var getLargeUpdateCounts_MethodID_13: jmethodID?
-
-    open func getLargeUpdateCounts() -> [Int64]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLargeUpdateCounts", methodSig: "()[J", methodCache: &BatchUpdateException.getLargeUpdateCounts_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [Int64](), from: __return )
+    public convenience init( _ _updateCounts: [Int32]?, _ _cause: java_swift.Throwable? ) {
+        self.init( updateCounts: _updateCounts, cause: _cause )
     }
 
+    /// public java.sql.BatchUpdateException(java.lang.Throwable)
+
+    private static var new_MethodID_11: jmethodID?
+
+    public convenience init( cause: java_swift.Throwable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/BatchUpdateException", classCache: &BatchUpdateException.BatchUpdateExceptionJNIClass, methodSig: "(Ljava/lang/Throwable;)V", methodCache: &BatchUpdateException.new_MethodID_11, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _cause: java_swift.Throwable? ) {
+        self.init( cause: _cause )
+    }
+
+    /// private static long[] java.sql.BatchUpdateException.copyUpdateCount(int[])
 
     /// private static int[] java.sql.BatchUpdateException.copyUpdateCount(long[])
 
-    /// private static long[] java.sql.BatchUpdateException.copyUpdateCount(int[])
+    /// public long[] java.sql.BatchUpdateException.getLargeUpdateCounts()
+
+    private static var getLargeUpdateCounts_MethodID_12: jmethodID?
+
+    open func getLargeUpdateCounts() -> [Int64]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getLargeUpdateCounts", methodSig: "()[J", methodCache: &BatchUpdateException.getLargeUpdateCounts_MethodID_12, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [Int64].self, from: __return )
+    }
+
+
+    /// public int[] java.sql.BatchUpdateException.getUpdateCounts()
+
+    private static var getUpdateCounts_MethodID_13: jmethodID?
+
+    open func getUpdateCounts() -> [Int32]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getUpdateCounts", methodSig: "()[I", methodCache: &BatchUpdateException.getUpdateCounts_MethodID_13, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [Int32].self, from: __return )
+    }
+
+
+    /// private void java.sql.BatchUpdateException.readObject(java.io.ObjectInputStream) throws java.io.IOException,java.lang.ClassNotFoundException
+
+    /// private void java.sql.BatchUpdateException.writeObject(java.io.ObjectOutputStream) throws java.io.IOException,java.lang.ClassNotFoundException
 
 }
 

@@ -17,42 +17,44 @@ open class Timestamp: java_util.Date {
 
     private static var TimestampJNIClass: jclass?
 
-    /// private int java.sql.Timestamp.nanos
+    /// private static final int java.sql.Timestamp.MILLIS_PER_SECOND
 
     /// static final long java.sql.Timestamp.serialVersionUID
 
-    /// private static final int java.sql.Timestamp.MILLIS_PER_SECOND
+    // Skipping field: true true false false false false 
+
+    /// private int java.sql.Timestamp.nanos
+
+    /// private static int java.util.Date.defaultCenturyStart
 
     /// private static final sun.util.calendar.BaseCalendar java.util.Date.gcal
 
     /// private static sun.util.calendar.BaseCalendar java.util.Date.jcal
 
-    /// private transient long java.util.Date.fastTime
-
-    /// private transient sun.util.calendar.BaseCalendar$Date java.util.Date.cdate
-
-    /// private static int java.util.Date.defaultCenturyStart
-
     /// private static final long java.util.Date.serialVersionUID
+
+    /// private static final int[] java.util.Date.ttb
 
     /// private static final java.lang.String[] java.util.Date.wtb
 
-    /// private static final int[] java.util.Date.ttb
+    /// private transient sun.util.calendar.BaseCalendar$Date java.util.Date.cdate
+
+    /// private transient long java.util.Date.fastTime
 
     /// public java.sql.Timestamp(int,int,int,int,int,int,int)
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( year: Int, month: Int, date: Int, hour: Int, minute: Int, second: Int, nano: Int ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 7 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: year, locals: &__locals )
-        __args[1] = JNIType.toJava( value: month, locals: &__locals )
-        __args[2] = JNIType.toJava( value: date, locals: &__locals )
-        __args[3] = JNIType.toJava( value: hour, locals: &__locals )
-        __args[4] = JNIType.toJava( value: minute, locals: &__locals )
-        __args[5] = JNIType.toJava( value: second, locals: &__locals )
-        __args[6] = JNIType.toJava( value: nano, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 7 )
+        __args[0] = jvalue( i: jint(year) )
+        __args[1] = jvalue( i: jint(month) )
+        __args[2] = jvalue( i: jint(date) )
+        __args[3] = jvalue( i: jint(hour) )
+        __args[4] = jvalue( i: jint(minute) )
+        __args[5] = jvalue( i: jint(second) )
+        __args[6] = jvalue( i: jint(nano) )
         let __object = JNIMethod.NewObject( className: "java/sql/Timestamp", classCache: &Timestamp.TimestampJNIClass, methodSig: "(IIIIIII)V", methodCache: &Timestamp.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -67,9 +69,9 @@ open class Timestamp: java_util.Date {
     private static var new_MethodID_2: jmethodID?
 
     public convenience init( time: Int64 ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: time, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: time )
         let __object = JNIMethod.NewObject( className: "java/sql/Timestamp", classCache: &Timestamp.TimestampJNIClass, methodSig: "(J)V", methodCache: &Timestamp.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -79,116 +81,32 @@ open class Timestamp: java_util.Date {
         self.init( time: _time )
     }
 
-    /// public boolean java.sql.Timestamp.equals(java.sql.Timestamp)
+    /// public static java.sql.Timestamp java.sql.Timestamp.from(java.time.Instant)
 
-    private static var equals_MethodID_3: jmethodID?
+    private static var from_MethodID_3: jmethodID?
 
-    open func equals( ts: Timestamp? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    override open class func from( instant: /* class java.time.Instant */ UnavailableObject? ) -> Timestamp! {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: ts, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/sql/Timestamp;)Z", methodCache: &Timestamp.equals_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    open func equals( _ _ts: Timestamp? ) -> Bool {
-        return equals( ts: _ts )
-    }
-
-    /// public boolean java.sql.Timestamp.equals(java.lang.Object)
-
-    private static var equals_MethodID_4: jmethodID?
-
-    open func equals( ts: java_swift.JavaObject? ) -> Bool {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: ts, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Timestamp.equals_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-    override open func equals( _ _ts: java_swift.JavaObject? ) -> Bool {
-        return equals( ts: _ts )
-    }
-
-    /// public java.lang.String java.sql.Timestamp.toString()
-
-    /// public int java.sql.Timestamp.hashCode()
-
-    /// public int java.sql.Timestamp.compareTo(java.sql.Timestamp)
-
-    private static var compareTo_MethodID_5: jmethodID?
-
-    open func compareTo( ts: Timestamp? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: ts, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/sql/Timestamp;)I", methodCache: &Timestamp.compareTo_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open func compareTo( _ _ts: Timestamp? ) -> Int {
-        return compareTo( ts: _ts )
-    }
-
-    /// public int java.sql.Timestamp.compareTo(java.lang.Object)
-
-    private static var compareTo_MethodID_6: jmethodID?
-
-    open func compareTo( o: java_swift.JavaObject? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: o, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Timestamp.compareTo_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    override open func compareTo( _ _o: java_swift.JavaObject? ) -> Int {
-        return compareTo( o: _o )
-    }
-
-    /// public int java.sql.Timestamp.compareTo(java.util.Date)
-
-    private static var compareTo_MethodID_7: jmethodID?
-
-    open func compareTo( o: java_util.Date? ) -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: o, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/util/Date;)I", methodCache: &Timestamp.compareTo_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    override open func compareTo( _ _o: java_util.Date? ) -> Int {
-        return compareTo( o: _o )
-    }
-
-    /// public static java.sql.Timestamp java.sql.Timestamp.valueOf(java.time.LocalDateTime)
-
-    private static var valueOf_MethodID_8: jmethodID?
-
-    open class func valueOf( dateTime: /* java.time.LocalDateTime */ UnclassedObject? ) -> Timestamp! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: dateTime, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Timestamp", classCache: &TimestampJNIClass, methodName: "valueOf", methodSig: "(Ljava/time/LocalDateTime;)Ljava/sql/Timestamp;", methodCache: &valueOf_MethodID_8, args: &__args, locals: &__locals )
+        __args[0] = JNIType.toJava( value: instant, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Timestamp", classCache: &TimestampJNIClass, methodName: "from", methodSig: "(Ljava/time/Instant;)Ljava/sql/Timestamp;", methodCache: &from_MethodID_3, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Timestamp( javaObject: __return ) : nil
     }
 
-    open class func valueOf( _ _dateTime: /* java.time.LocalDateTime */ UnclassedObject? ) -> Timestamp! {
-        return valueOf( dateTime: _dateTime )
+    override open class func from( _ _instant: /* class java.time.Instant */ UnavailableObject? ) -> Timestamp! {
+        return from( instant: _instant )
     }
 
     /// public static java.sql.Timestamp java.sql.Timestamp.valueOf(java.lang.String)
 
-    private static var valueOf_MethodID_9: jmethodID?
+    private static var valueOf_MethodID_4: jmethodID?
 
     open class func valueOf( s: String? ) -> Timestamp! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: s, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Timestamp", classCache: &TimestampJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/sql/Timestamp;", methodCache: &valueOf_MethodID_9, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Timestamp", classCache: &TimestampJNIClass, methodName: "valueOf", methodSig: "(Ljava/lang/String;)Ljava/sql/Timestamp;", methodCache: &valueOf_MethodID_4, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Timestamp( javaObject: __return ) : nil
     }
@@ -197,53 +115,133 @@ open class Timestamp: java_util.Date {
         return valueOf( s: _s )
     }
 
-    /// public static java.sql.Timestamp java.sql.Timestamp.from(java.time.Instant)
+    /// public static java.sql.Timestamp java.sql.Timestamp.valueOf(java.time.LocalDateTime)
 
-    private static var from_MethodID_10: jmethodID?
+    private static var valueOf_MethodID_5: jmethodID?
 
-    override open class func from( instant: /* java.time.Instant */ UnclassedObject? ) -> Timestamp! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open class func valueOf( dateTime: /* class java.time.LocalDateTime */ UnavailableObject? ) -> Timestamp! {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: instant, locals: &__locals )
-        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Timestamp", classCache: &TimestampJNIClass, methodName: "from", methodSig: "(Ljava/time/Instant;)Ljava/sql/Timestamp;", methodCache: &from_MethodID_10, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: dateTime, locals: &__locals )
+        let __return = JNIMethod.CallStaticObjectMethod( className: "java/sql/Timestamp", classCache: &TimestampJNIClass, methodName: "valueOf", methodSig: "(Ljava/time/LocalDateTime;)Ljava/sql/Timestamp;", methodCache: &valueOf_MethodID_5, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
         return __return != nil ? Timestamp( javaObject: __return ) : nil
     }
 
-    override open class func from( _ _instant: /* java.time.Instant */ UnclassedObject? ) -> Timestamp! {
-        return from( instant: _instant )
+    open class func valueOf( _ _dateTime: /* class java.time.LocalDateTime */ UnavailableObject? ) -> Timestamp! {
+        return valueOf( dateTime: _dateTime )
+    }
+
+    /// public boolean java.sql.Timestamp.after(java.sql.Timestamp)
+
+    private static var after_MethodID_6: jmethodID?
+
+    open func after( ts: Timestamp? ) -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: ts, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "after", methodSig: "(Ljava/sql/Timestamp;)Z", methodCache: &Timestamp.after_MethodID_6, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func after( _ _ts: Timestamp? ) -> Bool {
+        return after( ts: _ts )
     }
 
     /// public boolean java.sql.Timestamp.before(java.sql.Timestamp)
 
-    private static var before_MethodID_11: jmethodID?
+    private static var before_MethodID_7: jmethodID?
 
     open func before( ts: Timestamp? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: ts, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "before", methodSig: "(Ljava/sql/Timestamp;)Z", methodCache: &Timestamp.before_MethodID_11, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "before", methodSig: "(Ljava/sql/Timestamp;)Z", methodCache: &Timestamp.before_MethodID_7, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
     }
 
     open func before( _ _ts: Timestamp? ) -> Bool {
         return before( ts: _ts )
     }
 
-    /// public boolean java.sql.Timestamp.after(java.sql.Timestamp)
+    /// public int java.sql.Timestamp.compareTo(java.sql.Timestamp)
 
-    private static var after_MethodID_12: jmethodID?
+    private static var compareTo_MethodID_8: jmethodID?
 
-    open func after( ts: Timestamp? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func compareTo( ts: Timestamp? ) -> Int {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: ts, locals: &__locals )
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "after", methodSig: "(Ljava/sql/Timestamp;)Z", methodCache: &Timestamp.after_MethodID_12, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/sql/Timestamp;)I", methodCache: &Timestamp.compareTo_MethodID_8, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
-    open func after( _ _ts: Timestamp? ) -> Bool {
-        return after( ts: _ts )
+    open func compareTo( _ _ts: Timestamp? ) -> Int {
+        return compareTo( ts: _ts )
+    }
+
+    /// public int java.sql.Timestamp.compareTo(java.lang.Object)
+
+    private static var compareTo_MethodID_9: jmethodID?
+
+    open func compareTo( o: java_swift.JavaObject? ) -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: o, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/lang/Object;)I", methodCache: &Timestamp.compareTo_MethodID_9, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    override open func compareTo( _ _o: java_swift.JavaObject? ) -> Int {
+        return compareTo( o: _o )
+    }
+
+    /// public int java.sql.Timestamp.compareTo(java.util.Date)
+
+    private static var compareTo_MethodID_10: jmethodID?
+
+    open func compareTo( o: java_util.Date? ) -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: o, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "compareTo", methodSig: "(Ljava/util/Date;)I", methodCache: &Timestamp.compareTo_MethodID_10, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+    override open func compareTo( _ _o: java_util.Date? ) -> Int {
+        return compareTo( o: _o )
+    }
+
+    /// public boolean java.sql.Timestamp.equals(java.sql.Timestamp)
+
+    private static var equals_MethodID_11: jmethodID?
+
+    open func equals( ts: Timestamp? ) -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: ts, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/sql/Timestamp;)Z", methodCache: &Timestamp.equals_MethodID_11, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    open func equals( _ _ts: Timestamp? ) -> Bool {
+        return equals( ts: _ts )
+    }
+
+    /// public boolean java.sql.Timestamp.equals(java.lang.Object)
+
+    private static var equals_MethodID_12: jmethodID?
+
+    open func equals( ts: java_swift.JavaObject? ) -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = JNIType.toJava( value: ts, locals: &__locals )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &Timestamp.equals_MethodID_12, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+    override open func equals( _ _ts: java_swift.JavaObject? ) -> Bool {
+        return equals( ts: _ts )
     }
 
     /// public int java.sql.Timestamp.getNanos()
@@ -251,21 +249,29 @@ open class Timestamp: java_util.Date {
     private static var getNanos_MethodID_13: jmethodID?
 
     open func getNanos() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getNanos", methodSig: "()I", methodCache: &Timestamp.getNanos_MethodID_13, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
+
+    /// public long java.sql.Timestamp.getTime()
+
+    // Skipping method: false true false false false 
+
+    /// public int java.sql.Timestamp.hashCode()
+
+    // Skipping method: false true false false false 
 
     /// public void java.sql.Timestamp.setNanos(int)
 
     private static var setNanos_MethodID_14: jmethodID?
 
     open func setNanos( n: Int ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: n, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( i: jint(n) )
         JNIMethod.CallVoidMethod( object: javaObject, methodName: "setNanos", methodSig: "(I)V", methodCache: &Timestamp.setNanos_MethodID_14, args: &__args, locals: &__locals )
     }
 
@@ -273,24 +279,30 @@ open class Timestamp: java_util.Date {
         setNanos( n: _n )
     }
 
+    /// public void java.sql.Timestamp.setTime(long)
+
+    // Skipping method: false true false false false 
+
+    /// public java.time.Instant java.sql.Timestamp.toInstant()
+
+    // Skipping method: false true false false false 
+
     /// public java.time.LocalDateTime java.sql.Timestamp.toLocalDateTime()
 
     private static var toLocalDateTime_MethodID_15: jmethodID?
 
-    open func toLocalDateTime() -> /* java.time.LocalDateTime */ UnclassedObject! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func toLocalDateTime() -> /* class java.time.LocalDateTime */ UnavailableObject! {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toLocalDateTime", methodSig: "()Ljava/time/LocalDateTime;", methodCache: &Timestamp.toLocalDateTime_MethodID_15, args: &__args, locals: &__locals )
         defer { JNI.DeleteLocalRef( __return ) }
-        return __return != nil ? /* java.time.LocalDateTime */ UnclassedObject( javaObject: __return ) : nil
+        return __return != nil ? /* class java.time.LocalDateTime */ UnavailableObject( javaObject: __return ) : nil
     }
 
 
-    /// public java.time.Instant java.sql.Timestamp.toInstant()
+    /// public java.lang.String java.sql.Timestamp.toString()
 
-    /// public void java.sql.Timestamp.setTime(long)
-
-    /// public long java.sql.Timestamp.getTime()
+    // Skipping method: false true false false false 
 
 }
 

@@ -11,17 +11,17 @@ public protocol RowId: JavaProtocol {
 
     func equals( obj: java_swift.JavaObject? ) -> Bool
 
-    /// public abstract java.lang.String java.sql.RowId.toString()
+    /// public abstract byte[] java.sql.RowId.getBytes()
 
-    func toString() -> String!
+    func getBytes() -> [Int8]!
 
     /// public abstract int java.sql.RowId.hashCode()
 
     func hashCode() -> Int
 
-    /// public abstract byte[] java.sql.RowId.getBytes()
+    /// public abstract java.lang.String java.sql.RowId.toString()
 
-    func getBytes() -> [Int8]!
+    func toString() -> String!
 
 }
 
@@ -35,26 +35,26 @@ open class RowIdForward: JNIObjectForward, RowId {
     private static var equals_MethodID_5: jmethodID?
 
     open func equals( obj: java_swift.JavaObject? ) -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: obj, locals: &__locals )
         let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "equals", methodSig: "(Ljava/lang/Object;)Z", methodCache: &RowIdForward.equals_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
+        return __return != jboolean(JNI_FALSE)
     }
 
     open func equals( _ _obj: java_swift.JavaObject? ) -> Bool {
         return equals( obj: _obj )
     }
 
-    /// public abstract java.lang.String java.sql.RowId.toString()
+    /// public abstract byte[] java.sql.RowId.getBytes()
 
-    private static var toString_MethodID_6: jmethodID?
+    private static var getBytes_MethodID_6: jmethodID?
 
-    open func toString() -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func getBytes() -> [Int8]! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toString", methodSig: "()Ljava/lang/String;", methodCache: &RowIdForward.toString_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: String(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBytes", methodSig: "()[B", methodCache: &RowIdForward.getBytes_MethodID_6, args: &__args, locals: &__locals )
+        return JNIType.toSwift( type: [Int8].self, from: __return )
     }
 
 
@@ -63,25 +63,25 @@ open class RowIdForward: JNIObjectForward, RowId {
     private static var hashCode_MethodID_7: jmethodID?
 
     open func hashCode() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "hashCode", methodSig: "()I", methodCache: &RowIdForward.hashCode_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
 
-    /// public abstract byte[] java.sql.RowId.getBytes()
+    /// public abstract java.lang.String java.sql.RowId.toString()
 
-    private static var getBytes_MethodID_8: jmethodID?
+    private static var toString_MethodID_8: jmethodID?
 
-    open func getBytes() -> [Int8]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func toString() -> String! {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBytes", methodSig: "()[B", methodCache: &RowIdForward.getBytes_MethodID_8, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: [Int8](), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "toString", methodSig: "()Ljava/lang/String;", methodCache: &RowIdForward.toString_MethodID_8, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
 }
-
 

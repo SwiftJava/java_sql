@@ -7,43 +7,49 @@ import java_swift
 
 public protocol Blob: JavaProtocol {
 
-    /// public abstract long java.sql.Blob.length() throws java.sql.SQLException
-
-    func length() throws /* java.sql.SQLException */ -> Int64
-
-    /// public abstract byte[] java.sql.Blob.getBytes(long,int) throws java.sql.SQLException
-
-    func getBytes( pos: Int64, length: Int ) throws /* java.sql.SQLException */ -> [Int8]!
-
-    /// public abstract long java.sql.Blob.position(byte[],long) throws java.sql.SQLException
-
-    func position( pattern: [Int8]?, start: Int64 ) throws /* java.sql.SQLException */ -> Int64
-
-    /// public abstract long java.sql.Blob.position(java.sql.Blob,long) throws java.sql.SQLException
-
-    func position( pattern: Blob?, start: Int64 ) throws /* java.sql.SQLException */ -> Int64
-
-    /// public abstract void java.sql.Blob.truncate(long) throws java.sql.SQLException
-
-    func truncate( len: Int64 ) throws /* java.sql.SQLException */
-
-    /// public abstract int java.sql.Blob.setBytes(long,byte[],int,int) throws java.sql.SQLException
-
-    func setBytes( pos: Int64, bytes: [Int8]?, offset: Int, len: Int ) throws /* java.sql.SQLException */ -> Int
-
-    /// public abstract int java.sql.Blob.setBytes(long,byte[]) throws java.sql.SQLException
-
-    func setBytes( pos: Int64, bytes: [Int8]? ) throws /* java.sql.SQLException */ -> Int
-
-    /// public abstract java.io.OutputStream java.sql.Blob.setBinaryStream(long) throws java.sql.SQLException
-
     /// public abstract void java.sql.Blob.free() throws java.sql.SQLException
 
     func free() throws /* java.sql.SQLException */
 
     /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream(long,long) throws java.sql.SQLException
 
+    // Skipping method: false false true false false 
+
     /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream() throws java.sql.SQLException
+
+    // Skipping method: false false true false false 
+
+    /// public abstract byte[] java.sql.Blob.getBytes(long,int) throws java.sql.SQLException
+
+    func getBytes( pos: Int64, length: Int ) throws /* java.sql.SQLException */ -> [Int8]!
+
+    /// public abstract long java.sql.Blob.length() throws java.sql.SQLException
+
+    func length() throws /* java.sql.SQLException */ -> Int64
+
+    /// public abstract long java.sql.Blob.position(java.sql.Blob,long) throws java.sql.SQLException
+
+    func position( pattern: Blob?, start: Int64 ) throws /* java.sql.SQLException */ -> Int64
+
+    /// public abstract long java.sql.Blob.position(byte[],long) throws java.sql.SQLException
+
+    func position( pattern: [Int8]?, start: Int64 ) throws /* java.sql.SQLException */ -> Int64
+
+    /// public abstract java.io.OutputStream java.sql.Blob.setBinaryStream(long) throws java.sql.SQLException
+
+    // Skipping method: false false true false false 
+
+    /// public abstract int java.sql.Blob.setBytes(long,byte[]) throws java.sql.SQLException
+
+    func setBytes( pos: Int64, bytes: [Int8]? ) throws /* java.sql.SQLException */ -> Int
+
+    /// public abstract int java.sql.Blob.setBytes(long,byte[],int,int) throws java.sql.SQLException
+
+    func setBytes( pos: Int64, bytes: [Int8]?, offset: Int, len: Int ) throws /* java.sql.SQLException */ -> Int
+
+    /// public abstract void java.sql.Blob.truncate(long) throws java.sql.SQLException
+
+    func truncate( len: Int64 ) throws /* java.sql.SQLException */
 
 }
 
@@ -52,91 +58,167 @@ open class BlobForward: JNIObjectForward, Blob {
 
     private static var BlobJNIClass: jclass?
 
-    /// public abstract long java.sql.Blob.length() throws java.sql.SQLException
+    /// public abstract void java.sql.Blob.free() throws java.sql.SQLException
 
-    private static var length_MethodID_9: jmethodID?
+    private static var free_MethodID_9: jmethodID?
 
-    open func length() throws /* java.sql.SQLException */ -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    open func free() throws /* java.sql.SQLException */ {
         var __locals = [jobject]()
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "length", methodSig: "()J", methodCache: &BlobForward.length_MethodID_9, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "free", methodSig: "()V", methodCache: &BlobForward.free_MethodID_9, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int64(), from: __return )
     }
 
+
+    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream(long,long) throws java.sql.SQLException
+
+    // Skipping method: false false true false false 
+
+    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream() throws java.sql.SQLException
+
+    // Skipping method: false false true false false 
 
     /// public abstract byte[] java.sql.Blob.getBytes(long,int) throws java.sql.SQLException
 
     private static var getBytes_MethodID_10: jmethodID?
 
     open func getBytes( pos: Int64, length: Int ) throws /* java.sql.SQLException */ -> [Int8]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: pos, locals: &__locals )
-        __args[1] = JNIType.toJava( value: length, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( j: pos )
+        __args[1] = jvalue( i: jint(length) )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getBytes", methodSig: "(JI)[B", methodCache: &BlobForward.getBytes_MethodID_10, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: [Int8](), from: __return )
+        return JNIType.toSwift( type: [Int8].self, from: __return )
     }
 
     open func getBytes( _ _pos: Int64, _ _length: Int ) throws /* java.sql.SQLException */ -> [Int8]! {
         return try getBytes( pos: _pos, length: _length )
     }
 
-    /// public abstract long java.sql.Blob.position(byte[],long) throws java.sql.SQLException
+    /// public abstract long java.sql.Blob.length() throws java.sql.SQLException
 
-    private static var position_MethodID_11: jmethodID?
+    private static var length_MethodID_11: jmethodID?
 
-    open func position( pattern: [Int8]?, start: Int64 ) throws /* java.sql.SQLException */ -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+    open func length() throws /* java.sql.SQLException */ -> Int64 {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: pattern, locals: &__locals )
-        __args[1] = JNIType.toJava( value: start, locals: &__locals )
-        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "position", methodSig: "([BJ)J", methodCache: &BlobForward.position_MethodID_11, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "length", methodSig: "()J", methodCache: &BlobForward.length_MethodID_11, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int64(), from: __return )
+        return __return
     }
 
-    open func position( _ _pattern: [Int8]?, _ _start: Int64 ) throws /* java.sql.SQLException */ -> Int64 {
-        return try position( pattern: _pattern, start: _start )
-    }
 
     /// public abstract long java.sql.Blob.position(java.sql.Blob,long) throws java.sql.SQLException
 
     private static var position_MethodID_12: jmethodID?
 
     open func position( pattern: Blob?, start: Int64 ) throws /* java.sql.SQLException */ -> Int64 {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: pattern, locals: &__locals )
-        __args[1] = JNIType.toJava( value: start, locals: &__locals )
+        __args[1] = jvalue( j: start )
         let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "position", methodSig: "(Ljava/sql/Blob;J)J", methodCache: &BlobForward.position_MethodID_12, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int64(), from: __return )
+        return __return
     }
 
     open func position( _ _pattern: Blob?, _ _start: Int64 ) throws /* java.sql.SQLException */ -> Int64 {
         return try position( pattern: _pattern, start: _start )
     }
 
+    /// public abstract long java.sql.Blob.position(byte[],long) throws java.sql.SQLException
+
+    private static var position_MethodID_13: jmethodID?
+
+    open func position( pattern: [Int8]?, start: Int64 ) throws /* java.sql.SQLException */ -> Int64 {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: pattern, locals: &__locals )
+        __args[1] = jvalue( j: start )
+        let __return = JNIMethod.CallLongMethod( object: javaObject, methodName: "position", methodSig: "([BJ)J", methodCache: &BlobForward.position_MethodID_13, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return __return
+    }
+
+    open func position( _ _pattern: [Int8]?, _ _start: Int64 ) throws /* java.sql.SQLException */ -> Int64 {
+        return try position( pattern: _pattern, start: _start )
+    }
+
+    /// public abstract java.io.OutputStream java.sql.Blob.setBinaryStream(long) throws java.sql.SQLException
+
+    // Skipping method: false false true false false 
+
+    /// public abstract int java.sql.Blob.setBytes(long,byte[]) throws java.sql.SQLException
+
+    private static var setBytes_MethodID_14: jmethodID?
+
+    open func setBytes( pos: Int64, bytes: [Int8]? ) throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = jvalue( j: pos )
+        __args[1] = JNIType.toJava( value: bytes, locals: &__locals )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "setBytes", methodSig: "(J[B)I", methodCache: &BlobForward.setBytes_MethodID_14, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+    open func setBytes( _ _pos: Int64, _ _bytes: [Int8]? ) throws /* java.sql.SQLException */ -> Int {
+        return try setBytes( pos: _pos, bytes: _bytes )
+    }
+
+    /// public abstract int java.sql.Blob.setBytes(long,byte[],int,int) throws java.sql.SQLException
+
+    private static var setBytes_MethodID_15: jmethodID?
+
+    open func setBytes( pos: Int64, bytes: [Int8]?, offset: Int, len: Int ) throws /* java.sql.SQLException */ -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = jvalue( j: pos )
+        __args[1] = JNIType.toJava( value: bytes, locals: &__locals )
+        __args[2] = jvalue( i: jint(offset) )
+        __args[3] = jvalue( i: jint(len) )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "setBytes", methodSig: "(J[BII)I", methodCache: &BlobForward.setBytes_MethodID_15, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return Int(__return)
+    }
+
+    open func setBytes( _ _pos: Int64, _ _bytes: [Int8]?, _ _offset: Int, _ _len: Int ) throws /* java.sql.SQLException */ -> Int {
+        return try setBytes( pos: _pos, bytes: _bytes, offset: _offset, len: _len )
+    }
+
     /// public abstract void java.sql.Blob.truncate(long) throws java.sql.SQLException
 
-    private static var truncate_MethodID_13: jmethodID?
+    private static var truncate_MethodID_16: jmethodID?
 
     open func truncate( len: Int64 ) throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: len, locals: &__locals )
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "truncate", methodSig: "(J)V", methodCache: &BlobForward.truncate_MethodID_13, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        __args[0] = jvalue( j: len )
+        JNIMethod.CallVoidMethod( object: javaObject, methodName: "truncate", methodSig: "(J)V", methodCache: &BlobForward.truncate_MethodID_16, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
     }
@@ -145,68 +227,5 @@ open class BlobForward: JNIObjectForward, Blob {
         try truncate( len: _len )
     }
 
-    /// public abstract int java.sql.Blob.setBytes(long,byte[],int,int) throws java.sql.SQLException
-
-    private static var setBytes_MethodID_14: jmethodID?
-
-    open func setBytes( pos: Int64, bytes: [Int8]?, offset: Int, len: Int ) throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: pos, locals: &__locals )
-        __args[1] = JNIType.toJava( value: bytes, locals: &__locals )
-        __args[2] = JNIType.toJava( value: offset, locals: &__locals )
-        __args[3] = JNIType.toJava( value: len, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "setBytes", methodSig: "(J[BII)I", methodCache: &BlobForward.setBytes_MethodID_14, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open func setBytes( _ _pos: Int64, _ _bytes: [Int8]?, _ _offset: Int, _ _len: Int ) throws /* java.sql.SQLException */ -> Int {
-        return try setBytes( pos: _pos, bytes: _bytes, offset: _offset, len: _len )
-    }
-
-    /// public abstract int java.sql.Blob.setBytes(long,byte[]) throws java.sql.SQLException
-
-    private static var setBytes_MethodID_15: jmethodID?
-
-    open func setBytes( pos: Int64, bytes: [Int8]? ) throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: pos, locals: &__locals )
-        __args[1] = JNIType.toJava( value: bytes, locals: &__locals )
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "setBytes", methodSig: "(J[B)I", methodCache: &BlobForward.setBytes_MethodID_15, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-    open func setBytes( _ _pos: Int64, _ _bytes: [Int8]? ) throws /* java.sql.SQLException */ -> Int {
-        return try setBytes( pos: _pos, bytes: _bytes )
-    }
-
-    /// public abstract java.io.OutputStream java.sql.Blob.setBinaryStream(long) throws java.sql.SQLException
-
-    /// public abstract void java.sql.Blob.free() throws java.sql.SQLException
-
-    private static var free_MethodID_16: jmethodID?
-
-    open func free() throws /* java.sql.SQLException */ {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        JNIMethod.CallVoidMethod( object: javaObject, methodName: "free", methodSig: "()V", methodCache: &BlobForward.free_MethodID_16, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-    }
-
-
-    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream(long,long) throws java.sql.SQLException
-
-    /// public abstract java.io.InputStream java.sql.Blob.getBinaryStream() throws java.sql.SQLException
-
 }
-
 

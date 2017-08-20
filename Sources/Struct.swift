@@ -7,13 +7,13 @@ import java_swift
 
 public protocol Struct: JavaProtocol {
 
-    /// public abstract java.lang.Object[] java.sql.Struct.getAttributes() throws java.sql.SQLException
-
-    func getAttributes() throws /* java.sql.SQLException */ -> [JavaObject]!
-
     /// public abstract java.lang.Object[] java.sql.Struct.getAttributes(java.util.Map) throws java.sql.SQLException
 
     func getAttributes( map: java_swift.JavaMap? ) throws /* java.sql.SQLException */ -> [JavaObject]!
+
+    /// public abstract java.lang.Object[] java.sql.Struct.getAttributes() throws java.sql.SQLException
+
+    func getAttributes() throws /* java.sql.SQLException */ -> [JavaObject]!
 
     /// public abstract java.lang.String java.sql.Struct.getSQLTypeName() throws java.sql.SQLException
 
@@ -26,55 +26,58 @@ open class StructForward: JNIObjectForward, Struct {
 
     private static var StructJNIClass: jclass?
 
-    /// public abstract java.lang.Object[] java.sql.Struct.getAttributes() throws java.sql.SQLException
+    /// public abstract java.lang.Object[] java.sql.Struct.getAttributes(java.util.Map) throws java.sql.SQLException
 
     private static var getAttributes_MethodID_4: jmethodID?
 
-    open func getAttributes() throws /* java.sql.SQLException */ -> [JavaObject]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAttributes", methodSig: "()[Ljava/lang/Object;", methodCache: &StructForward.getAttributes_MethodID_4, args: &__args, locals: &__locals )
-        if let throwable = JNI.ExceptionCheck() {
-            throw SQLException( javaObject: throwable )
-        }
-        return JNIType.toSwift( type: [JavaObject](), from: __return )
-    }
-
-
-    /// public abstract java.lang.Object[] java.sql.Struct.getAttributes(java.util.Map) throws java.sql.SQLException
-
-    private static var getAttributes_MethodID_5: jmethodID?
-
     open func getAttributes( map: java_swift.JavaMap? ) throws /* java.sql.SQLException */ -> [JavaObject]! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: map, mapClass: "java/util/Map", locals: &__locals )
-        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAttributes", methodSig: "(Ljava/util/Map;)[Ljava/lang/Object;", methodCache: &StructForward.getAttributes_MethodID_5, args: &__args, locals: &__locals )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAttributes", methodSig: "(Ljava/util/Map;)[Ljava/lang/Object;", methodCache: &StructForward.getAttributes_MethodID_4, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: [JavaObject](), from: __return )
+        return JNIType.toSwift( type: [JavaObject].self, from: __return )
     }
 
     open func getAttributes( _ _map: java_swift.JavaMap? ) throws /* java.sql.SQLException */ -> [JavaObject]! {
         return try getAttributes( map: _map )
     }
 
+    /// public abstract java.lang.Object[] java.sql.Struct.getAttributes() throws java.sql.SQLException
+
+    private static var getAttributes_MethodID_5: jmethodID?
+
+    open func getAttributes() throws /* java.sql.SQLException */ -> [JavaObject]! {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getAttributes", methodSig: "()[Ljava/lang/Object;", methodCache: &StructForward.getAttributes_MethodID_5, args: &__args, locals: &__locals )
+        if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
+            throw SQLException( javaObject: throwable )
+        }
+        return JNIType.toSwift( type: [JavaObject].self, from: __return )
+    }
+
+
     /// public abstract java.lang.String java.sql.Struct.getSQLTypeName() throws java.sql.SQLException
 
     private static var getSQLTypeName_MethodID_6: jmethodID?
 
     open func getSQLTypeName() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSQLTypeName", methodSig: "()Ljava/lang/String;", methodCache: &StructForward.getSQLTypeName_MethodID_6, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: String(), from: __return )
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
 }
-
 

@@ -16,70 +16,74 @@ open class DataTruncation: SQLWarning {
 
     private static var DataTruncationJNIClass: jclass?
 
+    /// private static final long java.sql.DataTruncation.serialVersionUID
+
+    /// private int java.sql.DataTruncation.dataSize
+
     /// private int java.sql.DataTruncation.index
 
     /// private boolean java.sql.DataTruncation.parameter
 
     /// private boolean java.sql.DataTruncation.read
 
-    /// private int java.sql.DataTruncation.dataSize
-
     /// private int java.sql.DataTruncation.transferSize
 
-    /// private static final long java.sql.DataTruncation.serialVersionUID
-
     /// private static final long java.sql.SQLWarning.serialVersionUID
-
-    /// private java.lang.String java.sql.SQLException.SQLState
-
-    /// private int java.sql.SQLException.vendorCode
-
-    /// private volatile java.sql.SQLException java.sql.SQLException.next
 
     /// private static final java.util.concurrent.atomic.AtomicReferenceFieldUpdater java.sql.SQLException.nextUpdater
 
     /// private static final long java.sql.SQLException.serialVersionUID
 
+    /// private java.lang.String java.sql.SQLException.SQLState
+
+    /// private volatile java.sql.SQLException java.sql.SQLException.next
+
+    /// private int java.sql.SQLException.vendorCode
+
     /// static final long java.lang.Exception.serialVersionUID
 
-    /// private static final long java.lang.Throwable.serialVersionUID
+    // Skipping field: true true false false false false 
 
-    /// private java.lang.String java.lang.Throwable.detailMessage
+    /// static final boolean java.lang.Throwable.$assertionsDisabled
 
-    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+    // Skipping field: true false false false false false 
 
-    /// private java.lang.Throwable java.lang.Throwable.cause
+    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
 
-    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
-
-    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
-
-    /// private java.util.List java.lang.Throwable.suppressedExceptions
+    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
 
     /// private static final java.lang.String java.lang.Throwable.NULL_CAUSE_MESSAGE
 
     /// private static final java.lang.String java.lang.Throwable.SELF_SUPPRESSION_MESSAGE
 
-    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
-
     /// private static final java.lang.String java.lang.Throwable.SUPPRESSED_CAPTION
 
-    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
+    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
 
-    /// static final boolean java.lang.Throwable.$assertionsDisabled
+    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+
+    /// private static final long java.lang.Throwable.serialVersionUID
+
+    /// private java.lang.Throwable java.lang.Throwable.cause
+
+    /// private java.lang.String java.lang.Throwable.detailMessage
+
+    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
+
+    /// private java.util.List java.lang.Throwable.suppressedExceptions
 
     /// public java.sql.DataTruncation(int,boolean,boolean,int,int)
 
     private static var new_MethodID_1: jmethodID?
 
     public convenience init( index: Int, parameter: Bool, read: Bool, dataSize: Int, transferSize: Int ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 5 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: index, locals: &__locals )
-        __args[1] = JNIType.toJava( value: parameter, locals: &__locals )
-        __args[2] = JNIType.toJava( value: read, locals: &__locals )
-        __args[3] = JNIType.toJava( value: dataSize, locals: &__locals )
-        __args[4] = JNIType.toJava( value: transferSize, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 5 )
+        __args[0] = jvalue( i: jint(index) )
+        __args[1] = jvalue( z: jboolean(parameter ? JNI_TRUE : JNI_FALSE) )
+        __args[2] = jvalue( z: jboolean(read ? JNI_TRUE : JNI_FALSE) )
+        __args[3] = jvalue( i: jint(dataSize) )
+        __args[4] = jvalue( i: jint(transferSize) )
         let __object = JNIMethod.NewObject( className: "java/sql/DataTruncation", classCache: &DataTruncation.DataTruncationJNIClass, methodSig: "(IZZII)V", methodCache: &DataTruncation.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
@@ -94,13 +98,13 @@ open class DataTruncation: SQLWarning {
     private static var new_MethodID_2: jmethodID?
 
     public convenience init( index: Int, parameter: Bool, read: Bool, dataSize: Int, transferSize: Int, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 6 )
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: index, locals: &__locals )
-        __args[1] = JNIType.toJava( value: parameter, locals: &__locals )
-        __args[2] = JNIType.toJava( value: read, locals: &__locals )
-        __args[3] = JNIType.toJava( value: dataSize, locals: &__locals )
-        __args[4] = JNIType.toJava( value: transferSize, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 6 )
+        __args[0] = jvalue( i: jint(index) )
+        __args[1] = jvalue( z: jboolean(parameter ? JNI_TRUE : JNI_FALSE) )
+        __args[2] = jvalue( z: jboolean(read ? JNI_TRUE : JNI_FALSE) )
+        __args[3] = jvalue( i: jint(dataSize) )
+        __args[4] = jvalue( i: jint(transferSize) )
         __args[5] = JNIType.toJava( value: cause, locals: &__locals )
         let __object = JNIMethod.NewObject( className: "java/sql/DataTruncation", classCache: &DataTruncation.DataTruncationJNIClass, methodSig: "(IZZIILjava/lang/Throwable;)V", methodCache: &DataTruncation.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
@@ -111,63 +115,63 @@ open class DataTruncation: SQLWarning {
         self.init( index: _index, parameter: _parameter, read: _read, dataSize: _dataSize, transferSize: _transferSize, cause: _cause )
     }
 
-    /// public boolean java.sql.DataTruncation.getParameter()
-
-    private static var getParameter_MethodID_3: jmethodID?
-
-    open func getParameter() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "getParameter", methodSig: "()Z", methodCache: &DataTruncation.getParameter_MethodID_3, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
-    /// public boolean java.sql.DataTruncation.getRead()
-
-    private static var getRead_MethodID_4: jmethodID?
-
-    open func getRead() -> Bool {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "getRead", methodSig: "()Z", methodCache: &DataTruncation.getRead_MethodID_4, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Bool(), from: __return )
-    }
-
-
     /// public int java.sql.DataTruncation.getDataSize()
 
-    private static var getDataSize_MethodID_5: jmethodID?
+    private static var getDataSize_MethodID_3: jmethodID?
 
     open func getDataSize() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDataSize", methodSig: "()I", methodCache: &DataTruncation.getDataSize_MethodID_5, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
-    }
-
-
-    /// public int java.sql.DataTruncation.getTransferSize()
-
-    private static var getTransferSize_MethodID_6: jmethodID?
-
-    open func getTransferSize() -> Int {
         var __args = [jvalue]( repeating: jvalue(), count: 1 )
-        var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getTransferSize", methodSig: "()I", methodCache: &DataTruncation.getTransferSize_MethodID_6, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getDataSize", methodSig: "()I", methodCache: &DataTruncation.getDataSize_MethodID_3, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 
     /// public int java.sql.DataTruncation.getIndex()
 
-    private static var getIndex_MethodID_7: jmethodID?
+    private static var getIndex_MethodID_4: jmethodID?
 
     open func getIndex() -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
-        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getIndex", methodSig: "()I", methodCache: &DataTruncation.getIndex_MethodID_7, args: &__args, locals: &__locals )
-        return JNIType.toSwift( type: Int(), from: __return )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getIndex", methodSig: "()I", methodCache: &DataTruncation.getIndex_MethodID_4, args: &__args, locals: &__locals )
+        return Int(__return)
+    }
+
+
+    /// public boolean java.sql.DataTruncation.getParameter()
+
+    private static var getParameter_MethodID_5: jmethodID?
+
+    open func getParameter() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "getParameter", methodSig: "()Z", methodCache: &DataTruncation.getParameter_MethodID_5, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public boolean java.sql.DataTruncation.getRead()
+
+    private static var getRead_MethodID_6: jmethodID?
+
+    open func getRead() -> Bool {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallBooleanMethod( object: javaObject, methodName: "getRead", methodSig: "()Z", methodCache: &DataTruncation.getRead_MethodID_6, args: &__args, locals: &__locals )
+        return __return != jboolean(JNI_FALSE)
+    }
+
+
+    /// public int java.sql.DataTruncation.getTransferSize()
+
+    private static var getTransferSize_MethodID_7: jmethodID?
+
+    open func getTransferSize() -> Int {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getTransferSize", methodSig: "()I", methodCache: &DataTruncation.getTransferSize_MethodID_7, args: &__args, locals: &__locals )
+        return Int(__return)
     }
 
 

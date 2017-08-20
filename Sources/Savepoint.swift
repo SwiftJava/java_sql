@@ -27,13 +27,14 @@ open class SavepointForward: JNIObjectForward, Savepoint {
     private static var getSavepointId_MethodID_3: jmethodID?
 
     open func getSavepointId() throws /* java.sql.SQLException */ -> Int {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallIntMethod( object: javaObject, methodName: "getSavepointId", methodSig: "()I", methodCache: &SavepointForward.getSavepointId_MethodID_3, args: &__args, locals: &__locals )
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: Int(), from: __return )
+        return Int(__return)
     }
 
 
@@ -42,16 +43,17 @@ open class SavepointForward: JNIObjectForward, Savepoint {
     private static var getSavepointName_MethodID_4: jmethodID?
 
     open func getSavepointName() throws /* java.sql.SQLException */ -> String! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getSavepointName", methodSig: "()Ljava/lang/String;", methodCache: &SavepointForward.getSavepointName_MethodID_4, args: &__args, locals: &__locals )
+        defer { JNI.DeleteLocalRef( __return ) }
         if let throwable = JNI.ExceptionCheck() {
+            defer { JNI.DeleteLocalRef( throwable ) }
             throw SQLException( javaObject: throwable )
         }
-        return JNIType.toSwift( type: String(), from: __return )
+        return __return != nil ? String( javaObject: __return ) : nil
     }
 
 
 }
-
 

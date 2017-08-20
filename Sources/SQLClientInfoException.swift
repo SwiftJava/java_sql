@@ -16,118 +16,76 @@ open class SQLClientInfoException: SQLException {
 
     private static var SQLClientInfoExceptionJNIClass: jclass?
 
-    /// private java.util.Map java.sql.SQLClientInfoException.failedProperties
-
     /// private static final long java.sql.SQLClientInfoException.serialVersionUID
 
-    /// private java.lang.String java.sql.SQLException.SQLState
-
-    /// private int java.sql.SQLException.vendorCode
-
-    /// private volatile java.sql.SQLException java.sql.SQLException.next
+    /// private java.util.Map java.sql.SQLClientInfoException.failedProperties
 
     /// private static final java.util.concurrent.atomic.AtomicReferenceFieldUpdater java.sql.SQLException.nextUpdater
 
     /// private static final long java.sql.SQLException.serialVersionUID
 
+    /// private java.lang.String java.sql.SQLException.SQLState
+
+    /// private volatile java.sql.SQLException java.sql.SQLException.next
+
+    /// private int java.sql.SQLException.vendorCode
+
     /// static final long java.lang.Exception.serialVersionUID
 
-    /// private static final long java.lang.Throwable.serialVersionUID
+    // Skipping field: true true false false false false 
 
-    /// private java.lang.String java.lang.Throwable.detailMessage
+    /// static final boolean java.lang.Throwable.$assertionsDisabled
 
-    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
+    // Skipping field: true false false false false false 
 
-    /// private java.lang.Throwable java.lang.Throwable.cause
+    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
 
-    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
-
-    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
-
-    /// private java.util.List java.lang.Throwable.suppressedExceptions
+    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
 
     /// private static final java.lang.String java.lang.Throwable.NULL_CAUSE_MESSAGE
 
     /// private static final java.lang.String java.lang.Throwable.SELF_SUPPRESSION_MESSAGE
 
-    /// private static final java.lang.String java.lang.Throwable.CAUSE_CAPTION
-
     /// private static final java.lang.String java.lang.Throwable.SUPPRESSED_CAPTION
 
-    /// private static final java.lang.Throwable[] java.lang.Throwable.EMPTY_THROWABLE_ARRAY
+    /// private static final java.util.List java.lang.Throwable.SUPPRESSED_SENTINEL
 
-    /// static final boolean java.lang.Throwable.$assertionsDisabled
+    /// private static final java.lang.StackTraceElement[] java.lang.Throwable.UNASSIGNED_STACK
 
-    /// public java.sql.SQLClientInfoException(java.lang.String,java.util.Map,java.lang.Throwable)
+    /// private static final long java.lang.Throwable.serialVersionUID
+
+    /// private java.lang.Throwable java.lang.Throwable.cause
+
+    /// private java.lang.String java.lang.Throwable.detailMessage
+
+    /// private java.lang.StackTraceElement[] java.lang.Throwable.stackTrace
+
+    /// private java.util.List java.lang.Throwable.suppressedExceptions
+
+    /// public java.sql.SQLClientInfoException()
 
     private static var new_MethodID_1: jmethodID?
 
-    public convenience init( reason: String?, failedProperties: java_swift.JavaMap?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+    public convenience init() {
         var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
-        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_1, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "()V", methodCache: &SQLClientInfoException.new_MethodID_1, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _failedProperties: java_swift.JavaMap?, _ _cause: java_swift.Throwable? ) {
-        self.init( reason: _reason, failedProperties: _failedProperties, cause: _cause )
-    }
-
-    /// public java.sql.SQLClientInfoException(java.lang.String,java.lang.String,java.util.Map)
-
-    private static var new_MethodID_2: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String?, failedProperties: java_swift.JavaMap? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 3 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_2, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _failedProperties: java_swift.JavaMap? ) {
-        self.init( reason: _reason, SQLState: _SQLState, failedProperties: _failedProperties )
-    }
-
-    /// public java.sql.SQLClientInfoException(java.lang.String,java.lang.String,java.util.Map,java.lang.Throwable)
-
-    private static var new_MethodID_3: jmethodID?
-
-    public convenience init( reason: String?, SQLState: String?, failedProperties: java_swift.JavaMap?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
-        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_3, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _failedProperties: java_swift.JavaMap?, _ _cause: java_swift.Throwable? ) {
-        self.init( reason: _reason, SQLState: _SQLState, failedProperties: _failedProperties, cause: _cause )
     }
 
     /// public java.sql.SQLClientInfoException(java.lang.String,java.lang.String,int,java.util.Map)
 
-    private static var new_MethodID_4: jmethodID?
+    private static var new_MethodID_2: jmethodID?
 
     public convenience init( reason: String?, SQLState: String?, vendorCode: Int, failedProperties: java_swift.JavaMap? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
+        __args[2] = jvalue( i: jint(vendorCode) )
         __args[3] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_4, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_2, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -138,17 +96,17 @@ open class SQLClientInfoException: SQLException {
 
     /// public java.sql.SQLClientInfoException(java.lang.String,java.lang.String,int,java.util.Map,java.lang.Throwable)
 
-    private static var new_MethodID_5: jmethodID?
+    private static var new_MethodID_3: jmethodID?
 
     public convenience init( reason: String?, SQLState: String?, vendorCode: Int, failedProperties: java_swift.JavaMap?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 5 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 5 )
         __args[0] = JNIType.toJava( value: reason, locals: &__locals )
         __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
-        __args[2] = JNIType.toJava( value: vendorCode, locals: &__locals )
+        __args[2] = jvalue( i: jint(vendorCode) )
         __args[3] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
         __args[4] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_5, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;ILjava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_3, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -157,27 +115,91 @@ open class SQLClientInfoException: SQLException {
         self.init( reason: _reason, SQLState: _SQLState, vendorCode: _vendorCode, failedProperties: _failedProperties, cause: _cause )
     }
 
-    /// public java.sql.SQLClientInfoException()
+    /// public java.sql.SQLClientInfoException(java.lang.String,java.lang.String,java.util.Map)
 
-    private static var new_MethodID_6: jmethodID?
+    private static var new_MethodID_4: jmethodID?
 
-    public convenience init() {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( reason: String?, SQLState: String?, failedProperties: java_swift.JavaMap? ) {
         var __locals = [jobject]()
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "()V", methodCache: &SQLClientInfoException.new_MethodID_6, args: &__args, locals: &__locals )
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
+        __args[2] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_4, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
 
-    /// public java.sql.SQLClientInfoException(java.util.Map)
+    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _failedProperties: java_swift.JavaMap? ) {
+        self.init( reason: _reason, SQLState: _SQLState, failedProperties: _failedProperties )
+    }
+
+    /// public java.sql.SQLClientInfoException(java.lang.String,java.lang.String,java.util.Map,java.lang.Throwable)
+
+    private static var new_MethodID_5: jmethodID?
+
+    public convenience init( reason: String?, SQLState: String?, failedProperties: java_swift.JavaMap?, cause: java_swift.Throwable? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 4 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: SQLState, locals: &__locals )
+        __args[2] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
+        __args[3] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_5, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _SQLState: String?, _ _failedProperties: java_swift.JavaMap?, _ _cause: java_swift.Throwable? ) {
+        self.init( reason: _reason, SQLState: _SQLState, failedProperties: _failedProperties, cause: _cause )
+    }
+
+    /// public java.sql.SQLClientInfoException(java.lang.String,java.util.Map)
+
+    private static var new_MethodID_6: jmethodID?
+
+    public convenience init( reason: String?, failedProperties: java_swift.JavaMap? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_6, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _failedProperties: java_swift.JavaMap? ) {
+        self.init( reason: _reason, failedProperties: _failedProperties )
+    }
+
+    /// public java.sql.SQLClientInfoException(java.lang.String,java.util.Map,java.lang.Throwable)
 
     private static var new_MethodID_7: jmethodID?
 
-    public convenience init( failedProperties: java_swift.JavaMap? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
+    public convenience init( reason: String?, failedProperties: java_swift.JavaMap?, cause: java_swift.Throwable? ) {
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 3 )
+        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
+        __args[1] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
+        __args[2] = JNIType.toJava( value: cause, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_7, args: &__args, locals: &__locals )
+        self.init( javaObject: __object )
+        JNI.DeleteLocalRef( __object )
+    }
+
+    public convenience init( _ _reason: String?, _ _failedProperties: java_swift.JavaMap?, _ _cause: java_swift.Throwable? ) {
+        self.init( reason: _reason, failedProperties: _failedProperties, cause: _cause )
+    }
+
+    /// public java.sql.SQLClientInfoException(java.util.Map)
+
+    private static var new_MethodID_8: jmethodID?
+
+    public convenience init( failedProperties: java_swift.JavaMap? ) {
+        var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         __args[0] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_7, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_8, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -188,14 +210,14 @@ open class SQLClientInfoException: SQLException {
 
     /// public java.sql.SQLClientInfoException(java.util.Map,java.lang.Throwable)
 
-    private static var new_MethodID_8: jmethodID?
+    private static var new_MethodID_9: jmethodID?
 
     public convenience init( failedProperties: java_swift.JavaMap?, cause: java_swift.Throwable? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 2 )
         __args[0] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
         __args[1] = JNIType.toJava( value: cause, locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_8, args: &__args, locals: &__locals )
+        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/util/Map;Ljava/lang/Throwable;)V", methodCache: &SQLClientInfoException.new_MethodID_9, args: &__args, locals: &__locals )
         self.init( javaObject: __object )
         JNI.DeleteLocalRef( __object )
     }
@@ -204,34 +226,15 @@ open class SQLClientInfoException: SQLException {
         self.init( failedProperties: _failedProperties, cause: _cause )
     }
 
-    /// public java.sql.SQLClientInfoException(java.lang.String,java.util.Map)
-
-    private static var new_MethodID_9: jmethodID?
-
-    public convenience init( reason: String?, failedProperties: java_swift.JavaMap? ) {
-        var __args = [jvalue]( repeating: jvalue(), count: 2 )
-        var __locals = [jobject]()
-        __args[0] = JNIType.toJava( value: reason, locals: &__locals )
-        __args[1] = JNIType.toJava( value: failedProperties, mapClass: "java/util/Map", locals: &__locals )
-        let __object = JNIMethod.NewObject( className: "java/sql/SQLClientInfoException", classCache: &SQLClientInfoException.SQLClientInfoExceptionJNIClass, methodSig: "(Ljava/lang/String;Ljava/util/Map;)V", methodCache: &SQLClientInfoException.new_MethodID_9, args: &__args, locals: &__locals )
-        self.init( javaObject: __object )
-        JNI.DeleteLocalRef( __object )
-    }
-
-    public convenience init( _ _reason: String?, _ _failedProperties: java_swift.JavaMap? ) {
-        self.init( reason: _reason, failedProperties: _failedProperties )
-    }
-
     /// public java.util.Map java.sql.SQLClientInfoException.getFailedProperties()
 
     private static var getFailedProperties_MethodID_10: jmethodID?
 
     open func getFailedProperties() -> java_swift.JavaMap! {
-        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         var __locals = [jobject]()
+        var __args = [jvalue]( repeating: jvalue(), count: 1 )
         let __return = JNIMethod.CallObjectMethod( object: javaObject, methodName: "getFailedProperties", methodSig: "()Ljava/util/Map;", methodCache: &SQLClientInfoException.getFailedProperties_MethodID_10, args: &__args, locals: &__locals )
-        defer { JNI.DeleteLocalRef( __return ) }
-        return JNIType.toSwift( type: java_swift.JavaMapForward(), from: __return )
+        return JNIType.toSwift( type: java_swift.JavaMapForward.self, from: __return )
     }
 
 
