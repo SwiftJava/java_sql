@@ -9,7 +9,7 @@ public enum ClientInfoStatus: Int, JNIObjectProtocol, JNIObjectInit {
 
     case REASON_UNKNOWN, REASON_UNKNOWN_PROPERTY, REASON_VALUE_INVALID, REASON_VALUE_TRUNCATED
 
-    static let enumConstants = try! JavaClass.forName("java.sql.ClientInfoStatus")
+    static let enumConstants = JavaClass(loading: "java.sql.ClientInfoStatus")
         .getEnumConstants()!.map { ClientInfoStatusForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> ClientInfoStatusForward {

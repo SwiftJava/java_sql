@@ -9,7 +9,7 @@ public enum RowIdLifetime: Int, JNIObjectProtocol, JNIObjectInit {
 
     case ROWID_UNSUPPORTED, ROWID_VALID_OTHER, ROWID_VALID_SESSION, ROWID_VALID_TRANSACTION, ROWID_VALID_FOREVER
 
-    static let enumConstants = try! JavaClass.forName("java.sql.RowIdLifetime")
+    static let enumConstants = JavaClass(loading: "java.sql.RowIdLifetime")
         .getEnumConstants()!.map { RowIdLifetimeForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> RowIdLifetimeForward {

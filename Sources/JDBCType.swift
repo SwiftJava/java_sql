@@ -10,7 +10,7 @@ public enum JDBCType: Int, JNIObjectProtocol, JNIObjectInit {
 
     case BIT, TINYINT, SMALLINT, INTEGER, BIGINT, FLOAT, REAL, DOUBLE, NUMERIC, DECIMAL, CHAR, VARCHAR, LONGVARCHAR, DATE, TIME, TIMESTAMP, BINARY, VARBINARY, LONGVARBINARY, NULL, OTHER, JAVA_OBJECT, DISTINCT, STRUCT, ARRAY, BLOB, CLOB, REF, DATALINK, BOOLEAN, ROWID, NCHAR, NVARCHAR, LONGNVARCHAR, NCLOB, SQLXML, REF_CURSOR, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE
 
-    static let enumConstants = try! JavaClass.forName("java.sql.JDBCType")
+    static let enumConstants = JavaClass(loading: "java.sql.JDBCType")
         .getEnumConstants()!.map { JDBCTypeForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> JDBCTypeForward {

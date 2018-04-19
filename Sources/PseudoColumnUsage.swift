@@ -9,7 +9,7 @@ public enum PseudoColumnUsage: Int, JNIObjectProtocol, JNIObjectInit {
 
     case SELECT_LIST_ONLY, WHERE_CLAUSE_ONLY, NO_USAGE_RESTRICTIONS, USAGE_UNKNOWN
 
-    static let enumConstants = try! JavaClass.forName("java.sql.PseudoColumnUsage")
+    static let enumConstants = JavaClass(loading: "java.sql.PseudoColumnUsage")
         .getEnumConstants()!.map { PseudoColumnUsageForward( javaObject: $0.javaObject ) }
 
     public func underlier() -> PseudoColumnUsageForward {
