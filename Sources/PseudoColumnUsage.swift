@@ -56,7 +56,7 @@ open class PseudoColumnUsageForward: JNIObjectForward {
 
     private static var NO_USAGE_RESTRICTIONS_FieldID: jfieldID?
 
-    open static var NO_USAGE_RESTRICTIONS: PseudoColumnUsage! {
+    public static var NO_USAGE_RESTRICTIONS: PseudoColumnUsage! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NO_USAGE_RESTRICTIONS", fieldType: "Ljava/sql/PseudoColumnUsage;", fieldCache: &NO_USAGE_RESTRICTIONS_FieldID, className: "java/sql/PseudoColumnUsage", classCache: &PseudoColumnUsageJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class PseudoColumnUsageForward: JNIObjectForward {
 
     private static var SELECT_LIST_ONLY_FieldID: jfieldID?
 
-    open static var SELECT_LIST_ONLY: PseudoColumnUsage! {
+    public static var SELECT_LIST_ONLY: PseudoColumnUsage! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SELECT_LIST_ONLY", fieldType: "Ljava/sql/PseudoColumnUsage;", fieldCache: &SELECT_LIST_ONLY_FieldID, className: "java/sql/PseudoColumnUsage", classCache: &PseudoColumnUsageJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class PseudoColumnUsageForward: JNIObjectForward {
 
     private static var USAGE_UNKNOWN_FieldID: jfieldID?
 
-    open static var USAGE_UNKNOWN: PseudoColumnUsage! {
+    public static var USAGE_UNKNOWN: PseudoColumnUsage! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "USAGE_UNKNOWN", fieldType: "Ljava/sql/PseudoColumnUsage;", fieldCache: &USAGE_UNKNOWN_FieldID, className: "java/sql/PseudoColumnUsage", classCache: &PseudoColumnUsageJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -92,7 +92,7 @@ open class PseudoColumnUsageForward: JNIObjectForward {
 
     private static var WHERE_CLAUSE_ONLY_FieldID: jfieldID?
 
-    open static var WHERE_CLAUSE_ONLY: PseudoColumnUsage! {
+    public static var WHERE_CLAUSE_ONLY: PseudoColumnUsage! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "WHERE_CLAUSE_ONLY", fieldType: "Ljava/sql/PseudoColumnUsage;", fieldCache: &WHERE_CLAUSE_ONLY_FieldID, className: "java/sql/PseudoColumnUsage", classCache: &PseudoColumnUsageJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

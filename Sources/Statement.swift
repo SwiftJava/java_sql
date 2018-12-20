@@ -247,7 +247,7 @@ open class StatementForward: WrapperForward, Statement {
 
     private static var CLOSE_ALL_RESULTS_FieldID: jfieldID?
 
-    open static var CLOSE_ALL_RESULTS: Int {
+    public static var CLOSE_ALL_RESULTS: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "CLOSE_ALL_RESULTS", fieldType: "I", fieldCache: &CLOSE_ALL_RESULTS_FieldID, className: "java/sql/Statement", classCache: &StatementJNIClass )
             return Int(__value)
@@ -258,7 +258,7 @@ open class StatementForward: WrapperForward, Statement {
 
     private static var CLOSE_CURRENT_RESULT_FieldID: jfieldID?
 
-    open static var CLOSE_CURRENT_RESULT: Int {
+    public static var CLOSE_CURRENT_RESULT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "CLOSE_CURRENT_RESULT", fieldType: "I", fieldCache: &CLOSE_CURRENT_RESULT_FieldID, className: "java/sql/Statement", classCache: &StatementJNIClass )
             return Int(__value)
@@ -269,7 +269,7 @@ open class StatementForward: WrapperForward, Statement {
 
     private static var EXECUTE_FAILED_FieldID: jfieldID?
 
-    open static var EXECUTE_FAILED: Int {
+    public static var EXECUTE_FAILED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "EXECUTE_FAILED", fieldType: "I", fieldCache: &EXECUTE_FAILED_FieldID, className: "java/sql/Statement", classCache: &StatementJNIClass )
             return Int(__value)
@@ -280,7 +280,7 @@ open class StatementForward: WrapperForward, Statement {
 
     private static var KEEP_CURRENT_RESULT_FieldID: jfieldID?
 
-    open static var KEEP_CURRENT_RESULT: Int {
+    public static var KEEP_CURRENT_RESULT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "KEEP_CURRENT_RESULT", fieldType: "I", fieldCache: &KEEP_CURRENT_RESULT_FieldID, className: "java/sql/Statement", classCache: &StatementJNIClass )
             return Int(__value)
@@ -291,7 +291,7 @@ open class StatementForward: WrapperForward, Statement {
 
     private static var NO_GENERATED_KEYS_FieldID: jfieldID?
 
-    open static var NO_GENERATED_KEYS: Int {
+    public static var NO_GENERATED_KEYS: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NO_GENERATED_KEYS", fieldType: "I", fieldCache: &NO_GENERATED_KEYS_FieldID, className: "java/sql/Statement", classCache: &StatementJNIClass )
             return Int(__value)
@@ -302,7 +302,7 @@ open class StatementForward: WrapperForward, Statement {
 
     private static var RETURN_GENERATED_KEYS_FieldID: jfieldID?
 
-    open static var RETURN_GENERATED_KEYS: Int {
+    public static var RETURN_GENERATED_KEYS: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "RETURN_GENERATED_KEYS", fieldType: "I", fieldCache: &RETURN_GENERATED_KEYS_FieldID, className: "java/sql/Statement", classCache: &StatementJNIClass )
             return Int(__value)
@@ -313,7 +313,7 @@ open class StatementForward: WrapperForward, Statement {
 
     private static var SUCCESS_NO_INFO_FieldID: jfieldID?
 
-    open static var SUCCESS_NO_INFO: Int {
+    public static var SUCCESS_NO_INFO: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SUCCESS_NO_INFO", fieldType: "I", fieldCache: &SUCCESS_NO_INFO_FieldID, className: "java/sql/Statement", classCache: &StatementJNIClass )
             return Int(__value)

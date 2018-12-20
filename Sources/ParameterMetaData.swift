@@ -82,7 +82,7 @@ open class ParameterMetaDataForward: WrapperForward, ParameterMetaData {
 
     private static var parameterModeIn_FieldID: jfieldID?
 
-    open static var parameterModeIn: Int {
+    public static var parameterModeIn: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "parameterModeIn", fieldType: "I", fieldCache: &parameterModeIn_FieldID, className: "java/sql/ParameterMetaData", classCache: &ParameterMetaDataJNIClass )
             return Int(__value)
@@ -93,7 +93,7 @@ open class ParameterMetaDataForward: WrapperForward, ParameterMetaData {
 
     private static var parameterModeInOut_FieldID: jfieldID?
 
-    open static var parameterModeInOut: Int {
+    public static var parameterModeInOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "parameterModeInOut", fieldType: "I", fieldCache: &parameterModeInOut_FieldID, className: "java/sql/ParameterMetaData", classCache: &ParameterMetaDataJNIClass )
             return Int(__value)
@@ -104,7 +104,7 @@ open class ParameterMetaDataForward: WrapperForward, ParameterMetaData {
 
     private static var parameterModeOut_FieldID: jfieldID?
 
-    open static var parameterModeOut: Int {
+    public static var parameterModeOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "parameterModeOut", fieldType: "I", fieldCache: &parameterModeOut_FieldID, className: "java/sql/ParameterMetaData", classCache: &ParameterMetaDataJNIClass )
             return Int(__value)
@@ -115,7 +115,7 @@ open class ParameterMetaDataForward: WrapperForward, ParameterMetaData {
 
     private static var parameterModeUnknown_FieldID: jfieldID?
 
-    open static var parameterModeUnknown: Int {
+    public static var parameterModeUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "parameterModeUnknown", fieldType: "I", fieldCache: &parameterModeUnknown_FieldID, className: "java/sql/ParameterMetaData", classCache: &ParameterMetaDataJNIClass )
             return Int(__value)
@@ -126,7 +126,7 @@ open class ParameterMetaDataForward: WrapperForward, ParameterMetaData {
 
     private static var parameterNoNulls_FieldID: jfieldID?
 
-    open static var parameterNoNulls: Int {
+    public static var parameterNoNulls: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "parameterNoNulls", fieldType: "I", fieldCache: &parameterNoNulls_FieldID, className: "java/sql/ParameterMetaData", classCache: &ParameterMetaDataJNIClass )
             return Int(__value)
@@ -137,7 +137,7 @@ open class ParameterMetaDataForward: WrapperForward, ParameterMetaData {
 
     private static var parameterNullable_FieldID: jfieldID?
 
-    open static var parameterNullable: Int {
+    public static var parameterNullable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "parameterNullable", fieldType: "I", fieldCache: &parameterNullable_FieldID, className: "java/sql/ParameterMetaData", classCache: &ParameterMetaDataJNIClass )
             return Int(__value)
@@ -148,7 +148,7 @@ open class ParameterMetaDataForward: WrapperForward, ParameterMetaData {
 
     private static var parameterNullableUnknown_FieldID: jfieldID?
 
-    open static var parameterNullableUnknown: Int {
+    public static var parameterNullableUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "parameterNullableUnknown", fieldType: "I", fieldCache: &parameterNullableUnknown_FieldID, className: "java/sql/ParameterMetaData", classCache: &ParameterMetaDataJNIClass )
             return Int(__value)

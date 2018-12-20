@@ -56,7 +56,7 @@ open class ClientInfoStatusForward: JNIObjectForward {
 
     private static var REASON_UNKNOWN_FieldID: jfieldID?
 
-    open static var REASON_UNKNOWN: ClientInfoStatus! {
+    public static var REASON_UNKNOWN: ClientInfoStatus! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REASON_UNKNOWN", fieldType: "Ljava/sql/ClientInfoStatus;", fieldCache: &REASON_UNKNOWN_FieldID, className: "java/sql/ClientInfoStatus", classCache: &ClientInfoStatusJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class ClientInfoStatusForward: JNIObjectForward {
 
     private static var REASON_UNKNOWN_PROPERTY_FieldID: jfieldID?
 
-    open static var REASON_UNKNOWN_PROPERTY: ClientInfoStatus! {
+    public static var REASON_UNKNOWN_PROPERTY: ClientInfoStatus! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REASON_UNKNOWN_PROPERTY", fieldType: "Ljava/sql/ClientInfoStatus;", fieldCache: &REASON_UNKNOWN_PROPERTY_FieldID, className: "java/sql/ClientInfoStatus", classCache: &ClientInfoStatusJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class ClientInfoStatusForward: JNIObjectForward {
 
     private static var REASON_VALUE_INVALID_FieldID: jfieldID?
 
-    open static var REASON_VALUE_INVALID: ClientInfoStatus! {
+    public static var REASON_VALUE_INVALID: ClientInfoStatus! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REASON_VALUE_INVALID", fieldType: "Ljava/sql/ClientInfoStatus;", fieldCache: &REASON_VALUE_INVALID_FieldID, className: "java/sql/ClientInfoStatus", classCache: &ClientInfoStatusJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -92,7 +92,7 @@ open class ClientInfoStatusForward: JNIObjectForward {
 
     private static var REASON_VALUE_TRUNCATED_FieldID: jfieldID?
 
-    open static var REASON_VALUE_TRUNCATED: ClientInfoStatus! {
+    public static var REASON_VALUE_TRUNCATED: ClientInfoStatus! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REASON_VALUE_TRUNCATED", fieldType: "Ljava/sql/ClientInfoStatus;", fieldCache: &REASON_VALUE_TRUNCATED_FieldID, className: "java/sql/ClientInfoStatus", classCache: &ClientInfoStatusJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

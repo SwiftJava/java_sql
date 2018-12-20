@@ -20,7 +20,7 @@ open class Types: java_swift.JavaObject {
 
     private static var ARRAY_FieldID: jfieldID?
 
-    open static var ARRAY: Int {
+    public static var ARRAY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "ARRAY", fieldType: "I", fieldCache: &ARRAY_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -31,7 +31,7 @@ open class Types: java_swift.JavaObject {
 
     private static var BIGINT_FieldID: jfieldID?
 
-    open static var BIGINT: Int {
+    public static var BIGINT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BIGINT", fieldType: "I", fieldCache: &BIGINT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -42,7 +42,7 @@ open class Types: java_swift.JavaObject {
 
     private static var BINARY_FieldID: jfieldID?
 
-    open static var BINARY: Int {
+    public static var BINARY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BINARY", fieldType: "I", fieldCache: &BINARY_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -53,7 +53,7 @@ open class Types: java_swift.JavaObject {
 
     private static var BIT_FieldID: jfieldID?
 
-    open static var BIT: Int {
+    public static var BIT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BIT", fieldType: "I", fieldCache: &BIT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -64,7 +64,7 @@ open class Types: java_swift.JavaObject {
 
     private static var BLOB_FieldID: jfieldID?
 
-    open static var BLOB: Int {
+    public static var BLOB: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BLOB", fieldType: "I", fieldCache: &BLOB_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -75,7 +75,7 @@ open class Types: java_swift.JavaObject {
 
     private static var BOOLEAN_FieldID: jfieldID?
 
-    open static var BOOLEAN: Int {
+    public static var BOOLEAN: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "BOOLEAN", fieldType: "I", fieldCache: &BOOLEAN_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -86,7 +86,7 @@ open class Types: java_swift.JavaObject {
 
     private static var CHAR_FieldID: jfieldID?
 
-    open static var CHAR: Int {
+    public static var CHAR: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "CHAR", fieldType: "I", fieldCache: &CHAR_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -97,7 +97,7 @@ open class Types: java_swift.JavaObject {
 
     private static var CLOB_FieldID: jfieldID?
 
-    open static var CLOB: Int {
+    public static var CLOB: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "CLOB", fieldType: "I", fieldCache: &CLOB_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -108,7 +108,7 @@ open class Types: java_swift.JavaObject {
 
     private static var DATALINK_FieldID: jfieldID?
 
-    open static var DATALINK: Int {
+    public static var DATALINK: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DATALINK", fieldType: "I", fieldCache: &DATALINK_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -119,7 +119,7 @@ open class Types: java_swift.JavaObject {
 
     private static var DATE_FieldID: jfieldID?
 
-    open static var DATE: Int {
+    public static var DATE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DATE", fieldType: "I", fieldCache: &DATE_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -130,7 +130,7 @@ open class Types: java_swift.JavaObject {
 
     private static var DECIMAL_FieldID: jfieldID?
 
-    open static var DECIMAL: Int {
+    public static var DECIMAL: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DECIMAL", fieldType: "I", fieldCache: &DECIMAL_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -141,7 +141,7 @@ open class Types: java_swift.JavaObject {
 
     private static var DISTINCT_FieldID: jfieldID?
 
-    open static var DISTINCT: Int {
+    public static var DISTINCT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DISTINCT", fieldType: "I", fieldCache: &DISTINCT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -152,7 +152,7 @@ open class Types: java_swift.JavaObject {
 
     private static var DOUBLE_FieldID: jfieldID?
 
-    open static var DOUBLE: Int {
+    public static var DOUBLE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "DOUBLE", fieldType: "I", fieldCache: &DOUBLE_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -163,7 +163,7 @@ open class Types: java_swift.JavaObject {
 
     private static var FLOAT_FieldID: jfieldID?
 
-    open static var FLOAT: Int {
+    public static var FLOAT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FLOAT", fieldType: "I", fieldCache: &FLOAT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -174,7 +174,7 @@ open class Types: java_swift.JavaObject {
 
     private static var INTEGER_FieldID: jfieldID?
 
-    open static var INTEGER: Int {
+    public static var INTEGER: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "INTEGER", fieldType: "I", fieldCache: &INTEGER_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -185,7 +185,7 @@ open class Types: java_swift.JavaObject {
 
     private static var JAVA_OBJECT_FieldID: jfieldID?
 
-    open static var JAVA_OBJECT: Int {
+    public static var JAVA_OBJECT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "JAVA_OBJECT", fieldType: "I", fieldCache: &JAVA_OBJECT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -196,7 +196,7 @@ open class Types: java_swift.JavaObject {
 
     private static var LONGNVARCHAR_FieldID: jfieldID?
 
-    open static var LONGNVARCHAR: Int {
+    public static var LONGNVARCHAR: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "LONGNVARCHAR", fieldType: "I", fieldCache: &LONGNVARCHAR_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -207,7 +207,7 @@ open class Types: java_swift.JavaObject {
 
     private static var LONGVARBINARY_FieldID: jfieldID?
 
-    open static var LONGVARBINARY: Int {
+    public static var LONGVARBINARY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "LONGVARBINARY", fieldType: "I", fieldCache: &LONGVARBINARY_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -218,7 +218,7 @@ open class Types: java_swift.JavaObject {
 
     private static var LONGVARCHAR_FieldID: jfieldID?
 
-    open static var LONGVARCHAR: Int {
+    public static var LONGVARCHAR: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "LONGVARCHAR", fieldType: "I", fieldCache: &LONGVARCHAR_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -229,7 +229,7 @@ open class Types: java_swift.JavaObject {
 
     private static var NCHAR_FieldID: jfieldID?
 
-    open static var NCHAR: Int {
+    public static var NCHAR: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NCHAR", fieldType: "I", fieldCache: &NCHAR_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -240,7 +240,7 @@ open class Types: java_swift.JavaObject {
 
     private static var NCLOB_FieldID: jfieldID?
 
-    open static var NCLOB: Int {
+    public static var NCLOB: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NCLOB", fieldType: "I", fieldCache: &NCLOB_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -251,7 +251,7 @@ open class Types: java_swift.JavaObject {
 
     private static var NULL_FieldID: jfieldID?
 
-    open static var NULL: Int {
+    public static var NULL: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NULL", fieldType: "I", fieldCache: &NULL_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -262,7 +262,7 @@ open class Types: java_swift.JavaObject {
 
     private static var NUMERIC_FieldID: jfieldID?
 
-    open static var NUMERIC: Int {
+    public static var NUMERIC: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NUMERIC", fieldType: "I", fieldCache: &NUMERIC_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -273,7 +273,7 @@ open class Types: java_swift.JavaObject {
 
     private static var NVARCHAR_FieldID: jfieldID?
 
-    open static var NVARCHAR: Int {
+    public static var NVARCHAR: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "NVARCHAR", fieldType: "I", fieldCache: &NVARCHAR_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -284,7 +284,7 @@ open class Types: java_swift.JavaObject {
 
     private static var OTHER_FieldID: jfieldID?
 
-    open static var OTHER: Int {
+    public static var OTHER: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "OTHER", fieldType: "I", fieldCache: &OTHER_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -295,7 +295,7 @@ open class Types: java_swift.JavaObject {
 
     private static var REAL_FieldID: jfieldID?
 
-    open static var REAL: Int {
+    public static var REAL: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REAL", fieldType: "I", fieldCache: &REAL_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -306,7 +306,7 @@ open class Types: java_swift.JavaObject {
 
     private static var REF_FieldID: jfieldID?
 
-    open static var REF: Int {
+    public static var REF: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF", fieldType: "I", fieldCache: &REF_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -317,7 +317,7 @@ open class Types: java_swift.JavaObject {
 
     private static var REF_CURSOR_FieldID: jfieldID?
 
-    open static var REF_CURSOR: Int {
+    public static var REF_CURSOR: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "REF_CURSOR", fieldType: "I", fieldCache: &REF_CURSOR_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -328,7 +328,7 @@ open class Types: java_swift.JavaObject {
 
     private static var ROWID_FieldID: jfieldID?
 
-    open static var ROWID: Int {
+    public static var ROWID: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "ROWID", fieldType: "I", fieldCache: &ROWID_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -339,7 +339,7 @@ open class Types: java_swift.JavaObject {
 
     private static var SMALLINT_FieldID: jfieldID?
 
-    open static var SMALLINT: Int {
+    public static var SMALLINT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SMALLINT", fieldType: "I", fieldCache: &SMALLINT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -350,7 +350,7 @@ open class Types: java_swift.JavaObject {
 
     private static var SQLXML_FieldID: jfieldID?
 
-    open static var SQLXML: Int {
+    public static var SQLXML: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "SQLXML", fieldType: "I", fieldCache: &SQLXML_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -361,7 +361,7 @@ open class Types: java_swift.JavaObject {
 
     private static var STRUCT_FieldID: jfieldID?
 
-    open static var STRUCT: Int {
+    public static var STRUCT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "STRUCT", fieldType: "I", fieldCache: &STRUCT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -372,7 +372,7 @@ open class Types: java_swift.JavaObject {
 
     private static var TIME_FieldID: jfieldID?
 
-    open static var TIME: Int {
+    public static var TIME: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TIME", fieldType: "I", fieldCache: &TIME_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -383,7 +383,7 @@ open class Types: java_swift.JavaObject {
 
     private static var TIMESTAMP_FieldID: jfieldID?
 
-    open static var TIMESTAMP: Int {
+    public static var TIMESTAMP: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TIMESTAMP", fieldType: "I", fieldCache: &TIMESTAMP_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -394,7 +394,7 @@ open class Types: java_swift.JavaObject {
 
     private static var TIMESTAMP_WITH_TIMEZONE_FieldID: jfieldID?
 
-    open static var TIMESTAMP_WITH_TIMEZONE: Int {
+    public static var TIMESTAMP_WITH_TIMEZONE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TIMESTAMP_WITH_TIMEZONE", fieldType: "I", fieldCache: &TIMESTAMP_WITH_TIMEZONE_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -405,7 +405,7 @@ open class Types: java_swift.JavaObject {
 
     private static var TIME_WITH_TIMEZONE_FieldID: jfieldID?
 
-    open static var TIME_WITH_TIMEZONE: Int {
+    public static var TIME_WITH_TIMEZONE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TIME_WITH_TIMEZONE", fieldType: "I", fieldCache: &TIME_WITH_TIMEZONE_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -416,7 +416,7 @@ open class Types: java_swift.JavaObject {
 
     private static var TINYINT_FieldID: jfieldID?
 
-    open static var TINYINT: Int {
+    public static var TINYINT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TINYINT", fieldType: "I", fieldCache: &TINYINT_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -427,7 +427,7 @@ open class Types: java_swift.JavaObject {
 
     private static var VARBINARY_FieldID: jfieldID?
 
-    open static var VARBINARY: Int {
+    public static var VARBINARY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "VARBINARY", fieldType: "I", fieldCache: &VARBINARY_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)
@@ -438,7 +438,7 @@ open class Types: java_swift.JavaObject {
 
     private static var VARCHAR_FieldID: jfieldID?
 
-    open static var VARCHAR: Int {
+    public static var VARCHAR: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "VARCHAR", fieldType: "I", fieldCache: &VARCHAR_FieldID, className: "java/sql/Types", classCache: &TypesJNIClass )
             return Int(__value)

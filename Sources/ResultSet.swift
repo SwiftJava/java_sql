@@ -832,7 +832,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var CLOSE_CURSORS_AT_COMMIT_FieldID: jfieldID?
 
-    open static var CLOSE_CURSORS_AT_COMMIT: Int {
+    public static var CLOSE_CURSORS_AT_COMMIT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "CLOSE_CURSORS_AT_COMMIT", fieldType: "I", fieldCache: &CLOSE_CURSORS_AT_COMMIT_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -843,7 +843,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var CONCUR_READ_ONLY_FieldID: jfieldID?
 
-    open static var CONCUR_READ_ONLY: Int {
+    public static var CONCUR_READ_ONLY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "CONCUR_READ_ONLY", fieldType: "I", fieldCache: &CONCUR_READ_ONLY_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -854,7 +854,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var CONCUR_UPDATABLE_FieldID: jfieldID?
 
-    open static var CONCUR_UPDATABLE: Int {
+    public static var CONCUR_UPDATABLE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "CONCUR_UPDATABLE", fieldType: "I", fieldCache: &CONCUR_UPDATABLE_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -865,7 +865,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var FETCH_FORWARD_FieldID: jfieldID?
 
-    open static var FETCH_FORWARD: Int {
+    public static var FETCH_FORWARD: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FETCH_FORWARD", fieldType: "I", fieldCache: &FETCH_FORWARD_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -876,7 +876,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var FETCH_REVERSE_FieldID: jfieldID?
 
-    open static var FETCH_REVERSE: Int {
+    public static var FETCH_REVERSE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FETCH_REVERSE", fieldType: "I", fieldCache: &FETCH_REVERSE_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -887,7 +887,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var FETCH_UNKNOWN_FieldID: jfieldID?
 
-    open static var FETCH_UNKNOWN: Int {
+    public static var FETCH_UNKNOWN: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "FETCH_UNKNOWN", fieldType: "I", fieldCache: &FETCH_UNKNOWN_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -898,7 +898,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var HOLD_CURSORS_OVER_COMMIT_FieldID: jfieldID?
 
-    open static var HOLD_CURSORS_OVER_COMMIT: Int {
+    public static var HOLD_CURSORS_OVER_COMMIT: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "HOLD_CURSORS_OVER_COMMIT", fieldType: "I", fieldCache: &HOLD_CURSORS_OVER_COMMIT_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -909,7 +909,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var TYPE_FORWARD_ONLY_FieldID: jfieldID?
 
-    open static var TYPE_FORWARD_ONLY: Int {
+    public static var TYPE_FORWARD_ONLY: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TYPE_FORWARD_ONLY", fieldType: "I", fieldCache: &TYPE_FORWARD_ONLY_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -920,7 +920,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var TYPE_SCROLL_INSENSITIVE_FieldID: jfieldID?
 
-    open static var TYPE_SCROLL_INSENSITIVE: Int {
+    public static var TYPE_SCROLL_INSENSITIVE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TYPE_SCROLL_INSENSITIVE", fieldType: "I", fieldCache: &TYPE_SCROLL_INSENSITIVE_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)
@@ -931,7 +931,7 @@ open class ResultSetForward: WrapperForward, ResultSet {
 
     private static var TYPE_SCROLL_SENSITIVE_FieldID: jfieldID?
 
-    open static var TYPE_SCROLL_SENSITIVE: Int {
+    public static var TYPE_SCROLL_SENSITIVE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TYPE_SCROLL_SENSITIVE", fieldType: "I", fieldCache: &TYPE_SCROLL_SENSITIVE_FieldID, className: "java/sql/ResultSet", classCache: &ResultSetJNIClass )
             return Int(__value)

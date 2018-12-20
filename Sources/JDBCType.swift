@@ -92,7 +92,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var ARRAY_FieldID: jfieldID?
 
-    open static var ARRAY: JDBCType! {
+    public static var ARRAY: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ARRAY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &ARRAY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -104,7 +104,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var BIGINT_FieldID: jfieldID?
 
-    open static var BIGINT: JDBCType! {
+    public static var BIGINT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BIGINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BIGINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -116,7 +116,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var BINARY_FieldID: jfieldID?
 
-    open static var BINARY: JDBCType! {
+    public static var BINARY: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -128,7 +128,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var BIT_FieldID: jfieldID?
 
-    open static var BIT: JDBCType! {
+    public static var BIT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BIT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BIT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -140,7 +140,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var BLOB_FieldID: jfieldID?
 
-    open static var BLOB: JDBCType! {
+    public static var BLOB: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BLOB", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BLOB_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -152,7 +152,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var BOOLEAN_FieldID: jfieldID?
 
-    open static var BOOLEAN: JDBCType! {
+    public static var BOOLEAN: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "BOOLEAN", fieldType: "Ljava/sql/JDBCType;", fieldCache: &BOOLEAN_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -164,7 +164,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var CHAR_FieldID: jfieldID?
 
-    open static var CHAR: JDBCType! {
+    public static var CHAR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &CHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -176,7 +176,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var CLOB_FieldID: jfieldID?
 
-    open static var CLOB: JDBCType! {
+    public static var CLOB: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "CLOB", fieldType: "Ljava/sql/JDBCType;", fieldCache: &CLOB_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -188,7 +188,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var DATALINK_FieldID: jfieldID?
 
-    open static var DATALINK: JDBCType! {
+    public static var DATALINK: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DATALINK", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DATALINK_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -200,7 +200,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var DATE_FieldID: jfieldID?
 
-    open static var DATE: JDBCType! {
+    public static var DATE: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DATE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DATE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -212,7 +212,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var DECIMAL_FieldID: jfieldID?
 
-    open static var DECIMAL: JDBCType! {
+    public static var DECIMAL: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DECIMAL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DECIMAL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -224,7 +224,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var DISTINCT_FieldID: jfieldID?
 
-    open static var DISTINCT: JDBCType! {
+    public static var DISTINCT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DISTINCT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DISTINCT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -236,7 +236,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var DOUBLE_FieldID: jfieldID?
 
-    open static var DOUBLE: JDBCType! {
+    public static var DOUBLE: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "DOUBLE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &DOUBLE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -248,7 +248,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var FLOAT_FieldID: jfieldID?
 
-    open static var FLOAT: JDBCType! {
+    public static var FLOAT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "FLOAT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &FLOAT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -260,7 +260,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var INTEGER_FieldID: jfieldID?
 
-    open static var INTEGER: JDBCType! {
+    public static var INTEGER: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "INTEGER", fieldType: "Ljava/sql/JDBCType;", fieldCache: &INTEGER_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -272,7 +272,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var JAVA_OBJECT_FieldID: jfieldID?
 
-    open static var JAVA_OBJECT: JDBCType! {
+    public static var JAVA_OBJECT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "JAVA_OBJECT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &JAVA_OBJECT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -284,7 +284,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var LONGNVARCHAR_FieldID: jfieldID?
 
-    open static var LONGNVARCHAR: JDBCType! {
+    public static var LONGNVARCHAR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LONGNVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGNVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -296,7 +296,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var LONGVARBINARY_FieldID: jfieldID?
 
-    open static var LONGVARBINARY: JDBCType! {
+    public static var LONGVARBINARY: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LONGVARBINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGVARBINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -308,7 +308,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var LONGVARCHAR_FieldID: jfieldID?
 
-    open static var LONGVARCHAR: JDBCType! {
+    public static var LONGVARCHAR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "LONGVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &LONGVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -320,7 +320,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var NCHAR_FieldID: jfieldID?
 
-    open static var NCHAR: JDBCType! {
+    public static var NCHAR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -332,7 +332,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var NCLOB_FieldID: jfieldID?
 
-    open static var NCLOB: JDBCType! {
+    public static var NCLOB: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NCLOB", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NCLOB_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -344,7 +344,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var NULL_FieldID: jfieldID?
 
-    open static var NULL: JDBCType! {
+    public static var NULL: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NULL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NULL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -356,7 +356,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var NUMERIC_FieldID: jfieldID?
 
-    open static var NUMERIC: JDBCType! {
+    public static var NUMERIC: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NUMERIC", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NUMERIC_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -368,7 +368,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var NVARCHAR_FieldID: jfieldID?
 
-    open static var NVARCHAR: JDBCType! {
+    public static var NVARCHAR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "NVARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &NVARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -380,7 +380,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var OTHER_FieldID: jfieldID?
 
-    open static var OTHER: JDBCType! {
+    public static var OTHER: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "OTHER", fieldType: "Ljava/sql/JDBCType;", fieldCache: &OTHER_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -392,7 +392,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var REAL_FieldID: jfieldID?
 
-    open static var REAL: JDBCType! {
+    public static var REAL: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REAL", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REAL_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -404,7 +404,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var REF_FieldID: jfieldID?
 
-    open static var REF: JDBCType! {
+    public static var REF: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REF", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REF_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -416,7 +416,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var REF_CURSOR_FieldID: jfieldID?
 
-    open static var REF_CURSOR: JDBCType! {
+    public static var REF_CURSOR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "REF_CURSOR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &REF_CURSOR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -428,7 +428,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var ROWID_FieldID: jfieldID?
 
-    open static var ROWID: JDBCType! {
+    public static var ROWID: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ROWID", fieldType: "Ljava/sql/JDBCType;", fieldCache: &ROWID_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -440,7 +440,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var SMALLINT_FieldID: jfieldID?
 
-    open static var SMALLINT: JDBCType! {
+    public static var SMALLINT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SMALLINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &SMALLINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -452,7 +452,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var SQLXML_FieldID: jfieldID?
 
-    open static var SQLXML: JDBCType! {
+    public static var SQLXML: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "SQLXML", fieldType: "Ljava/sql/JDBCType;", fieldCache: &SQLXML_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -464,7 +464,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var STRUCT_FieldID: jfieldID?
 
-    open static var STRUCT: JDBCType! {
+    public static var STRUCT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "STRUCT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &STRUCT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -476,7 +476,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var TIME_FieldID: jfieldID?
 
-    open static var TIME: JDBCType! {
+    public static var TIME: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIME", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIME_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -488,7 +488,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var TIMESTAMP_FieldID: jfieldID?
 
-    open static var TIMESTAMP: JDBCType! {
+    public static var TIMESTAMP: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIMESTAMP", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIMESTAMP_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -500,7 +500,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var TIMESTAMP_WITH_TIMEZONE_FieldID: jfieldID?
 
-    open static var TIMESTAMP_WITH_TIMEZONE: JDBCType! {
+    public static var TIMESTAMP_WITH_TIMEZONE: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIMESTAMP_WITH_TIMEZONE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIMESTAMP_WITH_TIMEZONE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -512,7 +512,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var TIME_WITH_TIMEZONE_FieldID: jfieldID?
 
-    open static var TIME_WITH_TIMEZONE: JDBCType! {
+    public static var TIME_WITH_TIMEZONE: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TIME_WITH_TIMEZONE", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TIME_WITH_TIMEZONE_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -524,7 +524,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var TINYINT_FieldID: jfieldID?
 
-    open static var TINYINT: JDBCType! {
+    public static var TINYINT: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "TINYINT", fieldType: "Ljava/sql/JDBCType;", fieldCache: &TINYINT_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -536,7 +536,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var VARBINARY_FieldID: jfieldID?
 
-    open static var VARBINARY: JDBCType! {
+    public static var VARBINARY: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VARBINARY", fieldType: "Ljava/sql/JDBCType;", fieldCache: &VARBINARY_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -548,7 +548,7 @@ open class JDBCTypeForward: SQLTypeForward {
 
     private static var VARCHAR_FieldID: jfieldID?
 
-    open static var VARCHAR: JDBCType! {
+    public static var VARCHAR: JDBCType! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "VARCHAR", fieldType: "Ljava/sql/JDBCType;", fieldCache: &VARCHAR_FieldID, className: "java/sql/JDBCType", classCache: &JDBCTypeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

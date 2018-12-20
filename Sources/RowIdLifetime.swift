@@ -56,7 +56,7 @@ open class RowIdLifetimeForward: JNIObjectForward {
 
     private static var ROWID_UNSUPPORTED_FieldID: jfieldID?
 
-    open static var ROWID_UNSUPPORTED: RowIdLifetime! {
+    public static var ROWID_UNSUPPORTED: RowIdLifetime! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ROWID_UNSUPPORTED", fieldType: "Ljava/sql/RowIdLifetime;", fieldCache: &ROWID_UNSUPPORTED_FieldID, className: "java/sql/RowIdLifetime", classCache: &RowIdLifetimeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -68,7 +68,7 @@ open class RowIdLifetimeForward: JNIObjectForward {
 
     private static var ROWID_VALID_FOREVER_FieldID: jfieldID?
 
-    open static var ROWID_VALID_FOREVER: RowIdLifetime! {
+    public static var ROWID_VALID_FOREVER: RowIdLifetime! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ROWID_VALID_FOREVER", fieldType: "Ljava/sql/RowIdLifetime;", fieldCache: &ROWID_VALID_FOREVER_FieldID, className: "java/sql/RowIdLifetime", classCache: &RowIdLifetimeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -80,7 +80,7 @@ open class RowIdLifetimeForward: JNIObjectForward {
 
     private static var ROWID_VALID_OTHER_FieldID: jfieldID?
 
-    open static var ROWID_VALID_OTHER: RowIdLifetime! {
+    public static var ROWID_VALID_OTHER: RowIdLifetime! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ROWID_VALID_OTHER", fieldType: "Ljava/sql/RowIdLifetime;", fieldCache: &ROWID_VALID_OTHER_FieldID, className: "java/sql/RowIdLifetime", classCache: &RowIdLifetimeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -92,7 +92,7 @@ open class RowIdLifetimeForward: JNIObjectForward {
 
     private static var ROWID_VALID_SESSION_FieldID: jfieldID?
 
-    open static var ROWID_VALID_SESSION: RowIdLifetime! {
+    public static var ROWID_VALID_SESSION: RowIdLifetime! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ROWID_VALID_SESSION", fieldType: "Ljava/sql/RowIdLifetime;", fieldCache: &ROWID_VALID_SESSION_FieldID, className: "java/sql/RowIdLifetime", classCache: &RowIdLifetimeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }
@@ -104,7 +104,7 @@ open class RowIdLifetimeForward: JNIObjectForward {
 
     private static var ROWID_VALID_TRANSACTION_FieldID: jfieldID?
 
-    open static var ROWID_VALID_TRANSACTION: RowIdLifetime! {
+    public static var ROWID_VALID_TRANSACTION: RowIdLifetime! {
         get {
             let __value = JNIField.GetStaticObjectField( fieldName: "ROWID_VALID_TRANSACTION", fieldType: "Ljava/sql/RowIdLifetime;", fieldCache: &ROWID_VALID_TRANSACTION_FieldID, className: "java/sql/RowIdLifetime", classCache: &RowIdLifetimeJNIClass )
             defer { JNI.DeleteLocalRef( __value ) }

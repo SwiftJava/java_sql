@@ -248,7 +248,7 @@ open class ConnectionForward: WrapperForward, Connection {
 
     private static var TRANSACTION_NONE_FieldID: jfieldID?
 
-    open static var TRANSACTION_NONE: Int {
+    public static var TRANSACTION_NONE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TRANSACTION_NONE", fieldType: "I", fieldCache: &TRANSACTION_NONE_FieldID, className: "java/sql/Connection", classCache: &ConnectionJNIClass )
             return Int(__value)
@@ -259,7 +259,7 @@ open class ConnectionForward: WrapperForward, Connection {
 
     private static var TRANSACTION_READ_COMMITTED_FieldID: jfieldID?
 
-    open static var TRANSACTION_READ_COMMITTED: Int {
+    public static var TRANSACTION_READ_COMMITTED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TRANSACTION_READ_COMMITTED", fieldType: "I", fieldCache: &TRANSACTION_READ_COMMITTED_FieldID, className: "java/sql/Connection", classCache: &ConnectionJNIClass )
             return Int(__value)
@@ -270,7 +270,7 @@ open class ConnectionForward: WrapperForward, Connection {
 
     private static var TRANSACTION_READ_UNCOMMITTED_FieldID: jfieldID?
 
-    open static var TRANSACTION_READ_UNCOMMITTED: Int {
+    public static var TRANSACTION_READ_UNCOMMITTED: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TRANSACTION_READ_UNCOMMITTED", fieldType: "I", fieldCache: &TRANSACTION_READ_UNCOMMITTED_FieldID, className: "java/sql/Connection", classCache: &ConnectionJNIClass )
             return Int(__value)
@@ -281,7 +281,7 @@ open class ConnectionForward: WrapperForward, Connection {
 
     private static var TRANSACTION_REPEATABLE_READ_FieldID: jfieldID?
 
-    open static var TRANSACTION_REPEATABLE_READ: Int {
+    public static var TRANSACTION_REPEATABLE_READ: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TRANSACTION_REPEATABLE_READ", fieldType: "I", fieldCache: &TRANSACTION_REPEATABLE_READ_FieldID, className: "java/sql/Connection", classCache: &ConnectionJNIClass )
             return Int(__value)
@@ -292,7 +292,7 @@ open class ConnectionForward: WrapperForward, Connection {
 
     private static var TRANSACTION_SERIALIZABLE_FieldID: jfieldID?
 
-    open static var TRANSACTION_SERIALIZABLE: Int {
+    public static var TRANSACTION_SERIALIZABLE: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "TRANSACTION_SERIALIZABLE", fieldType: "I", fieldCache: &TRANSACTION_SERIALIZABLE_FieldID, className: "java/sql/Connection", classCache: &ConnectionJNIClass )
             return Int(__value)

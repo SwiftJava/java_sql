@@ -966,7 +966,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var attributeNoNulls_FieldID: jfieldID?
 
-    open static var attributeNoNulls: Int16 {
+    public static var attributeNoNulls: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "attributeNoNulls", fieldType: "S", fieldCache: &attributeNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return __value
@@ -977,7 +977,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var attributeNullable_FieldID: jfieldID?
 
-    open static var attributeNullable: Int16 {
+    public static var attributeNullable: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "attributeNullable", fieldType: "S", fieldCache: &attributeNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return __value
@@ -988,7 +988,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var attributeNullableUnknown_FieldID: jfieldID?
 
-    open static var attributeNullableUnknown: Int16 {
+    public static var attributeNullableUnknown: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "attributeNullableUnknown", fieldType: "S", fieldCache: &attributeNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return __value
@@ -999,7 +999,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var bestRowNotPseudo_FieldID: jfieldID?
 
-    open static var bestRowNotPseudo: Int {
+    public static var bestRowNotPseudo: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "bestRowNotPseudo", fieldType: "I", fieldCache: &bestRowNotPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1010,7 +1010,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var bestRowPseudo_FieldID: jfieldID?
 
-    open static var bestRowPseudo: Int {
+    public static var bestRowPseudo: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "bestRowPseudo", fieldType: "I", fieldCache: &bestRowPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1021,7 +1021,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var bestRowSession_FieldID: jfieldID?
 
-    open static var bestRowSession: Int {
+    public static var bestRowSession: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "bestRowSession", fieldType: "I", fieldCache: &bestRowSession_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1032,7 +1032,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var bestRowTemporary_FieldID: jfieldID?
 
-    open static var bestRowTemporary: Int {
+    public static var bestRowTemporary: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "bestRowTemporary", fieldType: "I", fieldCache: &bestRowTemporary_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1043,7 +1043,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var bestRowTransaction_FieldID: jfieldID?
 
-    open static var bestRowTransaction: Int {
+    public static var bestRowTransaction: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "bestRowTransaction", fieldType: "I", fieldCache: &bestRowTransaction_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1054,7 +1054,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var bestRowUnknown_FieldID: jfieldID?
 
-    open static var bestRowUnknown: Int {
+    public static var bestRowUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "bestRowUnknown", fieldType: "I", fieldCache: &bestRowUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1065,7 +1065,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var columnNoNulls_FieldID: jfieldID?
 
-    open static var columnNoNulls: Int {
+    public static var columnNoNulls: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "columnNoNulls", fieldType: "I", fieldCache: &columnNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1076,7 +1076,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var columnNullable_FieldID: jfieldID?
 
-    open static var columnNullable: Int {
+    public static var columnNullable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "columnNullable", fieldType: "I", fieldCache: &columnNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1087,7 +1087,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var columnNullableUnknown_FieldID: jfieldID?
 
-    open static var columnNullableUnknown: Int {
+    public static var columnNullableUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "columnNullableUnknown", fieldType: "I", fieldCache: &columnNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1098,7 +1098,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionColumnIn_FieldID: jfieldID?
 
-    open static var functionColumnIn: Int {
+    public static var functionColumnIn: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnIn", fieldType: "I", fieldCache: &functionColumnIn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1109,7 +1109,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionColumnInOut_FieldID: jfieldID?
 
-    open static var functionColumnInOut: Int {
+    public static var functionColumnInOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnInOut", fieldType: "I", fieldCache: &functionColumnInOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1120,7 +1120,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionColumnOut_FieldID: jfieldID?
 
-    open static var functionColumnOut: Int {
+    public static var functionColumnOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnOut", fieldType: "I", fieldCache: &functionColumnOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1131,7 +1131,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionColumnResult_FieldID: jfieldID?
 
-    open static var functionColumnResult: Int {
+    public static var functionColumnResult: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnResult", fieldType: "I", fieldCache: &functionColumnResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1142,7 +1142,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionColumnUnknown_FieldID: jfieldID?
 
-    open static var functionColumnUnknown: Int {
+    public static var functionColumnUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionColumnUnknown", fieldType: "I", fieldCache: &functionColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1153,7 +1153,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionNoNulls_FieldID: jfieldID?
 
-    open static var functionNoNulls: Int {
+    public static var functionNoNulls: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionNoNulls", fieldType: "I", fieldCache: &functionNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1164,7 +1164,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionNoTable_FieldID: jfieldID?
 
-    open static var functionNoTable: Int {
+    public static var functionNoTable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionNoTable", fieldType: "I", fieldCache: &functionNoTable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1175,7 +1175,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionNullable_FieldID: jfieldID?
 
-    open static var functionNullable: Int {
+    public static var functionNullable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionNullable", fieldType: "I", fieldCache: &functionNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1186,7 +1186,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionNullableUnknown_FieldID: jfieldID?
 
-    open static var functionNullableUnknown: Int {
+    public static var functionNullableUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionNullableUnknown", fieldType: "I", fieldCache: &functionNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1197,7 +1197,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionResultUnknown_FieldID: jfieldID?
 
-    open static var functionResultUnknown: Int {
+    public static var functionResultUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionResultUnknown", fieldType: "I", fieldCache: &functionResultUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1208,7 +1208,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionReturn_FieldID: jfieldID?
 
-    open static var functionReturn: Int {
+    public static var functionReturn: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionReturn", fieldType: "I", fieldCache: &functionReturn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1219,7 +1219,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var functionReturnsTable_FieldID: jfieldID?
 
-    open static var functionReturnsTable: Int {
+    public static var functionReturnsTable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "functionReturnsTable", fieldType: "I", fieldCache: &functionReturnsTable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1230,7 +1230,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeyCascade_FieldID: jfieldID?
 
-    open static var importedKeyCascade: Int {
+    public static var importedKeyCascade: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeyCascade", fieldType: "I", fieldCache: &importedKeyCascade_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1241,7 +1241,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeyInitiallyDeferred_FieldID: jfieldID?
 
-    open static var importedKeyInitiallyDeferred: Int {
+    public static var importedKeyInitiallyDeferred: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeyInitiallyDeferred", fieldType: "I", fieldCache: &importedKeyInitiallyDeferred_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1252,7 +1252,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeyInitiallyImmediate_FieldID: jfieldID?
 
-    open static var importedKeyInitiallyImmediate: Int {
+    public static var importedKeyInitiallyImmediate: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeyInitiallyImmediate", fieldType: "I", fieldCache: &importedKeyInitiallyImmediate_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1263,7 +1263,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeyNoAction_FieldID: jfieldID?
 
-    open static var importedKeyNoAction: Int {
+    public static var importedKeyNoAction: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeyNoAction", fieldType: "I", fieldCache: &importedKeyNoAction_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1274,7 +1274,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeyNotDeferrable_FieldID: jfieldID?
 
-    open static var importedKeyNotDeferrable: Int {
+    public static var importedKeyNotDeferrable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeyNotDeferrable", fieldType: "I", fieldCache: &importedKeyNotDeferrable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1285,7 +1285,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeyRestrict_FieldID: jfieldID?
 
-    open static var importedKeyRestrict: Int {
+    public static var importedKeyRestrict: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeyRestrict", fieldType: "I", fieldCache: &importedKeyRestrict_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1296,7 +1296,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeySetDefault_FieldID: jfieldID?
 
-    open static var importedKeySetDefault: Int {
+    public static var importedKeySetDefault: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeySetDefault", fieldType: "I", fieldCache: &importedKeySetDefault_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1307,7 +1307,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var importedKeySetNull_FieldID: jfieldID?
 
-    open static var importedKeySetNull: Int {
+    public static var importedKeySetNull: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "importedKeySetNull", fieldType: "I", fieldCache: &importedKeySetNull_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1318,7 +1318,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureColumnIn_FieldID: jfieldID?
 
-    open static var procedureColumnIn: Int {
+    public static var procedureColumnIn: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnIn", fieldType: "I", fieldCache: &procedureColumnIn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1329,7 +1329,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureColumnInOut_FieldID: jfieldID?
 
-    open static var procedureColumnInOut: Int {
+    public static var procedureColumnInOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnInOut", fieldType: "I", fieldCache: &procedureColumnInOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1340,7 +1340,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureColumnOut_FieldID: jfieldID?
 
-    open static var procedureColumnOut: Int {
+    public static var procedureColumnOut: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnOut", fieldType: "I", fieldCache: &procedureColumnOut_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1351,7 +1351,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureColumnResult_FieldID: jfieldID?
 
-    open static var procedureColumnResult: Int {
+    public static var procedureColumnResult: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnResult", fieldType: "I", fieldCache: &procedureColumnResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1362,7 +1362,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureColumnReturn_FieldID: jfieldID?
 
-    open static var procedureColumnReturn: Int {
+    public static var procedureColumnReturn: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnReturn", fieldType: "I", fieldCache: &procedureColumnReturn_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1373,7 +1373,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureColumnUnknown_FieldID: jfieldID?
 
-    open static var procedureColumnUnknown: Int {
+    public static var procedureColumnUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureColumnUnknown", fieldType: "I", fieldCache: &procedureColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1384,7 +1384,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureNoNulls_FieldID: jfieldID?
 
-    open static var procedureNoNulls: Int {
+    public static var procedureNoNulls: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureNoNulls", fieldType: "I", fieldCache: &procedureNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1395,7 +1395,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureNoResult_FieldID: jfieldID?
 
-    open static var procedureNoResult: Int {
+    public static var procedureNoResult: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureNoResult", fieldType: "I", fieldCache: &procedureNoResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1406,7 +1406,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureNullable_FieldID: jfieldID?
 
-    open static var procedureNullable: Int {
+    public static var procedureNullable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureNullable", fieldType: "I", fieldCache: &procedureNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1417,7 +1417,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureNullableUnknown_FieldID: jfieldID?
 
-    open static var procedureNullableUnknown: Int {
+    public static var procedureNullableUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureNullableUnknown", fieldType: "I", fieldCache: &procedureNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1428,7 +1428,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureResultUnknown_FieldID: jfieldID?
 
-    open static var procedureResultUnknown: Int {
+    public static var procedureResultUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureResultUnknown", fieldType: "I", fieldCache: &procedureResultUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1439,7 +1439,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var procedureReturnsResult_FieldID: jfieldID?
 
-    open static var procedureReturnsResult: Int {
+    public static var procedureReturnsResult: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "procedureReturnsResult", fieldType: "I", fieldCache: &procedureReturnsResult_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1450,7 +1450,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var sqlStateSQL_FieldID: jfieldID?
 
-    open static var sqlStateSQL: Int {
+    public static var sqlStateSQL: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "sqlStateSQL", fieldType: "I", fieldCache: &sqlStateSQL_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1461,7 +1461,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var sqlStateSQL99_FieldID: jfieldID?
 
-    open static var sqlStateSQL99: Int {
+    public static var sqlStateSQL99: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "sqlStateSQL99", fieldType: "I", fieldCache: &sqlStateSQL99_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1472,7 +1472,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var sqlStateXOpen_FieldID: jfieldID?
 
-    open static var sqlStateXOpen: Int {
+    public static var sqlStateXOpen: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "sqlStateXOpen", fieldType: "I", fieldCache: &sqlStateXOpen_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1483,7 +1483,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var tableIndexClustered_FieldID: jfieldID?
 
-    open static var tableIndexClustered: Int16 {
+    public static var tableIndexClustered: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "tableIndexClustered", fieldType: "S", fieldCache: &tableIndexClustered_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return __value
@@ -1494,7 +1494,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var tableIndexHashed_FieldID: jfieldID?
 
-    open static var tableIndexHashed: Int16 {
+    public static var tableIndexHashed: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "tableIndexHashed", fieldType: "S", fieldCache: &tableIndexHashed_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return __value
@@ -1505,7 +1505,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var tableIndexOther_FieldID: jfieldID?
 
-    open static var tableIndexOther: Int16 {
+    public static var tableIndexOther: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "tableIndexOther", fieldType: "S", fieldCache: &tableIndexOther_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return __value
@@ -1516,7 +1516,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var tableIndexStatistic_FieldID: jfieldID?
 
-    open static var tableIndexStatistic: Int16 {
+    public static var tableIndexStatistic: Int16 {
         get {
             let __value = JNIField.GetStaticShortField( fieldName: "tableIndexStatistic", fieldType: "S", fieldCache: &tableIndexStatistic_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return __value
@@ -1527,7 +1527,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var typeNoNulls_FieldID: jfieldID?
 
-    open static var typeNoNulls: Int {
+    public static var typeNoNulls: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "typeNoNulls", fieldType: "I", fieldCache: &typeNoNulls_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1538,7 +1538,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var typeNullable_FieldID: jfieldID?
 
-    open static var typeNullable: Int {
+    public static var typeNullable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "typeNullable", fieldType: "I", fieldCache: &typeNullable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1549,7 +1549,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var typeNullableUnknown_FieldID: jfieldID?
 
-    open static var typeNullableUnknown: Int {
+    public static var typeNullableUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "typeNullableUnknown", fieldType: "I", fieldCache: &typeNullableUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1560,7 +1560,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var typePredBasic_FieldID: jfieldID?
 
-    open static var typePredBasic: Int {
+    public static var typePredBasic: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "typePredBasic", fieldType: "I", fieldCache: &typePredBasic_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1571,7 +1571,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var typePredChar_FieldID: jfieldID?
 
-    open static var typePredChar: Int {
+    public static var typePredChar: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "typePredChar", fieldType: "I", fieldCache: &typePredChar_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1582,7 +1582,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var typePredNone_FieldID: jfieldID?
 
-    open static var typePredNone: Int {
+    public static var typePredNone: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "typePredNone", fieldType: "I", fieldCache: &typePredNone_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1593,7 +1593,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var typeSearchable_FieldID: jfieldID?
 
-    open static var typeSearchable: Int {
+    public static var typeSearchable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "typeSearchable", fieldType: "I", fieldCache: &typeSearchable_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1604,7 +1604,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var versionColumnNotPseudo_FieldID: jfieldID?
 
-    open static var versionColumnNotPseudo: Int {
+    public static var versionColumnNotPseudo: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "versionColumnNotPseudo", fieldType: "I", fieldCache: &versionColumnNotPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1615,7 +1615,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var versionColumnPseudo_FieldID: jfieldID?
 
-    open static var versionColumnPseudo: Int {
+    public static var versionColumnPseudo: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "versionColumnPseudo", fieldType: "I", fieldCache: &versionColumnPseudo_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)
@@ -1626,7 +1626,7 @@ open class DatabaseMetaDataForward: WrapperForward, DatabaseMetaData {
 
     private static var versionColumnUnknown_FieldID: jfieldID?
 
-    open static var versionColumnUnknown: Int {
+    public static var versionColumnUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "versionColumnUnknown", fieldType: "I", fieldCache: &versionColumnUnknown_FieldID, className: "java/sql/DatabaseMetaData", classCache: &DatabaseMetaDataJNIClass )
             return Int(__value)

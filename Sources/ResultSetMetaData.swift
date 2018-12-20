@@ -114,7 +114,7 @@ open class ResultSetMetaDataForward: WrapperForward, ResultSetMetaData {
 
     private static var columnNoNulls_FieldID: jfieldID?
 
-    open static var columnNoNulls: Int {
+    public static var columnNoNulls: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "columnNoNulls", fieldType: "I", fieldCache: &columnNoNulls_FieldID, className: "java/sql/ResultSetMetaData", classCache: &ResultSetMetaDataJNIClass )
             return Int(__value)
@@ -125,7 +125,7 @@ open class ResultSetMetaDataForward: WrapperForward, ResultSetMetaData {
 
     private static var columnNullable_FieldID: jfieldID?
 
-    open static var columnNullable: Int {
+    public static var columnNullable: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "columnNullable", fieldType: "I", fieldCache: &columnNullable_FieldID, className: "java/sql/ResultSetMetaData", classCache: &ResultSetMetaDataJNIClass )
             return Int(__value)
@@ -136,7 +136,7 @@ open class ResultSetMetaDataForward: WrapperForward, ResultSetMetaData {
 
     private static var columnNullableUnknown_FieldID: jfieldID?
 
-    open static var columnNullableUnknown: Int {
+    public static var columnNullableUnknown: Int {
         get {
             let __value = JNIField.GetStaticIntField( fieldName: "columnNullableUnknown", fieldType: "I", fieldCache: &columnNullableUnknown_FieldID, className: "java/sql/ResultSetMetaData", classCache: &ResultSetMetaDataJNIClass )
             return Int(__value)
